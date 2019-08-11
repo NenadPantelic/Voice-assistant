@@ -39,7 +39,8 @@ RECOGNITION_METHODS = {
 
 
 def loggingException(exception):
-    print(dir(exception))
+    print(exception)
+    print("Exception message: {}".format(exception))
 
 
 class SpeechRecognizer:
@@ -53,7 +54,14 @@ class SpeechRecognizer:
         self.recognitionMethod = None
         self.determinRecognitionMethod()
         self._microphone = sr.Microphone(deviceIndex)
-        self.language = language
+        self.__language = language
+
+
+    def setLanguage(self, language):
+        self.__language = language
+
+    def getLanguage(self):
+        return self.__language
 
     def determinRecognitionMethod(self):
         apiMethod = RECOGNITION_METHODS.get(self._recognitionApi, "recognize_google()")
@@ -67,7 +75,7 @@ class SpeechRecognizer:
         audio = self.getAudioFromMicrophone()
         result = None
         try:
-            result = self.recognitionMethod(audio, language=self.language)
+            result = self.recognitionMethod(audio, language=self.__language)
             '''
             if(result is None):
                 raise sr.UnknownValueError
@@ -81,6 +89,7 @@ class SpeechRecognizer:
             result = "Request error problem. Check API limits and connectivity status!"
 
         finally:
+            print(result)
             return result
 
     def getAudioFromMicrophone(self):

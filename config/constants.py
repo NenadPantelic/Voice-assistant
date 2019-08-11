@@ -1,4 +1,6 @@
 
+
+PATH_TO_AUDIO_DIR = r"data/auido/"
 LANGUAGES = {
 
 }
