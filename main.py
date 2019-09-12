@@ -1,7 +1,8 @@
 import json
-from services.tts_service import  *
-from services.stt_service import *
-from utils.utils import  *
+
+from services.speech.semantic_processor import SemanticProcessor
+from services.speech.tts_service import  *
+from services.speech.stt_service import *
 from config.constants import  *
 langs = None
 #INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!"
@@ -13,9 +14,12 @@ if __name__ == "__main__":
     with open(r'data/languages.json') as json_file:
         langs = json.load(json_file)
         speaker.speak(INIT_MESSAGE)
-        langChoice = srec.recognizeFromMicrophone().lower()
+        #time.sleep(10)
+        l = srec.recognizeFromMicrophone()
+        langChoice = l.getResult().lower()
         #only Serbian and English will be available
         print(langChoice)
+        '''
         if "english" in langChoice or "default" in langChoice:
             langChoice = "en-US"
         elif "serbian" in langChoice:
@@ -32,7 +36,8 @@ if __name__ == "__main__":
         else:
             print(langChoice)
 
+        '''
 
-
-
+sp = SemanticProcessor()
+print(sp.filterOutWords(sp.filterOutSpecialChars('Linda, you should listen what I am speaking to you')))
 

@@ -1,7 +1,8 @@
 
 
-PATH_TO_AUDIO_DIR = r"data/auido/"
-LANGUAGES = {
+PROVIDED_LANGUAGES = {
+        "english",
+        "serbian"
 
 }
 RECOGNITION_METHODS = {
@@ -15,14 +16,41 @@ RECOGNITION_METHODS = {
         "wit" : "recognize_wit",
         "azure" : "recognize_azure"
 
-
-
-
 }
 
+'''
+recognize_bing(): Microsoft Bing Speech
+recognize_google(): Google Web Speech API
+recognize_google_cloud(): Google Cloud Speech - requires installation of the google-cloud-speech package
+recognize_houndify(): Houndify by SoundHound
+recognize_ibm(): IBM Speech to Text
+recognize_sphinx(): CMU Sphinx - requires installing PocketSphinx
+recognize_wit(): Wit.ai
 
+
+'''
 
 #region MESSAGES
 
 INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!"
+OK = 0
+
+#exception constants
+DEFAULT_EXCEPTION = 100
+#speech recognition - 2xx
+UNKNOWN_SPEECH_VALUE_EXCEPTION = 201
+REQUEST_SPEECH_EXCEPTION = 202
+
+
+#tts audio config
+
+PATH_TO_AUDIO_DIR = r"data/audio/"
+DEFAULT_AUDIO_FILE = PATH_TO_AUDIO_DIR + "temporary.mp3"
+
+
+
+#semantic processor
+ENGLISH_DICTIONARY_PATH: str = "data/words-en.json"
+SERBIAN_DICTIONARY_PATH = "data/words-sr.json"
+
 

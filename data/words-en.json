@@ -1,0 +1,48 @@
+{
+   "usual_words":[
+      "linda",
+      "please",
+      "should",
+      "could",
+      "tell",
+      "say",
+      "listen",
+      "speak",
+      "help",
+      "hello",
+      "hi",
+      "bye",
+      "good bye",
+      "yo"
+   ],
+   "conjunctions":[
+      "and",
+      "or",
+      "nor",
+      "for",
+      "but",
+      "yet",
+      "so"
+   ],
+   "pronouns": [
+      "i",
+      "you",
+      "he",
+      "she",
+      "it",
+      "we",
+      "they",
+      "me",
+      "them",
+      "her",
+      "his"
+   ],
+   "prepositions": [
+      "at",
+      "in",
+      "on",
+      "to",
+      "of",
+      "by"
+   ]
+}
