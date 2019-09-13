@@ -4,6 +4,7 @@ from config.constants import *
 from utils.utils import *
 
 
+
 class SpeechRecognizer:
 
     def __init__(self, recognitionApi="google", language="en-us"):

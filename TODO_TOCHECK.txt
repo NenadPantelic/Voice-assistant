@@ -1,8 +1,8 @@
-1) check different stt APIs
+1) check different stt APIs [DONE]
 2) check speed of the out speech
 3) check exception handling for gTTS
 4) check OOP paradigm in the code and annotation possibilities
-5) check module's relative import
+5) check module's relative import [DONE]
 6) proveri sample rate ljudskog govora
 
 

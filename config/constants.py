@@ -50,7 +50,20 @@ DEFAULT_AUDIO_FILE = PATH_TO_AUDIO_DIR + "temporary.mp3"
 
 
 #semantic processor
-ENGLISH_DICTIONARY_PATH: str = "data/words-en.json"
-SERBIAN_DICTIONARY_PATH = "data/words-sr.json"
+ENGLISH_DICTIONARY_PATH: str = "data/words/words-en.json"
+SERBIAN_DICTIONARY_PATH = "data/words/words-sr.json"
+
+#keywords
+ENGLISH_KEYWORDS:str = "data/keywords/keywords-en.json"
+
+
+#answers
+ENGLISH_ANSWERS:str = "data/answers/answers-en.json"
+
+
+
+#commands
+ENGLISH_COMMANDS = "data/commands/commands-en.json"
+#TODO: refactor path variables to be in dictionary form for simpler usage
 
 

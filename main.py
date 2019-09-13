@@ -1,5 +1,6 @@
 import json
 
+from controller import Controller
 from services.speech.semantic_processor import SemanticProcessor
 from services.speech.tts_service import  *
 from services.speech.stt_service import *
@@ -13,12 +14,12 @@ srec = SpeechRecognizer(language="en-US")
 if __name__ == "__main__":
     with open(r'data/languages.json') as json_file:
         langs = json.load(json_file)
-        speaker.speak(INIT_MESSAGE)
+        #speaker.speak(INIT_MESSAGE)
         #time.sleep(10)
-        l = srec.recognizeFromMicrophone()
-        langChoice = l.getResult().lower()
+        #l = srec.recognizeFromMicrophone()
+        #langChoice = l.getResult().lower()
         #only Serbian and English will be available
-        print(langChoice)
+        #print(langChoice)
         '''
         if "english" in langChoice or "default" in langChoice:
             langChoice = "en-US"
@@ -38,6 +39,24 @@ if __name__ == "__main__":
 
         '''
 
+keywordsFiles = dict(en=ENGLISH_KEYWORDS)
+keywords = {lang:loadJsonData(keywordsFiles[lang]) for lang in keywordsFiles}
+
 sp = SemanticProcessor()
-print(sp.filterOutWords(sp.filterOutSpecialChars('Linda, you should listen what I am speaking to you')))
+from services.command_resolver import CommandResolver
+from services.websearch import wikipedia_search
+#from services.websearch import * #import WikipediaService
+
+servicePool = {
+
+    "wikipedia": wikipedia_search.WikipediaService("en")
+
+}
+commands = loadJsonData(ENGLISH_COMMANDS)
+
+sr = CommandResolver(sp, commands, keywords['en'])
+#sr.calculateServiceScores(words)
+controller = Controller(srec, speaker, sr, servicePool=servicePool)
+#print(controller.determineExecutor("Linda, who is Who is Vladimir Putin"))
+controller.determineExecutor("Linda, who is Who is Vladimir Putin")
 

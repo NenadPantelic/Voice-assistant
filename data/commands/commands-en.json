@@ -1,0 +1,19 @@
+[
+
+  {
+    "id":"0498476b-f599-488c-8c98-a314c64d77f2",
+    "service": "wikipedia",
+    "methodName": "briefSearch",
+    "arguments": true,
+    "activeMode": null,
+    "previousCommandId": null,
+    "nextCommandId": null,
+    "answer": "By Wikipedia: ",
+    "description": "Brief Wikipedia search. Returns summary of wikipedia page."
+
+
+  }
+
+]
+
+
