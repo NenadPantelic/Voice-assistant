@@ -13,7 +13,7 @@ wordDictionaryMapping = loadWordsDictionaries(languageWordFiles)
 keywords = {lang:loadJsonData(keywordsFiles[lang]) for lang in keywordsFiles}
 
 
-class SemanticProcessor:
+class TextProcessor:
     def __init__(self, language="en"):
         self.__language = language
         self.__targetWords = None

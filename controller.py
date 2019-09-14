@@ -1,10 +1,8 @@
-from services import *
 from config.constants import *
 from utils.utils import loadJsonData
 
 from services.websearch import wikipedia_search
-#from services.websearch import * #import WikipediaService
-
+from exceptions.exception_handler import ExceptionHandler
 
 commands = loadJsonData(ENGLISH_COMMANDS)
 
@@ -20,7 +18,6 @@ class Controller:
         self.recognizer = recognizer
         self.speaker = speaker
         self.executor = executor
-        self.executingMethod = None
         self.commandResolver = commandResolver
         self.servicePool = servicePool
         self.language = None
@@ -30,15 +27,25 @@ class Controller:
         self.language = language
 
 
-    def determineExecutor(self, text):
-        serviceMethod = self.commandResolver.getCommand(text)
-        #self.executor = servicePool[serviceMethod["service"]]
-        #self.executingMethod = getattr(self.executor, serviceMethod["method"])
-        #arg = serviceMethod["arg"]
-        #response = self.speak(serviceMethod["service"] + '-' + serviceMethod["method"]) + str(self.executingMethod(arg).getResult())
-        #return response
-        print(serviceMethod)
-        return serviceMethod
+    def listenAndSpeakOut(self):
+        recognizedSpeech = self.recognizer.recognizeFromMicrophone()
+        return self.getOutputSpeech(recognizedSpeech)
+
+    def getOutputSpeech(self, recognizedSpeech):
+        recognitionResult = recognizedSpeech.getResult()
+        outputMessage = "" if recognitionResult is None else recognitionResult
+        messagePrefix = ExceptionHandler.checkExceptionExistence(recognizedSpeech.getStatus(), self.language)
+        return messagePrefix + outputMessage
+
+    #this method should be called only once per voice control request
+    def determineCommand(self, text):
+        command = self.commandResolver.getCommand(text)
+        service = self.servicePool[command["service"]]
+        executor = getattr(service, command["method"])
+
+        commandResult = executor(command["arg"])
+
+
 
 
 

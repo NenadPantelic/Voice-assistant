@@ -1,10 +1,11 @@
 [
 
   {
-    "id":"0498476b-f599-488c-8c98-a314c64d77f2",
+    "commandId":"0498476b-f599-488c-8c98-a314c64d77f2",
     "service": "wikipedia",
-    "methodName": "briefSearch",
+    "method": "briefSearch",
     "arguments": true,
+    "systemCommand": null,
     "activeMode": null,
     "previousCommandId": null,
     "nextCommandId": null,

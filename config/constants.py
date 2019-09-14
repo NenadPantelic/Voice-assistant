@@ -67,3 +67,19 @@ ENGLISH_COMMANDS = "data/commands/commands-en.json"
 #TODO: refactor path variables to be in dictionary form for simpler usage
 
 
+#exception messages
+EXCEPTION_MESSAGES = {
+        UNKNOWN_SPEECH_VALUE_EXCEPTION: {
+                "en":"Speech cannot be analyzed and/or recognized!",
+                "sr":"Ваш говор не може бити обрађен или препознат!"
+        },
+        REQUEST_SPEECH_EXCEPTION:{
+                "en":"Request error problem. Check API limits and connectivity status!",
+                "sr":"Проблеми са слањем захтева. Проверите АПИ лимите и статус мреже!"
+        },
+
+        DEFAULT_EXCEPTION:{
+                "en":"",
+                "sr":"Дошло је до неке грешке. Оригинална порука грешке на енглеском је: "
+        }
+}

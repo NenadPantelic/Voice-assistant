@@ -2,6 +2,7 @@ import speech_recognition as sr
 import logging
 from config.constants import *
 from utils.utils import *
+from ..action_result import ActionResult
 
 
 
@@ -36,23 +37,23 @@ class SpeechRecognizer:
         result = None
         try:
             speech = self.__recognitionMethod(audio, language=self.__language)
-            result = RecognitionResult(speech, OK)
+            result = ActionResult(speech, OK)
             '''
             if(result is None):
                 raise sr.UnknownValueError
             '''
         except sr.UnknownValueError as e:
             loggingException(e)
-            result = RecognitionResult("Speech cannot be analyzed and/or recognized!", UNKNOWN_SPEECH_VALUE_EXCEPTION)
+            result = ActionResult("Speech cannot be analyzed and/or recognized!", UNKNOWN_SPEECH_VALUE_EXCEPTION)
 
         except sr.RequestError as e:
             loggingException(e)
-            result = RecognitionResult("Request error problem. Check API limits and connectivity status!",
+            result = ActionResult("Request error problem. Check API limits and connectivity status!",
                                        REQUEST_SPEECH_EXCEPTION)
 
         except Exception as e:
             loggingException(e)
-            result = RecognitionResult(e, DEFAULT_EXCEPTION)
+            result = ActionResult(e, DEFAULT_EXCEPTION)
 
         finally:
             logging.info(result)
@@ -69,7 +70,7 @@ class SpeechRecognizer:
         return audio
 
 
-
+'''
 class RecognitionResult:
     def __init__(self, result, status):
         self.__result = result
@@ -87,3 +88,4 @@ class RecognitionResult:
 
     def setStatus(self, status):
         self.__status = status
+'''

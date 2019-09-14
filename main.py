@@ -1,7 +1,7 @@
 import json
 
 from controller import Controller
-from services.speech.semantic_processor import SemanticProcessor
+from services.speech.text_processor_service import TextProcessor
 from services.speech.tts_service import  *
 from services.speech.stt_service import *
 from config.constants import  *
@@ -42,7 +42,7 @@ if __name__ == "__main__":
 keywordsFiles = dict(en=ENGLISH_KEYWORDS)
 keywords = {lang:loadJsonData(keywordsFiles[lang]) for lang in keywordsFiles}
 
-sp = SemanticProcessor()
+sp = TextProcessor()
 from services.command_resolver import CommandResolver
 from services.websearch import wikipedia_search
 #from services.websearch import * #import WikipediaService
@@ -57,6 +57,6 @@ commands = loadJsonData(ENGLISH_COMMANDS)
 sr = CommandResolver(sp, commands, keywords['en'])
 #sr.calculateServiceScores(words)
 controller = Controller(srec, speaker, sr, servicePool=servicePool)
-#print(controller.determineExecutor("Linda, who is Who is Vladimir Putin"))
-controller.determineExecutor("Linda, who is Who is Vladimir Putin")
+#print(controller.determineCommand("Linda, who is Who is Vladimir Putin"))
+print(controller.determineCommand("Linda, who is Who is Vladimir Putin"))
 
