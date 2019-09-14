@@ -4,9 +4,12 @@ from config.constants import EXCEPTION_MESSAGES, OK
 class ExceptionHandler:
 
     @staticmethod
+    def hasException(actionResultCode):
+        return actionResultCode != OK
+    @staticmethod
     def checkExceptionExistence(actionResultCode, language):
-        message = ""
-        if actionResultCode != OK:
+        message = None
+        if ExceptionHandler.hasException(actionResultCode) != OK:
             message = ExceptionHandler.getExceptionMessage(actionResultCode, language)
         return message
 

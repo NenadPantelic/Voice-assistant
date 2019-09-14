@@ -44,16 +44,16 @@ class SpeechRecognizer:
             '''
         except sr.UnknownValueError as e:
             loggingException(e)
-            result = ActionResult("Speech cannot be analyzed and/or recognized!", UNKNOWN_SPEECH_VALUE_EXCEPTION)
+            result = ActionResult(None, UNKNOWN_SPEECH_VALUE_EXCEPTION)
 
         except sr.RequestError as e:
             loggingException(e)
-            result = ActionResult("Request error problem. Check API limits and connectivity status!",
+            result = ActionResult(None,
                                        REQUEST_SPEECH_EXCEPTION)
 
         except Exception as e:
             loggingException(e)
-            result = ActionResult(e, DEFAULT_EXCEPTION)
+            result = ActionResult(None, DEFAULT_EXCEPTION)
 
         finally:
             logging.info(result)

@@ -10,6 +10,7 @@ class ActionResult:
     def getStatus(self):
         return self.__status
 
+    #setters
     def setResult(self, result):
         self.__result = result
 

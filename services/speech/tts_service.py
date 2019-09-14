@@ -9,7 +9,7 @@ class Speaker:
     def __init__(self, lang="en-us"):
         self.__language = lang
         self.tts = gTTS(lang=self.__language, text="dummy")
-        self.answers = loadJsonData(ENGLISH_ANSWERS)
+        #self.answers = loadJsonData(ENGLISH_ANSWERS)
 
     def setLanguage(self, language):
         self.__language = language
@@ -21,7 +21,6 @@ class Speaker:
     def speak(self, text, method, fileName=DEFAULT_AUDIO_FILE):
         if (fileName != DEFAULT_AUDIO_FILE):
             fileName = PATH_TO_AUDIO_DIR + fileName
-        answerText = self.answers[method]
         self.tts.text = text
         self.tts.save(fileName)
         self.playAudio(fileName)

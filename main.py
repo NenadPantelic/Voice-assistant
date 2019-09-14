@@ -57,6 +57,9 @@ commands = loadJsonData(ENGLISH_COMMANDS)
 sr = CommandResolver(sp, commands, keywords['en'])
 #sr.calculateServiceScores(words)
 controller = Controller(srec, speaker, sr, servicePool=servicePool)
-#print(controller.determineCommand("Linda, who is Who is Vladimir Putin"))
-print(controller.determineCommand("Linda, who is Who is Vladimir Putin"))
+#print(controller.execute("Linda, who is Who is Vladimir Putin"))
+#print(controller.execute(None))
+#print(controller.execute("I'm choosing serbian."))
+
+print(controller.listenAndExecute())
 

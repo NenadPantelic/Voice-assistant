@@ -30,12 +30,16 @@ class CommandResolver:
 
     #TODO: check what to use - phrases or single words
     def getCommand(self, text):
-        wordList = self.__textProcessor.preprocessText(text)
-        self.determineCommand(wordList)
-        arg = self.__textProcessor.filterOutKeywords(wordList, self.__keywords[self.command["commandId"]]["words"].keys())
+        if(text is None):
+            self.command = self.getDefaultCommand()
+        else:
+            wordList = self.__textProcessor.preprocessText(text)
+            self.determineCommand(wordList)
+            arg = self.__textProcessor.filterOutKeywords(wordList, self.__keywords[self.command["commandId"]]["words"].keys())
 
         targetCommand = self.command
-        targetCommand.update({"arg": arg})
+        if(targetCommand["hasArgs"]):
+            targetCommand.update({"arg": arg})
         return targetCommand
 
     def determineCommand(self, wordList = []):
@@ -59,6 +63,9 @@ class CommandResolver:
     def getMostProbableCommand(self, commands):
         pass
 
+    def getDefaultCommand(self):
+        #one command with no service and method should be set
+        return list(filter(lambda x: x["service"] is None and x["method"] is None, self.__commands.values()))[0]
 
     #helper method
     def getCommandKeywords(self, commandId):

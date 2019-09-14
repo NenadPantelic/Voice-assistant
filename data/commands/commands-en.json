@@ -1,18 +1,62 @@
 [
 
   {
+    "commandId":"536007cb-67ff-492c-8c65-01995ef195c9",
+    "service": null,
+    "method": null,
+    "hasArgs": false,
+    "systemCommand": null,
+    "setupCommand": true,
+    "previousCommandId": null,
+    "nextCommandId": null,
+    "messages": {
+        "en": "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!",
+        "sr": "Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
+    },
+
+    "descriptions": {
+        "en": "Set operating language of voice assistant.",
+        "sr": "Поставља оперативни језик гласовног асистента."
+    }
+  },
+ {
+    "commandId":"6dae42df-6029-4e47-8e5a-c435341e1108",
+    "service": null,
+    "method": "method",
+    "hasArgs": false,
+    "systemCommand": null,
+    "setupCommand": true,
+    "previousCommandId": null,
+    "nextCommandId": null,
+    "messages": {
+        "en": "Language is set successfully.",
+        "sr": "Jезик је успешно постављен."
+    },
+
+    "descriptions": {
+        "en": "Set operating language of voice assistant.",
+        "sr": "Поставља оперативни језик гласовног асистента."
+    }
+  },
+  {
     "commandId":"0498476b-f599-488c-8c98-a314c64d77f2",
     "service": "wikipedia",
     "method": "briefSearch",
-    "arguments": true,
+    "hasArgs": true,
     "systemCommand": null,
-    "activeMode": null,
+    "setupCommand": false,
     "previousCommandId": null,
     "nextCommandId": null,
-    "answer": "By Wikipedia: ",
-    "description": "Brief Wikipedia search. Returns summary of wikipedia page."
+    "messages": {
+        "en": "By Wikipedia: ",
+        "sr": "Према Википедији: "
 
+    },
 
+    "descriptions": {
+        "en": "Brief Wikipedia search. Returns summary of wikipedia page.",
+        "sr": "Кратак резиме са стране добијене са Википедије"
+    }
   }
 
 ]
