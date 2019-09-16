@@ -30,20 +30,25 @@ class CommandResolver:
 
     #TODO: check what to use - phrases or single words
     def getCommand(self, text):
-        if(text is None):
-            self.command = self.getDefaultCommand()
-        else:
+        init = True
+        wordList = []
+        if(text is not None):
             wordList = self.__textProcessor.preprocessText(text)
-            self.determineCommand(wordList)
-            arg = self.__textProcessor.filterOutKeywords(wordList, self.__keywords[self.command["commandId"]]["words"].keys())
+            init = False
 
+        self.determineCommand(init, wordList)
         targetCommand = self.command
-        if(targetCommand["hasArgs"]):
+        if (targetCommand["hasArgs"]):
+            arg = wordList
+            if(targetCommand["processInputText"]):
+                arg = self.__textProcessor.filterOutKeywords(wordList, self.__keywords[self.command["commandId"]]["words"].keys())
             targetCommand.update({"arg": arg})
         return targetCommand
 
-    def determineCommand(self, wordList = []):
-        if(self.__nextCommandId is None):
+    def determineCommand(self, init = False, wordList = []):
+        if(init):
+            self.command = self.getDefaultCommand()
+        elif(self.__nextCommandId is None):
             scoreMap = self.calculateCommandScores(wordList)
             maxScore = max(scoreMap.values())
             candidateCommands = list(filter(lambda x:x[1] == maxScore, scoreMap.items()))
@@ -52,7 +57,6 @@ class CommandResolver:
                 self.command = self.getMostProbableCommand(candidateCommands)
             else:
                 self.command = self.__commands[candidateCommands[0][0]]
-            #self.command = self.commandResolver.getCommand(text)
             self.previousCommandId = self.command["previousCommandId"]
         else:
             self.previousCommandId = self.command["commandId"]

@@ -39,9 +39,9 @@ wikipedia.set_lang("sr")
 class WikipediaService:
     def __init__(self, language="en"):
         if(language is not None):
-            self.changeLanguage(language)
+            self.setLanguage(language)
 
-    def changeLanguage(self, language):
+    def setLanguage(self, language):
         wikipedia.set_lang(language)
 
     @lru_cache(maxsize=32)

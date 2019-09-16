@@ -2,7 +2,7 @@ from config.constants import *
 from gtts import gTTS
 from playsound import playsound
 
-from utils.utils import loadJsonData
+from utils.utils import loadJsonData, getCurrentTimestamp
 answers = loadJsonData(ENGLISH_ANSWERS)
 
 class Speaker:
@@ -18,12 +18,15 @@ class Speaker:
     def getLanguage(self):
         return self.__language
 
-    def speak(self, text, method, fileName=DEFAULT_AUDIO_FILE):
-        if (fileName != DEFAULT_AUDIO_FILE):
+    def speak(self, text, fileName=DEFAULT_AUDIO_FILE):
+        if fileName != DEFAULT_AUDIO_FILE:
             fileName = PATH_TO_AUDIO_DIR + fileName
         self.tts.text = text
         self.tts.save(fileName)
         self.playAudio(fileName)
+
+    def speakWithFileSave(self, tеxt=None):
+        self.speak(tеxt, str(getCurrentTimestamp()) + ".mp3")
 
     def playAudio(self, fileName):
         playsound(fileName)

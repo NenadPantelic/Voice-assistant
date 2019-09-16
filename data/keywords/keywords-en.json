@@ -11,5 +11,22 @@
          "what's":0.25,
          "who's":0.25
       }
+   },
+   {
+      "commandId": "6dae42df-6029-4e47-8e5a-c435341e1108",
+      "words": {
+         "choosing": 0.3,
+         "choose": 0.3,
+         "language": 0.4,
+         "default": 0.25,
+         "option": 0.2,
+         "english": 0.3,
+         "serbian": 0.3,
+         "choice": 0.3,
+         "usa": 0.3,
+         "american": 0.3
+      }
+
+
    }
 ]

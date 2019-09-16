@@ -12,34 +12,41 @@ servicePool = {
     "wikipedia": wikipedia_search.WikipediaService(language=None)
 
 }
-
-
+#TODO: add json structure checking
+#TODO:check if this can be refactored
 # languageStr is actuall string that contatins language name
 def getLanguageCode(languageStr):
     if "english" in languageStr or "default" in languageStr:
-        langChoice = "en-US"  # "en-US"
+        langChoice = "en"  # "en-US"
     elif "serbian" in languageStr:
-        langChoice = "sr-RS"
+        langChoice = "sr"
     else:
         langChoice = None
     return langChoice
 
 class Controller:
-    def __init__(self, recognizer, speaker, commandResolver, executor=None, servicePool={}):
+    def __init__(self, recognizer, speaker, commandResolver, servicePool={}):
         self.recognizer = recognizer
         self.speaker = speaker
-        self.executor = executor
         self.commandResolver = commandResolver
         self.servicePool = servicePool
         self.language = "en"
 
-    def switchLanguage(self, language):
-        assert isinstance(language, str) and language in PROVIDED_LANGUAGES
-        self.language = language
+    def setLanguage(self, languageStr):
+        assert isinstance(languageStr, str)
+        langCode = getLanguageCode(languageStr)
+        self.language = langCode
+        self.recognizer.setLanguage(langCode)
+        self.speaker.setLanguage(langCode)
+        for service in servicePool.values():
+            service.setLanguage(langCode)
 
+
+    def initialize(self):
+        self.speaker.speakWithFileSave(self.execute(None))
 
     def listen(self, init = False):
-        return None if init else self.recognizer.recognizeFromMicrophone()
+        return self.recognizer.recognizeFromMicrophone()
 
     def getCommandOutputText(self, commandResult):
         #TODO:add check if outputMessage and exceptionMessage are nonempty
@@ -52,7 +59,6 @@ class Controller:
 
 
     def getOutputSpeech(self, commandResult, message):
-
         outputMessage, exceptionMessage = self.getCommandOutputText(commandResult)
         messagePrefix = message if exceptionMessage is None else exceptionMessage
         return messagePrefix + outputMessage
@@ -68,31 +74,31 @@ class Controller:
         #service is none for setup commands
         if(service is None):
             #NOTE:if method is None - initial speaking, else language setting
-            executor = None
-            if(method is not None):
-                lang = command["arg"]
-                #TODO: map language name to language code
-                self.switchLanguage(getLanguageCode(lang))
-        else:
+            #executor = None
+            service = self
+            #if(method is None):
+                #TODO: map language name to language code - check
+        if(method is not None):
             executor = getattr(service, method)
+            if(command["hasArgs"]):
+                commandResult = executor(command["arg"])
+            else:
+                commandResult = executor()
+        else:
+            commandResult = None
         message = command["messages"][self.language]
-        if(executor is not None):
-            commandResult = executor(command["arg"])
         return self.getOutputSpeech(commandResult, message)
 
 
     def listenAndExecute(self, init=False):
-        textResult = self.listen(init)
+        textResult = self.recognizer.recognizeFromMicrophone()
         output = None
-        #not initial command
-        if(textResult is not None):
-            text = textResult.getResult()
-            if(text is not None):
-                output = self.execute(text)
-            else:
-                output = self.getOutputSpeech(textResult, '')
-        self.speaker.speak(output, str(getCurrentTimestamp()) + ".mp3")
-        #return output
+        #tts exception
+        if(textResult is None or textResult.getResult() is  None):
+            output = self.getOutputSpeech(textResult, '')
+        else:
+            output = self.execute(textResult.getResult())
+        self.speaker.speakWithFileSave(output)
 
 
 

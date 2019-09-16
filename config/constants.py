@@ -1,8 +1,9 @@
 
 
 PROVIDED_LANGUAGES = {
-        "english",
-        "serbian"
+        "english":"en-US",
+        "serbian": "sr-RS",
+        "default":"en-US"
 
 }
 RECOGNITION_METHODS = {

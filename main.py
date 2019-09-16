@@ -61,5 +61,7 @@ controller = Controller(srec, speaker, sr, servicePool=servicePool)
 #print(controller.execute(None))
 #print(controller.execute("I'm choosing serbian."))
 
+#print(controller.listenAndExecute(True))
+print(controller.initialize())
 print(controller.listenAndExecute())
 

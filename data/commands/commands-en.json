@@ -5,10 +5,11 @@
     "service": null,
     "method": null,
     "hasArgs": false,
+    "processInputText": false,
     "systemCommand": null,
     "setupCommand": true,
     "previousCommandId": null,
-    "nextCommandId": null,
+    "nextCommandId": "6dae42df-6029-4e47-8e5a-c435341e1108",
     "messages": {
         "en": "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!",
         "sr": "Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
@@ -22,8 +23,9 @@
  {
     "commandId":"6dae42df-6029-4e47-8e5a-c435341e1108",
     "service": null,
-    "method": "method",
-    "hasArgs": false,
+    "method": "setLanguage",
+    "hasArgs": true,
+    "processInputText": false,
     "systemCommand": null,
     "setupCommand": true,
     "previousCommandId": null,
@@ -43,6 +45,7 @@
     "service": "wikipedia",
     "method": "briefSearch",
     "hasArgs": true,
+    "processInputText": true,
     "systemCommand": null,
     "setupCommand": false,
     "previousCommandId": null,
