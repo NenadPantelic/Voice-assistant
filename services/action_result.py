@@ -4,15 +4,15 @@ class ActionResult:
         self.__status = status
 
     # getters
-    def getResult(self):
+    def get_result(self):
         return self.__result
 
-    def getStatus(self):
+    def get_status(self):
         return self.__status
 
     #setters
-    def setResult(self, result):
+    def set_result(self, result):
         self.__result = result
 
-    def setStatus(self, status):
+    def set_status(self, status):
         self.__status = status

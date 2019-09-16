@@ -2,41 +2,40 @@ import logging
 import string
 
 from config.constants import ENGLISH_DICTIONARY_PATH, SERBIAN_DICTIONARY_PATH, ENGLISH_KEYWORDS
-from utils.utils import loadWordsDictionaries, flattenDictionaryValues, loadJsonData
+from utils.utils import load_words_dictionaries, flatten_dictionary_values, load_json_data
 
 languageWordFiles = dict(en=ENGLISH_DICTIONARY_PATH, sr=SERBIAN_DICTIONARY_PATH)
 keywordsFiles = dict(en=ENGLISH_KEYWORDS)
 
 
-wordDictionaryMapping = loadWordsDictionaries(languageWordFiles)
+wordDictionaryMapping = load_words_dictionaries(languageWordFiles)
 
-keywords = {lang:loadJsonData(keywordsFiles[lang]) for lang in keywordsFiles}
+keywords = {lang:load_json_data(keywordsFiles[lang]) for lang in keywordsFiles}
 
 
 class TextProcessor:
     def __init__(self, language="en"):
         self.__language = language
-        self.__targetWords = None
-        self.setLanguage(language)
+        self.__target_words = None
+        self.set_language(language)
 
-    def setLanguage(self, language):
+    def set_language(self, language):
         try:
-            self.__targetWords = flattenDictionaryValues(wordDictionaryMapping["en"].values())
+            self.__target_words = flatten_dictionary_values(wordDictionaryMapping["en"].values())
             self.__language = language
         except KeyError:
             logging.debug("Language is not supported. Use English or Serbian.")
 
     # @staticmethod
-    def filterOutSpecialChars(self, phrase):
+    def filter_out_special_chars(self, phrase):
         return phrase.translate(str.maketrans("", "", string.punctuation))
 
-    def filterOutWords(self, phrase):
+    def filter_out_words(self, phrase):
         wordList = phrase.lower().split(' ')
-        #return " ".join([word for word in wordList if word.isalpha() and word not in self.__targetWords])
-        return [word for word in wordList if word.isalpha() and word not in self.__targetWords]
+        return [word for word in wordList if word.isalpha() and word not in self.__target_words]
 
-    def preprocessText(self, text):
-        return self.filterOutWords(self.filterOutSpecialChars(text))
+    def preprocess_text(self, text):
+        return self.filter_out_words(self.filter_out_special_chars(text))
 
-    def filterOutKeywords(self, phraseList, keywordList):
+    def filter_out_keywords(self, phraseList, keywordList):
         return ' '.join([word for word in phraseList if word not in keywordList])

@@ -1,0 +1,29 @@
+[
+   {
+      "command_id":"0498476b-f599-488c-8c98-a314c64d77f2",
+      "words":{
+         "ko":0.35,
+         "šta":0.35,
+         "je":0.15,
+         "su":0.15,
+         "bio":0.2,
+         "bili":0.2
+      }
+   },
+   {
+      "command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
+      "words":{
+         "biram":0.3,
+         "izabraću":0.3,
+         "jezik":0.4,
+         "podrazumevana":0.25,
+         "podrazumevanu":0.25,
+         "opcija":0.2,
+         "opciju":0.2,
+         "engleski":0.3,
+         "srpski":0.3,
+         "izbor":0.3,
+         "američki":0.3
+      }
+   }
+]

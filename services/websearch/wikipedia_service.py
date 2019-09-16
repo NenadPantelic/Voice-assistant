@@ -1,23 +1,23 @@
 import wikipedia
-
 from ..action_result import ActionResult
-from utils.utils import  loggingException
+from utils.utils import logging_exception
 from config.constants import *
 from functools import lru_cache
-#print (wikipedia.summary("Wikipedia"))
-#print(wikipedia.search('Novak'))
+'''
+# print (wikipedia.summary("Wikipedia"))
+# print(wikipedia.search('Novak'))
 
 nd = wikipedia.page('Nikola Tesla')
-#print(nd.title)
-#print(nd.url)
-#print(nd.content)
-#print(nd.links)
-#print(wikipedia.summary('Nikola Tesla'))
+# print(nd.title)
+# print(nd.url)
+# print(nd.content)
+# print(nd.links)
+# print(wikipedia.summary('Nikola Tesla'))
 wikipedia.set_lang("sr")
-#print(wikipedia.summary('Nikola Tesla'))
+# print(wikipedia.summary('Nikola Tesla'))
 
 '''
-
+'''
 >>> wikipedia.search("Barack")
 # [u'Barak (given name)', u'Barack Obama', u'Barack (brandy)', u'Presidency of Barack Obama', u'Family of Barack Obama', u'First inauguration of Barack Obama', u'Barack Obama presidential campaign, 2008', u'Barack Obama, Sr.', u'Barack Obama citizenship conspiracy theories', u'Presidential transition of Barack Obama']
 
@@ -36,30 +36,29 @@ wikipedia.set_lang("sr")
 # Facebook est un service de réseautage social en ligne sur Internet permettant d'y publier des informations (phot
 '''
 
+
 class WikipediaService:
     def __init__(self, language="en"):
-        if(language is not None):
-            self.setLanguage(language)
+        if language is not None:
+            self.set_language(language)
 
-    def setLanguage(self, language):
+    def set_language(self, language):
         wikipedia.set_lang(language)
 
     @lru_cache(maxsize=32)
-    def briefSearch(self, query, sentences = 3):
+    def brief_search(self, query, sentences=3):
         try:
-            return  ActionResult(wikipedia.summary(query, sentences=sentences), OK)
+            return ActionResult(wikipedia.summary(query, sentences=sentences), OK)
         except Exception as e:
-            loggingException(e)
+            logging_exception(e)
             return ActionResult(e, DEFAULT_EXCEPTION)
 
+    #not tested or used
     @lru_cache(maxsize=32)
-    def getCompletePage(self, query):
+    def get_complete_page(self, query):
         try:
             page = wikipedia.page(query)
-            return  ActionResult(page.content, OK)
+            return ActionResult(page.content, OK)
         except Exception as e:
-            loggingException(e)
+            logging_exception(e)
             return ActionResult(e, DEFAULT_EXCEPTION)
-
-
-

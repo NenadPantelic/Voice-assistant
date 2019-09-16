@@ -1,15 +1,15 @@
 [
 
   {
-    "commandId":"536007cb-67ff-492c-8c65-01995ef195c9",
+    "command_id":"536007cb-67ff-492c-8c65-01995ef195c9",
     "service": null,
     "method": null,
-    "hasArgs": false,
-    "processInputText": false,
-    "systemCommand": null,
-    "setupCommand": true,
-    "previousCommandId": null,
-    "nextCommandId": "6dae42df-6029-4e47-8e5a-c435341e1108",
+    "has_args": false,
+    "process_input_text": false,
+    "system_command": null,
+    "setup_command": true,
+    "previous_command_id": null,
+    "next_command_id": "6dae42df-6029-4e47-8e5a-c435341e1108",
     "messages": {
         "en": "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!",
         "sr": "Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
@@ -21,15 +21,15 @@
     }
   },
  {
-    "commandId":"6dae42df-6029-4e47-8e5a-c435341e1108",
+    "command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
     "service": null,
-    "method": "setLanguage",
-    "hasArgs": true,
-    "processInputText": false,
-    "systemCommand": null,
-    "setupCommand": true,
-    "previousCommandId": null,
-    "nextCommandId": null,
+    "method": "set_language",
+    "has_args": true,
+    "process_input_text": false,
+    "system_command": null,
+    "setup_command": true,
+    "previous_command_id": null,
+    "next_command_id": null,
     "messages": {
         "en": "Language is set successfully.",
         "sr": "Jезик је успешно постављен."
@@ -41,15 +41,15 @@
     }
   },
   {
-    "commandId":"0498476b-f599-488c-8c98-a314c64d77f2",
+    "command_id":"0498476b-f599-488c-8c98-a314c64d77f2",
     "service": "wikipedia",
-    "method": "briefSearch",
-    "hasArgs": true,
-    "processInputText": true,
-    "systemCommand": null,
-    "setupCommand": false,
-    "previousCommandId": null,
-    "nextCommandId": null,
+    "method": "brief_search",
+    "has_args": true,
+    "process_input_text": true,
+    "system_command": null,
+    "setup_command": false,
+    "previous_command_id": null,
+    "next_command_id": null,
     "messages": {
         "en": "By Wikipedia: ",
         "sr": "Према Википедији: "

@@ -1,6 +1,6 @@
 [
    {
-      "commandId":"0498476b-f599-488c-8c98-a314c64d77f2",
+      "command_id":"0498476b-f599-488c-8c98-a314c64d77f2",
       "words":{
          "who":0.35,
          "what":0.35,
@@ -9,24 +9,24 @@
          "was":0.2,
          "were":0.2,
          "what's":0.25,
-         "who's":0.25
+         "who's":0.25,
+         "something":0.1,
+         "about":0.2
       }
    },
    {
-      "commandId": "6dae42df-6029-4e47-8e5a-c435341e1108",
-      "words": {
-         "choosing": 0.3,
-         "choose": 0.3,
-         "language": 0.4,
-         "default": 0.25,
-         "option": 0.2,
-         "english": 0.3,
-         "serbian": 0.3,
-         "choice": 0.3,
-         "usa": 0.3,
-         "american": 0.3
+      "command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
+      "words":{
+         "choosing":0.3,
+         "choose":0.3,
+         "language":0.4,
+         "default":0.25,
+         "option":0.2,
+         "english":0.3,
+         "serbian":0.3,
+         "choice":0.3,
+         "usa":0.3,
+         "american":0.3
       }
-
-
    }
 ]

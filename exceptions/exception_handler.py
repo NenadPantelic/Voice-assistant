@@ -1,19 +1,15 @@
-
 from config.constants import EXCEPTION_MESSAGES, OK
+
 
 class ExceptionHandler:
 
     @staticmethod
-    def hasException(actionResultCode):
-        return actionResultCode != OK
-    @staticmethod
-    def checkExceptionExistence(actionResultCode, language):
+    def check_exception_existence(actionResultCode, language):
         message = None
-        if ExceptionHandler.hasException(actionResultCode) != OK:
-            message = ExceptionHandler.getExceptionMessage(actionResultCode, language)
+        if actionResultCode != OK:
+            message = ExceptionHandler.get_exception_message(actionResultCode, language)
         return message
 
     @staticmethod
-    def getExceptionMessage(exceptionCode, language):
+    def get_exception_message(exceptionCode, language):
         return EXCEPTION_MESSAGES[exceptionCode][language]
-

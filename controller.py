@@ -1,107 +1,91 @@
-from config.constants import *
-from utils.utils import loadJsonData, getCurrentTimestamp
-
-from services.websearch import wikipedia_search
+#from exceptions import exception_handler
 from exceptions.exception_handler import ExceptionHandler
-
-commands = loadJsonData(ENGLISH_COMMANDS)
-
-
+import services.websearch.wikipedia_service as ws
 servicePool = {
 
-    "wikipedia": wikipedia_search.WikipediaService(language=None)
+    "wikipedia": ws.WikipediaService(language=None)
 
 }
-#TODO: add json structure checking
-#TODO:check if this can be refactored
-# languageStr is actuall string that contatins language name
-def getLanguageCode(languageStr):
-    if "english" in languageStr or "default" in languageStr:
-        langChoice = "en"  # "en-US"
-    elif "serbian" in languageStr:
-        langChoice = "sr"
+
+
+# TODO: add json structure checking
+# TODO:check if this can be refactored
+def get_language_code(str_list):
+    if "english" in str_list or "default" in str_list:
+        lang_choice = "en"  # "en-US"
+    elif "serbian" in str_list:
+        lang_choice = "sr"
     else:
-        langChoice = None
-    return langChoice
+        lang_choice = None
+    return lang_choice
+
 
 class Controller:
-    def __init__(self, recognizer, speaker, commandResolver, servicePool={}):
+    def __init__(self, recognizer, speaker, commandResolver, service_pool={}):
         self.recognizer = recognizer
         self.speaker = speaker
-        self.commandResolver = commandResolver
-        self.servicePool = servicePool
+        self.command_resolver = commandResolver
+        self.service_pool = service_pool
         self.language = "en"
 
-    def setLanguage(self, languageStr):
-        assert isinstance(languageStr, str)
-        langCode = getLanguageCode(languageStr)
-        self.language = langCode
-        self.recognizer.setLanguage(langCode)
-        self.speaker.setLanguage(langCode)
+    def set_language(self, language_list):
+        assert isinstance(language_list, list)
+        lang_code = get_language_code(language_list)
+        self.language = lang_code
+        self.recognizer.set_language(lang_code)
+        self.speaker.set_language(lang_code)
         for service in servicePool.values():
-            service.setLanguage(langCode)
-
+            service.set_language(lang_code)
+        self.command_resolver.set_language(lang_code)
 
     def initialize(self):
-        self.speaker.speakWithFileSave(self.execute(None))
+        self.speaker.save_speech_and_play(self.execute(None))
 
-    def listen(self, init = False):
-        return self.recognizer.recognizeFromMicrophone()
+    def listen(self, init=False):
+        return self.recognizer.recognize_from_microphone()
 
-    def getCommandOutputText(self, commandResult):
-        #TODO:add check if outputMessage and exceptionMessage are nonempty
-        exceptionMessage = None
-        outputMessage = ""
-        if (commandResult is not None):
-            outputMessage = "" if commandResult.getResult() is None else commandResult.getResult()
-            exceptionMessage = ExceptionHandler.checkExceptionExistence(commandResult.getStatus(), self.language)
-        return (outputMessage, exceptionMessage)
+    def get_command_output_text(self, command_result):
+        # TODO:add check if output_message and exception_message are nonempty
+        exception_message = None
+        output_message = ""
+        if command_result is not None:
+            output_message = "" if command_result.get_result() is None else command_result.get_result()
+            exception_message = ExceptionHandler.check_exception_existence(command_result.get_status(), self.language)
+        return output_message, exception_message
 
+    def get_output_speech(self, command_result, message):
+        output_message, exception_message = self.get_command_output_text(command_result)
+        message_prefix = message if exception_message is None else exception_message
+        return message_prefix + output_message
 
-    def getOutputSpeech(self, commandResult, message):
-        outputMessage, exceptionMessage = self.getCommandOutputText(commandResult)
-        messagePrefix = message if exceptionMessage is None else exceptionMessage
-        return messagePrefix + outputMessage
-
-
-
-    #this method should be called only once per voice control request
+    # this method should be called only once per voice control request
     def execute(self, text):
-        command = self.commandResolver.getCommand(text)
-        commandResult = None
-        service = self.servicePool.get(command["service"], None)
+        command = self.command_resolver.get_command(text)
+        command_result = None
+        service = self.service_pool.get(command["service"], None)
         method = command["method"]
-        #service is none for setup commands
-        if(service is None):
-            #NOTE:if method is None - initial speaking, else language setting
-            #executor = None
+        # service is none for setup commands
+        if service is None:
+            # NOTE:if method is None - initial speaking, else language setting
             service = self
-            #if(method is None):
-                #TODO: map language name to language code - check
-        if(method is not None):
+            # TODO: map language name to language code - check
+        if method is not None:
             executor = getattr(service, method)
-            if(command["hasArgs"]):
-                commandResult = executor(command["arg"])
+            if command["has_args"]:
+                command_result = executor(command["arg"])
             else:
-                commandResult = executor()
+                command_result = executor()
         else:
-            commandResult = None
+            command_result = None
         message = command["messages"][self.language]
-        return self.getOutputSpeech(commandResult, message)
+        return self.get_output_speech(command_result, message)
 
-
-    def listenAndExecute(self, init=False):
-        textResult = self.recognizer.recognizeFromMicrophone()
+    def listen_and_execute(self, init=False):
+        text_result = self.recognizer.recognize_from_microphone()
         output = None
-        #tts exception
-        if(textResult is None or textResult.getResult() is  None):
-            output = self.getOutputSpeech(textResult, '')
+        # tts exception
+        if text_result is None or text_result.get_result() is None:
+            output = self.get_output_speech(text_result, '')
         else:
-            output = self.execute(textResult.getResult())
-        self.speaker.speakWithFileSave(output)
-
-
-
-
-
-
+            output = self.execute(text_result.get_result())
+        self.speaker.save_speech_and_play(output)
