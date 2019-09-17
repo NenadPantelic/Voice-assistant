@@ -10,6 +10,7 @@
     "setup_command": true,
     "previous_command_id": null,
     "next_command_id": "6dae42df-6029-4e47-8e5a-c435341e1108",
+    "default_arg": null,
     "messages": {
         "en": "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!",
         "sr": "Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
@@ -30,6 +31,7 @@
     "setup_command": true,
     "previous_command_id": null,
     "next_command_id": null,
+    "default_arg": null,
     "messages": {
         "en": "Language is set successfully.",
         "sr": "Jезик је успешно постављен."
@@ -50,9 +52,32 @@
     "setup_command": false,
     "previous_command_id": null,
     "next_command_id": null,
+    "default_arg": null,
     "messages": {
         "en": "By Wikipedia: ",
         "sr": "Према Википедији: "
+
+    },
+
+    "descriptions": {
+        "en": "Brief Wikipedia search. Returns summary of wikipedia page.",
+        "sr": "Кратак резиме са стране добијене са Википедије"
+    }
+  },
+  {
+    "command_id":"f18e2c7d-5b28-4109-8bd2-7f25a233024f",
+    "service": "owm",
+    "method": "get_forecast_result",
+    "has_args": true,
+    "process_input_text": true,
+    "system_command": null,
+    "setup_command": false,
+    "previous_command_id": null,
+    "next_command_id": null,
+    "default_arg": "celsius",
+    "messages": {
+        "en": "Weather forecast results:\n",
+        "sr": "Stanje vremenske prognoze: \n"
 
     },
 

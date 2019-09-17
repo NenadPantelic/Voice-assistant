@@ -25,5 +25,31 @@
          "izbor":0.3,
          "američki":0.3
       }
+   },
+   {
+      "command_id":"f18e2c7d-5b28-4109-8bd2-7f25a233024f",
+      "words":{
+         "kakvo": 0.25,
+         "će": 0.15,
+         "biti": 0.15,
+         "je": 0.15,
+         "vreme":0.4,
+         "vremenska":0.4,
+         "prognoza":0.4,
+         "temperatura":0.3,
+         "vlažnost":0.3,
+         "pritisak":0.3,
+         "vetar":0.3,
+         "oblačnost":0.3,
+         "vlažnost":0.15,
+         "vazduh":0.15,
+         "kiša":0.3,
+         "mestu": 0.15,
+         "mesto": 0.15,
+         "lokaciji": 0.15,
+         "lokacija": 0.1,
+         "grad": 0.15,
+         "gradu": 0.15
+      }
    }
 ]

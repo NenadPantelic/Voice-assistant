@@ -84,3 +84,32 @@ EXCEPTION_MESSAGES = {
         "sr": "Дошло је до неке грешке. Оригинална порука грешке на енглеском је: "
     }
 }
+
+# credentials
+
+OWM_API_KEY = "5ab8013f8b3c54d28b8f8035ffd40f0a"
+
+# weather params
+# NOTE: only some of params are included (most important ones)
+WEATHER_PARAMS = {'clouds', 'detailed_status', 'dewpoint', 'heat_index', 'humidex', 'humidity', 'pressure', 'rain', \
+                  'reference_time', 'snow', 'status', 'sunrise_time', 'sunset_time', 'temperature',
+                  'visibility_distance', \
+                  'weather_code', 'weather_icon_name', 'weather_icon_url', 'wind'}
+
+# format <name in json response>: (json_subvalue or alias, child/alias, display name)
+#hr stands for croatian language beacuse OWM API doesn't support serbian, so instead of serbian (sr),
+# croatian language is used (hr)
+
+WEATHER_PARAMETERS = {
+    "clouds": ("clouds", "alias", {"en": "clouds", "hr": "oblačnost"}),
+    "pressure": ("press", "child", {"en": "pressure", "hr": "pritisak"}),
+    "wind": ("speed", "child", {"en": "wind speed", "hr": "brzina vetra"}),
+    # "snow":("snow", "child", ),
+    "humidity": ("humidity", "alias", {"en": "humidity", "hr": "vlažnost vazduha"}),
+    "temperature_min": ("temp_min", "child", {"en": "minimum temperature", "hr": "minimalna dnevna temperatura"}),
+    "temperature_max": ("temp_max", "child", {"en": "maximum temperature", "hr": "maksimalna dnevna temperatura"}),
+    "temperature": ("temp", "child", {"en": "temperature", "hr": "prosečna dnevna temperatura"}),
+    "detailed_status": ("detailed_status", "alias", {"en": "detailed status", "hr": "detaljniji opis"})
+    # "rain":{}
+
+}

@@ -2,7 +2,7 @@ import logging
 import string
 
 from config.constants import ENGLISH_DICTIONARY_PATH, SERBIAN_DICTIONARY_PATH, ENGLISH_KEYWORDS
-from utils.utils import load_words_dictionaries, flatten_dictionary_values, load_json_data
+from utils.utils import load_words_dictionaries, flatten_lists, load_json_data
 
 languageWordFiles = dict(en=ENGLISH_DICTIONARY_PATH, sr=SERBIAN_DICTIONARY_PATH)
 keywordsFiles = dict(en=ENGLISH_KEYWORDS)
@@ -21,7 +21,7 @@ class TextProcessor:
 
     def set_language(self, language):
         try:
-            self.__target_words = flatten_dictionary_values(wordDictionaryMapping["en"].values())
+            self.__target_words = flatten_lists(wordDictionaryMapping[language].values())
             self.__language = language
         except KeyError:
             logging.debug("Language is not supported. Use English or Serbian.")

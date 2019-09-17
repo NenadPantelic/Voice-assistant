@@ -1,11 +1,6 @@
-#from exceptions import exception_handler
 from exceptions.exception_handler import ExceptionHandler
 import services.websearch.wikipedia_service as ws
-servicePool = {
-
-    "wikipedia": ws.WikipediaService(language=None)
-
-}
+import services.webapi.owm_service as owm
 
 
 # TODO: add json structure checking
@@ -34,9 +29,10 @@ class Controller:
         self.language = lang_code
         self.recognizer.set_language(lang_code)
         self.speaker.set_language(lang_code)
-        for service in servicePool.values():
+        for service in self.service_pool.values():
             service.set_language(lang_code)
         self.command_resolver.set_language(lang_code)
+        self.command_resolver.set_processor_language(lang_code)
 
     def initialize(self):
         self.speaker.save_speech_and_play(self.execute(None))
@@ -82,10 +78,10 @@ class Controller:
 
     def listen_and_execute(self, init=False):
         text_result = self.recognizer.recognize_from_microphone()
-        output = None
         # tts exception
         if text_result is None or text_result.get_result() is None:
             output = self.get_output_speech(text_result, '')
         else:
             output = self.execute(text_result.get_result())
+        #TODO:check gTTS Google text-to-speech API limit
         self.speaker.save_speech_and_play(output)

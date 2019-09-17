@@ -47,12 +47,14 @@ keywords = {lang: load_json_data(keywordsFiles[lang]) for lang in keywordsFiles}
 sp = TextProcessor()
 from services.command_resolver import CommandResolver
 from services.websearch import wikipedia_service
+from services.webapi.owm_service import WeatherForecastService
 
 # from services.websearch import * #import WikipediaService
 
 servicePool = {
 
-    "wikipedia": wikipedia_service.WikipediaService("en")
+    "wikipedia": wikipedia_service.WikipediaService("en"),
+    "owm": WeatherForecastService("en")
 
 }
 commands = load_json_data(ENGLISH_COMMANDS)

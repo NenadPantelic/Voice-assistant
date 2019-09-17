@@ -26,6 +26,9 @@ class CommandResolver:
         keywords = load_json_data(LANG_KEYWORDS[language])
         self.set_keywords(keywords)
 
+    def set_processor_language(self, language):
+        self.__text_processor.set_language(language)
+
     def set_keywords(self, keywords):
         self.__keywords = convert_json_array_to_dict(keywords)
 

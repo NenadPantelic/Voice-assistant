@@ -8,10 +8,13 @@ ffmpeg
 pocketsphinx
  google-cloud-speech (only for google cloud)
 
-
+API:
+pyowm
+wikipedia
 
 
 
  TTS:
-pyttsx3
+pyttsx3 (requires sudo apt-get update && sudo apt-get install espeak)y
+
 gTTS

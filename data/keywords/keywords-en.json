@@ -28,5 +28,31 @@
          "usa":0.3,
          "american":0.3
       }
+   },
+      {
+      "command_id":"f18e2c7d-5b28-4109-8bd2-7f25a233024f",
+      "words":{
+         "how": 0.2,
+         "what": 0.2,
+         "what's": 0.2,
+         "whats": 0.2,
+         "is": 0.1,
+         "will": 0.1,
+         "be": 0.1,
+         "weather":0.4,
+         "forecast":0.4,
+         "temperature":0.3,
+         "humidity":0.3,
+         "pressure":0.3,
+         "wind":0.3,
+         "clouds":0.3,
+         "snow":0.3,
+         "rain":0.3,
+         "in": 0.1,
+         "location": 0.2,
+         "place": 0.2,
+         "city": 0.2
+      }
    }
+
 ]
