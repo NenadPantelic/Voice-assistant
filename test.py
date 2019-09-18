@@ -54,3 +54,15 @@ print(translator.detect_language_from_text("Ja sam Marko Marković").get_result(
 #print(translator.translate_text_with_auto_detection(text, "german"))
 #print(translator.translate_text_with_auto_detection(text, "german"))
 #print(translator.translate_text_with_auto_detection(text, "italian"))
+
+
+import googletrans
+
+langs = googletrans.LANGCODES.keys()
+sr_langs = {}
+for lang in langs:
+    sr_langs[translator.translate(text=lang, src_lang="en", dest_lang="sr").text.lower()] = lang
+
+import json
+with open('data/langs_in_serbian.json', 'w', encoding='utf8') as f:
+    json.dump(sr_langs, f, ensure_ascii = False)

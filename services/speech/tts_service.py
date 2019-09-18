@@ -1,7 +1,8 @@
 from config.constants import *
-from gtts import gTTS
+from gtts import gTTS, gTTSError
 from playsound import playsound
 
+from services.action_result import ActionResult
 from utils.utils import load_json_data, get_current_timestamp
 
 
@@ -21,8 +22,12 @@ class Speaker:
         if fileName != DEFAULT_AUDIO_FILE:
             fileName = PATH_TO_AUDIO_DIR + fileName
         self.tts.text = text
-        self.tts.save(fileName)
-        self.play_audio(fileName)
+        try:
+            self.tts.save(fileName)
+            self.play_audio(fileName)
+        except gTTSError as e:
+            return ActionResult(e, TEXT_TO_SPEECH_EXCEPTION)
+
 
     def save_speech_and_play(self, text=None):
         self.speak(text, str(get_current_timestamp()) + ".mp3")

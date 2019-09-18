@@ -5,6 +5,8 @@ PROVIDED_LANGUAGES = {
     "default": "en-US"
 
 }
+
+LANGUAGES_IN_SERBIAN = "data/langs_in_serbian.json"
 RECOGNITION_METHODS = {
 
     "bing": "recognize_bing",
@@ -40,6 +42,8 @@ DEFAULT_EXCEPTION = 100
 # speech recognition - 2xx
 UNKNOWN_SPEECH_VALUE_EXCEPTION = 201
 REQUEST_SPEECH_EXCEPTION = 202
+
+TEXT_TO_SPEECH_EXCEPTION = 301
 
 # tts audio config
 
@@ -82,6 +86,11 @@ EXCEPTION_MESSAGES = {
     DEFAULT_EXCEPTION: {
         "en": "",
         "sr": "Дошло је до неке грешке. Оригинална порука грешке на енглеском је: "
+    },
+    TEXT_TO_SPEECH_EXCEPTION: {
+        "en": "",
+        "sr": "Дошло је до неке грешке. Оригинална порука грешке на енглеском је: "
+
     }
 }
 
@@ -89,7 +98,6 @@ EXCEPTION_MESSAGES = {
 
 OWM_API_KEY = "5ab8013f8b3c54d28b8f8035ffd40f0a"
 OMDB_API_KEY = '56674ea0'
-
 
 # weather params
 # NOTE: only some of params are included (most important ones)
@@ -99,7 +107,7 @@ WEATHER_PARAMS = {'clouds', 'detailed_status', 'dewpoint', 'heat_index', 'humide
                   'weather_code', 'weather_icon_name', 'weather_icon_url', 'wind'}
 
 # format <name in json response>: (json_subvalue or alias, child/alias, display name)
-#hr stands for croatian language beacuse OWM API doesn't support serbian, so instead of serbian (sr),
+# hr stands for croatian language beacuse OWM API doesn't support serbian, so instead of serbian (sr),
 # croatian language is used (hr)
 
 WEATHER_PARAMETERS = {
