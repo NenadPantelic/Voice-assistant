@@ -162,8 +162,8 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"Result of translation: ",
-         "sr":"Rezultat prevoda: "
+         "en":"",
+         "sr":""
       },
       "descriptions":{
          "en":"Translates original speech text.",

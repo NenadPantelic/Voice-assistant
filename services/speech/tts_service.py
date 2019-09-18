@@ -30,7 +30,13 @@ class Speaker:
 
 
     def save_speech_and_play(self, text=None):
+        #backup_language = None
+        #if language not in ("en", None):
+        #    backup_language = self.get_language()
+        #    self.set_language(language)
         self.speak(text, str(get_current_timestamp()) + ".mp3")
+        #if(backup_language is not None):
+        #    self.set_language(backup_language)
 
     def play_audio(self, fileName):
         playsound(fileName)

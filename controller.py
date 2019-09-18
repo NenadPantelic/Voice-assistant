@@ -3,6 +3,8 @@ import services.websearch.wikipedia_service as ws
 import services.webapi.owm_service as owm
 
 from utils.utils import convert_or_return_text
+
+
 # TODO: add json structure checking
 # TODO:check if this can be refactored
 def get_language_code(str_list):
@@ -24,7 +26,7 @@ class Controller:
         self.language = "en"
 
     def set_language(self, language_list):
-        #assert isinstance(language_list, list)
+        # assert isinstance(language_list, list)
         lang_code = get_language_code(language_list)
         self.language = lang_code
         self.recognizer.set_language(lang_code)
@@ -33,6 +35,12 @@ class Controller:
             service.set_language(lang_code)
         self.command_resolver.set_language(lang_code)
         self.command_resolver.set_processor_language(lang_code)
+
+    def set_speaking_language(self, language):
+        self.speaker.set_language(language)
+
+    def reset_speaking_language_(self):
+        self.speaker.set_language(self.language)
 
     def initialize(self):
         self.speaker.save_speech_and_play(self.execute(None))
@@ -58,6 +66,7 @@ class Controller:
     def execute(self, text):
         command = self.command_resolver.get_command(text)
         command_result = None
+        speaking_language = None
         service = self.service_pool.get(command["service"], None)
         method = command["method"]
         # service is none for setup commands
@@ -74,6 +83,12 @@ class Controller:
         else:
             command_result = None
         message = command["messages"][self.language]
+
+        if command_result is not None:
+            speaking_language = command_result.get_language()
+
+        if speaking_language not in (None, self.language):
+            self.set_speaking_language(speaking_language)
         return self.get_output_speech(command_result, message)
 
     def listen_and_execute(self, init=False):
@@ -82,11 +97,13 @@ class Controller:
         if text_result is None or text_result.get_result() is None:
             output = self.get_output_speech(text_result, '')
         else:
-            print(text_result.get_result())
-            #text = convert_or_return_text(text_result.get_result(), self.language)
-            #print(text)
-            #text_result.set_result(text)
+            # text = convert_or_return_text(text_result.get_result(), self.language)
+            # print(text)
+            # text_result.set_result(text)
             output = self.execute(text_result.get_result())
-            print(output)
+        #self.speaker.save_speech_and_play(output[0])
+        print(output)
+
         #TODO:check gTTS Google text-to-speech API limit
         self.speaker.save_speech_and_play(output)
+        self.reset_speaking_language_()

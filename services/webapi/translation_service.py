@@ -36,7 +36,7 @@ class TranslationService:
         src_language = self.detect_language(text).lang
         dest_language = self.get_appropriate_lang_code(dest_language)
         #TODO: handle speaking in destination language, not language set in controller
-        return ActionResult(self.translate(text, src_lang=src_language, dest_lang=dest_language).text, OK)
+        return ActionResult(self.translate(text, src_lang=src_language, dest_lang=dest_language).text, OK, language=dest_language)
 
 
     #low level service methods
