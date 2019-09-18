@@ -1,92 +1,173 @@
 [
-
-  {
-    "command_id":"536007cb-67ff-492c-8c65-01995ef195c9",
-    "service": null,
-    "method": null,
-    "has_args": false,
-    "process_input_text": false,
-    "system_command": null,
-    "setup_command": true,
-    "previous_command_id": null,
-    "next_command_id": "6dae42df-6029-4e47-8e5a-c435341e1108",
-    "default_arg": null,
-    "messages": {
-        "en": "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!",
-        "sr": "Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
-    },
-
-    "descriptions": {
-        "en": "Set operating language of voice assistant.",
-        "sr": "Поставља оперативни језик гласовног асистента."
-    }
-  },
- {
-    "command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
-    "service": null,
-    "method": "set_language",
-    "has_args": true,
-    "process_input_text": false,
-    "system_command": null,
-    "setup_command": true,
-    "previous_command_id": null,
-    "next_command_id": null,
-    "default_arg": null,
-    "messages": {
-        "en": "Language is set successfully.",
-        "sr": "Jезик је успешно постављен."
-    },
-
-    "descriptions": {
-        "en": "Set operating language of voice assistant.",
-        "sr": "Поставља оперативни језик гласовног асистента."
-    }
-  },
-  {
-    "command_id":"0498476b-f599-488c-8c98-a314c64d77f2",
-    "service": "wikipedia",
-    "method": "brief_search",
-    "has_args": true,
-    "process_input_text": true,
-    "system_command": null,
-    "setup_command": false,
-    "previous_command_id": null,
-    "next_command_id": null,
-    "default_arg": null,
-    "messages": {
-        "en": "By Wikipedia: ",
-        "sr": "Према Википедији: "
-
-    },
-
-    "descriptions": {
-        "en": "Brief Wikipedia search. Returns summary of wikipedia page.",
-        "sr": "Кратак резиме са стране добијене са Википедије"
-    }
-  },
-  {
-    "command_id":"f18e2c7d-5b28-4109-8bd2-7f25a233024f",
-    "service": "owm",
-    "method": "get_forecast_result",
-    "has_args": true,
-    "process_input_text": true,
-    "system_command": null,
-    "setup_command": false,
-    "previous_command_id": null,
-    "next_command_id": null,
-    "default_arg": "celsius",
-    "messages": {
-        "en": "Weather forecast results:\n",
-        "sr": "Stanje vremenske prognoze: \n"
-
-    },
-
-    "descriptions": {
-        "en": "Brief Wikipedia search. Returns summary of wikipedia page.",
-        "sr": "Кратак резиме са стране добијене са Википедије"
-    }
-  }
-
+   {
+      "command_id":"536007cb-67ff-492c-8c65-01995ef195c9",
+      "service":null,
+      "method":null,
+      "has_args":false,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":true,
+      "previous_command_id":null,
+      "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
+      "messages":{
+         "en":"Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!",
+         "sr":"Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
+      },
+      "descriptions":{
+         "en":"Set operating language of voice assistant.",
+         "sr":"Поставља оперативни језик гласовног асистента."
+      }
+   },
+   {
+      "command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
+      "service":null,
+      "method":"set_language",
+      "has_args":true,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":true,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"Language is set successfully.",
+         "sr":"Jезик је успешно постављен."
+      },
+      "descriptions":{
+         "en":"Set operating language of voice assistant.",
+         "sr":"Поставља оперативни језик гласовног асистента."
+      }
+   },
+   {
+      "command_id":"0498476b-f599-488c-8c98-a314c64d77f2",
+      "service":"wikipedia",
+      "method":"brief_search",
+      "has_args":true,
+      "process_input_text":true,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"By Wikipedia: ",
+         "sr":"Према Википедији: "
+      },
+      "descriptions":{
+         "en":"Brief Wikipedia search. Returns summary of wikipedia page.",
+         "sr":"Кратак резиме са стране добијене са Википедије"
+      }
+   },
+   {
+      "command_id":"f18e2c7d-5b28-4109-8bd2-7f25a233024f",
+      "service":"owm",
+      "method":"get_forecast_result",
+      "has_args":true,
+      "process_input_text":true,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"Weather forecast results:\n",
+         "sr":"Stanje vremenske prognoze: \n"
+      },
+      "descriptions":{
+         "en":"Brief Wikipedia search. Returns summary of wikipedia page.",
+         "sr":"Кратак резиме са стране добијене са Википедије"
+      }
+   },
+   {
+      "command_id":"b928af78-93d3-444e-a5d2-28e316a3b027",
+      "service":null,
+      "method":null,
+      "has_args":true,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"ac451574-91c3-49b3-95d7-13796007504d",
+      "messages":{
+         "en":"Say text for detection.",
+         "sr":"Koji tekst želiš da analiziram?"
+      },
+      "descriptions":{
+         "en":"Detect language from speech.",
+         "sr":"Detektuje jezik iz govora."
+      }
+   },
+   {
+      "command_id":"ac451574-91c3-49b3-95d7-13796007504d",
+      "service":"translation",
+      "method":"detect_language_from_text",
+      "has_args":true,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"I think this is the ",
+         "sr":"Mislim da je u pitanju "
+      },
+      "descriptions":{
+         "en":"Returns language with the highest detection confidence.",
+         "sr":"Враћа језик са највећом вероватноћом."
+      }
+   },
+   {
+      "command_id":"a35a5bce-f117-4993-9fb4-312fb27ee2c2",
+      "service":null,
+      "method":null,
+      "has_args":true,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"5708d0b1-f1d6-4852-930d-8d950f980de1",
+      "messages":{
+         "en":"Say text for translation.",
+         "sr":"Koji tekst želiš da prevedem?"
+      },
+      "descriptions":{
+         "en":"Initialize speech translation.",
+         "sr":"Inicijalizuje prevod govora."
+      }
+   },
+   {
+      "command_id":"5708d0b1-f1d6-4852-930d-8d950f980de1",
+      "service":"translation",
+      "method":"set_buffered_text",
+      "has_args":true,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"e57f3a23-2950-4d1a-88d7-05c6ec072d60",
+      "messages":{
+         "en":"What's the target language?",
+         "sr":"Na koji jezik želiš da prevedem ovo?"
+      },
+      "descriptions":{
+         "en":"Sets text for translation.",
+         "sr":"Postavlja tekst za prevod."
+      }
+   },
+   {
+      "command_id":"e57f3a23-2950-4d1a-88d7-05c6ec072d60",
+      "service":"translation",
+      "method":"translate_text_with_auto_detection",
+      "has_args":true,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"Result of translation: ",
+         "sr":"Rezultat prevoda: "
+      },
+      "descriptions":{
+         "en":"Translates original speech text.",
+         "sr":"Prevodi tekst iz govora na željeni jezik."
+      }
+   }
 ]
-
-

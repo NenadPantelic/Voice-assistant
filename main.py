@@ -48,13 +48,15 @@ sp = TextProcessor()
 from services.command_resolver import CommandResolver
 from services.websearch import wikipedia_service
 from services.webapi.owm_service import WeatherForecastService
+from services.webapi.translation_service import  TranslationService
 
 # from services.websearch import * #import WikipediaService
 
 servicePool = {
 
     "wikipedia": wikipedia_service.WikipediaService("en"),
-    "owm": WeatherForecastService("en")
+    "owm": WeatherForecastService("en"),
+    "translation": TranslationService()
 
 }
 commands = load_json_data(ENGLISH_COMMANDS)
@@ -70,3 +72,6 @@ controller = Controller(srec, speaker, sr, service_pool=servicePool)
 print(controller.initialize())
 controller.listen_and_execute()
 controller.listen_and_execute()
+controller.listen_and_execute()
+controller.listen_and_execute()
+

@@ -24,7 +24,7 @@ class Controller:
         self.language = "en"
 
     def set_language(self, language_list):
-        assert isinstance(language_list, list)
+        #assert isinstance(language_list, list)
         lang_code = get_language_code(language_list)
         self.language = lang_code
         self.recognizer.set_language(lang_code)
@@ -44,6 +44,7 @@ class Controller:
         # TODO:add check if output_message and exception_message are nonempty
         exception_message = None
         output_message = ""
+        print(command_result)
         if command_result is not None:
             output_message = "" if command_result.get_result() is None else command_result.get_result()
             exception_message = ExceptionHandler.check_exception_existence(command_result.get_status(), self.language)
@@ -69,6 +70,7 @@ class Controller:
             executor = getattr(service, method)
             if command["has_args"]:
                 command_result = executor(command["arg"])
+                print(command["arg"])
             else:
                 command_result = executor()
         else:
@@ -79,6 +81,7 @@ class Controller:
     def listen_and_execute(self, init=False):
         text_result = self.recognizer.recognize_from_microphone()
         # tts exception
+        print(text_result.get_result())
         if text_result is None or text_result.get_result() is None:
             output = self.get_output_speech(text_result, '')
         else:

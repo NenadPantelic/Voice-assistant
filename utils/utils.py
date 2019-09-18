@@ -23,6 +23,7 @@ def load_words_dictionaries(language_word_files):
             language_words[language] = json.load(f)
     return language_words
 
+
 def load_json_data(jsonFilePath):
     with open(jsonFilePath) as f:
         data = json.load(f)
@@ -34,3 +35,7 @@ def flatten_lists(jagged_array):
     for element in jagged_array:
         flattened_list.extend(element)
     return flattened_list
+
+
+def convert_list_to_str(list_to_convert):
+    return ' '.join(list_to_convert)

@@ -52,8 +52,9 @@ class CommandResolver:
 
         self.determine_command(init, word_list)
         target_command = self.__command
+
         if target_command["has_args"]:
-            arg = word_list
+            arg = ' '.join(word_list)
             if target_command["process_input_text"]:
                 arg = self.__text_processor.filter_out_keywords(word_list, self.__keywords[self.__command["command_id"]][
                     "words"].keys())
@@ -63,6 +64,7 @@ class CommandResolver:
     def determine_command(self, init=False, wordList=[]):
         if init:
             self.__command = self.get_default_command()
+
         elif self.__next_command_id is None:
             score_map = self.calculate_command_scores(wordList)
             max_score = max(score_map.values())

@@ -11,7 +11,8 @@ pocketsphinx
 API:
 pyowm
 wikipedia
-
+omdb
+googletrans
 
 
  TTS:

@@ -88,6 +88,8 @@ EXCEPTION_MESSAGES = {
 # credentials
 
 OWM_API_KEY = "5ab8013f8b3c54d28b8f8035ffd40f0a"
+OMDB_API_KEY = '56674ea0'
+
 
 # weather params
 # NOTE: only some of params are included (most important ones)
