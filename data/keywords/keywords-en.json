@@ -64,7 +64,7 @@
          "text":0.25
       }
    },
-      {
+   {
       "command_id":"a35a5bce-f117-4993-9fb4-312fb27ee2c2",
       "words":{
          "translate":0.4,
@@ -72,10 +72,9 @@
          "language":0.2,
          "translator":0.2,
          "text":0.25,
-         "some": 0.1
+         "some":0.1
       }
    },
-
    {
       "command_id":"5708d0b1-f1d6-4852-930d-8d950f980de1",
       "words":{
@@ -85,12 +84,21 @@
          "translation":0.2
       }
    },
-
    {
       "command_id":"e57f3a23-2950-4d1a-88d7-05c6ec072d60",
       "words":{
          "target":0.4,
          "language":0.3
+      }
+   },
+   {
+      "command_id":"a9e87967-3e58-4297-b2fe-f5bf1c1ce5da",
+      "words":{
+         "send":0.4,
+         "mail":0.4,
+         "email":0.4,
+         "message":0.25,
+         "want":0.1
       }
    }
 ]

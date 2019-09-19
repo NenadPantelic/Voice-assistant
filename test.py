@@ -47,7 +47,7 @@ text = 'Kuullut jos jostain ole konsuli alkanut pistaen vai. Harva iso kai hanna
 #print(translator.convert_language_to_lang_code(None))
 
 text = "Моja кућа је далеко где ме стара мајка чека"
-print(translator.detect_language_from_text("Ja sam Marko Marković").get_result())
+#print(translator.detect_language_from_text("Ja sam Marko Marković").get_result())
 #print(translator.detect_language_from_text(text))
 
 #print(translator.translate_text_(text, "german"))
@@ -67,7 +67,17 @@ import json
 with open('data/langs_in_serbian.json', 'w', encoding='utf8') as f:
     json.dump(sr_langs, f, ensure_ascii = False)
     
-'''
+
 import json
 with open('data/langs_codes.json', 'w', encoding='utf8') as f:
     json.dump(googletrans.LANGCODES, f, ensure_ascii = False)
+
+'''
+
+from services.webapi.mail_service import MailService
+
+ms = MailService()
+ms.set_content("Hello bro again")
+ms.set_receiver("564.2015@fink.rs")
+ms.set_subject("Lindo greeting")
+print(ms.send_mail_with_default_params())

@@ -97,5 +97,15 @@
          "jezik":0.4,
          "ciljni":0.4
       }
+   },
+   {
+      "command_id":"a9e87967-3e58-4297-b2fe-f5bf1c1ce5da",
+      "words":{
+         "pošalji":0.4,
+         "mail":0.4,
+         "email":0.4,
+         "poruku":0.25,
+         "želim":0.1
+      }
    }
 ]

@@ -1,10 +1,11 @@
 from exceptions.exception_handler import ExceptionHandler
 import services.websearch.wikipedia_service as ws
 import services.webapi.owm_service as owm
-from config.constants import LANG_CODES
-from utils.utils import convert_or_return_text, load_json_data
+from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN
+from utils.utils import convert_or_return_text, load_json_data, convert_latinic_to_cyrilic
 
 LANGUAGES = load_json_data(LANG_CODES)
+SR_LANGUAGES = load_json_data(LANGUAGES_IN_SERBIAN)
 
 # TODO: add json structure checking
 # TODO:check if this can be refactored
@@ -35,12 +36,15 @@ class Controller:
         self.recognizer.set_language(lang_code)
         self.speaker.set_language(lang_code)
         for service in self.service_pool.values():
-            service.set_language(lang_code)
+            if hasattr(service, "set_language"):
+                service.set_language(lang_code)
         self.command_resolver.set_language(lang_code)
         self.command_resolver.set_processor_language(lang_code)
 
     def set_translation_language(self, language):
         assert(isinstance(language, str))
+        if self.language == "sr":
+            language = SR_LANGUAGES.get(convert_latinic_to_cyrilic(language), "english")
         language = LANGUAGES.get(language, "en")
         print("DEBUUUUG " + language)
         self.recognizer.set_language(language)
@@ -122,8 +126,9 @@ class Controller:
         self.reset_speaking_language_()
         #self.reset_recognizer_language()
 
-    def listen_and_execute(self, init=False):
+    def listen_and_execute(self):
         text_result = self.recognizer.recognize_from_microphone()
+        self.reset_recognizer_language()
         # tts exception
 
         if text_result is None or text_result.get_result() is None:

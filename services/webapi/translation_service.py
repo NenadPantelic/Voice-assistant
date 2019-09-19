@@ -68,12 +68,12 @@ class TranslationService:
 
     # TODO:think about conversion to cyrillic when using serbian
     def get_appropriate_lang_code(self, language):
+        print("DEBUGISKA " + language)
         if self.__language == 'sr':
             language = convert_latinic_to_cyrilic(language)
             language = self.__langs_in_serbian.get(language, "en")
         if language not in googletrans.LANGUAGES:
             language = self.convert_language_to_lang_code(language)
-        print(language)
         return language
 
 

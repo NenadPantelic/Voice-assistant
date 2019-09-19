@@ -38,7 +38,6 @@ class SpeechRecognizer:
         result = None
         try:
             speech = self.__recognition_method(audio, language=self.__language)
-            print("METHOD " + self.__language)
             result = ActionResult(speech, OK)
 
         except sr.UnknownValueError as e:

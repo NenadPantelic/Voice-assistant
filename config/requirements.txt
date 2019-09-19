@@ -13,7 +13,7 @@ pyowm
 wikipedia
 omdb
 googletrans
-
+gmail
 
  TTS:
 pyttsx3 (requires sudo apt-get update && sudo apt-get install espeak)y

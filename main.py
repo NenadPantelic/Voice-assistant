@@ -3,7 +3,7 @@ import json
 from services.speech.text_processor_service import TextProcessor
 from services.speech.tts_service import *
 from services.speech.stt_service import *
-#efrom config.constants import *
+# efrom config.constants import *
 from controller import Controller
 import config.constants
 
@@ -48,7 +48,8 @@ sp = TextProcessor()
 from services.command_resolver import CommandResolver
 from services.websearch import wikipedia_service
 from services.webapi.owm_service import WeatherForecastService
-from services.webapi.translation_service import  TranslationService
+from services.webapi.translation_service import TranslationService
+from services.webapi.mail_service import MailService
 
 # from services.websearch import * #import WikipediaService
 
@@ -56,7 +57,8 @@ servicePool = {
 
     "wikipedia": wikipedia_service.WikipediaService("en"),
     "owm": WeatherForecastService("en"),
-    "translation": TranslationService()
+    "translation": TranslationService(),
+    "mail": MailService()
 
 }
 commands = load_json_data(ENGLISH_COMMANDS)
@@ -75,5 +77,4 @@ controller.listen_and_execute()
 controller.listen_and_execute()
 controller.listen_and_execute()
 controller.listen_and_execute()
-
-
+controller.listen_and_execute()

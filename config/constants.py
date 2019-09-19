@@ -100,6 +100,10 @@ EXCEPTION_MESSAGES = {
 OWM_API_KEY = "5ab8013f8b3c54d28b8f8035ffd40f0a"
 OMDB_API_KEY = '56674ea0'
 
+
+PROXY_MAIL = "lindo.voice.assistant@gmail.com"
+MAIL_PASSWORD = "mizcechlykbgsfhx"
+
 # weather params
 # NOTE: only some of params are included (most important ones)
 WEATHER_PARAMS = {'clouds', 'detailed_status', 'dewpoint', 'heat_index', 'humidex', 'humidity', 'pressure', 'rain', \

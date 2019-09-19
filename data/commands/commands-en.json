@@ -198,5 +198,93 @@
          "en":"Translates original speech text.",
          "sr":"Prevodi tekst iz govora na željeni jezik."
       }
+   },
+
+
+   {
+      "command_id":"a9e87967-3e58-4297-b2fe-f5bf1c1ce5da",
+      "service":null,
+      "method":null,
+      "has_args":false,
+      "arg_name":null,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
+      "messages":{
+         "en":"I'm ready for a new email. who is the recipient?",
+         "sr":"Spreman sam za novi email. Ko je primalac?"
+      },
+      "descriptions":{
+         "en":"Activates email sending mode.",
+         "sr":"Inicijalizuje slanje email-a."
+      }
+   },
+
+
+   {
+      "command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
+      "service":"mail",
+      "method":"set_receiver",
+      "has_args":true,
+      "arg_name":"receiver",
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
+      "messages":{
+         "en":"What about the subject?",
+         "sr":"Koja je tema poruke?"
+      },
+      "descriptions":{
+         "en":"Sets the receiver.",
+         "sr":"Postavlja primaoca."
+      }
+   },
+
+   {
+      "command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
+      "service":"mail",
+      "method":"set_content",
+      "has_args":true,
+      "arg_name":"content",
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"9a14587e-77bf-43a4-a1e4-9be18abb959d",
+      "messages":{
+         "en":"Finally, what is your message.",
+         "sr":"Na kraju, izdiktiraj mi poruku."
+      },
+      "descriptions":{
+         "en":"Accept the message of an email.",
+         "sr":"Unos poruke emaila."
+      }
+   },
+
+
+    {
+      "command_id":"9a14587e-77bf-43a4-a1e4-9be18abb959d",
+      "service":"mail",
+      "method":"send_email_with_default_params",
+      "has_args":false,
+      "arg_name":null,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"Email sending is active.",
+         "sr":"Šaljem email."
+      },
+      "descriptions":{
+         "en":"Sents an email.",
+         "sr":"Šalje email."
+      }
    }
+
 ]
