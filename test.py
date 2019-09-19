@@ -43,17 +43,17 @@ text = 'Kuullut jos jostain ole konsuli alkanut pistaen vai. Harva iso kai hanna
 #lang = translator.detect_language(text)
 #print(lang)
 #print(translator.translate(text, src_lang=lang.lang))
-#print(translator.translate_text_with_auto_detection(text, "french"))
+#print(translator.translate_text_(text, "french"))
 #print(translator.convert_language_to_lang_code(None))
 
 text = "Моja кућа је далеко где ме стара мајка чека"
 print(translator.detect_language_from_text("Ja sam Marko Marković").get_result())
 #print(translator.detect_language_from_text(text))
 
-#print(translator.translate_text_with_auto_detection(text, "german"))
-#print(translator.translate_text_with_auto_detection(text, "german"))
-#print(translator.translate_text_with_auto_detection(text, "german"))
-#print(translator.translate_text_with_auto_detection(text, "italian"))
+#print(translator.translate_text_(text, "german"))
+#print(translator.translate_text_(text, "german"))
+#print(translator.translate_text_(text, "german"))
+#print(translator.translate_text_(text, "italian"))
 
 
 import googletrans

@@ -29,14 +29,10 @@ class Speaker:
             return ActionResult(e, TEXT_TO_SPEECH_EXCEPTION)
 
 
-    def save_speech_and_play(self, text=None):
-        #backup_language = None
-        #if language not in ("en", None):
-        #    backup_language = self.get_language()
-        #    self.set_language(language)
-        self.speak(text, str(get_current_timestamp()) + ".mp3")
-        #if(backup_language is not None):
-        #    self.set_language(backup_language)
+    def save_speech_and_play(self, text=''):
+        if(text != '' ):
+            self.speak(text, str(get_current_timestamp()) + ".mp3")
+
 
     def play_audio(self, fileName):
         playsound(fileName)

@@ -24,11 +24,13 @@ class Controller:
         self.command_resolver = commandResolver
         self.service_pool = service_pool
         self.language = "en"
+        self.speaking_language = "en"
 
     def set_language(self, language_list):
         # assert isinstance(language_list, list)
         lang_code = get_language_code(language_list)
         self.language = lang_code
+        self.speaking_language = lang_code
         self.recognizer.set_language(lang_code)
         self.speaker.set_language(lang_code)
         for service in self.service_pool.values():
@@ -37,13 +39,16 @@ class Controller:
         self.command_resolver.set_processor_language(lang_code)
 
     def set_speaking_language(self, language):
-        self.speaker.set_language(language)
+        if language not in (None, self.language):
+            self.speaker.set_language(language)
+        # self.speaker.set_language(language)
 
     def reset_speaking_language_(self):
         self.speaker.set_language(self.language)
 
     def initialize(self):
-        self.speaker.save_speech_and_play(self.execute(None))
+        message_prefix, command_output_message = self.execute(None)
+        self.speaker.save_speech_and_play(message_prefix + command_output_message)
 
     def listen(self, init=False):
         return self.recognizer.recognize_from_microphone()
@@ -60,7 +65,8 @@ class Controller:
     def get_output_speech(self, command_result, message):
         output_message, exception_message = self.get_command_output_text(command_result)
         message_prefix = message if exception_message is None else exception_message
-        return message_prefix + output_message
+        # message_prefix = self.get_message_prefix(message, exception_message)
+        return (message_prefix, output_message)
 
     # this method should be called only once per voice control request
     def execute(self, text):
@@ -85,25 +91,30 @@ class Controller:
         message = command["messages"][self.language]
 
         if command_result is not None:
-            speaking_language = command_result.get_language()
+            speaking_language = command_result.get_language() if command_result.get_language() is not None \
+                else self.language
+        self.speaking_language = speaking_language
 
-        if speaking_language not in (None, self.language):
-            self.set_speaking_language(speaking_language)
+        # return self.get_output_speech(command_result, message)
         return self.get_output_speech(command_result, message)
 
     def listen_and_execute(self, init=False):
         text_result = self.recognizer.recognize_from_microphone()
         # tts exception
+
         if text_result is None or text_result.get_result() is None:
             output = self.get_output_speech(text_result, '')
+            # speaking_language = self.language
         else:
             # text = convert_or_return_text(text_result.get_result(), self.language)
             # print(text)
             # text_result.set_result(text)
             output = self.execute(text_result.get_result())
-        #self.speaker.save_speech_and_play(output[0])
-        print(output)
 
-        #TODO:check gTTS Google text-to-speech API limit
-        self.speaker.save_speech_and_play(output)
+        if (output[0] != ''): self.speaker.save_speech_and_play(output[0])
+        print(self.speaking_language)
+        self.set_speaking_language(self.speaking_language)
+
+        # TODO:check gTTS Google text-to-speech API limit
+        if (output[1] != ''): self.speaker.save_speech_and_play(output[1])
         self.reset_speaking_language_()

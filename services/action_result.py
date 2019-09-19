@@ -1,5 +1,5 @@
 class ActionResult:
-    def __init__(self, result, status, language="en"):
+    def __init__(self, result, status, language=None):
         self.__result = result
         self.__status = status
         self.__language = language

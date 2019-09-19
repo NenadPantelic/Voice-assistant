@@ -122,10 +122,29 @@
       "system_command":null,
       "setup_command":false,
       "previous_command_id":null,
+      "next_command_id":"90f0bfbc-e3f9-4291-bb4e-28b5ddcb2f4d",
+      "messages":{
+         "en":"Ok, I can do it. What's the source language?",
+         "sr":"Mislim da mogu da ti pomognem. Koji je izvorni jezik sa kog želiš da prevedem?"
+      },
+      "descriptions":{
+         "en":"Initialize speech translation.",
+         "sr":"Inicijalizuje prevod govora."
+      }
+   },
+   {
+      "command_id":"90f0bfbc-e3f9-4291-bb4e-28b5ddcb2f4d",
+      "service":"translation",
+      "method":"set_src_language",
+      "has_args":true,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
       "next_command_id":"5708d0b1-f1d6-4852-930d-8d950f980de1",
       "messages":{
-         "en":"Say text for translation.",
-         "sr":"Koji tekst želiš da prevedem?"
+         "en":"Yes, I can handle that. Say text for translation.",
+         "sr":"Da, snaći ću se sa tim. Koji tekst želiš da prevedem?"
       },
       "descriptions":{
          "en":"Initialize speech translation.",
@@ -154,7 +173,7 @@
    {
       "command_id":"e57f3a23-2950-4d1a-88d7-05c6ec072d60",
       "service":"translation",
-      "method":"translate_text_with_auto_detection",
+      "method":"translate_text",
       "has_args":true,
       "process_input_text":false,
       "system_command":null,
@@ -162,8 +181,8 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"",
-         "sr":""
+         "en":"I think that translated speech sounds like this: ",
+         "sr":"Mislim da prevod glasi ovako: "
       },
       "descriptions":{
          "en":"Translates original speech text.",
