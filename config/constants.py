@@ -7,6 +7,7 @@ PROVIDED_LANGUAGES = {
 }
 
 LANGUAGES_IN_SERBIAN = "data/langs_in_serbian.json"
+LANG_CODES = "data/langs_codes.json"
 RECOGNITION_METHODS = {
 
     "bing": "recognize_bing",

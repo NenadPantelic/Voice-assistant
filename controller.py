@@ -1,9 +1,10 @@
 from exceptions.exception_handler import ExceptionHandler
 import services.websearch.wikipedia_service as ws
 import services.webapi.owm_service as owm
+from config.constants import LANG_CODES
+from utils.utils import convert_or_return_text, load_json_data
 
-from utils.utils import convert_or_return_text
-
+LANGUAGES = load_json_data(LANG_CODES)
 
 # TODO: add json structure checking
 # TODO:check if this can be refactored
@@ -37,6 +38,21 @@ class Controller:
             service.set_language(lang_code)
         self.command_resolver.set_language(lang_code)
         self.command_resolver.set_processor_language(lang_code)
+
+    def set_translation_language(self, language):
+        assert(isinstance(language, str))
+        language = LANGUAGES.get(language, "en")
+        print("DEBUUUUG " + language)
+        self.recognizer.set_language(language)
+        if "translation" in self.service_pool:
+            self.service_pool['translation'].set_src_language(language)
+            print("DEBUG 2 " + self.service_pool['translation'].get_src_language())
+
+        print("DEBUG 3 " + self.recognizer.get_language())
+
+    def reset_recognizer_language(self):
+        if self.recognizer.get_language() != self.language:
+            self.recognizer.set_language(self.language)
 
     def set_speaking_language(self, language):
         if language not in (None, self.language):
@@ -83,7 +99,7 @@ class Controller:
         if method is not None:
             executor = getattr(service, method)
             if command["has_args"]:
-                command_result = executor(command["arg"])
+                command_result = eval('executor(' + command["arg_name"] + "=" + "'" + str(command["arg"]) + "')")
             else:
                 command_result = executor()
         else:
@@ -95,8 +111,16 @@ class Controller:
                 else self.language
         self.speaking_language = speaking_language
 
-        # return self.get_output_speech(command_result, message)
         return self.get_output_speech(command_result, message)
+
+    # TODO:check gTTS Google text-to-speech API limit
+    def speak_out(self, message_prefix, output_message):
+        print(message_prefix, output_message)
+        self.speaker.save_speech_and_play(message_prefix)
+        self.set_speaking_language(self.speaking_language)
+        self.speaker.save_speech_and_play(output_message)
+        self.reset_speaking_language_()
+        #self.reset_recognizer_language()
 
     def listen_and_execute(self, init=False):
         text_result = self.recognizer.recognize_from_microphone()
@@ -109,12 +133,7 @@ class Controller:
             # text = convert_or_return_text(text_result.get_result(), self.language)
             # print(text)
             # text_result.set_result(text)
+            print(text_result.get_result())
+
             output = self.execute(text_result.get_result())
-
-        if (output[0] != ''): self.speaker.save_speech_and_play(output[0])
-        print(self.speaking_language)
-        self.set_speaking_language(self.speaking_language)
-
-        # TODO:check gTTS Google text-to-speech API limit
-        if (output[1] != ''): self.speaker.save_speech_and_play(output[1])
-        self.reset_speaking_language_()
+        self.speak_out(message_prefix=output[0], output_message=output[1])

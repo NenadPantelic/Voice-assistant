@@ -19,6 +19,7 @@ class SpeechRecognizer:
         self.__language = language
 
     def set_language(self, language):
+        print("LANGUAGE CHANGED")
         self.__language = language
 
     def get_language(self):
@@ -37,6 +38,7 @@ class SpeechRecognizer:
         result = None
         try:
             speech = self.__recognition_method(audio, language=self.__language)
+            print("METHOD " + self.__language)
             result = ActionResult(speech, OK)
 
         except sr.UnknownValueError as e:

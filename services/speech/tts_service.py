@@ -30,7 +30,7 @@ class Speaker:
 
 
     def save_speech_and_play(self, text=''):
-        if(text != '' ):
+        if text != '':
             self.speak(text, str(get_current_timestamp()) + ".mp3")
 
 

@@ -57,7 +57,7 @@ print(translator.detect_language_from_text("Ja sam Marko Marković").get_result(
 
 
 import googletrans
-
+'''
 langs = googletrans.LANGCODES.keys()
 sr_langs = {}
 for lang in langs:
@@ -66,3 +66,8 @@ for lang in langs:
 import json
 with open('data/langs_in_serbian.json', 'w', encoding='utf8') as f:
     json.dump(sr_langs, f, ensure_ascii = False)
+    
+'''
+import json
+with open('data/langs_codes.json', 'w', encoding='utf8') as f:
+    json.dump(googletrans.LANGCODES, f, ensure_ascii = False)
