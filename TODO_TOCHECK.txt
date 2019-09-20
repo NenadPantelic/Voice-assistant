@@ -26,3 +26,9 @@
 
 2) yt/tw/git/owm
 3)smart home control
+
+#todo
+#1 isprobaj mogucnost da vise argumenata se prosledjuje metodi iz kontrolera
+#2 razmisli o opciji uspesna/neuspesna komanda u jsonu sa komandama, tako bi kontrolisao da li se ide na sledecu komandu ili ne
+#3 assertions
+#4 exception handling

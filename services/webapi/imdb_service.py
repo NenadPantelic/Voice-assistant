@@ -20,6 +20,7 @@ class IMDBService:
         #assert(isinstance(num, int)), "Value must be integer by type."
         #if num not in range(1, 251):
         #    raise ValueError("Value must be in range 1 to 250")
+        #TODO:handle num when spoken in Serbian, it uses words, in english it uses numbers
         if(num == "jedan"): num = 1
         num = int(num)
         top_movies = self.__imdb.get_top250_movies()[:num]
@@ -101,3 +102,4 @@ class IMDBService:
 ##omdb_ser = IMDBService()
 # id = movies[0].movieID
 # print(omdb_ser.get_movie_by_id("tt" + id))
+#https://imdbpy.readthedocs.io/en/latest/usage/quickstart.html#searching

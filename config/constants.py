@@ -46,6 +46,8 @@ REQUEST_SPEECH_EXCEPTION = 202
 
 TEXT_TO_SPEECH_EXCEPTION = 301
 
+NO_GOOGLE_RESULT = 403
+
 # tts audio config
 
 PATH_TO_AUDIO_DIR = r"data/audio/"
@@ -92,6 +94,11 @@ EXCEPTION_MESSAGES = {
         "en": "",
         "sr": "Дошло је до неке грешке. Оригинална порука грешке на енглеском је: "
 
+    },
+
+    NO_GOOGLE_RESULT : {
+        "en": "Hmm, Google cannot find anything that matches your query. Are you sure you query is valid?",
+        "sr": "Nažalost, Google ne može da nađe ništa vezano za tvoj upit. Da li si siguran da je tvoj upit validan?"
     }
 }
 
@@ -128,3 +135,11 @@ WEATHER_PARAMETERS = {
     # "rain":{}
 
 }
+
+
+#social networks urls
+
+FACEBOOK_BASE_URL = "https://www.facebook.com/"
+TWITTER_BASE_URL = "https://twitter.com/"
+INSTAGRAM_BASE_URL = "https://instagram.com/"
+LINKEDIN_BASE_URL = "https://www.linkedin.com/in/"
