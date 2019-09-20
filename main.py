@@ -6,6 +6,7 @@ from services.speech.stt_service import *
 # efrom config.constants import *
 from controller import Controller
 import config.constants
+from services.webapi.imdb_service import IMDBService
 
 langs = None
 # INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!"
@@ -58,7 +59,8 @@ servicePool = {
     "wikipedia": wikipedia_service.WikipediaService("en"),
     "owm": WeatherForecastService("en"),
     "translation": TranslationService(),
-    "mail": MailService()
+    "mail": MailService(),
+    "imdb": IMDBService()
 
 }
 commands = load_json_data(ENGLISH_COMMANDS)

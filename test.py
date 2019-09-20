@@ -75,9 +75,19 @@ with open('data/langs_codes.json', 'w', encoding='utf8') as f:
 '''
 
 from services.webapi.mail_service import MailService
-
+'''
 ms = MailService()
 ms.set_content("Hello bro again")
 ms.set_receiver("564.2015@fink.rs")
 ms.set_subject("Lindo greeting")
 print(ms.send_mail_with_default_params())
+
+'''
+
+from services.webapi.imdb_service import IMDBService
+imdb = IMDBService()
+#print(imdb.get_top_movies(num=10))
+#imdb = IMDBService()
+print(imdb.get_movie_details("siege 2"))
+#imdb.get_movie_by_title("Tesna koža")
+print(imdb.get_movies_by_keywords("war"))

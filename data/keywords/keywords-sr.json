@@ -107,5 +107,29 @@
          "poruku":0.25,
          "želim":0.1
       }
+   },
+   {
+      "command_id":"43d47ce1-accd-4086-be4a-3c2fd3846311",
+      "words":{
+         "top":0.4,
+         "najbolji":0.4,
+         "najbolje":0.4,
+         "filmovi":0.4,
+         "filmove":0.4,
+         "koji":0.15,
+         "imdb":0.3,
+         "rejting":0.3
+      }
+   },
+     {
+      "command_id":"6978d277-0802-4697-93f5-70ecc004ddd1",
+      "words":{
+         "detalji":0.4,
+         "detalje":0.4,
+         "filmu":0.4,
+         "film":0.4,
+         "info":0.25,
+         "informacije":0.25
+      }
    }
 ]

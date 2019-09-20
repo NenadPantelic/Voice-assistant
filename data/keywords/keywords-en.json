@@ -100,5 +100,26 @@
          "message":0.25,
          "want":0.1
       }
+   },
+    {
+      "command_id":"43d47ce1-accd-4086-be4a-3c2fd3846311",
+      "words":{
+         "top":0.4,
+         "best":0.4,
+         "movies":0.4,
+         "what":0.15,
+         "imdb":0.3,
+         "rating": 0.3
+      }
+   },
+   {
+      "command_id":"6978d277-0802-4697-93f5-70ecc004ddd1",
+      "words":{
+         "details":0.4,
+         "movie":0.4,
+         "info":0.25,
+         "information":0.25,
+         "film":0.3
+      }
    }
 ]

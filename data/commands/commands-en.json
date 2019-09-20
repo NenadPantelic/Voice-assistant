@@ -213,8 +213,8 @@
       "previous_command_id":null,
       "next_command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "messages":{
-         "en":"I'm ready for a new email. who is the recipient?",
-         "sr":"Spreman sam za novi email. Ko je primalac?"
+         "en":"I'm ready for a new email. who is the recipient? It will be better if you enter an address from keyboard.",
+         "sr":"Spreman sam za novi email. Ko je primalac? Sgiurnije je da uneseš adresu sa tastature."
       },
       "descriptions":{
          "en":"Activates email sending mode.",
@@ -226,7 +226,7 @@
    {
       "command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "service":"mail",
-      "method":"set_receiver",
+      "method":"set_receiver_with_input",
       "has_args":true,
       "arg_name":"receiver",
       "process_input_text":false,
@@ -247,9 +247,9 @@
    {
       "command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
       "service":"mail",
-      "method":"set_content",
+      "method":"set_subject",
       "has_args":true,
-      "arg_name":"content",
+      "arg_name":"subject",
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
@@ -262,6 +262,27 @@
       "descriptions":{
          "en":"Accept the message of an email.",
          "sr":"Unos poruke emaila."
+      }
+   },
+
+     {
+      "command_id":"8b33b6a0-7bfb-489c-b6df-12eceefa8ebe",
+      "service":"mail",
+      "method":"set_content",
+      "has_args":true,
+      "arg_name":"content",
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"9a14587e-77bf-43a4-a1e4-9be18abb959d",
+      "messages":{
+         "en":"Email sending is active.",
+         "sr":"Šaljem email."
+      },
+      "descriptions":{
+         "en":"Sents an email.",
+         "sr":"Šalje email."
       }
    },
 
@@ -284,6 +305,91 @@
       "descriptions":{
          "en":"Sents an email.",
          "sr":"Šalje email."
+      }
+   },
+  {
+      "command_id":"43d47ce1-accd-4086-be4a-3c2fd3846311",
+      "service":null,
+      "method":null,
+      "has_args":false,
+      "arg_name":null,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"0d473e1c-45a8-4869-bc01-17a01543ba1f",
+      "messages":{
+         "en":"Sure, tell me what is the number of top movies you want?",
+         "sr":"Naravno, koliko filmova želiš?"
+      },
+     "descriptions":{
+         "en":"Initialize imdb method that returns top movies.",
+         "sr":"Inicijalizuje pretragu najboljih filmova."
+      }
+   },
+
+
+     {
+      "command_id":"0d473e1c-45a8-4869-bc01-17a01543ba1f",
+      "service":"imdb",
+      "method":"get_top_movies",
+      "has_args":true,
+      "arg_name":"num",
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"By IMDB these are the top movies you asked for:\n",
+         "sr":"Po IMDB, ovo su najbolji filmovi koje si tražio:\n"
+      },
+      "descriptions":{
+         "en":"Get best movies by IMDB.",
+         "sr":"Vraća najbolje filmove po IMDB."
+      }
+   },
+
+   {
+      "command_id":"6978d277-0802-4697-93f5-70ecc004ddd1",
+      "service": null,
+      "method": null,
+      "has_args":false,
+      "arg_name":null,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"969eac4b-fb8e-4778-9872-553af12a4819",
+      "messages":{
+         "en":"That sounds fine. Tell me the title of movie you want, as precise as you can.",
+         "sr":"To zvuči izvodljivo. Reci mi što tačniji naziv filma."
+      },
+      "descriptions":{
+         "en":"Initialize movie details searching.",
+         "sr":"Inicijalizuje komandu pretrage filma."
+      }
+   },
+
+
+   {
+      "command_id":"969eac4b-fb8e-4778-9872-553af12a4819",
+      "service":"imdb",
+      "method":"get_movie_details",
+      "has_args":true,
+      "arg_name":"title",
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"IMDB says this:\n",
+         "sr":"Prema IMDB:\n"
+      },
+      "descriptions":{
+         "en":"Get movie details from IMDB.",
+         "sr":"Vraća podatke o filmu sa IMDB."
       }
    }
 

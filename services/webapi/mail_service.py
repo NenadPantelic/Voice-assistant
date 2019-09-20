@@ -11,8 +11,13 @@ class MailService:
         self.__subject = None
 
     # setters
-    def set_receiver(self, receiver):
 
+    def set_receiver_with_input(self, receiver):
+        print("Email address: ")
+        receiver = input()
+        self.set_receiver(receiver)
+
+    def set_receiver(self, receiver):
         self.__receiver = self.convert_email_str_to_address(receiver)
 
     def set_subject(self, subject):
@@ -31,7 +36,7 @@ class MailService:
     def get_content(self):
         return self.__content
 
-    def send_mail_with_default_params(self):
+    def send_email_with_default_params(self):
         params = dict(
             zip(["receiver", "subject", "content"], [self.get_receiver(), self.get_subject(), self.get_content()]))
         status = self.send_mail(**params)
@@ -44,8 +49,8 @@ class MailService:
         except Exception as e:
             print(e)
 
-    #helper
-    #email_str will have _et_ for @ symbol
+    # helper
+    # email_str will have _et_ for @ symbol
     def convert_email_str_to_address(self, email_str):
         print(email_str)
         email_str = email_str.replace("_et_", "@")

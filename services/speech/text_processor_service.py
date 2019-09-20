@@ -32,7 +32,7 @@ class TextProcessor:
 
     def filter_out_words(self, phrase):
         wordList = phrase.lower().split(' ')
-        return [word for word in wordList if word.isalpha() and word not in self.__target_words]
+        return [word for word in wordList if word.isalnum() and word not in self.__target_words]
 
     def preprocess_text(self, text):
         return self.filter_out_words(self.filter_out_special_chars(text))
