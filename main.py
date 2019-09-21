@@ -1,6 +1,6 @@
 import json
 
-from ServiceExecutor import ServiceExecutor
+from service_executor import ServiceExecutor
 from services.speech.text_processor_service import TextProcessor
 from services.speech.tts_service import *
 from services.speech.stt_service import *

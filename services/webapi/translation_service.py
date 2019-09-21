@@ -12,25 +12,10 @@ class TranslationService:
     def __init__(self, language="en"):
         self.__api = Translator()
         self.__language = language
-        self.__buffered_text = None
         self.__langs_in_serbian = load_json_data(LANGUAGES_IN_SERBIAN)
-        self.src_language = language
 
     def set_language(self, language):
         self.__language = language
-
-    def set_src_language(self, language):
-        lang_code = self.get_appropriate_lang_code(language)
-        self.src_language = lang_code
-
-    def get_src_language(self):
-        return self.src_language
-
-    def set_buffered_text(self, text):
-        self.__buffered_text = text
-
-    def get_buffered_text(self):
-        return self.__buffered_text
 
     # high level service methods
     # @lru_cache(maxsize=32)
@@ -40,10 +25,11 @@ class TranslationService:
         return ActionResult(self.convert_lang_code_to_language(lang_code), OK)
 
     # NOTE:text must be in cyrillic for serbian
-    def translate_text(self, src_language=None, dest_language="en", text=None):
-        text = text if text is not None else self.get_buffered_text()
-        if src_language is None:
-            src_language = self.get_src_language() if self.get_src_language() else self.detect_language_from_text(text)
+    def translate_text(self,  text=None, src_language=None, dest_language="en"):
+        #text = text if text is not None else self.get_buffered_text()
+        #if src_language is None:
+        #    src_language = self.get_src_language() if self.get_src_language() else self.detect_language_from_text(text)
+        print("DEBUG: src = ",src_language, dest_language)
         dest_language = self.get_appropriate_lang_code(dest_language)
         # TODO: handle speaking in destination language, not language set in controller
         return ActionResult(self.translate(text, src_lang=src_language, dest_lang=dest_language).text, OK,
@@ -68,7 +54,6 @@ class TranslationService:
 
     # TODO:think about conversion to cyrillic when using serbian
     def get_appropriate_lang_code(self, language):
-        print("DEBUGISKA " + language)
         if self.__language == 'sr':
             language = convert_latinic_to_cyrilic(language)
             language = self.__langs_in_serbian.get(language, "en")

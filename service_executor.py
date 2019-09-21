@@ -34,6 +34,7 @@ class ServiceExecutor:
             arg_value = input()
         if input_type is not None:
             arg_value = eval(input_type + "('" + arg_value + "')")
+        print(arg_value, type(arg_value))
         self.__service_command_methods[service][method_name][arg_name] = arg_value
 
     def __commit(self, service, method):
@@ -41,7 +42,12 @@ class ServiceExecutor:
         if service_inst is not None:
             if hasattr(service_inst, method):
                 executor = getattr(service_inst, method)
-                return executor(**self.__service_command_methods[service][method])
+                try:
+                    return executor(**self.__service_command_methods[service][method])
+                except Exception as e:
+                    raise e
+        else:
+            pass
         # TODO:exception handling
 
     def __populate_service_command_methods(self):
@@ -61,7 +67,3 @@ class ServiceExecutor:
                             self.__service_command_methods[service][method][arg_name] = None
                         else:
                             self.__service_command_methods[service][method] = {arg_name: None}
-
-# sa = ServiceExecutor()
-# sa.populate_service_command_methods()
-# print(sa._ServiceExecutor__service_command_methods)

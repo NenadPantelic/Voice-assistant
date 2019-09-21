@@ -116,8 +116,8 @@
    },
    {
       "command_id":"90f0bfbc-e3f9-4291-bb4e-28b5ddcb2f4d",
-      "service":"translation",
-      "method":"translate_text",
+      "service":null,
+      "method":"set_translation_language",
       "has_args":true,
       "arg_name":"language",
       "arg_type":"str",
@@ -209,7 +209,7 @@
    {
       "command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "service":"mail",
-      "method":"send_email_with_default_params",
+      "method":"send_mail",
       "has_args":true,
       "arg_name":"receiver",
       "arg_type":"str",
@@ -232,7 +232,7 @@
    {
       "command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
       "service":"mail",
-      "method":"send_email_with_default_params",
+      "method":"send_mail",
       "has_args":true,
       "arg_name":"subject",
       "arg_type":"str",
@@ -242,7 +242,7 @@
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
-      "next_command_id":"9a14587e-77bf-43a4-a1e4-9be18abb959d",
+      "next_command_id":"8b33b6a0-7bfb-489c-b6df-12eceefa8ebe",
       "messages":{
          "en":"Finally, what is your message.",
          "sr":"Na kraju, izdiktiraj mi poruku."
@@ -255,7 +255,7 @@
    {
       "command_id":"8b33b6a0-7bfb-489c-b6df-12eceefa8ebe",
       "service":"mail",
-      "method":"send_email_with_default_params",
+      "method":"send_mail",
       "has_args":true,
       "arg_name":"content",
       "arg_type":"str",
@@ -275,28 +275,7 @@
          "sr":"Šalje email."
       }
    },
-   {
-      "command_id":"9a14587e-77bf-43a4-a1e4-9be18abb959d",
-      "service":"mail",
-      "method":"send_email_with_default_params",
-      "has_args":false,
-      "arg_name":null,
-      "arg_type":null,
-      "need_input":false,
-      "process_input_text":false,
-      "system_command":null,
-      "setup_command":false,
-      "previous_command_id":null,
-      "next_command_id":null,
-      "messages":{
-         "en":"Email sending is active.",
-         "sr":"Šaljem email."
-      },
-      "descriptions":{
-         "en":"Sents an email.",
-         "sr":"Šalje email."
-      }
-   },
+
    {
       "command_id":"43d47ce1-accd-4086-be4a-3c2fd3846311",
       "service":null,
@@ -327,7 +306,7 @@
       "has_args":true,
       "arg_name":"num",
       "arg_type":"int",
-      "need_input":true,
+      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,

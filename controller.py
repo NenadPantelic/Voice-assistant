@@ -46,6 +46,10 @@ class Controller:
             language = SR_LANGUAGES.get(convert_latinic_to_cyrilic(language), "english")
         language = LANGUAGES.get(language, "en")
         self.recognizer.set_language(language)
+        self.executor.set_param_and_commit("translation", "translate_text", "src_language",
+                                           language, input_type="str",
+                                           need_input=False,
+                                           is_ready=False)
 
 
     def reset_recognizer_language(self):
@@ -93,9 +97,8 @@ class Controller:
     # this method should be called only once per voice control request
     def execute(self, text):
         command = self.command_resolver.get_command(text)
-        command_result = None
+        #command_result = None
         speaking_language = None
-        #service = self.service_pool.get(command["service"], None)
         service = command["service"]
         method = command["method"]
         # service is none for setup commands
@@ -129,7 +132,6 @@ class Controller:
         self.set_speaking_language(self.speaking_language)
         self.speaker.save_speech_and_play(output_message)
         self.reset_speaking_language_()
-        # self.reset_recognizer_language()
 
     def listen_and_execute(self):
         text_result = self.recognizer.recognize_from_microphone()
@@ -140,10 +142,6 @@ class Controller:
             output = self.get_output_speech(text_result, '')
             # speaking_language = self.language
         else:
-            # text = convert_or_return_text(text_result.get_result(), self.language)
-            # print(text)
-            # text_result.set_result(text)
             print(text_result.get_result())
-
             output = self.execute(text_result.get_result())
         self.speak_out(message_prefix=output[0], output_message=output[1])
