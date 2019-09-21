@@ -48,7 +48,7 @@ class Controller:
         self.recognizer.set_language(language)
         self.executor.set_param_and_commit("translation", "translate_text", "src_language",
                                            language, input_type="str",
-                                           need_input=False,
+                                           need_input=False, input_processing_method=None,
                                            is_ready=False)
 
 
@@ -113,6 +113,7 @@ class Controller:
                 command_result = self.executor.set_param_and_commit(command["service"], method, command["arg_name"],
                                                                     command["arg"], input_type=command["arg_type"],
                                                                     need_input=command["need_input"],
+                                                                    input_processing_method=command["input_processing_method"],
                                                                     is_ready=command["is_ready"])
         else:
             command_result = None

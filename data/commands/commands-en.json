@@ -8,6 +8,7 @@
       "arg_type":null,
       "need_input":false,
       "process_input_text":false,
+      "input_processing_method": null,
       "system_command":null,
       "setup_command":true,
       "is_ready":true,
@@ -31,6 +32,8 @@
       "arg_type":"str",
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":true,
       "is_ready":true,
@@ -54,6 +57,8 @@
       "arg_type":"str",
       "need_input":false,
       "process_input_text":true,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":true,
@@ -77,6 +82,8 @@
       "arg_type":"str",
       "need_input":false,
       "process_input_text":true,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":true,
@@ -100,6 +107,8 @@
       "arg_type":null,
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":false,
@@ -123,6 +132,8 @@
       "arg_type":"str",
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":false,
@@ -146,6 +157,8 @@
       "arg_type":"str",
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":false,
@@ -169,6 +182,8 @@
       "arg_type":"str",
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":true,
@@ -192,6 +207,8 @@
       "arg_type":null,
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":false,
@@ -215,6 +232,8 @@
       "arg_type":"str",
       "need_input":true,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":false,
@@ -238,6 +257,8 @@
       "arg_type":"str",
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":false,
@@ -261,6 +282,8 @@
       "arg_type":"str",
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":true,
@@ -285,6 +308,8 @@
       "arg_type":null,
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":false,
@@ -308,6 +333,8 @@
       "arg_type":"int",
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":true,
@@ -331,6 +358,8 @@
       "arg_type":null,
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":false,
@@ -354,6 +383,8 @@
       "arg_type":"str",
       "need_input":false,
       "process_input_text":false,
+            "input_processing_method": null,
+
       "system_command":null,
       "setup_command":false,
       "is_ready":true,
@@ -367,5 +398,131 @@
          "en":"Get movie details from IMDB.",
          "sr":"Vraća podatke o filmu sa IMDB."
       }
+   },
+
+   {
+      "command_id":"3cc20832-b257-4bab-a6b5-90bae5ec2198",
+      "service":"browser",
+      "method":"open_social_network_page",
+      "has_args":true,
+      "arg_name":"social_network_url",
+      "arg_type":"str",
+      "need_input":false,
+      "process_input_text":false,
+      "input_processing_method": "get_social_network_base_url",
+      "system_command":null,
+      "setup_command":false,
+      "is_ready":false,
+      "previous_command_id":null,
+      "next_command_id":"4478af5d-5536-4f92-a1c1-03a5abc20222",
+      "messages":{
+         "en":"Sure, I'm here to help. Tell me the nickname.",
+         "sr":"Naravno, tu sam da pomognem. Reci mi korisničko ime."
+      },
+      "descriptions":{
+         "en":"Determines social network.",
+         "sr":"Određuje društvenu mrežu."
+      }
+   },
+    {
+      "command_id":"4478af5d-5536-4f92-a1c1-03a5abc20222",
+      "service":"browser",
+      "method":"open_social_network_page",
+      "has_args":true,
+      "arg_name":"nickname",
+      "arg_type":"str",
+      "need_input":true,
+      "process_input_text":false,
+      "input_processing_method": null,
+      "system_command":null,
+      "setup_command":false,
+      "is_ready":true,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"Here is the page.",
+         "sr":"Evo strane koju sam našao."
+      },
+      "descriptions":{
+         "en":"Opens social network page.",
+         "sr":"Otvara stranu društvenu mreže."
+      }
+   },
+
+
+    {
+      "command_id":"a4bba6e5-2fc6-4b60-b1a9-4b09bc4044f9",
+      "service":null,
+      "method":null,
+      "has_args":false,
+      "arg_name":null,
+      "arg_type":null,
+      "need_input":false,
+      "process_input_text":false,
+      "input_processing_method": null,
+      "system_command":null,
+      "setup_command":false,
+      "is_ready":false,
+      "previous_command_id":null,
+      "next_command_id":"6a90cef4-a6c2-472b-939f-480f138b443d",
+      "messages":{
+         "en":"I'll do it with pleasure. What are you looking for?.",
+         "sr":"Vrlo rado. Šta želiš da potražim?"
+      },
+      "descriptions":{
+         "en":"Initialize Google search.",
+         "sr":"Inciijalizuje Google pretragu."
+      }
+   },
+
+       {
+      "command_id":"6a90cef4-a6c2-472b-939f-480f138b443d",
+      "service":"browser",
+      "method":"open_found_url_in_browser",
+      "has_args":true,
+      "arg_name":"query",
+      "arg_type":"str",
+      "need_input":false,
+      "process_input_text":false,
+      "input_processing_method": null,
+      "system_command":null,
+      "setup_command":false,
+      "is_ready":false,
+      "previous_command_id":null,
+      "next_command_id":"c8849c8d-b52d-4519-8f4a-40c97f0f4f4a",
+      "messages":{
+         "en":"Ok, and what about type? Possible options are videos, news, images, books, shopping, applications or all?.",
+         "sr":"To je u redu. A šta ćemo sa tipom, ponuđene opcije su: video, vesti, slike, knjige, šoping, aplikacije ili sve?"
+      },
+      "descriptions":{
+         "en":"Sets search term.",
+         "sr":"Postavlja termin pretrage."
+      }
+   },
+
+          {
+      "command_id":"c8849c8d-b52d-4519-8f4a-40c97f0f4f4a",
+      "service":"browser",
+      "method":"open_found_url_in_browser",
+      "has_args":true,
+      "arg_name":"tpe",
+      "arg_type":"str",
+      "need_input":false,
+      "process_input_text":false,
+      "input_processing_method": "get_search_type",
+      "system_command":null,
+      "setup_command":false,
+      "is_ready":true,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"I'm opening first result that I found.",
+         "sr":"Otvaram prvi rezultat koji sam pronašla?"
+      },
+      "descriptions":{
+         "en":"Performs google search and opens first found result.",
+         "sr":"Izvršava google pretragu i otvara prvi rezultat."
+      }
    }
+
 ]

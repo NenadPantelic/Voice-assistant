@@ -131,5 +131,57 @@
          "info":0.25,
          "informacije":0.25
       }
+   },
+
+
+   {
+      "command_id":"3cc20832-b257-4bab-a6b5-90bae5ec2198",
+      "words":{
+         "otvori":0.2,
+         "prikaži":0.2,
+         "pokaži":0.2,
+         "socijalna":0.35,
+         "socijalnu":0.35,
+         "društvenu":0.35,
+         "društvene":0.35,
+         "mrežu":0.35,
+         "mreže":0.35,
+         "stranu":0.15,
+         "strana":0.15,
+         "facebook":0.35,
+         "fejsbuk":0.35,
+         "fejs":0.35,
+         "twitter":0.35,
+         "tviter":0.35,
+         "instagram":0.35,
+         "linkedin":0.35,
+         "profil": 0.25,
+         "nalog": 0.25
+
+      }
+   },
+
+     {
+      "command_id":"a4bba6e5-2fc6-4b60-b1a9-4b09bc4044f9",
+      "words":{
+         "otvori":0.2,
+         "google":0.35,
+         "gugl":0.35,
+         "guglu":0.35,
+         "guglaj":0.35,
+         "izguglaj":0.35,
+         "pretraži":0.35,
+         "pretraga":0.35,
+         "strana":0.35,
+         "traži":0.15,
+         "pronađi":0.15,
+         "browser":0.35,
+         "upit":0.15,
+         "internetu": 0.35,
+                  "internetu": 0.35,
+
+         "web": 0.35,
+                  "webu": 0.35
+      }
    }
 ]

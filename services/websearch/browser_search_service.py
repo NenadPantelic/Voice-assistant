@@ -44,8 +44,8 @@ class BrowserService:
         thread = threading.Thread(target=self.browser_open, args=(url,), daemon=True)
         thread.start()
 
-    def open_found_url_in_browser(self, query):
-        google_result = self.get_first_search_result(query)
+    def open_found_url_in_browser(self, query, tpe = ''):
+        google_result = self.get_first_search_result(query, tpe=tpe)
         url = google_result.get_result()
         if url is not None:
             self.browser_open(url=url)
@@ -58,8 +58,6 @@ class BrowserService:
 
     #this is tight coupled with controller logics, it asks for input
     def open_social_network_page(self, nickname = None, social_network_url = FACEBOOK_BASE_URL):
-        if nickname is None:
-            nickname = input()
         url = social_network_url + nickname + "/"
         self.browser_open(url)
         #TODO:check return statements

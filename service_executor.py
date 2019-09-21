@@ -1,6 +1,6 @@
 from config.constants import ENGLISH_COMMANDS
 from utils.utils import load_json_data
-
+from utils import data_conversion
 commands = load_json_data(ENGLISH_COMMANDS)
 
 
@@ -23,17 +23,21 @@ class ServiceExecutor:
             self.service_pool['translation'].set_src_language(language)
 
     def set_param_and_commit(self, service, method_name, arg_name, arg_value, need_input=False, input_type="str",
+                             input_processing_method = None,
                              is_ready=False):
-        self.__set_param(service, method_name, arg_name, arg_value, input_type, need_input)
+        self.__set_param(service, method_name, arg_name, arg_value, input_type, input_processing_method,need_input)
         if is_ready:
             return self.__commit(service, method_name)
 
     # super private methods
-    def __set_param(self, service, method_name, arg_name, arg_value, input_type, need_input=False):
+    def __set_param(self, service, method_name, arg_name, arg_value, input_type, input_processing_method, need_input=False):
         if need_input:
             arg_value = input()
         if input_type is not None:
             arg_value = eval(input_type + "('" + arg_value + "')")
+        print(arg_value)
+        if input_processing_method is not None:
+            arg_value = eval("data_conversion." + input_processing_method + "('" + arg_value +"')")
         print(arg_value, type(arg_value))
         self.__service_command_methods[service][method_name][arg_name] = arg_value
 

@@ -121,5 +121,42 @@
          "information":0.25,
          "film":0.3
       }
+   },
+
+
+    {
+      "command_id":"3cc20832-b257-4bab-a6b5-90bae5ec2198",
+      "words":{
+         "open":0.2,
+         "social":0.35,
+         "network":0.35,
+         "page":0.15,
+         "facebook":0.35,
+         "twitter":0.35,
+         "instagram":0.35,
+         "linkedin":0.35,
+         "nickname": 0.25,
+         "profile": 0.25,
+         "account": 0.25
+
+      }
+   },
+
+     {
+      "command_id":"a4bba6e5-2fc6-4b60-b1a9-4b09bc4044f9",
+      "words":{
+         "open":0.2,
+         "google":0.35,
+         "search":0.35,
+         "page":0.35,
+         "find":0.15,
+         "look":0.15,
+         "browser":0.35,
+         "term":0.15,
+         "query": 0.15,
+         "internet": 0.35,
+         "web": 0.35
+
+      }
    }
 ]
