@@ -7,6 +7,7 @@ from utils.utils import convert_or_return_text, load_json_data, convert_latinic_
 LANGUAGES = load_json_data(LANG_CODES)
 SR_LANGUAGES = load_json_data(LANGUAGES_IN_SERBIAN)
 
+
 # TODO: add json structure checking
 # TODO:check if this can be refactored
 def get_language_code(str_list):
@@ -20,11 +21,11 @@ def get_language_code(str_list):
 
 
 class Controller:
-    def __init__(self, recognizer, speaker, commandResolver, service_pool={}):
+    def __init__(self, recognizer, speaker, commandResolver, executor):
         self.recognizer = recognizer
         self.speaker = speaker
         self.command_resolver = commandResolver
-        self.service_pool = service_pool
+        self.executor = executor
         self.language = "en"
         self.speaking_language = "en"
 
@@ -35,24 +36,17 @@ class Controller:
         self.speaking_language = lang_code
         self.recognizer.set_language(lang_code)
         self.speaker.set_language(lang_code)
-        for service in self.service_pool.values():
-            if hasattr(service, "set_language"):
-                service.set_language(lang_code)
+        self.executor.set_services_language(lang_code)
         self.command_resolver.set_language(lang_code)
         self.command_resolver.set_processor_language(lang_code)
 
     def set_translation_language(self, language):
-        assert(isinstance(language, str))
+        assert (isinstance(language, str))
         if self.language == "sr":
             language = SR_LANGUAGES.get(convert_latinic_to_cyrilic(language), "english")
         language = LANGUAGES.get(language, "en")
-        print("DEBUUUUG " + language)
         self.recognizer.set_language(language)
-        if "translation" in self.service_pool:
-            self.service_pool['translation'].set_src_language(language)
-            print("DEBUG 2 " + self.service_pool['translation'].get_src_language())
 
-        print("DEBUG 3 " + self.recognizer.get_language())
 
     def reset_recognizer_language(self):
         if self.recognizer.get_language() != self.language:
@@ -86,14 +80,23 @@ class Controller:
         output_message, exception_message = self.get_command_output_text(command_result)
         message_prefix = message if exception_message is None else exception_message
         # message_prefix = self.get_message_prefix(message, exception_message)
-        return (message_prefix, output_message)
+        return message_prefix, output_message
+
+    def execute_appropriate_method(self, service, method, command):
+        executor = getattr(service, method)
+        if command["has_args"]:
+            command_result = eval('executor(' + command["arg_name"] + "=" + "'" + str(command["arg"]) + "')")
+        else:
+            command_result = executor()
+        return command_result
 
     # this method should be called only once per voice control request
     def execute(self, text):
         command = self.command_resolver.get_command(text)
         command_result = None
         speaking_language = None
-        service = self.service_pool.get(command["service"], None)
+        #service = self.service_pool.get(command["service"], None)
+        service = command["service"]
         method = command["method"]
         # service is none for setup commands
         if service is None:
@@ -101,11 +104,13 @@ class Controller:
             service = self
             # TODO: map language name to language code - check
         if method is not None:
-            executor = getattr(service, method)
-            if command["has_args"]:
-                command_result = eval('executor(' + command["arg_name"] + "=" + "'" + str(command["arg"]) + "')")
+            if service is self:
+                command_result = self.execute_appropriate_method(service, method, command)
             else:
-                command_result = executor()
+                command_result = self.executor.set_param_and_commit(command["service"], method, command["arg_name"],
+                                                                    command["arg"], input_type=command["arg_type"],
+                                                                    need_input=command["need_input"],
+                                                                    is_ready=command["is_ready"])
         else:
             command_result = None
         message = command["messages"][self.language]
@@ -124,7 +129,7 @@ class Controller:
         self.set_speaking_language(self.speaking_language)
         self.speaker.save_speech_and_play(output_message)
         self.reset_speaking_language_()
-        #self.reset_recognizer_language()
+        # self.reset_recognizer_language()
 
     def listen_and_execute(self):
         text_result = self.recognizer.recognize_from_microphone()

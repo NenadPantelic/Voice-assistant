@@ -5,12 +5,9 @@
       "method":null,
       "has_args":false,
       "arg_name":null,
-      "arg_type":null,
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":true,
-      "is_ready":true,
       "previous_command_id":null,
       "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "messages":{
@@ -28,12 +25,9 @@
       "method":"set_language",
       "has_args":true,
       "arg_name":"language_list",
-      "arg_type":"str",
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":true,
-      "is_ready":true,
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
@@ -51,12 +45,9 @@
       "method":"brief_search",
       "has_args":true,
       "arg_name":"query",
-      "arg_type":"str",
-      "need_input":false,
       "process_input_text":true,
       "system_command":null,
       "setup_command":false,
-      "is_ready":true,
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
@@ -74,21 +65,58 @@
       "method":"get_forecast_result",
       "has_args":true,
       "arg_name":"location",
-      "arg_type":"str",
-      "need_input":false,
       "process_input_text":true,
       "system_command":null,
       "setup_command":false,
-      "is_ready":true,
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "en":"Weather forecast results:\n",
-         "sr":"Stanje vremenske prognoze:\n"
+         "sr":"Stanje vremenske prognoze: \n"
       },
       "descriptions":{
          "en":"Brief Wikipedia search. Returns summary of wikipedia page.",
          "sr":"Кратак резиме са стране добијене са Википедије"
+      }
+   },
+   {
+      "command_id":"b928af78-93d3-444e-a5d2-28e316a3b027",
+      "service":null,
+      "method":null,
+      "has_args":false,
+      "arg_name":null,
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":"ac451574-91c3-49b3-95d7-13796007504d",
+      "messages":{
+         "en":"Say text for detection.",
+         "sr":"Koji tekst želiš da analiziram?"
+      },
+      "descriptions":{
+         "en":"Detect language from speech.",
+         "sr":"Detektuje jezik iz govora."
+      }
+   },
+   {
+      "command_id":"ac451574-91c3-49b3-95d7-13796007504d",
+      "service":"translation",
+      "method":"detect_language_from_text",
+      "has_args":true,
+      "arg_name":"text",
+      "process_input_text":false,
+      "system_command":null,
+      "setup_command":false,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "en":"I think this is the ",
+         "sr":"Mislim da je u pitanju "
+      },
+      "descriptions":{
+         "en":"Returns language with the highest detection confidence.",
+         "sr":"Враћа језик са највећом вероватноћом."
       }
    },
    {
@@ -97,12 +125,9 @@
       "method":null,
       "has_args":false,
       "arg_name":null,
-      "arg_type":null,
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"90f0bfbc-e3f9-4291-bb4e-28b5ddcb2f4d",
       "messages":{
@@ -116,16 +141,13 @@
    },
    {
       "command_id":"90f0bfbc-e3f9-4291-bb4e-28b5ddcb2f4d",
-      "service":"translation",
-      "method":"translate_text",
+      "service":null,
+      "method":"set_translation_language",
       "has_args":true,
       "arg_name":"language",
-      "arg_type":"str",
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"5708d0b1-f1d6-4852-930d-8d950f980de1",
       "messages":{
@@ -140,15 +162,12 @@
    {
       "command_id":"5708d0b1-f1d6-4852-930d-8d950f980de1",
       "service":"translation",
-      "method":"translate_text",
+      "method":"set_buffered_text",
       "has_args":true,
       "arg_name":"text",
-      "arg_type":"str",
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"e57f3a23-2950-4d1a-88d7-05c6ec072d60",
       "messages":{
@@ -166,12 +185,9 @@
       "method":"translate_text",
       "has_args":true,
       "arg_name":"dest_language",
-      "arg_type":"str",
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":true,
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
@@ -183,18 +199,17 @@
          "sr":"Prevodi tekst iz govora na željeni jezik."
       }
    },
+
+
    {
       "command_id":"a9e87967-3e58-4297-b2fe-f5bf1c1ce5da",
       "service":null,
       "method":null,
       "has_args":false,
       "arg_name":null,
-      "arg_type":null,
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "messages":{
@@ -206,18 +221,17 @@
          "sr":"Inicijalizuje slanje email-a."
       }
    },
+
+
    {
       "command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "service":"mail",
-      "method":"send_email_with_default_params",
+      "method":"set_receiver_with_input",
       "has_args":true,
       "arg_name":"receiver",
-      "arg_type":"str",
-      "need_input":true,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
       "messages":{
@@ -229,18 +243,16 @@
          "sr":"Postavlja primaoca."
       }
    },
+
    {
       "command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
       "service":"mail",
-      "method":"send_email_with_default_params",
+      "method":"set_subject",
       "has_args":true,
       "arg_name":"subject",
-      "arg_type":"str",
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"9a14587e-77bf-43a4-a1e4-9be18abb959d",
       "messages":{
@@ -252,20 +264,18 @@
          "sr":"Unos poruke emaila."
       }
    },
-   {
+
+     {
       "command_id":"8b33b6a0-7bfb-489c-b6df-12eceefa8ebe",
       "service":"mail",
-      "method":"send_email_with_default_params",
+      "method":"set_content",
       "has_args":true,
       "arg_name":"content",
-      "arg_type":"str",
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":true,
       "previous_command_id":null,
-      "next_command_id":null,
+      "next_command_id":"9a14587e-77bf-43a4-a1e4-9be18abb959d",
       "messages":{
          "en":"Email sending is active.",
          "sr":"Šaljem email."
@@ -275,14 +285,14 @@
          "sr":"Šalje email."
       }
    },
-   {
+
+
+    {
       "command_id":"9a14587e-77bf-43a4-a1e4-9be18abb959d",
       "service":"mail",
       "method":"send_email_with_default_params",
       "has_args":false,
       "arg_name":null,
-      "arg_type":null,
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
@@ -297,41 +307,37 @@
          "sr":"Šalje email."
       }
    },
-   {
+  {
       "command_id":"43d47ce1-accd-4086-be4a-3c2fd3846311",
       "service":null,
       "method":null,
       "has_args":false,
       "arg_name":null,
-      "arg_type":null,
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"0d473e1c-45a8-4869-bc01-17a01543ba1f",
       "messages":{
          "en":"Sure, tell me what is the number of top movies you want?",
          "sr":"Naravno, koliko filmova želiš?"
       },
-      "descriptions":{
+     "descriptions":{
          "en":"Initialize imdb method that returns top movies.",
          "sr":"Inicijalizuje pretragu najboljih filmova."
       }
    },
-   {
+
+
+     {
       "command_id":"0d473e1c-45a8-4869-bc01-17a01543ba1f",
       "service":"imdb",
       "method":"get_top_movies",
       "has_args":true,
       "arg_name":"num",
-      "arg_type":"int",
-      "need_input":true,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":true,
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
@@ -343,18 +349,16 @@
          "sr":"Vraća najbolje filmove po IMDB."
       }
    },
+
    {
       "command_id":"6978d277-0802-4697-93f5-70ecc004ddd1",
-      "service":null,
-      "method":null,
+      "service": null,
+      "method": null,
       "has_args":false,
       "arg_name":null,
-      "arg_type":null,
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"969eac4b-fb8e-4778-9872-553af12a4819",
       "messages":{
@@ -366,18 +370,17 @@
          "sr":"Inicijalizuje komandu pretrage filma."
       }
    },
+
+
    {
       "command_id":"969eac4b-fb8e-4778-9872-553af12a4819",
       "service":"imdb",
       "method":"get_movie_details",
       "has_args":true,
       "arg_name":"title",
-      "arg_type":"str",
-      "need_input":false,
       "process_input_text":false,
       "system_command":null,
       "setup_command":false,
-      "is_ready":true,
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
@@ -389,4 +392,5 @@
          "sr":"Vraća podatke o filmu sa IMDB."
       }
    }
+
 ]

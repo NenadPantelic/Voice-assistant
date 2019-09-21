@@ -1,5 +1,6 @@
 import json
 
+from ServiceExecutor import ServiceExecutor
 from services.speech.text_processor_service import TextProcessor
 from services.speech.tts_service import *
 from services.speech.stt_service import *
@@ -54,7 +55,7 @@ from services.webapi.mail_service import MailService
 
 # from services.websearch import * #import WikipediaService
 
-servicePool = {
+service_pool = {
 
     "wikipedia": wikipedia_service.WikipediaService("en"),
     "owm": WeatherForecastService("en"),
@@ -66,8 +67,9 @@ servicePool = {
 commands = load_json_data(ENGLISH_COMMANDS)
 
 sr = CommandResolver(sp, commands, 'en')
+executor = ServiceExecutor(service_pool)
 # sr.calculateServiceScores(words)
-controller = Controller(srec, speaker, sr, service_pool=servicePool)
+controller = Controller(srec, speaker, sr, executor)
 # print(controller.execute("Linda, who is Who is Vladimir Putin"))
 # print(controller.execute(None))
 # print(controller.execute("I'm choosing serbian."))

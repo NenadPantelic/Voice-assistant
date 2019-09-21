@@ -23,9 +23,9 @@ class WeatherForecastService:
         # if(out_format not in ("json", "xml")):
         #    raise ValueError("Only json and xml output formats are supporrted!")
         cache_value = self.__cache.get(location)
-        if (cache_value is not None):
+        if cache_value is not None:
             return cache_value
-        if (type(location) == str):
+        if type(location) == str:
             target_function = self.api.weather_at_place
         elif (type(location) == int):
             target_function = self.api.weather_at_id
@@ -43,8 +43,6 @@ class WeatherForecastService:
         else:
             weather_param = self.get_weather_param(weather_data, param, **kwargs)
         return weather_param
-
-
 
     def get_weather_param(self, weather_data, param, **kwargs):
         func_ptr = weather_param = None
@@ -68,7 +66,7 @@ class WeatherForecastService:
             weather[param] = self.get_weather_param(weather_data, param, **kwargs)
         return weather
 
-    #def get_forecast_in_readable_form(self, forecast):
+    # def get_forecast_in_readable_form(self, forecast):
     def get_forecast_in_readable_form(self, weather_data, param, **kwargs):
         forecast = self.get_forecast(weather_data, param, **kwargs)
         display_str = ''
@@ -85,9 +83,8 @@ class WeatherForecastService:
 
     def get_forecast_result(self, location, param="all", unit="celsius"):
         weather_data = self.get_weather_at_location(location)
-        forecast_output = self.get_forecast_in_readable_form(weather_data, param, **{"unit":unit})
+        forecast_output = self.get_forecast_in_readable_form(weather_data, param, **{"unit": unit})
         return ActionResult(forecast_output, OK)
-
 
     def get_forecast_at(self, time):
         try:
