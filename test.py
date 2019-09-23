@@ -97,14 +97,25 @@ print(imdb.get_movies_by_keywords("war"))
 #from services.system.os_service import *
 
 #print(subprocess.Popen(['echo',x[0]]))
-from services.websearch.browser_search_service import *
+#from services.websearch.browser_search_service import *
 
-from services.websearch.browser_search_service import BrowserService
-from config.constants import FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL
-bs = BrowserService()
+#from services.websearch.browser_search_service import BrowserService
+#from config.constants import FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL
+#bs = BrowserService()
 #print(bs.get_first_search_result(query="lion").get_result())
 #bs.open_found_url_in_browser("lion")
 #print("usao ovde")
 
 #print(bs.get_first_search_result(query="lion").get_result())
-print(bs.open_social_network_page("nenad-pantelić", LINKEDIN_BASE_URL))
+#print(bs.open_social_network_page("nenad-pantelić", LINKEDIN_BASE_URL))
+from services.system.os_service import OSService
+os_srv = OSService()
+#os_srv.execute_command("date")
+#print(os_srv.execute_command("sudo find / -name 'subprocess.py'"))
+#file = os_srv.search_file("cat.jpg")
+#file = os_srv.search_file("temporary.mp3")
+
+#print(file)
+#print(os_srv.open_file(file))
+print(os_srv.get_computer_status())
+print(os_srv.get_pid("chrome"))

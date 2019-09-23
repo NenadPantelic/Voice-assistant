@@ -1,5 +1,7 @@
 from config.constants import LANG_KEYWORDS
 from utils.utils import load_json_data
+
+
 def convert_json_array_to_dict(json_array):
     resulting_map = {}
     for element in json_array:
@@ -9,17 +11,15 @@ def convert_json_array_to_dict(json_array):
 
 class CommandResolver:
 
-    def __init__(self, text_processor, commands, language = "en"):
+    def __init__(self, text_processor, commands, language="en"):
         self.__text_processor = text_processor
         self.__language = None
         self.__keywords = None
-        #self.__keywords = convert_json_array_to_dict(language)
         self.__commands = convert_json_array_to_dict(commands)
         self.__command = None
         self.__previous_command_id = None
         self.__next_command_id = None
         self.set_language(language)
-
 
     def set_language(self, language):
         self.__language = language
@@ -35,7 +35,7 @@ class CommandResolver:
     def calculate_command_scores(self, word_list):
         scores = {}
         # TODO:change input type of word_list to string (currently is list)
-        #word_list = ' '.join(word_list)
+        # word_list = ' '.join(word_list)
         for command_id, command in self.__keywords.items():
             words = command["words"]
             scores[command_id] = sum([words.get(word, 0) * word_list.count(word) \
@@ -56,8 +56,9 @@ class CommandResolver:
         if target_command["has_args"]:
             arg = ' '.join(word_list)
             if target_command["process_input_text"]:
-                arg = self.__text_processor.filter_out_keywords(word_list, self.__keywords[self.__command["command_id"]][
-                    "words"].keys())
+                arg = self.__text_processor.filter_out_keywords(word_list,
+                                                                self.__keywords[self.__command["command_id"]][
+                                                                    "words"].keys())
             target_command.update({"arg": arg})
         return target_command
 

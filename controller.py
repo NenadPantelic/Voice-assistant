@@ -1,8 +1,7 @@
 from exceptions.exception_handler import ExceptionHandler
-import services.websearch.wikipedia_service as ws
-import services.webapi.owm_service as owm
+
 from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN
-from utils.utils import convert_or_return_text, load_json_data, convert_latinic_to_cyrilic
+from utils.utils import load_json_data, convert_latinic_to_cyrilic
 
 LANGUAGES = load_json_data(LANG_CODES)
 SR_LANGUAGES = load_json_data(LANGUAGES_IN_SERBIAN)

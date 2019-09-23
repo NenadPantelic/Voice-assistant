@@ -11,18 +11,10 @@ TPE_MAP = {"videos": "vid", "images": "isch", "news": "nws", "shopping": "shop",
 class BrowserService:
     def __init__(self):
         self.__search = googlesearch.search
-        self.__last_searched_term = None
-        self.__last_searched_type = None
-        self.__thread_counter = 0
 
-    # NOTE:maybe tpe property of search can be used
-    def set_tpe(self, tpe):
-        tpe = TPE_MAP.get(tpe, '')
 
     @lru_cache(maxsize=16)
     def google_search(self, query, tld="com", tpe='vid', pause=2.0, stop=3):
-        self.__last_searched_term = query
-        self.__last_searched_type = tpe
         return self.__search(query=query, tld=tld, tpe=tpe, pause=pause, stop=stop)
 
     def get_first_search_result(self, query, tpe=''):
@@ -34,8 +26,6 @@ class BrowserService:
         except StopIteration as e:
             # TODO logging
             return ActionResult(None, NO_GOOGLE_RESULT)
-
-    # TODO:enable multiparam execution of methods in controller
 
     def browser_open(self, url, new=2, autoraise=False):
         webbrowser.open(url, new=new, autoraise=autoraise)

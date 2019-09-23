@@ -8,7 +8,7 @@
          "su":0.15,
          "bio":0.2,
          "bili":0.2,
-         "bila": 0.2
+         "bila":0.2
       }
    },
    {
@@ -42,7 +42,6 @@
          "pritisak":0.3,
          "vetar":0.3,
          "oblačnost":0.3,
-         "vlažnost":0.15,
          "vazduh":0.15,
          "kiša":0.3,
          "mestu":0.15,
@@ -68,14 +67,13 @@
       }
    },
    {
-
       "command_id":"a35a5bce-f117-4993-9fb4-312fb27ee2c2",
       "words":{
          "prevedi":0.35,
          "prevodilac":0.35,
          "prevod":0.35,
          "prevođenje":0.35,
-         "prevedeš": 0.3,
+         "prevedeš":0.3,
          "tekst":0.2,
          "govor":0.2,
          "neki":0.1
@@ -121,7 +119,7 @@
          "rejting":0.3
       }
    },
-     {
+   {
       "command_id":"6978d277-0802-4697-93f5-70ecc004ddd1",
       "words":{
          "detalji":0.4,
@@ -132,8 +130,6 @@
          "informacije":0.25
       }
    },
-
-
    {
       "command_id":"3cc20832-b257-4bab-a6b5-90bae5ec2198",
       "words":{
@@ -155,13 +151,11 @@
          "tviter":0.35,
          "instagram":0.35,
          "linkedin":0.35,
-         "profil": 0.25,
-         "nalog": 0.25
-
+         "profil":0.25,
+         "nalog":0.25
       }
    },
-
-     {
+   {
       "command_id":"a4bba6e5-2fc6-4b60-b1a9-4b09bc4044f9",
       "words":{
          "otvori":0.2,
@@ -169,6 +163,7 @@
          "gugl":0.35,
          "guglu":0.35,
          "guglaj":0.35,
+         "googleu": 0.35,
          "izguglaj":0.35,
          "pretraži":0.35,
          "pretraga":0.35,
@@ -177,11 +172,27 @@
          "pronađi":0.15,
          "browser":0.35,
          "upit":0.15,
-         "internetu": 0.35,
-                  "internetu": 0.35,
-
-         "web": 0.35,
-                  "webu": 0.35
+         "internet":0.35,
+         "internetu":0.35,
+         "web":0.35,
+         "webu":0.35
+      }
+   },
+    {
+      "command_id":"30aa30ff-67cf-414a-a4e8-530f45e37510",
+      "words":{
+          "pokreni":0.35,
+         "izvrši":0.35,
+         "otvori":0.2,
+         "program":0.35,
+         "aplikaciju":0.25,
+         "komanda": 0.35,
+         "komandu": 0.35,
+         "linux": 0.25,
+         "unix": 0.25,
+         "sistem": 0.25,
+         "sistemsku": 0.25
       }
    }
+
 ]

@@ -54,7 +54,7 @@ from services.webapi.translation_service import TranslationService
 from services.webapi.mail_service import MailService
 from services.websearch.browser_search_service import BrowserService
 # from services.websearch import * #import WikipediaService
-
+from services.system.os_service import  OSService
 service_pool = {
 
     "wikipedia": wikipedia_service.WikipediaService("en"),
@@ -62,7 +62,8 @@ service_pool = {
     "translation": TranslationService(),
     "mail": MailService(),
     "imdb": IMDBService(),
-    "browser":BrowserService()
+    "browser":BrowserService(),
+    "system":OSService()
 
 }
 commands = load_json_data(ENGLISH_COMMANDS)

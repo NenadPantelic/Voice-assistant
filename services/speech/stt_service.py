@@ -5,7 +5,6 @@ from utils.utils import *
 from ..action_result import ActionResult
 
 
-
 class SpeechRecognizer:
 
     def __init__(self, recognition_api="google", language="en-us"):
@@ -19,16 +18,15 @@ class SpeechRecognizer:
         self.__language = language
 
     def set_language(self, language):
-        print("LANGUAGE CHANGED")
         self.__language = language
 
     def get_language(self):
         return self.__language
 
     def determine_recognition_method(self):
-        apiMethod = RECOGNITION_METHODS.get(self.__recognition_api, "recognize_google")
-        if (self.__recognizer is not None and hasattr(self.__recognizer, apiMethod)):
-            self.__recognition_method = getattr(self.__recognizer, apiMethod)
+        api_method = RECOGNITION_METHODS.get(self.__recognition_api, "recognize_google")
+        if self.__recognizer is not None and hasattr(self.__recognizer, api_method):
+            self.__recognition_method = getattr(self.__recognizer, api_method)
 
     def recognize_from_file(self, audio_file):
         pass
@@ -47,7 +45,7 @@ class SpeechRecognizer:
         except sr.RequestError as e:
             logging_exception(e)
             result = ActionResult(None,
-                                       REQUEST_SPEECH_EXCEPTION)
+                                  REQUEST_SPEECH_EXCEPTION)
 
         except Exception as e:
             logging_exception(e)
@@ -66,4 +64,3 @@ class SpeechRecognizer:
                 self.__recognizer.adjust_for_ambient_noise(source)
                 audio = self.__recognizer.listen(source)
         return audio
-
