@@ -1,5 +1,4 @@
 import speech_recognition as sr
-import logging
 from config.constants import *
 from utils.utils import *
 from ..action_result import ActionResult
@@ -36,8 +35,8 @@ class SpeechRecognizer:
         result = None
         try:
             speech = self.__recognition_method(audio, language=self.__language)
-            result = ActionResult(speech, OK)
-
+            result = ActionResult(speech, SUCCESS)
+        #
         except sr.UnknownValueError as e:
             logging_exception(e)
             result = ActionResult(None, UNKNOWN_SPEECH_VALUE_EXCEPTION)
@@ -52,7 +51,7 @@ class SpeechRecognizer:
             result = ActionResult(None, DEFAULT_EXCEPTION)
 
         finally:
-            logging.info(result)
+            logger.info(result)
             return result
 
     def get_audio_from_microphone(self):
@@ -60,7 +59,7 @@ class SpeechRecognizer:
         if self.__microphone is not None:
             with self.__microphone as source:
                 print('Ready for command...')
-                logging.info("Ready for command...")
+                logger.info("Ready for command...")
                 self.__recognizer.adjust_for_ambient_noise(source)
                 audio = self.__recognizer.listen(source)
         return audio

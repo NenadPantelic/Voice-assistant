@@ -1,5 +1,5 @@
 import omdb, imdb
-from config.constants import OMDB_API_KEY, OK
+from config.constants import OMDB_API_KEY, SUCCESS
 
 # from functools  import lru_cache
 from services.action_result import ActionResult
@@ -30,7 +30,7 @@ class IMDBService:
             movie_details = self.get_movie_by_id(movie_id)
             movie_info = self.get_brief_movie_info(movie_details)
             complete_info += self.movie_info_to_str(movie_info) + "\n"
-        return ActionResult(complete_info, OK, language="en")
+        return ActionResult(complete_info, SUCCESS, language="en")
 
     def get_movie_details(self, title):
         movie = self.get_first_movie(title)
@@ -38,7 +38,7 @@ class IMDBService:
             movie_id = self.get_movie_id(movie)
             movie_details = self.get_movie_by_id(movie_id)
             movie_info = self.get_detailed_movie_info(movie_details)
-            return ActionResult(self.movie_info_to_str(movie_info), OK, language="en")
+            return ActionResult(self.movie_info_to_str(movie_info), SUCCESS, language="en")
         else:
             return None
 

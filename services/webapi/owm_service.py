@@ -1,7 +1,7 @@
 from pyowm import OWM
 from pyowm.caches.lrucache import LRUCache
 
-from config.constants import OWM_API_KEY, WEATHER_PARAMS, WEATHER_PARAMETERS, OK
+from config.constants import OWM_API_KEY, WEATHER_PARAMS, WEATHER_PARAMETERS, SUCCESS, logger
 from ..action_result import ActionResult
 
 
@@ -82,9 +82,12 @@ class WeatherForecastService:
         return display_str
 
     def get_forecast_result(self, location, param="all", unit="celsius"):
+        logger.debug("Calling get_forecast_result with params: [location = {}, param = {}, unit = {}]".format(str(location), \
+                                                                                                 str(param), str(unit)))
         weather_data = self.get_weather_at_location(location)
+        logger.debug("Raw forecast results = {}".format(str(weather_data)))
         forecast_output = self.get_forecast_in_readable_form(weather_data, param, **{"unit": unit})
-        return ActionResult(forecast_output, OK)
+        return ActionResult(forecast_output, SUCCESS)
 
     def get_forecast_at(self, time):
         try:

@@ -54,5 +54,10 @@ def convert_latinic_to_cyrilic(text):
     conversion_map = {latinic_symbols[i]: cyrilic_symbols[i] for i in range(len(latinic_symbols))}
     for char in text:
         converted_text = converted_text + (conversion_map[char] if char.isalpha() else char)
-    return converted_text
+    return
+
+
+def convert_instance_type_to_str(type):
+    return str(type).split("'")[1]
+
 

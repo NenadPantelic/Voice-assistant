@@ -15,8 +15,14 @@
       "previous_command_id":null,
       "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "messages":{
-         "en":"Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!",
-         "sr":"Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
+         "success":{
+            "en":"Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!",
+            "sr":"Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
+         },
+         "fail":{
+            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if error happens again!",
+            "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probaj ponovo ili kasnije ukoliko to ne prođe!"
+         }
       },
       "descriptions":{
          "en":"Set operating language of voice assistant.",
@@ -39,8 +45,14 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"Language is set successfully.",
-         "sr":"Jезик је успешно постављен."
+         "success":{
+            "en":"Language is set successfully.",
+            "sr":"Jезик је успешно постављен."
+         },
+         "fail":{
+            "en":"I have some problems with language setting. Be kind to try again, speak clear and loud.",
+            "sr":"Imam problema sa postavkom jezika. Budi ljubazan da probaš opet, govori jasno i glasno."
+         }
       },
       "descriptions":{
          "en":"Set operating language of voice assistant.",
@@ -63,12 +75,18 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"By Wikipedia: ",
-         "sr":"Према Википедији: "
+         "success":{
+            "en":"By Wikipedia: ",
+            "sr":"Prema Vikipediji: "
+         },
+         "fail":{
+            "en":"Unfortunately, I met some problems during request handling. I think issue lies in voice comprehention. I'm suggesting to try again.",
+            "sr":"Nažalost, došlo je do nekih problema. Verovatno zbog razumevanja govora. Moj savet je da probaš ponovo."
+         }
       },
       "descriptions":{
          "en":"Brief Wikipedia search. Returns summary of wikipedia page.",
-         "sr":"Кратак резиме са стране добијене са Википедије"
+         "sr":"Kratak rezime dobijen sa strane dobijene sa Vikipedije."
       }
    },
    {
@@ -87,8 +105,14 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"Weather forecast results:\n",
-         "sr":"Stanje vremenske prognoze:\n"
+         "success":{
+            "en":"Weather forecast results:\n",
+            "sr":"Stanje vremenske prognoze:\n"
+         },
+         "fail":{
+            "en":"Oops. There is some problem. Usually problems with this service lies in speech recognition. So, my advice is to repeat your command.",
+            "sr":"Ups. Došlo je do nekog problema. Uglavnom, problemi kod ove usluge potiču iz probleema sa razumevanjem govora.Moj savet je da probaš ponovo."
+         }
       },
       "descriptions":{
          "en":"Brief Wikipedia search. Returns summary of wikipedia page.",
@@ -207,8 +231,14 @@
       "previous_command_id":null,
       "next_command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "messages":{
+         "success": {
          "en":"I'm ready for a new email. who is the recipient? It will be better if you enter an address from keyboard.",
          "sr":"Spreman sam za novi email. Ko je primalac? Sgiurnije je da uneseš adresu sa tastature."
+      },
+         "fail": {
+            "en":"I'm sorry, I could not handle this. Problems happen mainly because of speech recognition. Try again.",
+         "sr":"Žao mi je, nisam uspeo da rešim ovo. Problemi uglavnom nastaju zbog prepoznavanja glasa. Probaj ponovo."
+         }
       },
       "descriptions":{
          "en":"Activates email sending mode.",
@@ -231,8 +261,13 @@
       "previous_command_id":null,
       "next_command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
       "messages":{
+         "success": {
          "en":"What about the subject?",
          "sr":"Koja je tema poruke?"
+      }, "fail": {
+            "en":"Your last command cannot be executed. I met some unhandled issues. Try again.",
+         "sr":"Nisam u mogućnosti da izvršim poslednju komandu. Dogodile su se neke greškee. Pokušaj ponovo."
+         }
       },
       "descriptions":{
          "en":"Sets the receiver.",
@@ -503,9 +538,7 @@
          "sr":"Izvršava google pretragu i otvara prvi rezultat."
       }
    },
-
-
-    {
+   {
       "command_id":"30aa30ff-67cf-414a-a4e8-530f45e37510",
       "service":null,
       "method":null,
@@ -529,9 +562,7 @@
          "sr":"Inicijalizuje komandu za pokretanje programa."
       }
    },
-
-
-    {
+   {
       "command_id":"13d9c09c-b5cb-4c0a-b6a2-ec1e1ead53c0",
       "service":"system",
       "method":"run_program",

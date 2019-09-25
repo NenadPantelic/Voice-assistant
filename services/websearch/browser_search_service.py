@@ -2,7 +2,7 @@ import threading
 from functools import lru_cache
 import googlesearch, webbrowser
 
-from config.constants import OK, NO_GOOGLE_RESULT, FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL
+from config.constants import SUCCESS, NO_GOOGLE_RESULT, FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL
 from services.action_result import ActionResult
 
 TPE_MAP = {"videos": "vid", "images": "isch", "news": "nws", "shopping": "shop", "books": "bks", "applications": "app"}
@@ -22,7 +22,7 @@ class BrowserService:
         # results is generator object
         # TODO:think about sequential search result acquiring - not only first result
         try:
-            return ActionResult(next(results), OK)
+            return ActionResult(next(results), SUCCESS)
         except StopIteration as e:
             # TODO logging
             return ActionResult(None, NO_GOOGLE_RESULT)

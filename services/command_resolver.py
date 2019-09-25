@@ -32,6 +32,9 @@ class CommandResolver:
     def set_keywords(self, keywords):
         self.__keywords = convert_json_array_to_dict(keywords)
 
+    def set_next_command_id(self, command_id):
+        self.__next_command_id = command_id
+
     def calculate_command_scores(self, word_list):
         scores = {}
         # TODO:change input type of word_list to string (currently is list)
@@ -75,12 +78,12 @@ class CommandResolver:
                 self.__command = self.get_most_probable_command(candidate_commands)
             else:
                 self.__command = self.__commands[candidate_commands[0][0]]
-            self.__previous_command_id = self.__command["previous_command_id"]
+            #self.__previous_command_id = self.__command["previous_command_id"]
         else:
-            self.__previous_command_id = self.__command["command_id"]
+            #self.__previous_command_id = self.__command["command_id"]
             self.__command = self.find_command_by_id(self.__next_command_id)
 
-        self.__next_command_id = self.__command["next_command_id"]
+        #self.__next_command_id = self.__command["next_command_id"]
 
     def get_most_probable_command(self, commands):
         pass

@@ -1,4 +1,6 @@
-from config.constants import ENGLISH_COMMANDS
+from config.constants import ENGLISH_COMMANDS, SUCCESS, logger, FAIL
+from exceptions.exception_handler import ExceptionHandler
+from services.action_result import ActionResult
 from utils.utils import load_json_data
 commands = load_json_data(ENGLISH_COMMANDS)
 
@@ -11,8 +13,11 @@ class ServiceExecutor:
         self.__service_command_methods = {}
         self.__populate_service_command_methods()
         self.service_pool = service_pool
+        #TODO;check if this should be set in constructor
+        self.__language = None
 
     def set_services_language(self, language):
+        self.__language = language
         for service in self.service_pool.values():
             if hasattr(service, "set_language"):
                 service.set_language(language)
@@ -41,16 +46,25 @@ class ServiceExecutor:
         self.__service_command_methods[service][method_name][arg_name] = arg_value
 
     def __commit(self, service, method):
+        logger.info("-------- begin commit --------")
         service_inst = self.service_pool.get(service, None)
+        command_result = None
         if service_inst is not None:
             if hasattr(service_inst, method):
                 executor = getattr(service_inst, method)
                 try:
-                    return executor(**self.__service_command_methods[service][method])
+                    result = executor(**self.__service_command_methods[service][method])
+                    command_result = result
                 except Exception as e:
-                    raise e
+                    message = ExceptionHandler.get_exception_message(e, self.__language)
+                    command_result = ActionResult(message, FAIL, self.__language)
+                finally:
+                    logger.info("-------- end commit --------")
+                    return command_result
         else:
             pass
+        #logger.info("-------- end commit --------")
+
         # TODO:exception handling
 
     def __populate_service_command_methods(self):

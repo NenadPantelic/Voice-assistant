@@ -48,7 +48,7 @@ class WikipediaService:
     @lru_cache(maxsize=32)
     def brief_search(self, query, sentences=3):
         try:
-            return ActionResult(wikipedia.summary(query, sentences=sentences), OK)
+            return ActionResult(wikipedia.summary(query, sentences=sentences), SUCCESS)
         except Exception as e:
             logging_exception(e)
             return ActionResult(e, DEFAULT_EXCEPTION)
@@ -58,7 +58,7 @@ class WikipediaService:
     def get_complete_page(self, query):
         try:
             page = wikipedia.page(query)
-            return ActionResult(page.content, OK)
+            return ActionResult(page.content, SUCCESS)
         except Exception as e:
             logging_exception(e)
             return ActionResult(e, DEFAULT_EXCEPTION)

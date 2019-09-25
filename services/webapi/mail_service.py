@@ -1,4 +1,4 @@
-from config.constants import PROXY_MAIL, MAIL_PASSWORD, OK
+from config.constants import PROXY_MAIL, MAIL_PASSWORD, SUCCESS
 from services.action_result import ActionResult
 import gmail
 
@@ -12,7 +12,7 @@ class MailService:
         try:
             status = self.__api.send(new_message)
             if status is None:
-                return ActionResult("Email was sent successfully!", OK)
+                return ActionResult("Email was sent successfully!", SUCCESS)
         except Exception as e:
             #TODO:handle situation with problem
             print(e)

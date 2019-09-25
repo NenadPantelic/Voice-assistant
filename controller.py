@@ -1,6 +1,6 @@
 from exceptions.exception_handler import ExceptionHandler
 
-from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN
+from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL
 from utils.utils import load_json_data, convert_latinic_to_cyrilic
 
 LANGUAGES = load_json_data(LANG_CODES)
@@ -50,7 +50,6 @@ class Controller:
                                            need_input=False, input_processing_method=None,
                                            is_ready=False)
 
-
     def reset_recognizer_language(self):
         if self.recognizer.get_language() != self.language:
             self.recognizer.set_language(self.language)
@@ -70,7 +69,7 @@ class Controller:
     def listen(self, init=False):
         return self.recognizer.recognize_from_microphone()
 
-    def get_command_output_text(self, command_result):
+    def get_command_output_text(self, command_result, messages):
         # TODO:add check if output_message and exception_message are nonempty
         exception_message = None
         output_message = ""
@@ -79,11 +78,31 @@ class Controller:
             exception_message = ExceptionHandler.check_exception_existence(command_result.get_status(), self.language)
         return output_message, exception_message
 
-    def get_output_speech(self, command_result, message):
-        output_message, exception_message = self.get_command_output_text(command_result)
-        message_prefix = message if exception_message is None else exception_message
-        # message_prefix = self.get_message_prefix(message, exception_message)
+    def get_output_speech(self, command_result, messages):
+
+        output_message, status = "", SUCCESS
+        if command_result is not None:
+            output_message = command_result.get_result()
+            status = command_result.get_status()
+        message_prefix = messages["success"][self.language] if status == SUCCESS else \
+            messages["fail"][self.language]
+        # output_message, exception_message = self.get_command_output_text(command_result)
+        # message_prefix = message if exception_message is None else exception_message
         return message_prefix, output_message
+
+    def determine_next_command(self, command, command_result):
+        next_command_id = None
+
+        if command_result is not None:
+            if command_result.get_status() == SUCCESS:
+                next_command_id = command["next_command_id"]
+            elif command_result.get_status() == FAIL:
+                pass
+                #TODO:
+                #repeat command or break
+            else:
+                raise ValueError("Status can only be SUCCESS or FAIL")
+        self.command_resolver.set_next_command_id(command["next_command_id"])
 
     def execute_appropriate_method(self, service, method, command):
         executor = getattr(service, method)
@@ -96,7 +115,6 @@ class Controller:
     # this method should be called only once per voice control request
     def execute(self, text):
         command = self.command_resolver.get_command(text)
-        #command_result = None
         speaking_language = None
         service = command["service"]
         method = command["method"]
@@ -112,22 +130,25 @@ class Controller:
                 command_result = self.executor.set_param_and_commit(command["service"], method, command["arg_name"],
                                                                     command["arg"], input_type=command["arg_type"],
                                                                     need_input=command["need_input"],
-                                                                    input_processing_method=command["input_processing_method"],
+                                                                    input_processing_method=command[
+                                                                        "input_processing_method"],
                                                                     is_ready=command["is_ready"])
         else:
             command_result = None
-        message = command["messages"][self.language]
+
+        self.determine_next_command(command, command_result)
+        messages = command["messages"]  # [self.language]
+
 
         if command_result is not None:
             speaking_language = command_result.get_language() if command_result.get_language() is not None \
                 else self.language
         self.speaking_language = speaking_language
 
-        return self.get_output_speech(command_result, message)
+        return self.get_output_speech(command_result, messages)
 
     # TODO:check gTTS Google text-to-speech API limit
     def speak_out(self, message_prefix, output_message):
-        print(message_prefix, output_message)
         self.speaker.save_speech_and_play(message_prefix)
         self.set_speaking_language(self.speaking_language)
         self.speaker.save_speech_and_play(output_message)

@@ -117,5 +117,9 @@ os_srv = OSService()
 
 #print(file)
 #print(os_srv.open_file(file))
-print(os_srv.get_computer_status())
-print(os_srv.get_pid("chrome"))
+#print(os_srv.get_computer_status())
+#print(os_srv.get_pid("chrome"))
+
+
+
+#get_exception_message

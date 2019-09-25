@@ -1,4 +1,15 @@
 # - *- coding: utf- 8 - *-
+
+
+import logging
+
+logging.basicConfig(level=logging.DEBUG, filename="voice_assistant.log", \
+                   format='%(asctime)s: %(levelname)s - %(message)s',\
+                   datefmt='%m/%d/%Y %I:%M:%S %p')
+logger = logging
+
+#logging  - debug, info, warning, error, critical
+
 PROVIDED_LANGUAGES = {
     "english": "en-US",
     "serbian": "sr-RS",
@@ -33,21 +44,6 @@ recognize_wit(): Wit.ai
 
 '''
 
-# region MESSAGES
-
-# INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!"
-OK = 0
-
-# exception constants
-DEFAULT_EXCEPTION = 100
-# speech recognition - 2xx
-UNKNOWN_SPEECH_VALUE_EXCEPTION = 201
-REQUEST_SPEECH_EXCEPTION = 202
-
-TEXT_TO_SPEECH_EXCEPTION = 301
-
-NO_GOOGLE_RESULT = 403
-
 # tts audio config
 
 PATH_TO_AUDIO_DIR = r"data/audio/"
@@ -74,6 +70,19 @@ ENGLISH_COMMANDS = "data/commands/commands-en.json"
 # ENGLISH_COMMANDS = "data/commands/commands-sr.json"
 # TODO: refactor path variables to be in dictionary form for simpler usage
 
+# INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!"
+SUCCESS = 1
+FAIL = 0
+
+# exception constants
+DEFAULT_EXCEPTION = 100
+# speech recognition - 2xx
+UNKNOWN_SPEECH_VALUE_EXCEPTION = 201
+REQUEST_SPEECH_EXCEPTION = 202
+
+TEXT_TO_SPEECH_EXCEPTION = 301
+
+NO_GOOGLE_RESULT = 403
 
 # exception messages
 EXCEPTION_MESSAGES = {
@@ -96,7 +105,54 @@ EXCEPTION_MESSAGES = {
 
     },
 
-    NO_GOOGLE_RESULT : {
+    NO_GOOGLE_RESULT: {
+        "en": "Hmm, Google cannot find anything that matches your query. Are you sure you query is valid?",
+        "sr": "Nažalost, Google ne može da nađe ništa vezano za tvoj upit. Da li si siguran da je tvoj upit validan?"
+    }
+}
+GENERIC_MESSAGE_EN = "Some internal error occurred. Check log for more details!"
+GENERIC_MESSAGE_SR = "Došlo je do interne greške. Proverite log fajl za više detalja!"
+EXCEPTION_MESSAGES = {
+    "KeyError": {
+        "en": GENERIC_MESSAGE_EN,
+        "sr": GENERIC_MESSAGE_SR
+    },
+    "TypeError": {
+        "en": GENERIC_MESSAGE_EN,
+        "sr": GENERIC_MESSAGE_SR
+    },
+    "ValueError": {
+        "en": GENERIC_MESSAGE_EN,
+        "sr": GENERIC_MESSAGE_SR
+    },
+    "AssertionError": {
+        "en": GENERIC_MESSAGE_EN,
+        "sr": GENERIC_MESSAGE_SR
+    },
+    "IndexError": {
+        "en": GENERIC_MESSAGE_EN,
+        "sr": GENERIC_MESSAGE_SR
+    },
+    UNKNOWN_SPEECH_VALUE_EXCEPTION: {
+        "en": "Speech cannot be analyzed and/or recognized!",
+        "sr": "Ваш говор не може бити обрађен или препознат!"
+    },
+    REQUEST_SPEECH_EXCEPTION: {
+        "en": "Request error problem. Check API limits and connectivity status!",
+        "sr": "Проблеми са слањем захтева. Проверите АПИ лимите и статус мреже!"
+    },
+
+    DEFAULT_EXCEPTION: {
+        "en": "",
+        "sr": "Дошло је до неке грешке. Оригинална порука грешке на енглеском је: "
+    },
+    TEXT_TO_SPEECH_EXCEPTION: {
+        "en": "",
+        "sr": "Дошло је до неке грешке. Оригинална порука грешке на енглеском је: "
+
+    },
+
+    NO_GOOGLE_RESULT: {
         "en": "Hmm, Google cannot find anything that matches your query. Are you sure you query is valid?",
         "sr": "Nažalost, Google ne može da nađe ništa vezano za tvoj upit. Da li si siguran da je tvoj upit validan?"
     }
@@ -106,7 +162,6 @@ EXCEPTION_MESSAGES = {
 
 OWM_API_KEY = "5ab8013f8b3c54d28b8f8035ffd40f0a"
 OMDB_API_KEY = '56674ea0'
-
 
 PROXY_MAIL = "lindo.voice.assistant@gmail.com"
 MAIL_PASSWORD = "mizcechlykbgsfhx"
@@ -136,8 +191,7 @@ WEATHER_PARAMETERS = {
 
 }
 
-
-#social networks urls
+# social networks urls
 
 FACEBOOK_BASE_URL = "https://www.facebook.com/"
 TWITTER_BASE_URL = "https://twitter.com/"
