@@ -1,5 +1,5 @@
 import wikipedia
-from ..action_result import ActionResult
+from services.action_result import ActionResult
 from utils.utils import logging_exception
 from config.constants import *
 from functools import lru_cache
@@ -43,19 +43,32 @@ class WikipediaService:
             self.set_language(language)
 
     def set_language(self, language):
+        """
+        Sets language of wikipedia client API
+        :param language (str): language code
+        :return:
+        """
         wikipedia.set_lang(language)
 
-    @lru_cache(maxsize=32)
+    @lru_cache(maxsize=8)
     def brief_search(self, query, sentences=3):
-        try:
-            return ActionResult(wikipedia.summary(query, sentences=sentences), SUCCESS)
-        except Exception as e:
-            logging_exception(e)
-            return ActionResult(e, DEFAULT_EXCEPTION)
+        """
+        Get summary section of page that satisfy query.
+        :param query(str): searching term
+        :param sentences: number of sentences that wikipedia summary should have
+        :return: ActionResult with the result from wikipedia page (or appropriate error message)
+        """
+        if sentences > 10: raise ValueError("Number of summary sentences can not be greater than 10.")
+        return ActionResult(wikipedia.summary(query, sentences=sentences), SUCCESS)
 
-    #not tested or used
-    @lru_cache(maxsize=32)
+    #not tested nor used
+    @lru_cache(maxsize=8)
     def get_complete_page(self, query):
+        """
+        Returns wiki page that satisfy input query (complete page content)
+        :param query(str): searching term
+        :return:
+        """
         try:
             page = wikipedia.page(query)
             return ActionResult(page.content, SUCCESS)

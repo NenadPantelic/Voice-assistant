@@ -36,23 +36,29 @@ class SpeechRecognizer:
         try:
             speech = self.__recognition_method(audio, language=self.__language)
             result = ActionResult(speech, SUCCESS)
+            return result
         #
         except sr.UnknownValueError as e:
+            print("DEBUG" + str(type(e)))
             logging_exception(e)
-            result = ActionResult(None, UNKNOWN_SPEECH_VALUE_EXCEPTION)
+            #result = ActionResult(None, UNKNOWN_SPEECH_VALUE_EXCEPTION)
+            raise e
 
         except sr.RequestError as e:
+            print("DEBUG" + str(type(e)))
             logging_exception(e)
-            result = ActionResult(None,
-                                  REQUEST_SPEECH_EXCEPTION)
+            #result = ActionResult(None,
+             #                     REQUEST_SPEECH_EXCEPTION)
+            raise e
 
         except Exception as e:
             logging_exception(e)
             result = ActionResult(None, DEFAULT_EXCEPTION)
 
         finally:
-            logger.info(result)
-            return result
+            #logger.info(result)
+            #return result
+            pass
 
     def get_audio_from_microphone(self):
         audio = None

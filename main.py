@@ -1,12 +1,9 @@
-import json
-
 from service_executor import ServiceExecutor
 from services.speech.text_processor_service import TextProcessor
 from services.speech.tts_service import *
 from services.speech.stt_service import *
 # efrom config.constants import *
 from controller import Controller
-import config.constants
 from services.webapi.imdb_service import IMDBService
 
 langs = None
@@ -48,7 +45,7 @@ keywords = {lang: load_json_data(keywordsFiles[lang]) for lang in keywordsFiles}
 
 sp = TextProcessor()
 from services.command_resolver import CommandResolver
-from services.websearch import wikipedia_service
+from services.webapi import wikipedia_service
 from services.webapi.owm_service import WeatherForecastService
 from services.webapi.translation_service import TranslationService
 from services.webapi.mail_service import MailService

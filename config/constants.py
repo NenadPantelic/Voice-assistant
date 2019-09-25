@@ -4,11 +4,11 @@
 import logging
 
 logging.basicConfig(level=logging.DEBUG, filename="voice_assistant.log", \
-                   format='%(asctime)s: %(levelname)s - %(message)s',\
-                   datefmt='%m/%d/%Y %I:%M:%S %p')
+                    format='%(asctime)s: %(levelname)s - %(message)s', \
+                    datefmt='%m/%d/%Y %I:%M:%S %p')
 logger = logging
 
-#logging  - debug, info, warning, error, critical
+# logging  - debug, info, warning, error, critical
 
 PROVIDED_LANGUAGES = {
     "english": "en-US",
@@ -133,18 +133,58 @@ EXCEPTION_MESSAGES = {
         "en": GENERIC_MESSAGE_EN,
         "sr": GENERIC_MESSAGE_SR
     },
-    UNKNOWN_SPEECH_VALUE_EXCEPTION: {
+    "speech_recognition.UnknownValueError": {
         "en": "Speech cannot be analyzed and/or recognized!",
         "sr": "Ваш говор не може бити обрађен или препознат!"
     },
-    REQUEST_SPEECH_EXCEPTION: {
+    "speech_recognition.RequestError": {
         "en": "Request error problem. Check API limits and connectivity status!",
         "sr": "Проблеми са слањем захтева. Проверите АПИ лимите и статус мреже!"
     },
+    "smtplib.SMTPAuthenticationError":
+        {
+            "en": "There is some problem with email authentication. Check your email credentials.",
+            "sr": "Došlo je do problema sa autentifikacijom email naloga. Proveri kredencijale."
+        },
+    "smtplib.SMTPNotSupportedError": {
+        "en": "There is some problem with email settings configuration.",
+        "sr": "Postoje određeni problemi sa podešavanjima emaila."
+    },
+    "smtplib.SMTPHeloError": {
+        "en": "There is some problem with email settings configuration.",
+        "sr": "Postoje određeni problemi sa podešavanjima emaila."
+    },
+    "smtplib.SMTPDataError": {
+        "en": "There is some problem with email settings configuration.",
+        "sr": "Postoje određeni problemi sa podešavanjima emaila."
+    },
+    "smtplib.SMTPConnectError": {
+        "en": "There is some problem with email connection.",
+        "sr": "Postoje određeni problemi sa konekcijom ka emaila serveru."
+    },
+    "smtplib.SMTPServerDisconnected": {
+        "en": "There is some problem with email connection.",
+        "sr": "Postoje određeni problemi sa konekcijom ka emaila serveru."
+    },
 
-    DEFAULT_EXCEPTION: {
-        "en": "",
-        "sr": "Дошло је до неке грешке. Оригинална порука грешке на енглеском је: "
+    "smtplib.SMTPSenderRefused": {
+        "en": "Sender's email settings are not valid.",
+        "sr": "Postoje određeni problemi sa podešavanjima emaila pošiljaoca."
+    },
+    "smtplib.SMTPRecipientsRefused": {
+        "en": "Recipient's email settings are not valid. Check recipient email address.",
+        "sr": "Postoje određeni problemi sa podešavanjima emaila primaoca. Proveri da li si uneo validnu adresu."
+    },
+    "wikipedia.exceptions.PageError": {
+        "en": "I cannot find anything on Wikipedia that suits your query. Try another one or try again with more precise"
+              "speech.",
+        "sr": "Nisam uspeo da nađem ništa na Vikipediji što odgovara tvom zahtevu. Probaj sa nekim drugim zahtevom ili probaj"
+              "ponovo, ali probaj da budeš precizniji u govoru."
+    },
+
+    "exception": {
+        "en": GENERIC_MESSAGE_EN,
+        "sr": GENERIC_MESSAGE_SR
     },
     TEXT_TO_SPEECH_EXCEPTION: {
         "en": "",

@@ -54,6 +54,7 @@ class ServiceExecutor:
                 executor = getattr(service_inst, method)
                 try:
                     result = executor(**self.__service_command_methods[service][method])
+                    print(result.get_result())
                     command_result = result
                 except Exception as e:
                     message = ExceptionHandler.get_exception_message(e, self.__language)

@@ -233,7 +233,7 @@
       "messages":{
          "success": {
          "en":"I'm ready for a new email. who is the recipient? It will be better if you enter an address from keyboard.",
-         "sr":"Spreman sam za novi email. Ko je primalac? Sgiurnije je da uneseš adresu sa tastature."
+         "sr":"Spreman sam za novi email. Ko je primalac? Sigurnije je da uneseš adresu sa tastature."
       },
          "fail": {
             "en":"I'm sorry, I could not handle this. Problems happen mainly because of speech recognition. Try again.",
@@ -250,7 +250,7 @@
       "service":"mail",
       "method":"send_mail",
       "has_args":true,
-      "arg_name":"receiver",
+      "arg_name":"recipient",
       "arg_type":"str",
       "need_input":true,
       "process_input_text":false,
@@ -289,9 +289,12 @@
       "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"8b33b6a0-7bfb-489c-b6df-12eceefa8ebe",
-      "messages":{
-         "en":"Finally, what is your message.",
-         "sr":"Na kraju, izdiktiraj mi poruku."
+      "messages": {
+         "success": {
+            "en": "Finally, what is your message.",
+            "sr": "Na kraju, izdiktiraj mi poruku."
+         },
+         "fail": {"en": "Huh, I encountered some problems. Please, say again your last command.", "sr": "Huh, naišao sam na neki problem. Ponovi poslednju komandu."}
       },
       "descriptions":{
          "en":"Accept the message of an email.",
@@ -314,9 +317,12 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"Email sending is active.",
-         "sr":"Šaljem email."
-      },
+         "success": {
+         "en":"Email was sent successfully!.",
+         "sr":"Email je uspešno poslat!"
+      }, "fail": {
+   "en": "I could not sent an email!", "sr": "Nisam uspeo da pošaljem email!"}
+   },
       "descriptions":{
          "en":"Sents an email.",
          "sr":"Šalje email."

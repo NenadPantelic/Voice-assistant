@@ -1,6 +1,7 @@
 from exceptions.exception_handler import ExceptionHandler
 
 from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL
+from services.action_result import ActionResult
 from utils.utils import load_json_data, convert_latinic_to_cyrilic
 
 LANGUAGES = load_json_data(LANG_CODES)
@@ -78,31 +79,38 @@ class Controller:
             exception_message = ExceptionHandler.check_exception_existence(command_result.get_status(), self.language)
         return output_message, exception_message
 
-    def get_output_speech(self, command_result, messages):
+    def get_output_speech(self, command_result, messages={}):
 
-        output_message, status = "", SUCCESS
+        output_message, status, message_prefix = "", SUCCESS, ""
         if command_result is not None:
             output_message = command_result.get_result()
             status = command_result.get_status()
-        message_prefix = messages["success"][self.language] if status == SUCCESS else \
-            messages["fail"][self.language]
+        print(messages)
+        if messages != {}:
+            message_prefix = messages["success"][self.language] if status == SUCCESS else \
+                messages["fail"][self.language]
         # output_message, exception_message = self.get_command_output_text(command_result)
         # message_prefix = message if exception_message is None else exception_message
         return message_prefix, output_message
 
     def determine_next_command(self, command, command_result):
         next_command_id = None
-
         if command_result is not None:
             if command_result.get_status() == SUCCESS:
                 next_command_id = command["next_command_id"]
+                #self.command_resolver.set_next_command_id(command["next_command_id"])
             elif command_result.get_status() == FAIL:
-                pass
+                #pass
                 #TODO:
                 #repeat command or break
+                next_command_id = command["command_id"]
+                #self.command_resolver.set_next_command_id(command["command_id"])
             else:
                 raise ValueError("Status can only be SUCCESS or FAIL")
-        self.command_resolver.set_next_command_id(command["next_command_id"])
+        else:
+            #case when command is not ready (executable)
+            next_command_id = command["next_command_id"]
+        self.command_resolver.set_next_command_id(next_command_id)
 
     def execute_appropriate_method(self, service, method, command):
         executor = getattr(service, method)
@@ -155,12 +163,16 @@ class Controller:
         self.reset_speaking_language_()
 
     def listen_and_execute(self):
-        text_result = self.recognizer.recognize_from_microphone()
+        try:
+            text_result = self.recognizer.recognize_from_microphone()
+        except Exception as e:
+            message = ExceptionHandler.get_exception_message(e, self.language)
+            text_result = ActionResult(message, FAIL)
         self.reset_recognizer_language()
         # tts exception
 
-        if text_result is None or text_result.get_result() is None:
-            output = self.get_output_speech(text_result, '')
+        if text_result is None or text_result.get_result() is None or text_result.get_status() == FAIL:
+            output = self.get_output_speech(text_result)
             # speaking_language = self.language
         else:
             print(text_result.get_result())
