@@ -1,0 +1,41 @@
+09/25/2019 08:06:19 PM: DEBUG - Calling get_forecast_result with params: [location = London, param = all, unit = celsius]
+09/25/2019 08:06:19 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+09/25/2019 08:06:20 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=London&lang=en HTTP/1.1" 200 460
+09/25/2019 08:06:20 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-09-25 18:02:11+00, status=rain, detailed status=light rain>
+09/25/2019 08:06:20 PM: DEBUG - Forecast in readable form = clouds: 40
+pressure: 1003
+wind speed: 3.6
+humidity: 93
+temperature: 16.53
+detailed status: light rain
+
+09/25/2019 08:06:20 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+09/25/2019 08:06:20 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast/daily?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=Novi+Sad&lang=en&cnt=5 HTTP/1.1" 200 1696
+09/25/2019 08:07:07 PM: DEBUG - Calling get_forecast_result with params: [location = London, param = all, unit = celsius]
+09/25/2019 08:07:07 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+09/25/2019 08:07:07 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=London&lang=en HTTP/1.1" 200 460
+09/25/2019 08:07:07 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-09-25 18:02:11+00, status=rain, detailed status=light rain>
+09/25/2019 08:07:07 PM: DEBUG - Forecast in readable form:
+ clouds: 40
+pressure: 1003
+wind speed: 3.6
+humidity: 93
+temperature: 16.53
+detailed status: light rain
+
+09/25/2019 08:07:07 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+09/25/2019 08:07:08 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast/daily?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=Novi+Sad&lang=en&cnt=5 HTTP/1.1" 200 1696
+09/25/2019 08:07:31 PM: DEBUG - Calling get_forecast_result with params: [location = London, param = all, unit = celsius]
+09/25/2019 08:07:31 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+09/25/2019 08:07:31 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=London&lang=en HTTP/1.1" 200 460
+09/25/2019 08:07:31 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-09-25 18:02:11+00, status=rain, detailed status=light rain>
+09/25/2019 08:07:31 PM: DEBUG - Forecast in readable form:
+clouds: 40
+pressure: 1003
+wind speed: 3.6
+humidity: 93
+temperature: 16.53
+detailed status: light rain
+
+09/25/2019 08:07:31 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+09/25/2019 08:07:31 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast/daily?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=Novi+Sad&lang=en&cnt=5 HTTP/1.1" 200 1696
