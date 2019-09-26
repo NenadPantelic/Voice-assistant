@@ -169,5 +169,21 @@
          "unix": 0.25,
          "system": 0.25
       }
+   },
+    {
+   "command_id":"146470864-aaec-4fa4-a556-0634cec60e1d",
+      "words":{
+         "turn":0.35,
+         "on":0.15,
+         "off":0.15,
+         "switch":0.35,
+         "bulb":0.35,
+         "arduino":0.35,
+         "relay": 0.35,
+         "power on": 0.25,
+         "power off": 0.25,
+         "light": 0.35
+
+      }
    }
 ]

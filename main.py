@@ -52,6 +52,7 @@ from services.webapi.mail_service import MailService
 from services.websearch.browser_search_service import BrowserService
 # from services.websearch import * #import WikipediaService
 from services.system.os_service import  OSService
+from services.home_control.arduino_control_service import ArduinoControlService
 service_pool = {
 
     "wikipedia": wikipedia_service.WikipediaService("en"),
@@ -60,7 +61,8 @@ service_pool = {
     "mail": MailService(),
     "imdb": IMDBService(),
     "browser":BrowserService(),
-    "system":OSService()
+    "system":OSService(),
+    "arduino":ArduinoControlService()
 
 }
 commands = load_json_data(ENGLISH_COMMANDS)

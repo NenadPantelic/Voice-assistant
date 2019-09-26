@@ -237,3 +237,8 @@ FACEBOOK_BASE_URL = "https://www.facebook.com/"
 TWITTER_BASE_URL = "https://twitter.com/"
 INSTAGRAM_BASE_URL = "https://instagram.com/"
 LINKEDIN_BASE_URL = "https://www.linkedin.com/in/"
+
+
+SERIAL_PORT = "/dev/ttyUSB0"
+DEFAULT_BAUD_RATE = 9600
+

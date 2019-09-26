@@ -248,7 +248,7 @@
    {
       "command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "service":"mail",
-      "method":"send_mail",
+      "method":"send_email",
       "has_args":true,
       "arg_name":"recipient",
       "arg_type":"str",
@@ -277,7 +277,7 @@
    {
       "command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
       "service":"mail",
-      "method":"send_mail",
+      "method":"send_email",
       "has_args":true,
       "arg_name":"subject",
       "arg_type":"str",
@@ -304,7 +304,7 @@
    {
       "command_id":"8b33b6a0-7bfb-489c-b6df-12eceefa8ebe",
       "service":"mail",
-      "method":"send_mail",
+      "method":"send_email",
       "has_args":true,
       "arg_name":"content",
       "arg_type":"str",
@@ -590,6 +590,36 @@
       "descriptions":{
          "en":"Runs desired program.",
          "sr":"Pokreće traženi program."
+      }
+   },
+
+    {
+      "command_id":"146470864-aaec-4fa4-a556-0634cec60e1d",
+      "service":"arduino",
+      "method":"control",
+      "has_args":true,
+      "arg_name":"state_demmand",
+      "arg_type":"str",
+      "need_input":false,
+      "process_input_text":false,
+      "input_processing_method":"get_relay_state",
+      "system_command":null,
+      "setup_command":false,
+      "is_ready":true,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "success": {
+         "en":"Light state is changed.",
+         "sr":"Stanje sijalice je promenjeno."
+      }, "fail": {
+            "en": "I'm sorry. Something went wrong. Check connectivity and serial port parameters.",
+            "sr": "Žao mi je, nešto je pošlo po zlu. Proveri konekciju i parametre serijskog porta."
+         }
+      },
+      "descriptions":{
+         "en":"Bulb state change.",
+         "sr":"Menja stanje sijalice."
       }
    }
 ]

@@ -193,6 +193,21 @@
          "sistem": 0.25,
          "sistemsku": 0.25
       }
+   },
+    {
+   "command_id":"146470864-aaec-4fa4-a556-0634cec60e1d",
+      "words":{
+         "uključi":0.35,
+         "upali":0.35,
+         "isključi":0.35,
+         "ugasi":0.35,
+         "promeni":0.35,
+         "stanje":0.15,
+         "sijalica": 0.35,
+         "sijalice": 0.35,
+         "relej": 0.25,
+         "svetlo": 0.35
+      }
    }
 
 ]

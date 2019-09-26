@@ -16,9 +16,10 @@ class WeatherForecastService:
     def set_language(self, language):
         """
         Sets language for OWM API.
-        :param language (str): language code e.g. en, fr, sr...
+        :param language : language code (str) e.g. en, fr, sr...
         :return:
         """
+        logger.debug("Setting owm language: {}".format(language))
         language = 'hr' if language == 'sr' else language
         self.api.set_language(language)
 
@@ -39,6 +40,7 @@ class WeatherForecastService:
                                                                                                      str(param),
                                                                                                      str(unit)))
         weather_data = self._get_weather_at_location(location)
+        logger.debug("Weather data results were fetched....")
         logger.debug("Raw forecast results = {}".format(str(weather_data)))
         forecast_output = self._get_forecast_in_readable_form(weather_data, param, **{"unit": unit})
         logger.debug("Forecast in readable form:\n{}".format(forecast_output))

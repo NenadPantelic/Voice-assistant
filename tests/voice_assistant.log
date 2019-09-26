@@ -103,3 +103,44 @@ detailed status: light rain
 09/25/2019 10:34:22 PM: DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=fsfsfsfs&srinfo=suggestion&format=json&action=query HTTP/1.1" 301 0
 09/25/2019 10:34:22 PM: DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
 09/25/2019 10:34:22 PM: DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=fsfsfsfs&srinfo=suggestion&format=json&action=query HTTP/1.1" 200 110
+09/26/2019 11:19:06 AM: DEBUG - Calling send_email with params [subject = test subject, recipient = 564.2015@fink.rs, content = test message]
+09/26/2019 11:19:08 AM: DEBUG - Email sending finished with status = success
+09/26/2019 11:19:08 AM: DEBUG - Calling send_email with params [subject = test tema, recipient = 564.2015@fink.rs, content = test poruka]
+09/26/2019 11:19:09 AM: DEBUG - Email sending finished with status = success
+09/26/2019 11:19:53 AM: DEBUG - Setting wikipedia language: en
+09/26/2019 11:19:53 AM: DEBUG - Calling wikipedia brief_search with [query = fsfsfsfs
+09/26/2019 11:19:53 AM: DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+09/26/2019 11:19:53 AM: DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=fsfsfsfs&srinfo=suggestion&format=json&action=query HTTP/1.1" 301 0
+09/26/2019 11:19:53 AM: DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+09/26/2019 11:19:54 AM: DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=fsfsfsfs&srinfo=suggestion&format=json&action=query HTTP/1.1" 200 110
+09/26/2019 11:20:20 AM: DEBUG - Setting wikipedia language: en
+09/26/2019 11:20:20 AM: DEBUG - Calling wikipedia brief_search with [query = Mihajlo Pupin
+09/26/2019 11:20:20 AM: DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+09/26/2019 11:20:20 AM: DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=Mihajlo+Pupin&srinfo=suggestion&format=json&action=query HTTP/1.1" 301 0
+09/26/2019 11:20:20 AM: DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+09/26/2019 11:20:21 AM: DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=Mihajlo+Pupin&srinfo=suggestion&format=json&action=query HTTP/1.1" 200 170
+09/26/2019 11:20:21 AM: DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+09/26/2019 11:20:21 AM: DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=Mihajlo+Pupin&format=json&action=query HTTP/1.1" 301 0
+09/26/2019 11:20:21 AM: DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+09/26/2019 11:20:21 AM: DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=Mihajlo+Pupin&format=json&action=query HTTP/1.1" 200 271
+09/26/2019 11:20:21 AM: DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+09/26/2019 11:20:21 AM: DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?prop=extracts&explaintext=&titles=Mihajlo+Pupin&exsentences=3&format=json&action=query HTTP/1.1" 301 0
+09/26/2019 11:20:21 AM: DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+09/26/2019 11:20:22 AM: DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?prop=extracts&explaintext=&titles=Mihajlo+Pupin&exsentences=3&format=json&action=query HTTP/1.1" 200 643
+09/26/2019 11:20:22 AM: DEBUG - Wikipedia summary = Mihajlo Idvorski Pupin, Ph.D., LL.D. (Serbian Cyrillic: Михајло Идворски Пупин, pronounced [miˈxǎjlo ˈîdʋoɾski ˈpǔpin]; 4 October 1858 – 12 March 1935), also known as Michael I. Pupin was a Serbian American physicist, physical chemist, philanthropist and patriot. Pupin is best known for his numerous patents, including a means of greatly extending the range of long-distance telephone communication by placing loading coils (of wire) at predetermined intervals along the transmitting wire (known as "pupinization"). Pupin was a founding member of National Advisory Committee for Aeronautics (NACA) on 3 March 1915, which later became NASA. In 1924, he won a Pulitzer Prize for his autobiography.
+09/26/2019 11:20:22 AM: DEBUG - Setting wikipedia language: sr
+09/26/2019 11:20:22 AM: DEBUG - Calling wikipedia brief_search with [query = Новак Ђоковић
+09/26/2019 11:20:22 AM: DEBUG - Starting new HTTP connection (1): sr.wikipedia.org:80
+09/26/2019 11:20:22 AM: DEBUG - http://sr.wikipedia.org:80 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=%D0%9D%D0%BE%D0%B2%D0%B0%D0%BA+%D0%82%D0%BE%D0%BA%D0%BE%D0%B2%D0%B8%D1%9B&srinfo=suggestion&format=json&action=query HTTP/1.1" 301 0
+09/26/2019 11:20:22 AM: DEBUG - Starting new HTTPS connection (1): sr.wikipedia.org:443
+09/26/2019 11:20:22 AM: DEBUG - https://sr.wikipedia.org:443 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=%D0%9D%D0%BE%D0%B2%D0%B0%D0%BA+%D0%82%D0%BE%D0%BA%D0%BE%D0%B2%D0%B8%D1%9B&srinfo=suggestion&format=json&action=query HTTP/1.1" 200 184
+09/26/2019 11:20:22 AM: DEBUG - Starting new HTTP connection (1): sr.wikipedia.org:80
+09/26/2019 11:20:22 AM: DEBUG - http://sr.wikipedia.org:80 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=%D0%9D%D0%BE%D0%B2%D0%B0%D0%BA+%D0%82%D0%BE%D0%BA%D0%BE%D0%B2%D0%B8%D1%9B&format=json&action=query HTTP/1.1" 301 0
+09/26/2019 11:20:22 AM: DEBUG - Starting new HTTPS connection (1): sr.wikipedia.org:443
+09/26/2019 11:20:23 AM: DEBUG - https://sr.wikipedia.org:443 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=%D0%9D%D0%BE%D0%B2%D0%B0%D0%BA+%D0%82%D0%BE%D0%BA%D0%BE%D0%B2%D0%B8%D1%9B&format=json&action=query HTTP/1.1" 200 318
+09/26/2019 11:20:23 AM: DEBUG - Starting new HTTP connection (1): sr.wikipedia.org:80
+09/26/2019 11:20:23 AM: DEBUG - http://sr.wikipedia.org:80 "GET /w/api.php?prop=extracts&explaintext=&titles=%D0%9D%D0%BE%D0%B2%D0%B0%D0%BA+%D0%82%D0%BE%D0%BA%D0%BE%D0%B2%D0%B8%D1%9B&exsentences=3&format=json&action=query HTTP/1.1" 301 0
+09/26/2019 11:20:23 AM: DEBUG - Starting new HTTPS connection (1): sr.wikipedia.org:443
+09/26/2019 11:20:23 AM: DEBUG - https://sr.wikipedia.org:443 "GET /w/api.php?prop=extracts&explaintext=&titles=%D0%9D%D0%BE%D0%B2%D0%B0%D0%BA+%D0%82%D0%BE%D0%BA%D0%BE%D0%B2%D0%B8%D1%9B&exsentences=3&format=json&action=query HTTP/1.1" 200 330
+09/26/2019 11:20:23 AM: DEBUG - Wikipedia summary = Новак Ђоковић (Београд, 22. мај 1987) српски је професионални тенисер. На првом месту АТП листе је провео више од 270 недеља.
+09/26/2019 11:20:23 AM: DEBUG - Calling wikipedia brief_search with [query = Новак Ђоковић
