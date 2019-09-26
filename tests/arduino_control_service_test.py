@@ -9,4 +9,6 @@ for i in range(6):
     print(ar_s.get_state())
     time.sleep(3)
 
+ar_s.control("power on")
+ar_s.control("power off")
 ar_s.dispose()

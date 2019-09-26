@@ -1,4 +1,4 @@
-from config.constants import FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL
+from config.constants import FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL, logger
 
 social_networks_url_map = {"facebook": FACEBOOK_BASE_URL, "twitter": TWITTER_BASE_URL, \
                            "instagram": INSTAGRAM_BASE_URL, "linkedin": LINKEDIN_BASE_URL}
@@ -23,12 +23,14 @@ def get_search_type(type_str):
     return ''
 
 
-def get_relay_state(relay_control_str):
-    keywords = {"switch": ("switch", "promeni", "stanje"), "power on": ("power on", "turn on", "switch on", "upali",
+def get_relay_state(arduino_control_str):
+    keywords = {"switch": ("switch", "promeni", "stanje"), "power on": ("power on", "turn on", "switch on",
                                                                         "uključi", "upali", "aktiviraj"),
                 "power off": ("power off", "turn off", "switch off", "isključi", "ugasi",
                               "deaktiviraj")}
-    word_list = relay_control_str.split(' ')
+    logger.debug("Converting input command to control demand....")
     for target_word, assoc_words in keywords.items():
-        if any(word in assoc_words for word in word_list):
+        if any(word in assoc_words for word in arduino_control_str):
             return target_word
+    #NOTE:default case is switch (scenarios when speech is not recognized correctly)
+    return "switch"

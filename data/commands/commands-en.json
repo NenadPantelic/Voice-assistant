@@ -598,7 +598,7 @@
       "service":"arduino",
       "method":"control",
       "has_args":true,
-      "arg_name":"state_demmand",
+      "arg_name":"state",
       "arg_type":"str",
       "need_input":false,
       "process_input_text":false,
