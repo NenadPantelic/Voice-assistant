@@ -118,7 +118,7 @@ class BrowserService:
         url = google_result.get_result()
         if url is not None:
             self.browser_open(url=url)
-            #thread = threading.Thread(target=self.browser_open, args=(url,), daemon=True)
+            #thread = threading.Thread(target=self._browser_open, args=(url,), daemon=True)
             #thread.start()
             #return
         else:

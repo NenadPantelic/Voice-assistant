@@ -15,6 +15,7 @@ class MailService:
         :param content: content of an email (str)
         :return:
         """
+        assert (isinstance(recipient, str) and isinstance(subject, str) and isinstance(content, str))
         #TODO:add some regex validator for [to] email address
         logger.debug("Calling send_email with params [subject = {}, recipient = {}, content = {}]".\
                      format(subject, recipient, content))

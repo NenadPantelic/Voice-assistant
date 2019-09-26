@@ -181,7 +181,10 @@ EXCEPTION_MESSAGES = {
         "sr": "Nisam uspeo da nađem ništa na Vikipediji što odgovara tvom zahtevu. Probaj sa nekim drugim zahtevom ili probaj"
               "ponovo, ali probaj da budeš precizniji u govoru."
     },
-
+    "services.websearch.browser_search_service.GoogleSearchException":{
+        "en":"Google search cannot find anything that suits your query.",
+        "sr":"Gugl pretraga nije našla ništa što odgovara tvom upitu."
+    },
     "exception": {
         "en": GENERIC_MESSAGE_EN,
         "sr": GENERIC_MESSAGE_SR

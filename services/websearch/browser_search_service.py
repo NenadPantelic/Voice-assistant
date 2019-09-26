@@ -2,56 +2,114 @@ import threading
 from functools import lru_cache
 import googlesearch, webbrowser
 
-from config.constants import SUCCESS, NO_GOOGLE_RESULT, FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL
+from config.constants import SUCCESS, NO_GOOGLE_RESULT, FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, \
+    LINKEDIN_BASE_URL, logger
 from services.action_result import ActionResult
-
-TPE_MAP = {"videos": "vid", "images": "isch", "news": "nws", "shopping": "shop", "books": "bks", "applications": "app"}
 
 
 class BrowserService:
     def __init__(self):
         self.__search = googlesearch.search
 
+    # public methods
+    def open_found_url_in_browser(self, query, tpe=''):
+        """
+        Opens the found url in browser.
+        :param str query: google search query string. Must not be URL-encoded
+        :param str tpe: type of search, default=`all`
+        :rtype ActionResult
+        :return: Empty ActionResult with SUCCESS status
+        """
+        assert (isinstance(query, str) and isinstance(tpe, str))
+        logger.debug("Calling open_found_url_in_browser with params: [query = {}, tpe = {}].".format(query, tpe))
+        google_result = self._get_first_search_result(query, tpe=tpe)
+        url = google_result.get_result()
+        if url is not None:
+            logger.debug("Found url = {}.".format(url))
+            self._browser_open(url=url)
+            return ActionResult("", SUCCESS)
+        else:
+            raise GoogleSearchException
 
+    def open_social_network_page(self, nickname=None, social_network_url=FACEBOOK_BASE_URL):
+        """
+        Opens social network page
+        :param str nickname: user nickname
+        :param str social_network_url: base url of wanted social network (FB, IG, TW, IN)
+        :rtype ActionResult
+        :return: Empty ActionResult with SUCCESS status
+        """
+        assert (isinstance(nickname, str) and isinstance(social_network_url, str))
+        logger.debug("Calling open_social_network_page with params: [nickname = {}, social_network_url = {}].".
+                     format(nickname, social_network_url))
+        url = social_network_url + nickname + "/"
+        self._browser_open(url)
+        return ActionResult("", SUCCESS)
+
+    #private methods
     @lru_cache(maxsize=16)
-    def google_search(self, query, tld="com", tpe='vid', pause=2.0, stop=3):
+    def _google_search(self, query, tld="com", tpe='', pause=2.0, stop=3):
+        """
+        Search the given query string using Google.
+
+        :param str query: google search query string. Must not be URL-encoded
+        :param str tld: top level domain, default = `com`
+        :param str tpe: type of search, default=`all`
+        :param float pause: Lapse to wait between HTTP requests.
+        A lapse too long will make the search slow, but a lapse too short may
+        cause Google to block your IP. Your mileage may vary!
+        :param int or None stop: Last result to retrieve.
+        Use None to keep searching forever.
+        :rtype: generator of str
+        :return: Generator (iterator) that yields found URLs.
+        """
+        assert (all(isinstance(arg, str) for arg in (query, tld, tpe)) and isinstance(pause, float) and
+                isinstance(stop, int))
         return self.__search(query=query, tld=tld, tpe=tpe, pause=pause, stop=stop)
 
-    def get_first_search_result(self, query, tpe=''):
-        results = self.google_search(query=query, tpe=tpe)
+    def _get_first_search_result(self, query, tpe=''):
+        """
+        Returns the first result found by Google search.
+        :param str query: google search query string. Must not be URL-encoded
+        :param str tpe: type of search, default=`all`
+        :rtype ActionResult
+        :return: Action result with url as payload
+        """
+        assert (isinstance(query, str) and isinstance(tpe, str))
+        results = self._google_search(query=query, tpe=tpe)
+        logger.debug("Calling _get_first_search_result with params: [query = {}, tpe = {}].".format(query, tpe))
         # results is generator object
         # TODO:think about sequential search result acquiring - not only first result
         try:
-            return ActionResult(next(results), SUCCESS)
+            url = next(results)
+            logger.debug("First Google search result = {}.".format(url))
+            return ActionResult(url, SUCCESS)
         except StopIteration as e:
             # TODO logging
-            return ActionResult(None, NO_GOOGLE_RESULT)
+            raise GoogleSearchException
+            # return ActionResult(None, NO_GOOGLE_RESULT)
 
-    def browser_open(self, url, new=2, autoraise=False):
+    def _browser_open(self, url, new=2, autoraise=False):
+        """
+        Opens the given url in the browser.
+        :param str url: URL to open
+        :param int new: opening flag: 0 - the url is opened in the same browser window if possible, 1 - new window,
+        2 - new tab (default)
+        :param autoraise:If autoraise is True, the window is raised if possible (note that under many window managers
+        this will occur regardless of the setting of this variable).
+        :rtype None
+        :return: void method
+        """
+        assert (isinstance(url, str) and isinstance(new, int) and isinstance(autoraise, bool))
+        logger.debug("Opening url = {}.".format(url))
         webbrowser.open(url, new=new, autoraise=autoraise)
 
-    def browser_open_with_indep_thread(self, url):
-        thread = threading.Thread(target=self.browser_open, args=(url,), daemon=True)
+    # NOTE:not used at the moment
+    def _browser_open_with_indep_thread(self, url):
+        thread = threading.Thread(target=self._browser_open, args=(url,), daemon=True)
         thread.start()
 
-    def open_found_url_in_browser(self, query, tpe = ''):
-        google_result = self.get_first_search_result(query, tpe=tpe)
-        url = google_result.get_result()
-        if url is not None:
-            self.browser_open(url=url)
-            #thread = threading.Thread(target=self.browser_open, args=(url,), daemon=True)
-            #thread.start()
-            #return
-        else:
-            return ActionResult(None, NO_GOOGLE_RESULT)
-        #thread.join()
-
-    #this is tight coupled with controller logics, it asks for input
-    def open_social_network_page(self, nickname = None, social_network_url = FACEBOOK_BASE_URL):
-        url = social_network_url + nickname + "/"
-        self.browser_open(url)
-        #TODO:check return statements
 
 
-
-
+class GoogleSearchException(Exception):
+    pass

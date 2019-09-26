@@ -231,13 +231,13 @@
       "previous_command_id":null,
       "next_command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "messages":{
-         "success": {
-         "en":"I'm ready for a new email. who is the recipient? It will be better if you enter an address from keyboard.",
-         "sr":"Spreman sam za novi email. Ko je primalac? Sigurnije je da uneseš adresu sa tastature."
-      },
-         "fail": {
+         "success":{
+            "en":"I'm ready for a new email. who is the recipient? It will be better if you enter an address from keyboard.",
+            "sr":"Spreman sam za novi email. Ko je primalac? Sigurnije je da uneseš adresu sa tastature."
+         },
+         "fail":{
             "en":"I'm sorry, I could not handle this. Problems happen mainly because of speech recognition. Try again.",
-         "sr":"Žao mi je, nisam uspeo da rešim ovo. Problemi uglavnom nastaju zbog prepoznavanja glasa. Probaj ponovo."
+            "sr":"Žao mi je, nisam uspeo da rešim ovo. Problemi uglavnom nastaju zbog prepoznavanja glasa. Probaj ponovo."
          }
       },
       "descriptions":{
@@ -261,12 +261,13 @@
       "previous_command_id":null,
       "next_command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
       "messages":{
-         "success": {
-         "en":"What about the subject?",
-         "sr":"Koja je tema poruke?"
-      }, "fail": {
+         "success":{
+            "en":"What about the subject?",
+            "sr":"Koja je tema poruke?"
+         },
+         "fail":{
             "en":"Your last command cannot be executed. I met some unhandled issues. Try again.",
-         "sr":"Nisam u mogućnosti da izvršim poslednju komandu. Dogodile su se neke greškee. Pokušaj ponovo."
+            "sr":"Nisam u mogućnosti da izvršim poslednju komandu. Dogodile su se neke greškee. Pokušaj ponovo."
          }
       },
       "descriptions":{
@@ -289,12 +290,15 @@
       "is_ready":false,
       "previous_command_id":null,
       "next_command_id":"8b33b6a0-7bfb-489c-b6df-12eceefa8ebe",
-      "messages": {
-         "success": {
-            "en": "Finally, what is your message.",
-            "sr": "Na kraju, izdiktiraj mi poruku."
+      "messages":{
+         "success":{
+            "en":"Finally, what is your message.",
+            "sr":"Na kraju, izdiktiraj mi poruku."
          },
-         "fail": {"en": "Huh, I encountered some problems. Please, say again your last command.", "sr": "Huh, naišao sam na neki problem. Ponovi poslednju komandu."}
+         "fail":{
+            "en":"Huh, I encountered some problems. Please, say again your last command.",
+            "sr":"Huh, naišao sam na neki problem. Ponovi poslednju komandu."
+         }
       },
       "descriptions":{
          "en":"Accept the message of an email.",
@@ -317,12 +321,15 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "success": {
-         "en":"Email was sent successfully!.",
-         "sr":"Email je uspešno poslat!"
-      }, "fail": {
-   "en": "I could not sent an email!", "sr": "Nisam uspeo da pošaljem email!"}
-   },
+         "success":{
+            "en":"Email was sent successfully!.",
+            "sr":"Email je uspešno poslat!"
+         },
+         "fail":{
+            "en":"I could not sent an email!",
+            "sr":"Nisam uspeo da pošaljem email!"
+         }
+      },
       "descriptions":{
          "en":"Sents an email.",
          "sr":"Šalje email."
@@ -344,8 +351,14 @@
       "previous_command_id":null,
       "next_command_id":"0d473e1c-45a8-4869-bc01-17a01543ba1f",
       "messages":{
-         "en":"Sure, tell me what is the number of top movies you want?",
-         "sr":"Naravno, koliko filmova želiš?"
+         "success":{
+            "en":"Sure, tell me what is the number of top movies you want?",
+            "sr":"Naravno, koliko filmova želiš?"
+         },
+         "fail":{
+            "en":"Ah. Some error occurred. I'm suggesting to try again.",
+            "sr":"Ah, došlo je do neke greške. Predlažem da probaš ponovo."
+         }
       },
       "descriptions":{
          "en":"Initialize imdb method that returns top movies.",
@@ -368,8 +381,14 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"By IMDB these are the top movies you asked for:\n",
-         "sr":"Po IMDB, ovo su najbolji filmovi koje si tražio:\n"
+         "success":{
+            "en":"By IMDB these are the top movies you asked for:\n",
+            "sr":"Po IMDB, ovo su najbolji filmovi koje si tražio:\n"
+         },
+         "fail":{
+            "en":"Yikes. Some obstacle disabled this action. Try again!",
+            "sr":"Jao. Nešto je iskrslo pri ovoj akciji. Probaj ponovo!"
+         }
       },
       "descriptions":{
          "en":"Get best movies by IMDB.",
@@ -392,8 +411,14 @@
       "previous_command_id":null,
       "next_command_id":"969eac4b-fb8e-4778-9872-553af12a4819",
       "messages":{
-         "en":"That sounds fine. Tell me the title of movie you want, as precise as you can.",
-         "sr":"To zvuči izvodljivo. Reci mi što tačniji naziv filma."
+         "success":{
+            "en":"That sounds fine. Tell me the title of movie you want, as precise as you can.",
+            "sr":"To zvuči izvodljivo. Reci mi što tačniji naziv filma."
+         },
+         "fail":{
+            "en":"I'm sorry to say, but something went wrong. Try again!",
+            "sr":"Žao mi je što ovo kažem, ali nešto je pošlo naopako. Probaj ponovo."
+         }
       },
       "descriptions":{
          "en":"Initialize movie details searching.",
@@ -416,8 +441,14 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"IMDB says this:\n",
-         "sr":"Prema IMDB:\n"
+         "success":{
+            "en":"IMDB says this:\n",
+            "sr":"Prema IMDB:\n"
+         },
+         "fail":{
+            "en":"Action cannot be performed. Some issue got in the way.",
+            "sr":"Akcija ne može biti izvedena. Nešto je napravilo problem."
+         }
       },
       "descriptions":{
          "en":"Get movie details from IMDB.",
@@ -440,8 +471,14 @@
       "previous_command_id":null,
       "next_command_id":"4478af5d-5536-4f92-a1c1-03a5abc20222",
       "messages":{
-         "en":"Sure, I'm here to help. Tell me the nickname.",
-         "sr":"Naravno, tu sam da pomognem. Reci mi korisničko ime."
+         "success":{
+            "en":"Sure, I'm here to help. Tell me the nickname.",
+            "sr":"Naravno, tu sam da pomognem. Reci mi korisničko ime."
+         },
+         "fail":{
+            "en":"Oops. I met an unmanaged problem. Suggestion, try again.",
+            "sr":"Ups. Naišao sam na problem. Predlažem da probaš ponovo."
+         }
       },
       "descriptions":{
          "en":"Determines social network.",
@@ -464,8 +501,14 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"Here is the page.",
-         "sr":"Evo strane koju sam našao."
+         "success":{
+            "en":"Here is the page.",
+            "sr":"Evo strane koju sam našao."
+         },
+         "fail":{
+            "en":"I cannot open the given social network account. Trying again is one of the possibilities.",
+            "sr":"Ne mogu da otvorim nalog sa društvene mreže. Jedna od opcija je da probaš ponovo."
+         }
       },
       "descriptions":{
          "en":"Opens social network page.",
@@ -488,8 +531,14 @@
       "previous_command_id":null,
       "next_command_id":"6a90cef4-a6c2-472b-939f-480f138b443d",
       "messages":{
-         "en":"I'll do it with pleasure. What are you looking for?.",
-         "sr":"Vrlo rado. Šta želiš da potražim?"
+         "success":{
+            "en":"I'll do it with pleasure. What are you looking for?.",
+            "sr":"Vrlo rado. Šta želiš da potražim?"
+         },
+         "fail":{
+            "en":"I'm sorry, but we have a problem. Maybe you should try again.",
+            "sr":"Žao mi je, ali imamo problem. Možda bi trebalo da probaš ponovo."
+         }
       },
       "descriptions":{
          "en":"Initialize Google search.",
@@ -512,8 +561,14 @@
       "previous_command_id":null,
       "next_command_id":"c8849c8d-b52d-4519-8f4a-40c97f0f4f4a",
       "messages":{
-         "en":"Ok, and what about type? Possible options are videos, news, images, books, shopping, applications or all?.",
-         "sr":"To je u redu. A šta ćemo sa tipom, ponuđene opcije su: video, vesti, slike, knjige, šoping, aplikacije ili sve?"
+         "success":{
+            "en":"Ok, and what about type? Possible options are videos, news, images, books, shopping, applications or all?.",
+            "sr":"To je u redu. A šta ćemo sa tipom, ponuđene opcije su: video, vesti, slike, knjige, šoping, aplikacije ili sve?"
+         },
+         "fail":{
+            "en":"Sorry, but I have a problem with that. Try again.",
+            "sr":"Izvini, ali imam problem sa tim. Probaj ponovo"
+         }
       },
       "descriptions":{
          "en":"Sets search term.",
@@ -536,8 +591,14 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"I'm opening first result that I found.",
-         "sr":"Otvaram prvi rezultat koji sam pronašla?"
+         "success":{
+            "en":"I'm opening first result that I found.",
+            "sr":"Otvaram prvi rezultat koji sam pronašla?"
+         },
+         "fail":{
+            "en":"That's not possible. I got some problems while trying to open the wanted result's page. Try again.",
+            "sr":"To nije moguće. Naišao sam na problem dok sam pokušavao da otvorim željenu stranu. Pokušaj ponovo."
+         }
       },
       "descriptions":{
          "en":"Performs google search and opens first found result.",
@@ -592,8 +653,7 @@
          "sr":"Pokreće traženi program."
       }
    },
-
-    {
+   {
       "command_id":"146470864-aaec-4fa4-a556-0634cec60e1d",
       "service":"arduino",
       "method":"control",
@@ -609,12 +669,13 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "success": {
-         "en":"Light state is changed.",
-         "sr":"Stanje sijalice je promenjeno."
-      }, "fail": {
-            "en": "I'm sorry. Something went wrong. Check connectivity and serial port parameters.",
-            "sr": "Žao mi je, nešto je pošlo po zlu. Proveri konekciju i parametre serijskog porta."
+         "success":{
+            "en":"Light state is changed.",
+            "sr":"Stanje sijalice je promenjeno."
+         },
+         "fail":{
+            "en":"I'm sorry. Something went wrong. Check connectivity and serial port parameters.",
+            "sr":"Žao mi je, nešto je pošlo po zlu. Proveri konekciju i parametre serijskog porta."
          }
       },
       "descriptions":{

@@ -49,20 +49,6 @@ with open('data/langs_codes.json', 'w', encoding='utf8') as f:
 '''
 
 '''
-ms = MailService()
-ms.set_content("Hello bro again")
-ms.set_receiver("564.2015@fink.rs")
-ms.set_subject("Lindo greeting")
-print(ms.send_mail_with_default_params())
-
-
-from services.webapi.imdb_service import IMDBService
-imdb = IMDBService()
-#print(imdb.get_top_movies(num=10))
-#imdb = IMDBService()
-print(imdb.get_movie_details("siege 2"))
-#imdb.get_movie_by_title("Tesna koža")
-print(imdb.get_movies_by_keywords("war"))
 
 
 '''
@@ -70,17 +56,7 @@ print(imdb.get_movies_by_keywords("war"))
 # from services.system.os_service import *
 
 # print(subprocess.Popen(['echo',x[0]]))
-# from services.websearch.browser_search_service import *
 
-# from services.websearch.browser_search_service import BrowserService
-# from config.constants import FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL
-# bs = BrowserService()
-# print(bs.get_first_search_result(query="lion").get_result())
-# bs.open_found_url_in_browser("lion")
-# print("usao ovde")
-
-# print(bs.get_first_search_result(query="lion").get_result())
-# print(bs.open_social_network_page("nenad-pantelić", LINKEDIN_BASE_URL))
 from services.system.os_service import OSService
 
 os_srv = OSService()

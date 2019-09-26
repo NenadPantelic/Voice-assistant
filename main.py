@@ -62,7 +62,7 @@ service_pool = {
     "imdb": IMDBService(),
     "browser":BrowserService(),
     "system":OSService(),
-    "arduino":ArduinoControlService()
+    #"arduino":ArduinoControlService()
 
 }
 commands = load_json_data(ENGLISH_COMMANDS)

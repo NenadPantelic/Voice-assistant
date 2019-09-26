@@ -7,3 +7,4 @@ print(imdb.get_movie_details("Don Corleone").get_result())
 print(imdb.get_movie_details("Deer hunter").get_result())
 print(imdb.get_movie_details("Tesna koža").get_result())
 
+# https://imdbpy.readthedocs.io/en/latest/usage/quickstart.html#searching
