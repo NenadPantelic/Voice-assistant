@@ -144,3 +144,404 @@ detailed status: light rain
 09/26/2019 11:20:23 AM: DEBUG - https://sr.wikipedia.org:443 "GET /w/api.php?prop=extracts&explaintext=&titles=%D0%9D%D0%BE%D0%B2%D0%B0%D0%BA+%D0%82%D0%BE%D0%BA%D0%BE%D0%B2%D0%B8%D1%9B&exsentences=3&format=json&action=query HTTP/1.1" 200 330
 09/26/2019 11:20:23 AM: DEBUG - Wikipedia summary = Новак Ђоковић (Београд, 22. мај 1987) српски је професионални тенисер. На првом месту АТП листе је провео више од 270 недеља.
 09/26/2019 11:20:23 AM: DEBUG - Calling wikipedia brief_search with [query = Новак Ђоковић
+09/26/2019 09:37:11 PM: INFO - using lxml
+09/26/2019 09:37:11 PM: DEBUG - Get movie details. Params: [title = Don].
+09/26/2019 09:37:11 PM: DEBUG - Searching for movies with title = Don.
+09/26/2019 09:37:11 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don&s=tt (size: -1)
+09/26/2019 09:37:12 PM: INFO - using lxml html builder
+09/26/2019 09:37:12 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:37:12 PM: DEBUG - Movie id = 0461936
+09/26/2019 09:37:12 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:37:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0461936&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:37:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:37:13 PM: DEBUG - Complete movie info:
+{'title': 'Don', 'year': '2006', 'released': '20 Oct 2006', 'runtime': '171 min', 'genre': 'Action, Crime, Thriller', 'director': 'Farhan Akhtar', 'actors': 'Shah Rukh Khan, Priyanka Chopra, Arjun Rampal, Isha Koppikar', 'plot': 'A simple man, Vijay, is recruited by a police officer to masquerade as Don, the leader of an international gang of smugglers. But things go wrong when the officer is killed and Vijay is left to fend for himself.', 'language': 'Hindi', 'imdb_rating': '7.2'}
+09/26/2019 09:37:43 PM: INFO - using lxml
+09/26/2019 09:37:43 PM: DEBUG - Get movie details. Params: [title = Don].
+09/26/2019 09:37:43 PM: DEBUG - Searching for movies with title = Don.
+09/26/2019 09:37:43 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don&s=tt (size: -1)
+09/26/2019 09:37:44 PM: INFO - using lxml html builder
+09/26/2019 09:37:44 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:37:44 PM: DEBUG - Movie id = 0461936
+09/26/2019 09:37:44 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:37:44 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0461936&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:37:44 PM: DEBUG - Creating movie info....
+09/26/2019 09:37:44 PM: DEBUG - Complete movie info:
+{'title': 'Don', 'year': '2006', 'released': '20 Oct 2006', 'runtime': '171 min', 'genre': 'Action, Crime, Thriller', 'director': 'Farhan Akhtar', 'actors': 'Shah Rukh Khan, Priyanka Chopra, Arjun Rampal, Isha Koppikar', 'plot': 'A simple man, Vijay, is recruited by a police officer to masquerade as Don, the leader of an international gang of smugglers. But things go wrong when the officer is killed and Vijay is left to fend for himself.', 'language': 'Hindi', 'imdb_rating': '7.2'}
+09/26/2019 09:37:44 PM: DEBUG - Get movie details. Params: [title = Tesna koža].
+09/26/2019 09:37:44 PM: DEBUG - Searching for movies with title = Tesna koža.
+09/26/2019 09:37:44 PM: DEBUG - fetching url https://www.imdb.com/find?q=Tesna+ko%C5%BEa&s=tt (size: -1)
+09/26/2019 09:37:44 PM: INFO - using lxml html builder
+09/26/2019 09:37:44 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:37:44 PM: DEBUG - Movie id = 0084780
+09/26/2019 09:37:44 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0084780&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:37:44 PM: DEBUG - Creating movie info....
+09/26/2019 09:37:44 PM: DEBUG - Complete movie info:
+{'title': 'A Tight Spot', 'year': '1982', 'released': '24 Sep 1982', 'runtime': '92 min', 'genre': 'Comedy', 'director': 'Mica Milosevic', 'actors': "Nikola Simic, Milan 'Lane' Gutovic, Rahela Ferari, Ruzica Sokic", 'plot': 'In this light, fluffy comedy, a low-level clerk cannot make ends meet because his brood is in no way economically cooperative: his daughter is a lawyer looking for work, unsuccessfully; his...', 'language': 'Serbo-Croatian', 'imdb_rating': '8.2'}
+09/26/2019 09:37:55 PM: INFO - using lxml
+09/26/2019 09:37:55 PM: DEBUG - Get movie details. Params: [title = Don].
+09/26/2019 09:37:55 PM: DEBUG - Searching for movies with title = Don.
+09/26/2019 09:37:55 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don&s=tt (size: -1)
+09/26/2019 09:37:55 PM: INFO - using lxml html builder
+09/26/2019 09:37:55 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:37:55 PM: DEBUG - Movie id = 0461936
+09/26/2019 09:37:55 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:37:55 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0461936&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:37:55 PM: DEBUG - Creating movie info....
+09/26/2019 09:37:55 PM: DEBUG - Complete movie info:
+{'title': 'Don', 'year': '2006', 'released': '20 Oct 2006', 'runtime': '171 min', 'genre': 'Action, Crime, Thriller', 'director': 'Farhan Akhtar', 'actors': 'Shah Rukh Khan, Priyanka Chopra, Arjun Rampal, Isha Koppikar', 'plot': 'A simple man, Vijay, is recruited by a police officer to masquerade as Don, the leader of an international gang of smugglers. But things go wrong when the officer is killed and Vijay is left to fend for himself.', 'language': 'Hindi', 'imdb_rating': '7.2'}
+09/26/2019 09:37:55 PM: DEBUG - Get movie details. Params: [title = Tesna koža].
+09/26/2019 09:37:55 PM: DEBUG - Searching for movies with title = Tesna koža.
+09/26/2019 09:37:55 PM: DEBUG - fetching url https://www.imdb.com/find?q=Tesna+ko%C5%BEa&s=tt (size: -1)
+09/26/2019 09:37:56 PM: INFO - using lxml html builder
+09/26/2019 09:37:56 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:37:56 PM: DEBUG - Movie id = 0084780
+09/26/2019 09:37:56 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0084780&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:37:56 PM: DEBUG - Creating movie info....
+09/26/2019 09:37:56 PM: DEBUG - Complete movie info:
+{'title': 'A Tight Spot', 'year': '1982', 'released': '24 Sep 1982', 'runtime': '92 min', 'genre': 'Comedy', 'director': 'Mica Milosevic', 'actors': "Nikola Simic, Milan 'Lane' Gutovic, Rahela Ferari, Ruzica Sokic", 'plot': 'In this light, fluffy comedy, a low-level clerk cannot make ends meet because his brood is in no way economically cooperative: his daughter is a lawyer looking for work, unsuccessfully; his...', 'language': 'Serbo-Croatian', 'imdb_rating': '8.2'}
+09/26/2019 09:38:08 PM: INFO - using lxml
+09/26/2019 09:38:08 PM: DEBUG - Get movie details. Params: [title = Don Corleone].
+09/26/2019 09:38:08 PM: DEBUG - Searching for movies with title = Don Corleone.
+09/26/2019 09:38:08 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don+Corleone&s=tt (size: -1)
+09/26/2019 09:38:09 PM: INFO - using lxml html builder
+09/26/2019 09:38:09 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:38:09 PM: DEBUG - Movie id = 10257064
+09/26/2019 09:38:09 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:38:09 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt10257064&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:38:09 PM: DEBUG - Creating movie info....
+09/26/2019 09:39:22 PM: INFO - using lxml
+09/26/2019 09:39:22 PM: DEBUG - Get movie details. Params: [title = Don Corleone].
+09/26/2019 09:39:22 PM: DEBUG - Searching for movies with title = Don Corleone.
+09/26/2019 09:39:22 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don+Corleone&s=tt (size: -1)
+09/26/2019 09:39:23 PM: INFO - using lxml html builder
+09/26/2019 09:39:23 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:39:23 PM: DEBUG - Movie id = 10257064
+09/26/2019 09:39:23 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:39:23 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt10257064&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:39:23 PM: DEBUG - Creating movie info....
+09/26/2019 09:40:44 PM: INFO - using lxml
+09/26/2019 09:40:45 PM: DEBUG - Get movie details. Params: [title = Don Corleone].
+09/26/2019 09:40:45 PM: DEBUG - Searching for movies with title = Don Corleone.
+09/26/2019 09:40:45 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don+Corleone&s=tt (size: -1)
+09/26/2019 09:40:45 PM: INFO - using lxml html builder
+09/26/2019 09:40:45 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:40:45 PM: DEBUG - Movie id = 10257064
+09/26/2019 09:40:45 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:40:45 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt10257064&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:40:45 PM: DEBUG - Creating movie info....
+09/26/2019 09:43:27 PM: INFO - using lxml
+09/26/2019 09:43:27 PM: DEBUG - Get movie details. Params: [title = Don Corleone].
+09/26/2019 09:43:27 PM: DEBUG - Searching for movies with title = Don Corleone.
+09/26/2019 09:43:27 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don+Corleone&s=tt (size: -1)
+09/26/2019 09:43:28 PM: INFO - using lxml html builder
+09/26/2019 09:43:28 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:43:28 PM: DEBUG - Movie id = 10257064
+09/26/2019 09:43:28 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:43:28 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt10257064&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:43:28 PM: DEBUG - Movie cannot be found....
+09/26/2019 09:43:28 PM: DEBUG - Get movie details. Params: [title = Tesna koža].
+09/26/2019 09:43:28 PM: DEBUG - Searching for movies with title = Tesna koža.
+09/26/2019 09:43:28 PM: DEBUG - fetching url https://www.imdb.com/find?q=Tesna+ko%C5%BEa&s=tt (size: -1)
+09/26/2019 09:43:28 PM: INFO - using lxml html builder
+09/26/2019 09:43:28 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:43:28 PM: DEBUG - Movie id = 0084780
+09/26/2019 09:43:28 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0084780&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:43:28 PM: DEBUG - Creating movie info....
+09/26/2019 09:43:28 PM: DEBUG - Complete movie info:
+{'title': 'A Tight Spot', 'year': '1982', 'released': '24 Sep 1982', 'runtime': '92 min', 'genre': 'Comedy', 'director': 'Mica Milosevic', 'actors': "Nikola Simic, Milan 'Lane' Gutovic, Rahela Ferari, Ruzica Sokic", 'plot': 'In this light, fluffy comedy, a low-level clerk cannot make ends meet because his brood is in no way economically cooperative: his daughter is a lawyer looking for work, unsuccessfully; his...', 'language': 'Serbo-Croatian', 'imdb_rating': '8.2'}
+09/26/2019 09:44:08 PM: INFO - using lxml
+09/26/2019 09:44:08 PM: DEBUG - Seeking for best movies by imdb. Params: [num = 10].
+09/26/2019 09:44:08 PM: DEBUG - fetching url https://www.imdb.com/chart/top (size: -1)
+09/26/2019 09:44:12 PM: INFO - using lxml html builder
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0111161
+09/26/2019 09:44:12 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0111161&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0068646
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0068646&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0071562
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0071562&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0468569
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0468569&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0050083
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0050083&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0108052
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0108052&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0167260
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0167260&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0110912
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0110912&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0060196
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0060196&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Movie id = 0137523
+09/26/2019 09:44:12 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0137523&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:12 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:12 PM: DEBUG - Complete movies info:
+title: The Shawshank Redemption,
+genre: Drama,
+imdb_rating: 9.3,
+
+title: The Godfather,
+genre: Crime, Drama,
+imdb_rating: 9.2,
+
+title: The Godfather: Part II,
+genre: Crime, Drama,
+imdb_rating: 9.0,
+
+title: The Dark Knight,
+genre: Action, Crime, Drama, Thriller,
+imdb_rating: 9.0,
+
+title: 12 Angry Men,
+genre: Drama,
+imdb_rating: 8.9,
+
+title: Schindler's List,
+genre: Biography, Drama, History,
+imdb_rating: 8.9,
+
+title: The Lord of the Rings: The Return of the King,
+genre: Adventure, Drama, Fantasy,
+imdb_rating: 8.9,
+
+title: Pulp Fiction,
+genre: Crime, Drama,
+imdb_rating: 8.9,
+
+title: The Good, the Bad and the Ugly,
+genre: Western,
+imdb_rating: 8.8,
+
+title: Fight Club,
+genre: Drama,
+imdb_rating: 8.8,
+
+
+09/26/2019 09:44:12 PM: DEBUG - Get movie details. Params: [title = Don Corleone].
+09/26/2019 09:44:12 PM: DEBUG - Searching for movies with title = Don Corleone.
+09/26/2019 09:44:12 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don+Corleone&s=tt (size: -1)
+09/26/2019 09:44:13 PM: INFO - using lxml html builder
+09/26/2019 09:44:13 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:44:13 PM: DEBUG - Movie id = 10257064
+09/26/2019 09:44:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt10257064&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:13 PM: DEBUG - Movie cannot be found....
+09/26/2019 09:44:13 PM: DEBUG - Get movie details. Params: [title = Tesna koža].
+09/26/2019 09:44:13 PM: DEBUG - Searching for movies with title = Tesna koža.
+09/26/2019 09:44:13 PM: DEBUG - fetching url https://www.imdb.com/find?q=Tesna+ko%C5%BEa&s=tt (size: -1)
+09/26/2019 09:44:14 PM: INFO - using lxml html builder
+09/26/2019 09:44:14 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:44:14 PM: DEBUG - Movie id = 0084780
+09/26/2019 09:44:14 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0084780&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:14 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:14 PM: DEBUG - Complete movie info:
+{'title': 'A Tight Spot', 'year': '1982', 'released': '24 Sep 1982', 'runtime': '92 min', 'genre': 'Comedy', 'director': 'Mica Milosevic', 'actors': "Nikola Simic, Milan 'Lane' Gutovic, Rahela Ferari, Ruzica Sokic", 'plot': 'In this light, fluffy comedy, a low-level clerk cannot make ends meet because his brood is in no way economically cooperative: his daughter is a lawyer looking for work, unsuccessfully; his...', 'language': 'Serbo-Croatian', 'imdb_rating': '8.2'}
+09/26/2019 09:44:31 PM: INFO - using lxml
+09/26/2019 09:44:31 PM: DEBUG - Seeking for best movies by imdb. Params: [num = 10].
+09/26/2019 09:44:31 PM: DEBUG - fetching url https://www.imdb.com/chart/top (size: -1)
+09/26/2019 09:44:33 PM: INFO - using lxml html builder
+09/26/2019 09:44:33 PM: DEBUG - Movie id = 0111161
+09/26/2019 09:44:33 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:44:33 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0111161&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:33 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:33 PM: DEBUG - Movie id = 0068646
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0068646&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:34 PM: DEBUG - Movie id = 0071562
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0071562&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:34 PM: DEBUG - Movie id = 0468569
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0468569&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:34 PM: DEBUG - Movie id = 0050083
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0050083&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:34 PM: DEBUG - Movie id = 0108052
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0108052&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:34 PM: DEBUG - Movie id = 0167260
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0167260&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:34 PM: DEBUG - Movie id = 0110912
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0110912&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:34 PM: DEBUG - Movie id = 0060196
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0060196&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:34 PM: DEBUG - Movie id = 0137523
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0137523&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:34 PM: DEBUG - Complete movies info:
+title: The Shawshank Redemption,
+genre: Drama,
+imdb_rating: 9.3,
+
+title: The Godfather,
+genre: Crime, Drama,
+imdb_rating: 9.2,
+
+title: The Godfather: Part II,
+genre: Crime, Drama,
+imdb_rating: 9.0,
+
+title: The Dark Knight,
+genre: Action, Crime, Drama, Thriller,
+imdb_rating: 9.0,
+
+title: 12 Angry Men,
+genre: Drama,
+imdb_rating: 8.9,
+
+title: Schindler's List,
+genre: Biography, Drama, History,
+imdb_rating: 8.9,
+
+title: The Lord of the Rings: The Return of the King,
+genre: Adventure, Drama, Fantasy,
+imdb_rating: 8.9,
+
+title: Pulp Fiction,
+genre: Crime, Drama,
+imdb_rating: 8.9,
+
+title: The Good, the Bad and the Ugly,
+genre: Western,
+imdb_rating: 8.8,
+
+title: Fight Club,
+genre: Drama,
+imdb_rating: 8.8,
+
+
+09/26/2019 09:44:34 PM: DEBUG - Get movie details. Params: [title = Don Corleone].
+09/26/2019 09:44:34 PM: DEBUG - Searching for movies with title = Don Corleone.
+09/26/2019 09:44:34 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don+Corleone&s=tt (size: -1)
+09/26/2019 09:44:34 PM: INFO - using lxml html builder
+09/26/2019 09:44:34 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:44:34 PM: DEBUG - Movie id = 10257064
+09/26/2019 09:44:34 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt10257064&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:34 PM: DEBUG - Movie cannot be found....
+09/26/2019 09:44:34 PM: DEBUG - Get movie details. Params: [title = Tesna koža].
+09/26/2019 09:44:34 PM: DEBUG - Searching for movies with title = Tesna koža.
+09/26/2019 09:44:34 PM: DEBUG - fetching url https://www.imdb.com/find?q=Tesna+ko%C5%BEa&s=tt (size: -1)
+09/26/2019 09:44:35 PM: INFO - using lxml html builder
+09/26/2019 09:44:35 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:44:35 PM: DEBUG - Movie id = 0084780
+09/26/2019 09:44:35 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0084780&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:44:35 PM: DEBUG - Creating movie info....
+09/26/2019 09:44:35 PM: DEBUG - Complete movie info:
+{'title': 'A Tight Spot', 'year': '1982', 'released': '24 Sep 1982', 'runtime': '92 min', 'genre': 'Comedy', 'director': 'Mica Milosevic', 'actors': "Nikola Simic, Milan 'Lane' Gutovic, Rahela Ferari, Ruzica Sokic", 'plot': 'In this light, fluffy comedy, a low-level clerk cannot make ends meet because his brood is in no way economically cooperative: his daughter is a lawyer looking for work, unsuccessfully; his...', 'language': 'Serbo-Croatian', 'imdb_rating': '8.2'}
+09/26/2019 09:45:12 PM: INFO - using lxml
+09/26/2019 09:45:12 PM: DEBUG - Seeking for best movies by imdb. Params: [num = 10].
+09/26/2019 09:45:12 PM: DEBUG - fetching url https://www.imdb.com/chart/top (size: -1)
+09/26/2019 09:45:13 PM: INFO - using lxml html builder
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0111161
+09/26/2019 09:45:13 PM: DEBUG - Starting new HTTP connection (1): www.omdbapi.com:80
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0111161&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0068646
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0068646&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0071562
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0071562&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0468569
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0468569&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0050083
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0050083&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0108052
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0108052&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0167260
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0167260&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0110912
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0110912&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0060196
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0060196&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Movie id = 0137523
+09/26/2019 09:45:13 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0137523&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:13 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:13 PM: DEBUG - Complete movies info:
+title: The Shawshank Redemption,
+genre: Drama,
+imdb_rating: 9.3,
+
+title: The Godfather,
+genre: Crime, Drama,
+imdb_rating: 9.2,
+
+title: The Godfather: Part II,
+genre: Crime, Drama,
+imdb_rating: 9.0,
+
+title: The Dark Knight,
+genre: Action, Crime, Drama, Thriller,
+imdb_rating: 9.0,
+
+title: 12 Angry Men,
+genre: Drama,
+imdb_rating: 8.9,
+
+title: Schindler's List,
+genre: Biography, Drama, History,
+imdb_rating: 8.9,
+
+title: The Lord of the Rings: The Return of the King,
+genre: Adventure, Drama, Fantasy,
+imdb_rating: 8.9,
+
+title: Pulp Fiction,
+genre: Crime, Drama,
+imdb_rating: 8.9,
+
+title: The Good, the Bad and the Ugly,
+genre: Western,
+imdb_rating: 8.8,
+
+title: Fight Club,
+genre: Drama,
+imdb_rating: 8.8,
+
+
+09/26/2019 09:45:13 PM: DEBUG - Get movie details. Params: [title = Don Corleone].
+09/26/2019 09:45:13 PM: DEBUG - Searching for movies with title = Don Corleone.
+09/26/2019 09:45:13 PM: DEBUG - fetching url https://www.imdb.com/find?q=Don+Corleone&s=tt (size: -1)
+09/26/2019 09:45:14 PM: INFO - using lxml html builder
+09/26/2019 09:45:14 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:45:14 PM: DEBUG - Movie id = 10257064
+09/26/2019 09:45:14 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt10257064&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:14 PM: DEBUG - Movie cannot be found....
+09/26/2019 09:45:14 PM: DEBUG - Get movie details. Params: [title = Deer hunter].
+09/26/2019 09:45:14 PM: DEBUG - Searching for movies with title = Deer hunter.
+09/26/2019 09:45:14 PM: DEBUG - fetching url https://www.imdb.com/find?q=Deer+hunter&s=tt (size: -1)
+09/26/2019 09:45:15 PM: INFO - using lxml html builder
+09/26/2019 09:45:15 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:45:15 PM: DEBUG - Movie id = 0077416
+09/26/2019 09:45:15 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0077416&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:15 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:15 PM: DEBUG - Complete movie info:
+{'title': 'The Deer Hunter', 'year': '1978', 'released': '23 Feb 1979', 'runtime': '183 min', 'genre': 'Drama, War', 'director': 'Michael Cimino', 'actors': 'Robert De Niro, John Cazale, John Savage, Christopher Walken', 'plot': 'An in-depth examination of the ways in which the U.S. Vietnam War impacts and disrupts the lives of people in a small industrial town in Pennsylvania.', 'language': 'English, Russian, Vietnamese, French', 'imdb_rating': '8.1'}
+09/26/2019 09:45:15 PM: DEBUG - Get movie details. Params: [title = Tesna koža].
+09/26/2019 09:45:15 PM: DEBUG - Searching for movies with title = Tesna koža.
+09/26/2019 09:45:15 PM: DEBUG - fetching url https://www.imdb.com/find?q=Tesna+ko%C5%BEa&s=tt (size: -1)
+09/26/2019 09:45:16 PM: INFO - using lxml html builder
+09/26/2019 09:45:16 PM: DEBUG - Movies fetching is over.
+09/26/2019 09:45:16 PM: DEBUG - Movie id = 0084780
+09/26/2019 09:45:16 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0084780&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
+09/26/2019 09:45:16 PM: DEBUG - Creating movie info....
+09/26/2019 09:45:16 PM: DEBUG - Complete movie info:
+{'title': 'A Tight Spot', 'year': '1982', 'released': '24 Sep 1982', 'runtime': '92 min', 'genre': 'Comedy', 'director': 'Mica Milosevic', 'actors': "Nikola Simic, Milan 'Lane' Gutovic, Rahela Ferari, Ruzica Sokic", 'plot': 'In this light, fluffy comedy, a low-level clerk cannot make ends meet because his brood is in no way economically cooperative: his daughter is a lawyer looking for work, unsuccessfully; his...', 'language': 'Serbo-Croatian', 'imdb_rating': '8.2'}
