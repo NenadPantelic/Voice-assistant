@@ -1,7 +1,7 @@
 from config.constants import LANG_KEYWORDS
 from utils.utils import load_json_data
 
-
+#TODO:move this function to utility section
 def convert_json_array_to_dict(json_array):
     resulting_map = {}
     for element in json_array:
@@ -20,6 +20,7 @@ class CommandResolver:
         self.__previous_command_id = None
         self.__next_command_id = None
         self.set_language(language)
+        print(self.__commands.values())
 
     def set_language(self, language):
         self.__language = language
@@ -55,7 +56,6 @@ class CommandResolver:
 
         self.determine_command(init, word_list)
         target_command = self.__command
-        print("DEBUUUG")
         print(target_command)
         if target_command["has_args"]:
             arg = ' '.join(word_list)
@@ -68,36 +68,45 @@ class CommandResolver:
 
     def determine_command(self, init=False, wordList=[]):
         if init:
-            print("DEBUUUUG 1")
             self.__command = self.get_default_command()
-
         elif self.__next_command_id is None:
-            print("DEBUUUUG 2")
             score_map = self.calculate_command_scores(wordList)
             max_score = max(score_map.values())
             candidate_commands = list(filter(lambda x: x[1] == max_score, score_map.items()))
-            print(candidate_commands)
+            #print(candidate_commands)
             if len(candidate_commands) > 1:
-                print("DEBUUUUG 3")
                 # TODO:solve scenario when multiple methods have the same score
                 self.__command = self.get_most_probable_command(candidate_commands)
             else:
-                print("DEBUUUUG 4")
                 self.__command = self.__commands[candidate_commands[0][0]]
             #self.__previous_command_id = self.__command["previous_command_id"]
         else:
-            print("DEBUUUUG 5")
             #self.__previous_command_id = self.__command["command_id"]
             self.__command = self.find_command_by_id(self.__next_command_id)
+        if self.__command is None:
+            self.__command = self.get_invalid_command()
 
         self.__next_command_id = self.__command["next_command_id"]
 
     def get_most_probable_command(self, commands):
-        pass
+        return list(filter(lambda x: x["tag"] == "ambiguous", self.__commands.values()))[0]
+
+    def get_invalid_command(self):
+        for command in self.__commands.values():
+            if command["tag"] == "invalid":
+                return command
+        return None
 
     def get_default_command(self):
-        # one command with no service and method should be set
-        return list(filter(lambda x: x["service"] is None and x["method"] is None, self.__commands.values()))[0]
+        # one initial command
+        #return list(filter(lambda x: x["service"] is None and x["method"] is None, self.__commands.values()))[0]
+        return list(filter(lambda x: x["tag"] == "initial", self.__commands.values()))[0]
+
+    def get_final_command(self):
+        #print([x["tag"] for x in self.__commands.values()])
+        print(self.__commands.values())
+        return list(filter(lambda x: x["tag"] == "final", self.__commands.values()))[0]
+
 
     # helper method
     def get_command_keywords(self, commandId):

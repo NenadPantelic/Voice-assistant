@@ -7,6 +7,7 @@ tpe_map = {"videos": "vid", "images": "isch", "news": "nws", "shopping": "shop",
 
 
 def get_social_network_base_url(social_network_str):
+    logger.debug("Mapping social network url {}....".format(social_network_str))
     for social_network, url in social_networks_url_map.items():
         if social_network in social_network_str:
             return url
@@ -16,6 +17,7 @@ def get_social_network_base_url(social_network_str):
 
 # TODO:adapt to serbian phrases (for both methods)
 def get_search_type(type_str):
+    logger.debug("Mapping type {}....".format(type_str))
     for type, type_code in tpe_map.items():
         if type in type_str:
             return type_code

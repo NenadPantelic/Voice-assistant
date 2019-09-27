@@ -37,6 +37,7 @@ class ServiceExecutor:
     # super private methods
     def __set_param(self, service, method_name, arg_name, arg_value, input_type, input_processing_method, need_input=False):
         if need_input:
+            print("Enter your input:")
             arg_value = input()
         if input_type is not None:
             arg_value = eval(input_type + "('" + arg_value + "')")

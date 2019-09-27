@@ -15,6 +15,17 @@
       }
    },
    {
+      "command_id":"8d19f771-5d5d-4610-98d0-f15f6c137716",
+      "words":{
+         "switch":0.35,
+         "change":0.35,
+         "replace":0.15,
+         "language":0.25,
+         "operating":0.2,
+         "new":0.05
+      }
+   },
+   {
       "command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "words":{
          "choosing":0.3,
@@ -154,7 +165,6 @@
          "web":0.35
       }
    },
-
    {
       "command_id":"30aa30ff-67cf-414a-a4e8-530f45e37510",
       "words":{
@@ -164,14 +174,14 @@
          "program":0.35,
          "programme":0.35,
          "application":0.25,
-         "command": 0.35,
-         "linux": 0.25,
-         "unix": 0.25,
-         "system": 0.25
+         "command":0.35,
+         "linux":0.25,
+         "unix":0.25,
+         "system":0.25
       }
    },
-    {
-   "command_id":"146470864-aaec-4fa4-a556-0634cec60e1d",
+   {
+      "command_id":"146470864-aaec-4fa4-a556-0634cec60e1d",
       "words":{
          "turn":0.35,
          "on":0.15,
@@ -179,11 +189,21 @@
          "switch":0.35,
          "bulb":0.35,
          "arduino":0.35,
-         "relay": 0.35,
-         "power on": 0.25,
-         "power off": 0.25,
-         "light": 0.35
-
+         "relay":0.35,
+         "power on":0.25,
+         "power off":0.25,
+         "light":0.35
+      }
+   },
+   {
+      "command_id":"86735906-5a6b-42fd-9ee0-d8f93b1b8ed9",
+      "words":{
+         "free":0.2,
+         "go":0.2,
+         "off":0.25,
+         "down":0.25,
+         "sleep":0.25,
+         "abort":0.25
       }
    }
 ]

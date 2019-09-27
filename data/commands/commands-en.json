@@ -9,7 +9,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":"initial",
       "setup_command":true,
       "is_ready":true,
       "previous_command_id":null,
@@ -25,8 +25,8 @@
          }
       },
       "descriptions":{
-         "en":"Set operating language of voice assistant.",
-         "sr":"Поставља оперативни језик гласовног асистента."
+         "en":"Initial command.",
+         "sr":"Incijalna komanda."
       }
    },
    {
@@ -39,7 +39,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":true,
       "is_ready":true,
       "previous_command_id":null,
@@ -60,6 +60,96 @@
       }
    },
    {
+      "command_id":"68675608-4061-4322-923a-dab14108e916",
+      "service":null,
+      "method":null,
+      "has_args":false,
+      "arg_name":null,
+      "arg_type":null,
+      "need_input":false,
+      "process_input_text":false,
+      "input_processing_method":null,
+      "tag":"invalid",
+      "setup_command":true,
+      "is_ready":true,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "success":{
+            "en":"I'm sorry, but I'm not sure what you want. I cannot determine precisely your command. Try again!",
+            "sr":"Žao mi je, ali nisam siguran šta želiš. Ne mogu da odredim precizno tvoju komandu. Probaj ponovo!"
+         },
+         "fail":{
+            "en":"I'm sorry, but I'm not sure what you want. I cannot determine precisely your command. Try again!",
+            "sr":"Žao mi je, ali nisam siguran šta želiš. Ne mogu da odredim precizno tvoju komandu. Probaj ponovo!"
+         }
+      },
+      "descriptions":{
+         "en":"Invalid command.",
+         "sr":"Nevalidna komanda."
+      }
+   },
+   {
+      "command_id":"68675608-4061-4322-923a-dab14108e916",
+      "service":null,
+      "method":null,
+      "has_args":false,
+      "arg_name":null,
+      "arg_type":null,
+      "need_input":false,
+      "process_input_text":false,
+      "input_processing_method":null,
+      "tag":"ambiguous",
+      "setup_command":true,
+      "is_ready":true,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "success":{
+            "en":"I'm sorry, but I'm not sure what you want. Your command is ambiguous. There are few options. Try again please!",
+            "sr":"Žao mi je, ali nisam siguran šta želiš. Tvoje komanda nije jednoznačna. Postoji više mogućih opcija. Probaj ponovo!"
+         },
+         "fail":{
+            "en":"I'm sorry, but I'm not sure what you want. Your command is ambiguous. There are few options. Try again please!",
+            "sr":"Žao mi je, ali nisam siguran šta želiš. Tvoje komanda nije jednoznačna. Postoji više mogućih opcija. Probaj ponovo!"
+         }
+      },
+      "descriptions":{
+         "en":"Invalid command.",
+         "sr":"Nevalidna komanda."
+      }
+   },
+   {
+      "command_id":"8d19f771-5d5d-4610-98d0-f15f6c137716",
+      "service":null,
+      "method":null,
+      "has_args":false,
+      "arg_name":null,
+      "arg_type":null,
+      "need_input":false,
+      "process_input_text":false,
+      "input_processing_method":null,
+      "tag":null,
+      "setup_command":true,
+      "is_ready":true,
+      "previous_command_id":null,
+      "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
+      "messages":{
+         "success":{
+            "en":"Yes, that's possible. Choose new operating language. Default option is English(USA)!",
+            "sr":"Da, to je moguće. Izaberite novi operativni jezik. Podrazumevani jezik je engleski!"
+         },
+         "fail":{
+            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if error happens again!",
+            "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probaj ponovo ili kasnije ukoliko to ne prođe!"
+         }
+      },
+      "descriptions":{
+         "en":"Switch the operating language.",
+         "sr":"Promena operativnog jezika."
+      }
+   },
+   {
       "command_id":"0498476b-f599-488c-8c98-a314c64d77f2",
       "service":"wikipedia",
       "method":"brief_search",
@@ -69,7 +159,7 @@
       "need_input":false,
       "process_input_text":true,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -99,7 +189,7 @@
       "need_input":false,
       "process_input_text":true,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -129,7 +219,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -153,7 +243,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -177,7 +267,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -201,7 +291,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -225,7 +315,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -255,7 +345,7 @@
       "need_input":true,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -285,7 +375,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -315,7 +405,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -345,7 +435,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -375,7 +465,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -405,7 +495,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -435,7 +525,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -465,7 +555,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":"get_social_network_base_url",
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -495,7 +585,7 @@
       "need_input":true,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -525,7 +615,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -555,7 +645,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -585,7 +675,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":"get_search_type",
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -615,7 +705,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":false,
       "previous_command_id":null,
@@ -639,7 +729,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":null,
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -663,7 +753,7 @@
       "need_input":false,
       "process_input_text":false,
       "input_processing_method":"get_relay_state",
-      "system_command":null,
+      "tag":null,
       "setup_command":false,
       "is_ready":true,
       "previous_command_id":null,
@@ -681,6 +771,36 @@
       "descriptions":{
          "en":"Bulb state change.",
          "sr":"Menja stanje sijalice."
+      }
+   },
+   {
+      "command_id":"86735906-5a6b-42fd-9ee0-d8f93b1b8ed9",
+      "service":null,
+      "method":"finalize",
+      "has_args":false,
+      "arg_name":null,
+      "arg_type":null,
+      "need_input":false,
+      "process_input_text":false,
+      "input_processing_method":null,
+      "tag":"final",
+      "setup_command":true,
+      "is_ready":true,
+      "previous_command_id":null,
+      "next_command_id":null,
+      "messages":{
+         "success":{
+            "en":"Ok, I'm going off now. I hope so you enjoyed. See ya next time.!",
+            "sr":"U redu, ja se povlačim sada. Nadam se da si uživao. Do narednog viđenja!"
+         },
+         "fail":{
+            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if error happens again!",
+            "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probaj ponovo ili kasnije ukoliko to ne prođe!"
+         }
+      },
+      "descriptions":{
+         "en":"Final command.",
+         "sr":"Finalna komanda."
       }
    }
 ]

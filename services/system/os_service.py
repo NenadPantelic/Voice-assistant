@@ -34,13 +34,6 @@ class OSService:
 
     def execute_command(self, command):
         command_result = run(args=command, stdout=subprocess.PIPE, shell=True, encoding='utf-8')
-        # print(dir(command_result))
-        # print(command_result.args)
-        # print(command_result)
-        # print(command_result.returncode)
-        # print(command_result.stderr)
-        # (command_result.stdout)
-        # print(command_result.check_returncode())
         if (command_result.stdout is not None or command_result.returncode == 0 and command_result.stderr is None):
             return command_result.stdout
         else:

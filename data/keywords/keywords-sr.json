@@ -28,6 +28,17 @@
       }
    },
    {
+      "command_id":"8d19f771-5d5d-4610-98d0-f15f6c137716",
+      "words":{
+         "promeni":0.35,
+         "izbor":0.15,
+         "zameni":0.35,
+         "jezik":0.25,
+         "operativni":0.2,
+         "novi":0.05
+      }
+   },
+   {
       "command_id":"f18e2c7d-5b28-4109-8bd2-7f25a233024f",
       "words":{
          "kakvo":0.25,
@@ -163,7 +174,7 @@
          "gugl":0.35,
          "guglu":0.35,
          "guglaj":0.35,
-         "googleu": 0.35,
+         "googleu":0.35,
          "izguglaj":0.35,
          "pretraži":0.35,
          "pretraga":0.35,
@@ -178,24 +189,24 @@
          "webu":0.35
       }
    },
-    {
+   {
       "command_id":"30aa30ff-67cf-414a-a4e8-530f45e37510",
       "words":{
-          "pokreni":0.35,
+         "pokreni":0.35,
          "izvrši":0.35,
          "otvori":0.2,
          "program":0.35,
          "aplikaciju":0.25,
-         "komanda": 0.35,
-         "komandu": 0.35,
-         "linux": 0.25,
-         "unix": 0.25,
-         "sistem": 0.25,
-         "sistemsku": 0.25
+         "komanda":0.35,
+         "komandu":0.35,
+         "linux":0.25,
+         "unix":0.25,
+         "sistem":0.25,
+         "sistemsku":0.25
       }
    },
-    {
-   "command_id":"146470864-aaec-4fa4-a556-0634cec60e1d",
+   {
+      "command_id":"146470864-aaec-4fa4-a556-0634cec60e1d",
       "words":{
          "uključi":0.35,
          "upali":0.35,
@@ -203,11 +214,21 @@
          "ugasi":0.35,
          "promeni":0.35,
          "stanje":0.15,
-         "sijalica": 0.35,
-         "sijalice": 0.35,
-         "relej": 0.25,
-         "svetlo": 0.35
+         "sijalica":0.35,
+         "sijalice":0.35,
+         "relej":0.25,
+         "svetlo":0.35
+      }
+   },
+   {
+      "command_id":"86735906-5a6b-42fd-9ee0-d8f93b1b8ed9",
+      "words":{
+         "slobodan":0.2,
+         "slobodna":0.2,
+         "idi":0.2,
+         "ugasi":0.25,
+         "prekini":0.25,
+         "povuci":0.25
       }
    }
-
 ]

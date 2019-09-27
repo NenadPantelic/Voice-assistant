@@ -11,9 +11,9 @@ SR_LANGUAGES = load_json_data(LANGUAGES_IN_SERBIAN)
 # TODO: add json structure checking
 # TODO:check if this can be refactored
 def get_language_code(str_list):
-    if "english" in str_list or "default" in str_list:
+    if any(option in str_list for option in ("english", "default", "engleski", "podrazumevan")) :
         lang_choice = "en"  # "en-US"
-    elif "serbian" in str_list:
+    elif any(option in str_list for option in ("serbian", "srpski")):
         lang_choice = "sr"
     else:
         lang_choice = None
@@ -66,6 +66,14 @@ class Controller:
     def initialize(self):
         message_prefix, command_output_message = self.execute(None)
         self.speaker.save_speech_and_play(message_prefix + command_output_message)
+
+    def finalize(self):
+        final_command = self.command_resolver.get_final_command()
+        command_output_message = final_command["messages"]["success"][self.language]
+        self.speaker.save_speech_and_play(command_output_message)
+        exit(1)
+
+
 
     def listen(self, init=False):
         return self.recognizer.recognize_from_microphone()
@@ -143,7 +151,6 @@ class Controller:
                                                                     is_ready=command["is_ready"])
         else:
             command_result = None
-
         self.determine_next_command(command, command_result)
         messages = command["messages"]  # [self.language]
 
