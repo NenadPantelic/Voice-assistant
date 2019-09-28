@@ -4,6 +4,10 @@ class ActionResult:
         self.__status = status
         self.__language = language
 
+    def __str__(self):
+        return "ActionResult = [result = {}, status = {}, language = {}].".format(self.get_result(), self.get_status(),
+                                                                                  self.get_language())
+
     # getters
     def get_result(self):
         return self.__result

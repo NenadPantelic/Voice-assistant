@@ -2,7 +2,7 @@ from exceptions.exception_handler import ExceptionHandler
 
 from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL
 from services.action_result import ActionResult
-from utils.utils import load_json_data, convert_latinic_to_cyrilic
+from utils.utils import load_json_data, convert_latin_to_cyrillic
 
 LANGUAGES = load_json_data(LANG_CODES)
 SR_LANGUAGES = load_json_data(LANGUAGES_IN_SERBIAN)
@@ -43,7 +43,7 @@ class Controller:
     def set_translation_language(self, language):
         assert (isinstance(language, str))
         if self.language == "sr":
-            language = SR_LANGUAGES.get(convert_latinic_to_cyrilic(language), "english")
+            language = SR_LANGUAGES.get(convert_latin_to_cyrillic(language), "english")
         language = LANGUAGES.get(language, "en")
         self.recognizer.set_language(language)
         self.executor.set_param_and_commit("translation", "translate_text", "src_language",

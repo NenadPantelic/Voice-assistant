@@ -2,6 +2,7 @@
 
 
 import logging
+import os
 
 logging.basicConfig(level=logging.DEBUG, filename="voice_assistant.log", \
                     format='%(asctime)s: %(levelname)s - %(message)s', \
@@ -17,7 +18,8 @@ PROVIDED_LANGUAGES = {
 
 }
 
-LANGUAGES_IN_SERBIAN = "data/langs_in_serbian.json"
+
+LANGUAGES_IN_SERBIAN = os.path.abspath("data/langs_in_serbian.json")
 LANG_CODES = "data/langs_codes.json"
 RECOGNITION_METHODS = {
 

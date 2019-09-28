@@ -225,8 +225,13 @@
       "previous_command_id":null,
       "next_command_id":"90f0bfbc-e3f9-4291-bb4e-28b5ddcb2f4d",
       "messages":{
-         "en":"Ok, I can do it. What's the source language?",
-         "sr":"Mislim da mogu da ti pomognem. Koji je izvorni jezik sa kog želiš da prevedem?"
+         "success": {
+             "en":"Ok, I can do it. What's the source language?",
+             "sr":"Mislim da mogu da ti pomognem. Koji je izvorni jezik sa kog želiš da prevedem?"
+         }, "fail": {
+            "en": "Actually I'm not sure what you meant. Possible solution, say again!",
+            "sr": "Zapravo, nisa siguran šta želiš. Možda će stvar rešiti ako probaš ponovo!"
+         }
       },
       "descriptions":{
          "en":"Initialize speech translation.",
@@ -249,8 +254,13 @@
       "previous_command_id":null,
       "next_command_id":"5708d0b1-f1d6-4852-930d-8d950f980de1",
       "messages":{
-         "en":"Yes, I can handle that. Say text for translation.",
-         "sr":"Da, snaći ću se sa tim. Koji tekst želiš da prevedem?"
+         "success": {
+            "en":"Yes, I can handle that. Say text for translation.",
+            "sr":"Da, snaći ću se sa tim. Koji tekst želiš da prevedem?"
+      }, "fail": {
+            "en":"Nope, I have a problem. Say again.",
+            "sr":"Ne, imam problem. Ponovi."
+         }
       },
       "descriptions":{
          "en":"Initialize speech translation.",
@@ -273,8 +283,13 @@
       "previous_command_id":null,
       "next_command_id":"e57f3a23-2950-4d1a-88d7-05c6ec072d60",
       "messages":{
-         "en":"What's the target language?",
-         "sr":"Na koji jezik želiš da prevedem ovo?"
+         "success": {
+            "en":"What's the target language?",
+            "sr":"Na koji jezik želiš da prevedem ovo?"
+      },"fail": {
+            "en":"Unfortunately, I cannot handle your command. Repeat command!",
+            "sr":"Nažalost, nisam uspeo da odradim šta želiš. Ponovi komandu!"
+         }
       },
       "descriptions":{
          "en":"Sets text for translation.",
@@ -297,8 +312,15 @@
       "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "en":"I think that translated speech sounds like this: ",
+         "success": {
+            "en":"I think that translated speech sounds like this: ",
          "sr":"Mislim da prevod glasi ovako: "
+         },
+         "fail": {
+            "en":"I could translate the given speech. Please, try again!",
+         "sr":"Nisam uspeo da prevedem govor. Molim, probaj ponovo!"
+         }
+
       },
       "descriptions":{
          "en":"Translates original speech text.",
