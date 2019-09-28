@@ -45,7 +45,7 @@ recognize_wit(): Wit.ai
 
 '''
 
-# tts audio config
+# _tts audio config
 
 PATH_TO_AUDIO_DIR = r"data/audio/"
 DEFAULT_AUDIO_FILE = PATH_TO_AUDIO_DIR + "temporary.mp3"
@@ -142,6 +142,11 @@ EXCEPTION_MESSAGES = {
     "speech_recognition.RequestError": {
         "en": "Request error problem. Check API limits and connectivity status!",
         "sr": "Проблеми са слањем захтева. Проверите АПИ лимите и статус мреже!"
+    },
+    # TODO: handle when error occurs in speaking module - how to inform user
+    "gtts.tts.gTTSError": {
+        "en": "I have a problem with speaking. Probably you reached out the API limit!",
+        "sr": "Imam problem sa govorom. Verovatno si probio API limit!"
     },
     "smtplib.SMTPAuthenticationError":
         {

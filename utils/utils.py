@@ -1,6 +1,21 @@
 import json
 import time
 import uuid
+from playsound import playsound
+
+
+def play_audio(file_name):
+    playsound(file_name)
+
+# TODO:strongly coudpled with the english-serbian languages use-case
+def get_language_code(str_list):
+    if any(option in str_list for option in ("english", "default", "engleski", "podrazumevan")):
+        lang_choice = "en"  # "en-US"
+    elif any(option in str_list for option in ("serbian", "srpski")):
+        lang_choice = "sr"
+    else:
+        lang_choice = None
+    return lang_choice
 
 
 def logging_exception(exception):
@@ -54,10 +69,10 @@ def convert_or_return_text(text, language):
 
 
 def convert_latin_to_cyrillic(text):
-    latin_symbols = ['a', 'b', 'v', 'g', 'd', 'đ', 'e', 'ž', 'z', 'i', 'j', 'k', 'l', 'ǉ', 'm', 'n', 'ǌ', 'o', \
-                     'p', 'r', 's', 't', 'ć', 'u', 'f', 'h', 'c', 'č', 'dž', 'š']
+    latin_symbols = ['a', 'b', 'v', 'g', 'd', 'đ', 'e', 'ž', 'z', 'i', 'j', 'k', 'l', 'ǉ', 'm', 'n', 'ǌ', 'o', 'p',
+                     'r', 's', 't', 'ć', 'u', 'f', 'h', 'c', 'č', 'dž', 'š']
     cyrillic_symbols = ['а', 'б', 'в', 'г', 'д', 'ђ', 'е', 'ж', 'з', 'и', 'ј', 'к', 'л', 'љ', 'м', 'н', 'њ', 'о', 'п',
-                        'р', 'с', 'т', 'ћ', 'у', \
+                        'р', 'с', 'т', 'ћ', 'у',
                         'ф', 'х', 'ц', 'ч', 'џ', 'ш']
     converted_text = ""
     conversion_map = {latin_symbols[i]: cyrillic_symbols[i] for i in range(len(latin_symbols))}

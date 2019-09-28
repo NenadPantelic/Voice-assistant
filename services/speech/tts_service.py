@@ -1,39 +1,57 @@
 from config.constants import *
-from gtts import gTTS, gTTSError
-from playsound import playsound
-
-from services.common.action_result import ActionResult
-from utils.utils import get_current_timestamp
+# possible replacement pyttsx3
+from gtts import gTTS
+from utils.utils import get_current_timestamp, play_audio
 
 
 class Speaker:
     def __init__(self, lang="en-us"):
-        self.__language = lang
-        self.tts = gTTS(lang=self.__language, text="dummy")
+        self._language = lang
+        self._tts = gTTS(lang=self._language, text="dummy")
 
+    # public methods
     def set_language(self, language):
-        self.__language = language
-        self.tts.lang = self.__language
+        """
+        Sets operating speaking language.
+        :param str language: language code
+        :rtype: None
+        :return: void method
+        """
+        assert (isinstance(language, str))
+        self._language = language
+        self._tts.lang = self._language
 
     def get_language(self):
-        return self.__language
-
-    def speak(self, text, fileName=DEFAULT_AUDIO_FILE):
-        if fileName != DEFAULT_AUDIO_FILE:
-            fileName = PATH_TO_AUDIO_DIR + fileName
-        self.tts.text = text
-        try:
-            self.tts.save(fileName)
-            self.play_audio(fileName)
-        except gTTSError as e:
-            return ActionResult(e, TEXT_TO_SPEECH_EXCEPTION)
-
+        """
+        Returns speaking language.
+        :rtype:str
+        :return: speaking language
+        """
+        return self._language
 
     def save_speech_and_play(self, text=''):
+        """
+        Speak out the given text. Text must not be empty string.
+        :param str text: text to be spoken
+        :rtype: None
+        :return: void method
+        """
+        assert (isinstance(text, str))
         if text != '':
-            self.speak(text, str(get_current_timestamp()) + ".mp3")
+            self._speak(text, str(get_current_timestamp()) + ".mp3")
 
-
-    def play_audio(self, fileName):
-        playsound(fileName)
-        # os.remove(fileName)
+    # private methods
+    def _speak(self, text, file_name=DEFAULT_AUDIO_FILE):
+        """
+        Speak out and play audio.
+        :param str text:
+        :param str file_name: audio file in which speech will be saved
+        :rtype: None
+        :return:void method
+        """
+        assert (isinstance(text, str))
+        if file_name != DEFAULT_AUDIO_FILE:
+            file_name = PATH_TO_AUDIO_DIR + file_name
+        self._tts.text = text
+        self._tts.save(file_name)
+        play_audio(file_name)

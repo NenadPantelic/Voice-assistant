@@ -2,22 +2,10 @@ from exceptions.exception_handler import ExceptionHandler
 
 from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL, logger, FATAL
 from services.common.action_result import ActionResult
-from utils.utils import load_json_data, convert_latin_to_cyrillic
+from utils.utils import load_json_data, convert_latin_to_cyrillic, get_language_code
 
 LANGUAGES = load_json_data(LANG_CODES)
 SR_LANGUAGES = load_json_data(LANGUAGES_IN_SERBIAN)
-
-
-# TODO: add json structure checking
-# TODO:check if this can be refactored
-def get_language_code(str_list):
-    if any(option in str_list for option in ("english", "default", "engleski", "podrazumevan")):
-        lang_choice = "en"  # "en-US"
-    elif any(option in str_list for option in ("serbian", "srpski")):
-        lang_choice = "sr"
-    else:
-        lang_choice = None
-    return lang_choice
 
 
 class Controller:
@@ -85,7 +73,6 @@ class Controller:
 
     def listen(self, init=False):
         return self.recognizer.recognize_from_microphone()
-
 
     def get_output_speech(self, command_result, messages={}):
 
@@ -181,7 +168,7 @@ class Controller:
             message = ExceptionHandler.get_exception_message(e, self.language)
             text_result = ActionResult(message, FAIL)
         self.reset_recognizer_language()
-        # tts exception
+        # _tts exception
 
         if text_result is None or text_result.get_result() is None or text_result.get_status() == FAIL:
             output = self.get_output_speech(text_result)

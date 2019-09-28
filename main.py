@@ -6,6 +6,8 @@ from services.speech.stt_service import *
 from controller import Controller
 from services.webapi.imdb_service import IMDBService
 
+from utils.utils import load_json_data
+
 langs = None
 # INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!"
 
@@ -13,32 +15,7 @@ speaker = Speaker()
 srec = SpeechRecognizer(language="en-US")
 
 if __name__ == "__main__":
-    with open(r'data/languages.json') as json_file:
-        langs = json.load(json_file)
-        # speaker.speak(INIT_MESSAGE)
-        # time.sleep(10)
-        # l = srec.recognize_from_microphone()
-        # langChoice = l.get_result().lower()
-        # only Serbian and English will be available
-        # print(langChoice)
-        '''
-        if "english" in langChoice or "default" in langChoice:
-            langChoice = "en-US"
-        elif "serbian" in langChoice:
-            langChoice = "sr-RS"
-        else:
-            langChoice = None
-
-        if langChoice is not None:
-            srec.set_language(langChoice)
-            speaker.set_language(langChoice)
-            while True:
-                command = srec.recognize_from_microphone().lower()
-                speaker.speak("Command executed", str(get_current_timestamp()) + ".mp3")
-        else:
-            print(langChoice)
-
-        '''
+    print("start")
 
 keywordsFiles = dict(en=ENGLISH_KEYWORDS)
 keywords = {lang: load_json_data(keywordsFiles[lang]) for lang in keywordsFiles}
