@@ -13,7 +13,7 @@ Return : Generator (iterator) that yields found URLs. If the stop parameter is N
 
 # import googlesearch
 from config.constants import SUCCESS, NO_GOOGLE_RESULT, FACEBOOK_BASE_URL
-from services.action_result import ActionResult
+from services.common.action_result import ActionResult
 
 '''
 try:

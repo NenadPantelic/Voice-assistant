@@ -2,9 +2,8 @@ import threading
 from functools import lru_cache
 import googlesearch, webbrowser
 
-from config.constants import SUCCESS, NO_GOOGLE_RESULT, FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, \
-    LINKEDIN_BASE_URL, logger
-from services.action_result import ActionResult
+from config.constants import SUCCESS, FACEBOOK_BASE_URL, logger
+from services.common.action_result import ActionResult
 
 
 class BrowserService:

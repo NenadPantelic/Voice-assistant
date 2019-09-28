@@ -1,7 +1,7 @@
 import speech_recognition as sr
 from config.constants import *
 from utils.utils import *
-from ..action_result import ActionResult
+from services.common.action_result import ActionResult
 
 
 class SpeechRecognizer:

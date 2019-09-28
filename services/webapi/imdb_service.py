@@ -3,7 +3,7 @@ import omdb
 
 from config.constants import OMDB_API_KEY, SUCCESS, logger
 from functools import lru_cache
-from services.action_result import ActionResult
+from services.common.action_result import ActionResult
 
 
 class IMDBService:

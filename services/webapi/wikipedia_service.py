@@ -1,5 +1,5 @@
 import wikipedia
-from services.action_result import ActionResult
+from services.common.action_result import ActionResult
 from utils.utils import logging_exception
 from config.constants import logger, SUCCESS, DEFAULT_EXCEPTION
 from functools import lru_cache

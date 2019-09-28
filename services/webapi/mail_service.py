@@ -1,5 +1,5 @@
 from config.constants import PROXY_MAIL, MAIL_PASSWORD, SUCCESS, FAIL, logger
-from services.action_result import ActionResult
+from services.common.action_result import ActionResult
 import gmail
 
 

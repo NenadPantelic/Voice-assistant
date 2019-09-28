@@ -1,7 +1,7 @@
 from pyowm import OWM
 from functools import lru_cache
 from config.constants import OWM_API_KEY, WEATHER_PARAMS, WEATHER_PARAMETERS, SUCCESS, logger
-from ..action_result import ActionResult
+from services.common.action_result import ActionResult
 
 
 class WeatherForecastService:

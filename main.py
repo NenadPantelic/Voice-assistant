@@ -1,5 +1,5 @@
 from service_executor import ServiceExecutor
-from services.speech.text_processor_service import TextProcessor
+from services.common.text_processor_service import TextProcessor
 from services.speech.tts_service import *
 from services.speech.stt_service import *
 # efrom config.constants import *
@@ -44,7 +44,7 @@ keywordsFiles = dict(en=ENGLISH_KEYWORDS)
 keywords = {lang: load_json_data(keywordsFiles[lang]) for lang in keywordsFiles}
 
 sp = TextProcessor()
-from services.command_resolver import CommandResolver
+from services.common.command_resolver import CommandResolver
 from services.webapi import wikipedia_service
 from services.webapi.owm_service import WeatherForecastService
 from services.webapi.translation_service import TranslationService
@@ -52,7 +52,7 @@ from services.webapi.mail_service import MailService
 from services.websearch.browser_search_service import BrowserService
 # from services.websearch import * #import WikipediaService
 from services.system.os_service import  OSService
-from services.home_control.arduino_control_service import ArduinoControlService
+
 service_pool = {
 
     "wikipedia": wikipedia_service.WikipediaService("en"),

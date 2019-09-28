@@ -1,7 +1,7 @@
 from exceptions.exception_handler import ExceptionHandler
 
 from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL
-from services.action_result import ActionResult
+from services.common.action_result import ActionResult
 from utils.utils import load_json_data, convert_latin_to_cyrillic
 
 LANGUAGES = load_json_data(LANG_CODES)

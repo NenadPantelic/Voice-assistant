@@ -2,8 +2,8 @@ from config.constants import *
 from gtts import gTTS, gTTSError
 from playsound import playsound
 
-from services.action_result import ActionResult
-from utils.utils import load_json_data, get_current_timestamp
+from services.common.action_result import ActionResult
+from utils.utils import get_current_timestamp
 
 
 class Speaker:
