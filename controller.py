@@ -86,24 +86,13 @@ class Controller:
     def listen(self, init=False):
         return self.recognizer.recognize_from_microphone()
 
-    def get_command_output_text(self, command_result, messages):
-        # TODO:add check if output_message and exception_message are nonempty
-        exception_message = None
-        output_message = ""
-        if command_result is not None:
-            output_message = "" if command_result.get_result() is None else command_result.get_result()
-            exception_message = ExceptionHandler.check_exception_existence(command_result.get_status(), self.language)
-        return output_message, exception_message
 
     def get_output_speech(self, command_result, messages={}):
 
         output_message, status, message_prefix = "", SUCCESS, ""
         if command_result is not None:
             output_message = command_result.get_result()
-            print("DEBUFSKFJSJ")
-            print(output_message)
             status = command_result.get_status()
-        print(messages)
         if messages != {}:
             message_prefix = messages["success"][self.language] if status == SUCCESS else \
                 messages["fail"][self.language]
