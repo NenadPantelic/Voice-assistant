@@ -1,4 +1,4 @@
-from service_executor import ServiceExecutor
+from services.common.service_executor import ServiceExecutor
 from services.common.text_processor_service import TextProcessor
 from services.speech.tts_service import *
 from services.speech.stt_service import *

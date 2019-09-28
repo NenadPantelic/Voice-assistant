@@ -18,7 +18,6 @@ PROVIDED_LANGUAGES = {
 
 }
 
-
 LANGUAGES_IN_SERBIAN = os.path.abspath("data/langs_in_serbian.json")
 LANG_CODES = "data/langs_codes.json"
 RECOGNITION_METHODS = {
@@ -183,9 +182,9 @@ EXCEPTION_MESSAGES = {
         "sr": "Nisam uspeo da nađem ništa na Vikipediji što odgovara tvom zahtevu. Probaj sa nekim drugim zahtevom ili probaj"
               "ponovo, ali probaj da budeš precizniji u govoru."
     },
-    "services.websearch.browser_search_service.GoogleSearchException":{
-        "en":"Google search cannot find anything that suits your query.",
-        "sr":"Gugl pretraga nije našla ništa što odgovara tvom upitu."
+    "services.websearch.browser_search_service.GoogleSearchException": {
+        "en": "Google search cannot find anything that suits your query.",
+        "sr": "Gugl pretraga nije našla ništa što odgovara tvom upitu."
     },
     "exception": {
         "en": GENERIC_MESSAGE_EN,
@@ -231,7 +230,8 @@ WEATHER_PARAMETERS = {
     "temperature_min": ("temp_min", "child", {"en": "minimum temperature", "hr": "minimalna dnevna temperatura"}),
     "temperature_max": ("temp_max", "child", {"en": "maximum temperature", "hr": "maksimalna dnevna temperatura"}),
     "temperature": ("temp", "child", {"en": "temperature", "hr": "prosečna dnevna temperatura"}),
-    "detailed_status": ("detailed_status", "alias", {"en": "detailed status", "hr": "detaljniji opis"})
+    "detailed_status": ("detailed_status", "alias", {"en": "detailed status", "hr": "detaljniji opis"}),
+    "reference_time": ("reference_time", "alias", {"en": "reference time", "hr": "trenutak merenja"})
     # "rain":{}
 
 }
@@ -243,7 +243,5 @@ TWITTER_BASE_URL = "https://twitter.com/"
 INSTAGRAM_BASE_URL = "https://instagram.com/"
 LINKEDIN_BASE_URL = "https://www.linkedin.com/in/"
 
-
 SERIAL_PORT = "/dev/ttyUSB0"
 DEFAULT_BAUD_RATE = 9600
-

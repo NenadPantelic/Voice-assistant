@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pyowm import OWM
 from functools import lru_cache
 from config.constants import OWM_API_KEY, WEATHER_PARAMS, WEATHER_PARAMETERS, SUCCESS, logger
@@ -9,10 +11,6 @@ class WeatherForecastService:
     def __init__(self, language="en"):
         self._api = OWM(OWM_API_KEY, language=language)
 
-    @property
-    def api(self):
-        return self._api
-
     def set_language(self, language):
         """
         Sets language for OWM API.
@@ -21,7 +19,7 @@ class WeatherForecastService:
         """
         logger.debug("Setting owm language: {}".format(language))
         language = 'hr' if language == 'sr' else language
-        self.api.set_language(language)
+        self._api.set_language(language)
 
     # region public methods
     def get_forecast_result(self, location, param="all", unit="celsius"):
@@ -57,12 +55,12 @@ class WeatherForecastService:
         """
         assert (out_format in ("json", "xml")), "Only json and xml output formats are supported!"
         if type(location) == str:
-            target_function = self.api.weather_at_place
+            target_function = self._api.weather_at_place
         elif type(location) == int:
-            target_function = self.api.weather_at_id
+            target_function = self._api.weather_at_id
         elif type(location) == tuple:
             # NOTE:do not use tuple, currently it is not handled  when lat,long tuple arg is used
-            target_function = self.api.weather_at_coords
+            target_function = self._api.weather_at_coords
         else:
             raise TypeError("Location type is not valid.")
         weather_data = target_function(location)
@@ -73,22 +71,27 @@ class WeatherForecastService:
         Returns weather forecast in for-read user-friendly form.
         :param weather_data (pyowm.weatherapi25.weather.Weather): Weather object
         :param param_name (str): parameter we want e.g. temperature, humidity,....
+        metric units: wind (m/s), temperature (celsius), cloudines(%), pressure(mbar), humidity...
         :param kwargs:
         :return: weather data in string format weather_param:value
         """
         forecast = self._get_forecast(weather_data, param_name, **kwargs)
+        logger.debug("Complete forecast info: {}".format(forecast))
         display_str = ''
         for param, struct in WEATHER_PARAMETERS.items():
+            if param in ("temperature_min", "temperature_max"): param = "temperature"
+
             if param not in forecast:
                 continue
-            if param in ("temperature_min", "temperature_max"): param = "temperature"
             # NOTE:pressure value is measured in hPa, which is equal to mbar
             weather_param_value = forecast[param]
+            if param == "reference_time":
+                weather_param_value = datetime.utcfromtimestamp(int(weather_param_value)).strftime('%d-%m-%Y %H:%M:%S')
             child_alias_status = struct[1]
             child_alias_value = struct[0]
-            display_name = struct[2][self.api.get_language()]
+            display_name = struct[2][self._api.get_language()]
             value = weather_param_value[child_alias_value] if child_alias_status == "child" else weather_param_value
-            display_str += display_name + ": " + str(value) + "\n"
+            display_str += display_name + ": " + str(value) + ",\n"
         return display_str
 
     def _get_forecast(self, weather_data, param, **kwargs):
