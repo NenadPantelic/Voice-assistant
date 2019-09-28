@@ -54,8 +54,9 @@ class ServiceExecutor:
                 executor = getattr(service_inst, method)
                 try:
                     result = executor(**self.__service_command_methods[service][method])
-                    logger.debug("Output = {}".formt(result))
+                    logger.debug("Output = {}".format(result))
                     command_result = result
+                    #TODO:handle fatal exception
                 except Exception as e:
                     message = ExceptionHandler.get_exception_message(e, self.__language)
                     command_result = ActionResult(message, FAIL, self.__language)

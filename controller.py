@@ -1,6 +1,6 @@
 from exceptions.exception_handler import ExceptionHandler
 
-from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL, logger
+from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL, logger, FATAL
 from services.common.action_result import ActionResult
 from utils.utils import load_json_data, convert_latin_to_cyrillic
 
@@ -11,7 +11,7 @@ SR_LANGUAGES = load_json_data(LANGUAGES_IN_SERBIAN)
 # TODO: add json structure checking
 # TODO:check if this can be refactored
 def get_language_code(str_list):
-    if any(option in str_list for option in ("english", "default", "engleski", "podrazumevan")) :
+    if any(option in str_list for option in ("english", "default", "engleski", "podrazumevan")):
         lang_choice = "en"  # "en-US"
     elif any(option in str_list for option in ("serbian", "srpski")):
         lang_choice = "sr"
@@ -30,7 +30,7 @@ class Controller:
         self.speaking_language = "en"
 
     def set_language(self, language_list):
-        #assert (isinstance(language_list, str))
+        # assert (isinstance(language_list, str))
         try:
             lang_code = get_language_code(language_list)
             logger.debug("Operating language = {}.".format(lang_code))
@@ -80,10 +80,8 @@ class Controller:
         exit(1)
 
     def raise_invalid_command(self):
-        #invalid_command = self.command_resolver.
+        # invalid_command = self.command_resolver.
         pass
-
-
 
     def listen(self, init=False):
         return self.recognizer.recognize_from_microphone()
@@ -102,6 +100,8 @@ class Controller:
         output_message, status, message_prefix = "", SUCCESS, ""
         if command_result is not None:
             output_message = command_result.get_result()
+            print("DEBUFSKFJSJ")
+            print(output_message)
             status = command_result.get_status()
         print(messages)
         if messages != {}:
@@ -116,17 +116,18 @@ class Controller:
         if command_result is not None:
             if command_result.get_status() == SUCCESS:
                 next_command_id = command["next_command_id"]
-                #self.command_resolver.set_next_command_id(command["next_command_id"])
+                # self.command_resolver.set_next_command_id(command["next_command_id"])
             elif command_result.get_status() == FAIL:
-                #pass
-                #TODO:
-                #repeat command or break
+                # pass
+                # TODO:
+                # repeat command or break
                 next_command_id = command["command_id"]
-                #self.command_resolver.set_next_command_id(command["command_id"])
+            # elif command_result.get_status() == FATAL:
+            # exit(1)
             else:
                 raise ValueError("Status can only be SUCCESS or FAIL")
         else:
-            #case when command is not ready (executable)
+            # case when command is not ready (executable)
             next_command_id = command["next_command_id"]
         self.command_resolver.set_next_command_id(next_command_id)
 
@@ -166,9 +167,9 @@ class Controller:
                                                                     is_ready=command["is_ready"])
         else:
             command_result = None
+
         self.determine_next_command(command, command_result)
         messages = command["messages"]  # [self.language]
-
 
         if command_result is not None:
             speaking_language = command_result.get_language() if command_result.get_language() is not None \

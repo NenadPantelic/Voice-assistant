@@ -1,4 +1,5 @@
 import string
+
 from config.constants import ENGLISH_DICTIONARY_PATH, SERBIAN_DICTIONARY_PATH, logger
 from utils.utils import load_words_dictionaries, flatten_lists
 
@@ -52,12 +53,12 @@ class TextProcessor:
     def filter_out_keywords(self, word_list, keyword_list):
         """
         Filter out keywords from [word_list]. Keywords are stored in [keyword_list].
-        :param word_list: list of words that needs to be filtered
-        :param keyword_list: list of words that we want to filter out from [word_list]
+        :param list word_list: list of words that needs to be filtered
+        :param dict_keys keyword_list: list of words that we want to filter out from [word_list]
         :rtype: str
         :return: string composed from words from [word_list] that do not belong to [keyword_list]
         """
-        assert (isinstance(word_list, list) and isinstance(keyword_list, list))
+        assert (isinstance(word_list, list))
         text_without_keywords = ' '.join([word for word in word_list if word not in keyword_list])
         logger.debug("Text without keywords = {}".format(text_without_keywords))
         return text_without_keywords
