@@ -80,7 +80,7 @@ class TranslationService:
 
         :param text: The source text(s) whose language you want to identify.
                      Batch detection is supported via sequence input.
-        :type text: UTF-8 :class:`str`; :class:`unicode`; string sequence (list, tuple, iterator, generator)
+        :type_ text: UTF-8 :class:`str`; :class:`unicode`; string sequence (list, tuple, iterator, generator)
 
         :rtype: Detected
         :return: Detected object

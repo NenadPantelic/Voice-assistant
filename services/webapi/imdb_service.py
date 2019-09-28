@@ -25,7 +25,7 @@ class IMDBService:
         :param num: Number of top movies we seek. (int); in range [1,250]
         :return: movies info string wrapped in ActionResult; default speaking language is english
         """
-        assert (isinstance(num, int)), "Value must be integer by type."
+        assert (isinstance(num, int)), "Value must be integer by type_."
         assert (num in range(1, 251)), "Value must be in range 1 to 250"
         # TODO:handle num when spoken in Serbian, it uses words, in english it uses numbers
         num = int(num)

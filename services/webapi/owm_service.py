@@ -62,7 +62,7 @@ class WeatherForecastService:
             # NOTE:do not use tuple, currently it is not handled  when lat,long tuple arg is used
             target_function = self._api.weather_at_coords
         else:
-            raise TypeError("Location type is not valid.")
+            raise TypeError("Location type_ is not valid.")
         weather_data = target_function(location)
         return weather_data.get_weather()
 

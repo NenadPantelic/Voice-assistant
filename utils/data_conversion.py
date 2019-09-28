@@ -17,7 +17,7 @@ def get_social_network_base_url(social_network_str):
 
 # TODO:adapt to serbian phrases (for both methods)
 def get_search_type(type_str):
-    logger.debug("Mapping type {}....".format(type_str))
+    logger.debug("Mapping type_ {}....".format(type_str))
     for type, type_code in tpe_map.items():
         if type in type_str:
             return type_code

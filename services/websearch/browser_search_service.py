@@ -16,7 +16,7 @@ class BrowserService:
         """
         Opens the found url in browser.
         :param str query: google search query string. Must not be URL-encoded
-        :param str tpe: type of search, default=`all`
+        :param str tpe: type_ of search, default=`all`
         :rtype ActionResult
         :return: Empty ActionResult with SUCCESS status
         """
@@ -54,7 +54,7 @@ class BrowserService:
 
         :param str query: google search query string. Must not be URL-encoded
         :param str tld: top level domain, default = `com`
-        :param str tpe: type of search, default=`all`
+        :param str tpe: type_ of search, default=`all`
         :param float pause: Lapse to wait between HTTP requests.
         A lapse too long will make the search slow, but a lapse too short may
         cause Google to block your IP. Your mileage may vary!
@@ -71,7 +71,7 @@ class BrowserService:
         """
         Returns the first result found by Google search.
         :param str query: google search query string. Must not be URL-encoded
-        :param str tpe: type of search, default=`all`
+        :param str tpe: type_ of search, default=`all`
         :rtype ActionResult
         :return: Action result with url as payload
         """

@@ -43,10 +43,10 @@ class ServiceExecutor:
         :param str arg_name: argument name
         :param str arg_value: argument value
         :param bool need_input: needs input from keyboard or not
-        :param str input_type: str value of any type (`float`, `str`, `int`, `bool` ...)
+        :param str input_type: str value of any type_ (`float`, `str`, `int`, `bool` ...)
         :param str input_processing_method: name of the function that should preprocess [arg_value]
         :param bool is_ready: only ready methods are committed
-        :rtype: output type of [_commit] method or None
+        :rtype: output type_ of [_commit] method or None
         :return:
         """
         self._set_param(service, method_name, arg_name, arg_value, input_type, input_processing_method, need_input)
@@ -64,7 +64,7 @@ class ServiceExecutor:
         :param str arg_name: argument name
         :param str arg_value: argument value
         :param bool need_input: needs input from keyboard or not
-        :param str input_type: str value of any type (`float`, `str`, `int`, `bool` ...)
+        :param str input_type: str value of any type_ (`float`, `str`, `int`, `bool` ...)
         :param str input_processing_method: name of the function that should preprocess [arg_value]
         :return:
         """
@@ -72,12 +72,12 @@ class ServiceExecutor:
             logger.debug("Expecting input...")
             print("Enter your input:")
             arg_value = input()
-        logger.debug("Argument before processing: [type = {}, value = {}]".format(type(arg_value), arg_value))
+        logger.debug("Argument before processing: [type_ = {}, value = {}]".format(type(arg_value), arg_value))
         if input_type is not None:
             arg_value = eval(input_type + "('" + arg_value + "')")
         if input_processing_method is not None:
             arg_value = eval("data_conversion." + input_processing_method + "('" + arg_value + "')")
-        logger.debug("Argument after processing: [type = {}, value = {}]".format(type(arg_value), arg_value))
+        logger.debug("Argument after processing: [type_ = {}, value = {}]".format(type(arg_value), arg_value))
         self._service_command_methods[service][method_name][arg_name] = arg_value
 
     def _commit(self, service, method):
