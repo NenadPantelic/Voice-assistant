@@ -3,6 +3,9 @@ from subprocess import run as run
 
 # this service is incomplete - strong binding with Linux OS. It should be completed (make it platform agnostic)
 # do not use it in commands
+from exceptions.exceptions import CommandException
+
+
 class OSService:
 
     def __init__(self):
@@ -104,5 +107,3 @@ class OSService:
         return self.execute_command(command)
 
 
-class CommandException(Exception):
-    pass

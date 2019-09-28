@@ -1,117 +1,104 @@
-from config.constants import LANG_KEYWORDS
-from utils.utils import load_json_data
-
-#TODO:move this function to utility section
-def convert_json_array_to_dict(json_array):
-    resulting_map = {}
-    for element in json_array:
-        resulting_map[element["command_id"]] = element
-    return resulting_map
+from config.constants import LANG_KEYWORDS, logger
+from exceptions.exceptions import VoiceAssistantException
+from utils.utils import load_json_data, convert_commands_json_array_to_dict
 
 
 class CommandResolver:
 
     def __init__(self, text_processor, commands, language="en"):
-        self.__text_processor = text_processor
-        self.__language = None
-        self.__keywords = None
-        self.__commands = convert_json_array_to_dict(commands)
-        self.__command = None
-        self.__previous_command_id = None
-        self.__next_command_id = None
+        self._text_processor = text_processor
+        self._language = None
+        self._keywords = None
+        self._commands = convert_commands_json_array_to_dict(commands)
+        self._command = None
+        self._next_command_id = None
         self.set_language(language)
-        print(self.__commands.values())
 
     def set_language(self, language):
-        self.__language = language
+        assert (isinstance(language, str))
+        # try:
+        logger.debug("Command resolver language = {}.".format(language))
+        self._language = language
         keywords = load_json_data(LANG_KEYWORDS[language])
         self.set_keywords(keywords)
+        # except KeyError:
+        #    raise ValueError("Language is not supported. Use English or Serbian.")
 
     def set_processor_language(self, language):
-        self.__text_processor.set_language(language)
+        assert (isinstance(language, str))
+        self._text_processor.set_language(language)
 
     def set_keywords(self, keywords):
-        self.__keywords = convert_json_array_to_dict(keywords)
+        assert (isinstance(keywords, list))
+        self._keywords = convert_commands_json_array_to_dict(keywords)
 
     def set_next_command_id(self, command_id):
-        self.__next_command_id = command_id
+        assert (isinstance(command_id, str))
+        self._next_command_id = command_id
 
     def calculate_command_scores(self, word_list):
+        assert (isinstance(word_list, list))
         scores = {}
-        # TODO:change input type of word_list to string (currently is list)
-        # word_list = ' '.join(word_list)
-        for command_id, command in self.__keywords.items():
+        for command_id, command in self._keywords.items():
             words = command["words"]
             scores[command_id] = sum([words.get(word, 0) * word_list.count(word) \
                                       for word in words if word in word_list])
         return scores
 
-    # TODO: check what to use - phrases or single words
     def get_command(self, text):
+        assert (text is None or isinstance(text, str))
         init = True
         word_list = []
         if text is not None:
-            word_list = self.__text_processor.preprocess_text(text)
+            word_list = self._text_processor.preprocess_text(text)
             init = False
 
         self.determine_command(init, word_list)
-        target_command = self.__command
-        print(target_command)
+        target_command = self._command
         if target_command["has_args"]:
             arg = ' '.join(word_list)
             if target_command["process_input_text"]:
-                arg = self.__text_processor.filter_out_keywords(word_list,
-                                                                self.__keywords[self.__command["command_id"]][
-                                                                    "words"].keys())
+                arg = self._text_processor.filter_out_keywords(word_list,
+                                                               self._keywords[self._command["command_id"]][
+                                                                   "words"].keys())
             target_command.update({"arg": arg})
+        logger.debug("Command for execution = {}".format(target_command))
         return target_command
 
-    def determine_command(self, init=False, wordList=[]):
+    def determine_command(self, init=False, word_list=[]):
+        assert (isinstance(init, bool) and isinstance(word_list, list))
         if init:
-            self.__command = self.get_default_command()
-        elif self.__next_command_id is None:
-            score_map = self.calculate_command_scores(wordList)
+            self._command = self.find_command_by_tag("initial")
+        elif self._next_command_id is None:
+            score_map = self.calculate_command_scores(word_list)
             max_score = max(score_map.values())
             candidate_commands = list(filter(lambda x: x[1] == max_score, score_map.items()))
-            #print(candidate_commands)
             if len(candidate_commands) > 1:
-                # TODO:solve scenario when multiple methods have the same score
-                self.__command = self.get_most_probable_command(candidate_commands)
+                self._command = self.find_command_by_tag("ambiguous")
             else:
-                self.__command = self.__commands[candidate_commands[0][0]]
-            #self.__previous_command_id = self.__command["previous_command_id"]
+                self._command = self._commands[candidate_commands[0][0]]
         else:
-            #self.__previous_command_id = self.__command["command_id"]
-            self.__command = self.find_command_by_id(self.__next_command_id)
-        if self.__command is None:
-            self.__command = self.get_invalid_command()
+            self._command = self.find_command_by_id(self._next_command_id)
 
-        self.__next_command_id = self.__command["next_command_id"]
+        if self._command is None:
+            self._command = self.find_command_by_tag("invalid")
 
-    def get_most_probable_command(self, commands):
-        return list(filter(lambda x: x["tag"] == "ambiguous", self.__commands.values()))[0]
+        self._next_command_id = self._command["next_command_id"]
+        logger.debug("Next command's id = {}".format(self._next_command_id))
 
-    def get_invalid_command(self):
-        for command in self.__commands.values():
-            if command["tag"] == "invalid":
-                return command
-        return None
+    def find_command_by_tag(self, tag):
+        # currently there is only one command by tag, in future, if there is more than one command per tag, use command
+        # id as identifier
+        # return first one
+        try:
+            return list(filter(lambda x: x["tag"] == tag, self._commands.values()))[0]
+        except IndexError:
+            raise VoiceAssistantException("Command with the given tag = {} cannot be found. Check commands tag.".
+                                          format(tag))
 
-    def get_default_command(self):
-        # one initial command
-        #return list(filter(lambda x: x["service"] is None and x["method"] is None, self.__commands.values()))[0]
-        return list(filter(lambda x: x["tag"] == "initial", self.__commands.values()))[0]
-
-    def get_final_command(self):
-        #print([x["tag"] for x in self.__commands.values()])
-        print(self.__commands.values())
-        return list(filter(lambda x: x["tag"] == "final", self.__commands.values()))[0]
-
-
-    # helper method
     def get_command_keywords(self, commandId):
-        words = [command["words"] for command in self.__keywords if command["command_id"] == commandId]
+        words = [command["words"] for command in self._keywords if command["command_id"] == commandId]
         return words[0] if len(words) == 1 else None
 
     def find_command_by_id(self, commandId):
-        return self.__commands.get(commandId, None)
+        return self._commands.get(commandId, None)

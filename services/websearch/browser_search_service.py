@@ -3,6 +3,7 @@ from functools import lru_cache
 import googlesearch, webbrowser
 
 from config.constants import SUCCESS, FACEBOOK_BASE_URL, logger
+from exceptions.exceptions import GoogleSearchException
 from services.common.action_result import ActionResult
 
 
@@ -84,9 +85,7 @@ class BrowserService:
             logger.debug("First Google search result = {}.".format(url))
             return ActionResult(url, SUCCESS)
         except StopIteration as e:
-            # TODO logging
             raise GoogleSearchException
-            # return ActionResult(None, NO_GOOGLE_RESULT)
 
     def _browser_open(self, url, new=2, autoraise=False):
         """
@@ -110,5 +109,3 @@ class BrowserService:
 
 
 
-class GoogleSearchException(Exception):
-    pass

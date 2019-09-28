@@ -2667,7 +2667,7 @@ speech_recognition.UnknownValueError
 09/25/2019 08:41:18 PM: INFO - -------- begin commit --------
 09/25/2019 08:41:18 PM: WARNING - An exception occured.
 09/25/2019 08:41:18 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in _commit
     result = executor(**self.__service_command_methods[service][method])
 TypeError: send_email() got an unexpected keyword argument 'receiver'
 
@@ -2774,7 +2774,7 @@ TypeError: send_email() got an unexpected keyword argument 'receiver'
 09/25/2019 08:45:50 PM: INFO - -------- begin commit --------
 09/25/2019 08:45:50 PM: WARNING - An exception occured.
 09/25/2019 08:45:50 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in _commit
     result = executor(**self.__service_command_methods[service][method])
 TypeError: send_email() got an unexpected keyword argument 'receiver'
 
@@ -2908,7 +2908,7 @@ TypeError: send_email() got an unexpected keyword argument 'receiver'
 09/25/2019 08:48:09 PM: INFO - -------- begin commit --------
 09/25/2019 08:48:10 PM: WARNING - An exception occured.
 09/25/2019 08:48:10 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/webapi/mail_service.py", line 17, in send_email
     raise e
@@ -4116,7 +4116,7 @@ speech_recognition.UnknownValueError
 09/25/2019 10:38:38 PM: DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=michael+polling&format=json&action=query HTTP/1.1" 200 238
 09/25/2019 10:38:38 PM: WARNING - An exception occured.
 09/25/2019 10:38:38 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/webapi/wikipedia_service.py", line 62, in brief_search
     return ActionResult(wikipedia.summary(query, sentences=sentences), SUCCESS)
@@ -4442,7 +4442,7 @@ speech_recognition.UnknownValueError
 09/25/2019 10:41:31 PM: DEBUG - https://sr.wikipedia.org:443 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=sr%C4%91an+tantan+taretan+taretan&format=json&action=query HTTP/1.1" 200 262
 09/25/2019 10:41:31 PM: WARNING - An exception occured.
 09/25/2019 10:41:31 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 56, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/webapi/wikipedia_service.py", line 62, in brief_search
     return ActionResult(wikipedia.summary(query, sentences=sentences), SUCCESS)
@@ -4865,7 +4865,7 @@ speech_recognition.UnknownValueError
 09/26/2019 03:33:43 PM: INFO - -------- begin commit --------
 09/26/2019 03:33:43 PM: WARNING - An exception occured.
 09/26/2019 03:33:43 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/home_control/arduino_control_service.py", line 41, in control
     self._set_state(state_demmand)
@@ -4956,7 +4956,7 @@ speech_recognition.UnknownValueError
 09/26/2019 03:34:20 PM: INFO - -------- begin commit --------
 09/26/2019 03:34:20 PM: WARNING - An exception occured.
 09/26/2019 03:34:20 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/home_control/arduino_control_service.py", line 41, in control
     self._set_state(state_demmand)
@@ -5040,7 +5040,7 @@ ValueError: Invalid state.
 09/26/2019 03:35:17 PM: INFO - -------- begin commit --------
 09/26/2019 03:35:17 PM: WARNING - An exception occured.
 09/26/2019 03:35:17 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/home_control/arduino_control_service.py", line 41, in control
     self._set_state(state_demmand)
@@ -5156,7 +5156,7 @@ speech_recognition.UnknownValueError
 09/26/2019 03:37:25 PM: INFO - -------- begin commit --------
 09/26/2019 03:37:25 PM: WARNING - An exception occured.
 09/26/2019 03:37:25 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/home_control/arduino_control_service.py", line 41, in control
     self._set_state(state_demmand)
@@ -5437,7 +5437,7 @@ speech_recognition.UnknownValueError
 09/26/2019 07:21:28 PM: INFO - -------- begin commit --------
 09/26/2019 07:21:28 PM: WARNING - An exception occured.
 09/26/2019 07:21:28 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
 TypeError: control() got an unexpected keyword argument 'state_demmand'
 
@@ -5473,7 +5473,7 @@ TypeError: control() got an unexpected keyword argument 'state_demmand'
 09/26/2019 07:22:00 PM: INFO - -------- begin commit --------
 09/26/2019 07:22:00 PM: WARNING - An exception occured.
 09/26/2019 07:22:00 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
 TypeError: control() got an unexpected keyword argument 'state_demmand'
 
@@ -8276,7 +8276,7 @@ speech_recognition.UnknownValueError
 09/26/2019 09:22:04 PM: DEBUG - Creating movie info....
 09/26/2019 09:22:04 PM: WARNING - An exception occured.
 09/26/2019 09:22:04 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/webapi/imdb_service.py", line 59, in get_movie_details
     movie_info = self._get_detailed_movie_info(movie_details)
@@ -8384,7 +8384,7 @@ KeyError: 'naslov'
 09/26/2019 09:24:22 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt0084780&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
 09/26/2019 09:24:22 PM: WARNING - An exception occured.
 09/26/2019 09:24:22 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/webapi/imdb_service.py", line 59, in get_movie_details
     movie_info = self._get_detailed_movie_info(movie_details)
@@ -8490,7 +8490,7 @@ TypeError: tuple indices must be integers or slices, not str
 09/26/2019 09:27:50 PM: DEBUG - http://www.omdbapi.com:80 "GET /?i=tt6043142&page=1&plot=short&apikey=56674ea0 HTTP/1.1" 200 None
 09/26/2019 09:27:50 PM: WARNING - An exception occured.
 09/26/2019 09:27:50 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/webapi/imdb_service.py", line 59, in get_movie_details
     movie_info = self._get_detailed_movie_info(movie_details)
@@ -8599,7 +8599,7 @@ TypeError: tuple indices must be integers or slices, not str
 {'title': 'Skin', 'year': '2018', 'released': '26 Jul 2019', 'runtime': '118 min', 'genre': 'Biography, Crime, Drama', 'director': 'Guy Nattiv', 'actors': 'Jamie Bell, Danielle Macdonald, Daniel Henshall, Bill Camp', 'plot': 'A destitute young man, raised by racist skinheads and notorious among white supremacists, turns his back on hatred and violence to transform his life, with the help of a black activist and the woman he loves.', 'language': 'English', 'imdb_rating': '7.0'}
 09/26/2019 09:28:51 PM: WARNING - An exception occured.
 09/26/2019 09:28:51 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/webapi/imdb_service.py", line 61, in get_movie_details
     return ActionResult(self._movie_info_to_str(movie_info), SUCCESS, language=self._language)
@@ -8708,7 +8708,7 @@ ValueError: tuple.index(x): x not in tuple
 {'title': 'Skin', 'year': '2018', 'released': '26 Jul 2019', 'runtime': '118 min', 'genre': 'Biography, Crime, Drama', 'director': 'Guy Nattiv', 'actors': 'Jamie Bell, Danielle Macdonald, Daniel Henshall, Bill Camp', 'plot': 'A destitute young man, raised by racist skinheads and notorious among white supremacists, turns his back on hatred and violence to transform his life, with the help of a black activist and the woman he loves.', 'language': 'English', 'imdb_rating': '7.0'}
 09/26/2019 09:30:00 PM: WARNING - An exception occured.
 09/26/2019 09:30:00 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/webapi/imdb_service.py", line 61, in get_movie_details
     return ActionResult(self._movie_info_to_str(movie_info), SUCCESS, language=self._language)
@@ -9650,7 +9650,7 @@ speech_recognition.UnknownValueError
 09/26/2019 11:46:27 PM: INFO - -------- begin commit --------
 09/26/2019 11:46:27 PM: WARNING - An exception occured.
 09/26/2019 11:46:27 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/websearch/browser_search_service.py", line 42, in open_social_network_page
     assert (isinstance(nickname, str) and isinstance(social_network_url, str))
@@ -9746,7 +9746,7 @@ AssertionError
 09/26/2019 11:47:53 PM: INFO - -------- begin commit --------
 09/26/2019 11:47:53 PM: WARNING - An exception occured.
 09/26/2019 11:47:53 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 57, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/websearch/browser_search_service.py", line 43, in open_social_network_page
     assert (isinstance(nickname, str) and isinstance(social_network_url, str))
@@ -9872,7 +9872,7 @@ AssertionError
 09/26/2019 11:50:11 PM: INFO - -------- begin commit --------
 09/26/2019 11:50:11 PM: WARNING - An exception occured.
 09/26/2019 11:50:11 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 58, in __commit
+  File "/home/nenad/Documents/Voice-assistant/service_executor.py", line 58, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/websearch/browser_search_service.py", line 43, in open_social_network_page
     assert (isinstance(nickname, str) and isinstance(social_network_url, str))
@@ -13783,7 +13783,7 @@ reference time: 2019-09-28 13:34:21,
 09/28/2019 03:47:49 PM: DEBUG - Complete forecast info: {'weather_icon_url': 'http://openweathermap.org/img/w/02d.png', 'clouds': 20, 'dewpoint': None, 'detailed_status': 'blaga naoblaka', 'heat_index': None, 'humidity': 28, 'reference_time': 1569678236, 'sunset_time': 1569687868, 'visibility_distance': 10000, 'weather_code': 801, 'pressure': {'press': 1016, 'sea_level': None}, 'rain': {}, 'temperature': {'temp': 29.0, 'temp_max': 29.0, 'temp_min': 29.0, 'temp_kf': None}, 'wind': {'speed': 1}, 'humidex': None, 'weather_icon_name': '02d', 'sunrise_time': 1569644988, 'snow': {}, 'status': 'Clouds'}
 09/28/2019 03:47:49 PM: WARNING - An exception occured.
 09/28/2019 03:47:49 PM: ERROR - Traceback (most recent call last):
-  File "/home/nenad/Documents/Voice-assistant/services/common/service_executor.py", line 58, in __commit
+  File "/home/nenad/Documents/Voice-assistant/services/common/service_executor.py", line 58, in _commit
     result = executor(**self.__service_command_methods[service][method])
   File "/home/nenad/Documents/Voice-assistant/services/webapi/owm_service.py", line 43, in get_forecast_result
     forecast_output = self._get_forecast_in_readable_form(weather_data, param, **{"unit": unit})
@@ -14061,3 +14061,130 @@ vreme merenja: 28-09-2019 13:43:56,
 09/28/2019 03:49:03 PM: DEBUG - part-17 written to <_io.BufferedWriter name='data/audio/1569678539.8146133.mp3'>
 09/28/2019 03:49:03 PM: DEBUG - Saved to data/audio/1569678539.8146133.mp3
 09/28/2019 03:49:39 PM: INFO - Ready for command...
+09/28/2019 06:26:04 PM: DEBUG - tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=\\!).|(?<=\\？).|(?<=\\！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z])\\, |(?<!\\d)\\:|\\[|\\\n|\\¡|\\…|\\(|\\，|\\)|\\。|\\‥|\\]|\\،|\\;|\\¿|\\：|\\—|\\、', re.IGNORECASE) from: [<function tone_marks at 0x7fdf65ee81e0>, <function period_comma at 0x7fdf65ee8268>, <function colon at 0x7fdf65ee82f0>, <function other_punctuation at 0x7fdf65ee8378>]>
+09/28/2019 06:26:04 PM: DEBUG - pre_processor_funcs: [<function tone_marks at 0x7fdf6682f7b8>, <function end_of_line at 0x7fdf6682ff28>, <function abbreviations at 0x7fdf65ee8048>, <function word_sub at 0x7fdf65ee80d0>]
+09/28/2019 06:26:04 PM: DEBUG - lang_check: True
+09/28/2019 06:26:04 PM: DEBUG - slow: False
+09/28/2019 06:26:04 PM: DEBUG - lang: en-us
+09/28/2019 06:26:04 PM: DEBUG - text: dummy
+09/28/2019 06:26:04 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:26:04 PM: DEBUG - https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+09/28/2019 06:26:04 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:26:04 PM: DEBUG - https://translate.google.com:443 "GET //translate/releases/twsfe_w_20190923_RC05/r/js/translate_m.js HTTP/1.1" 200 555734
+09/28/2019 06:26:04 PM: DEBUG - langs: {'af': 'Afrikaans', 'sq': 'Albanian', 'ar': 'Arabic', 'hy': 'Armenian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'hr': 'Croatian', 'cs': 'Czech', 'da': 'Danish', 'nl': 'Dutch', 'en': 'English', 'eo': 'Esperanto', 'et': 'Estonian', 'tl': 'Filipino', 'fi': 'Finnish', 'fr': 'French', 'de': 'German', 'el': 'Greek', 'gu': 'Gujarati', 'hi': 'Hindi', 'hu': 'Hungarian', 'is': 'Icelandic', 'id': 'Indonesian', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'kn': 'Kannada', 'km': 'Khmer', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'sr': 'Serbian', 'si': 'Sinhala', 'sk': 'Slovak', 'es': 'Spanish', 'su': 'Sundanese', 'sw': 'Swahili', 'sv': 'Swedish', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'cy': 'Welsh', 'zh-cn': 'Chinese (Mandarin/China)', 'zh-tw': 'Chinese (Mandarin/Taiwan)', 'en-us': 'English (US)', 'en-ca': 'English (Canada)', 'en-uk': 'English (UK)', 'en-gb': 'English (UK)', 'en-au': 'English (Australia)', 'en-gh': 'English (Ghana)', 'en-in': 'English (India)', 'en-ie': 'English (Ireland)', 'en-nz': 'English (New Zealand)', 'en-ng': 'English (Nigeria)', 'en-ph': 'English (Philippines)', 'en-za': 'English (South Africa)', 'en-tz': 'English (Tanzania)', 'fr-ca': 'French (Canada)', 'fr-fr': 'French (France)', 'pt-br': 'Portuguese (Brazil)', 'pt-pt': 'Portuguese (Portugal)', 'es-es': 'Spanish (Spain)', 'es-us': 'Spanish (United States)'}
+09/28/2019 06:26:04 PM: DEBUG - Text processor language = en.
+09/28/2019 06:26:04 PM: DEBUG - Setting wikipedia language: en
+09/28/2019 06:26:05 PM: INFO - using lxml
+09/28/2019 06:26:05 PM: DEBUG - Command resolver language = en.
+09/28/2019 06:26:05 PM: DEBUG - Populating service command methods....
+09/28/2019 06:26:50 PM: DEBUG - tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=\\!).|(?<=\\？).|(?<=\\！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z])\\, |(?<!\\d)\\:|\\)|\\[|\\]|\\。|\\¡|\\¿|\\‥|\\…|\\，|\\—|\\(|\\\n|\\،|\\、|\\;|\\：', re.IGNORECASE) from: [<function tone_marks at 0x7f15398471e0>, <function period_comma at 0x7f1539847268>, <function colon at 0x7f15398472f0>, <function other_punctuation at 0x7f1539847378>]>
+09/28/2019 06:26:50 PM: DEBUG - pre_processor_funcs: [<function tone_marks at 0x7f15398367b8>, <function end_of_line at 0x7f1539836f28>, <function abbreviations at 0x7f1539847048>, <function word_sub at 0x7f15398470d0>]
+09/28/2019 06:26:50 PM: DEBUG - lang_check: True
+09/28/2019 06:26:50 PM: DEBUG - slow: False
+09/28/2019 06:26:50 PM: DEBUG - lang: en-us
+09/28/2019 06:26:50 PM: DEBUG - text: dummy
+09/28/2019 06:26:50 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:26:51 PM: DEBUG - https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+09/28/2019 06:26:51 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:26:51 PM: DEBUG - https://translate.google.com:443 "GET //translate/releases/twsfe_w_20190923_RC05/r/js/translate_m.js HTTP/1.1" 200 555734
+09/28/2019 06:26:51 PM: DEBUG - langs: {'af': 'Afrikaans', 'sq': 'Albanian', 'ar': 'Arabic', 'hy': 'Armenian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'hr': 'Croatian', 'cs': 'Czech', 'da': 'Danish', 'nl': 'Dutch', 'en': 'English', 'eo': 'Esperanto', 'et': 'Estonian', 'tl': 'Filipino', 'fi': 'Finnish', 'fr': 'French', 'de': 'German', 'el': 'Greek', 'gu': 'Gujarati', 'hi': 'Hindi', 'hu': 'Hungarian', 'is': 'Icelandic', 'id': 'Indonesian', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'kn': 'Kannada', 'km': 'Khmer', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'sr': 'Serbian', 'si': 'Sinhala', 'sk': 'Slovak', 'es': 'Spanish', 'su': 'Sundanese', 'sw': 'Swahili', 'sv': 'Swedish', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'cy': 'Welsh', 'zh-cn': 'Chinese (Mandarin/China)', 'zh-tw': 'Chinese (Mandarin/Taiwan)', 'en-us': 'English (US)', 'en-ca': 'English (Canada)', 'en-uk': 'English (UK)', 'en-gb': 'English (UK)', 'en-au': 'English (Australia)', 'en-gh': 'English (Ghana)', 'en-in': 'English (India)', 'en-ie': 'English (Ireland)', 'en-nz': 'English (New Zealand)', 'en-ng': 'English (Nigeria)', 'en-ph': 'English (Philippines)', 'en-za': 'English (South Africa)', 'en-tz': 'English (Tanzania)', 'fr-ca': 'French (Canada)', 'fr-fr': 'French (France)', 'pt-br': 'Portuguese (Brazil)', 'pt-pt': 'Portuguese (Portugal)', 'es-es': 'Spanish (Spain)', 'es-us': 'Spanish (United States)'}
+09/28/2019 06:26:51 PM: DEBUG - Text processor language = en.
+09/28/2019 06:26:51 PM: DEBUG - Setting wikipedia language: en
+09/28/2019 06:26:51 PM: INFO - using lxml
+09/28/2019 06:26:51 PM: DEBUG - Command resolver language = en.
+09/28/2019 06:26:51 PM: DEBUG - Populating service command methods....
+09/28/2019 06:27:12 PM: DEBUG - tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=\\!).|(?<=\\？).|(?<=\\！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z])\\, |(?<!\\d)\\:|\\‥|\\¿|\\]|\\：|\\[|\\—|\\。|\\¡|\\…|\\，|\\،|\\;|\\(|\\)|\\\n|\\、', re.IGNORECASE) from: [<function tone_marks at 0x7f6d636981e0>, <function period_comma at 0x7f6d63698268>, <function colon at 0x7f6d636982f0>, <function other_punctuation at 0x7f6d63698378>]>
+09/28/2019 06:27:12 PM: DEBUG - pre_processor_funcs: [<function tone_marks at 0x7f6d636877b8>, <function end_of_line at 0x7f6d63687f28>, <function abbreviations at 0x7f6d63698048>, <function word_sub at 0x7f6d636980d0>]
+09/28/2019 06:27:12 PM: DEBUG - lang_check: True
+09/28/2019 06:27:12 PM: DEBUG - slow: False
+09/28/2019 06:27:12 PM: DEBUG - lang: en-us
+09/28/2019 06:27:12 PM: DEBUG - text: dummy
+09/28/2019 06:27:12 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:27:12 PM: DEBUG - https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+09/28/2019 06:27:12 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:27:12 PM: DEBUG - https://translate.google.com:443 "GET //translate/releases/twsfe_w_20190923_RC05/r/js/translate_m.js HTTP/1.1" 200 555734
+09/28/2019 06:27:12 PM: DEBUG - langs: {'af': 'Afrikaans', 'sq': 'Albanian', 'ar': 'Arabic', 'hy': 'Armenian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'hr': 'Croatian', 'cs': 'Czech', 'da': 'Danish', 'nl': 'Dutch', 'en': 'English', 'eo': 'Esperanto', 'et': 'Estonian', 'tl': 'Filipino', 'fi': 'Finnish', 'fr': 'French', 'de': 'German', 'el': 'Greek', 'gu': 'Gujarati', 'hi': 'Hindi', 'hu': 'Hungarian', 'is': 'Icelandic', 'id': 'Indonesian', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'kn': 'Kannada', 'km': 'Khmer', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'sr': 'Serbian', 'si': 'Sinhala', 'sk': 'Slovak', 'es': 'Spanish', 'su': 'Sundanese', 'sw': 'Swahili', 'sv': 'Swedish', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'cy': 'Welsh', 'zh-cn': 'Chinese (Mandarin/China)', 'zh-tw': 'Chinese (Mandarin/Taiwan)', 'en-us': 'English (US)', 'en-ca': 'English (Canada)', 'en-uk': 'English (UK)', 'en-gb': 'English (UK)', 'en-au': 'English (Australia)', 'en-gh': 'English (Ghana)', 'en-in': 'English (India)', 'en-ie': 'English (Ireland)', 'en-nz': 'English (New Zealand)', 'en-ng': 'English (Nigeria)', 'en-ph': 'English (Philippines)', 'en-za': 'English (South Africa)', 'en-tz': 'English (Tanzania)', 'fr-ca': 'French (Canada)', 'fr-fr': 'French (France)', 'pt-br': 'Portuguese (Brazil)', 'pt-pt': 'Portuguese (Portugal)', 'es-es': 'Spanish (Spain)', 'es-us': 'Spanish (United States)'}
+09/28/2019 06:27:12 PM: DEBUG - Text processor language = en.
+09/28/2019 06:27:12 PM: DEBUG - Setting wikipedia language: en
+09/28/2019 06:27:12 PM: INFO - using lxml
+09/28/2019 06:27:12 PM: DEBUG - Command resolver language = en.
+09/28/2019 06:27:12 PM: DEBUG - Populating service command methods....
+09/28/2019 06:27:12 PM: DEBUG - pre-processing: <function tone_marks at 0x7f6d636877b8>
+09/28/2019 06:27:12 PM: DEBUG - pre-processing: <function end_of_line at 0x7f6d63687f28>
+09/28/2019 06:27:12 PM: DEBUG - pre-processing: <function abbreviations at 0x7f6d63698048>
+09/28/2019 06:27:13 PM: DEBUG - pre-processing: <function word_sub at 0x7f6d636980d0>
+09/28/2019 06:27:13 PM: DEBUG - text_parts: 1
+09/28/2019 06:27:13 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:27:13 PM: DEBUG - https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+09/28/2019 06:27:13 PM: DEBUG - payload-0: {'ie': 'UTF-8', 'q': "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!", 'tl': 'en-us', 'ttsspeed': 1, 'total': 1, 'idx': 0, 'client': 'tw-ob', 'textlen': 89, 'tk': '590393.1025281'}
+09/28/2019 06:27:13 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:27:13 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=Hi%2C+I%27m+Lindo+voice+assistant.+Choose+operating+language.+Default+option+is+English%28USA%29%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=89&tk=590393.1025281 HTTP/1.1" 200 29760
+09/28/2019 06:27:13 PM: DEBUG - headers-0: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/28/2019 06:27:13 PM: DEBUG - url-0: https://translate.google.com/translate_tts?ie=UTF-8&q=Hi%2C+I%27m+Lindo+voice+assistant.+Choose+operating+language.+Default+option+is+English%28USA%29%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=89&tk=590393.1025281
+09/28/2019 06:27:13 PM: DEBUG - status-0: 200
+09/28/2019 06:27:13 PM: DEBUG - part-0 written to <_io.BufferedWriter name='data/audio/1569688032.9983835.mp3'>
+09/28/2019 06:27:13 PM: DEBUG - Saved to data/audio/1569688032.9983835.mp3
+09/28/2019 06:27:21 PM: INFO - Ready for command...
+09/28/2019 06:27:25 PM: DEBUG - Text to be processed = i'm losing italian
+09/28/2019 06:27:25 PM: DEBUG - Text without special chars = im losing italian
+09/28/2019 06:27:25 PM: DEBUG - Text without target words = ['im', 'losing', 'italian']
+09/28/2019 06:27:25 PM: DEBUG - Operating language = None.
+09/28/2019 06:27:25 PM: WARNING - An exception occured.
+09/28/2019 06:27:25 PM: ERROR - Traceback (most recent call last):
+  File "/home/nenad/Documents/Voice-assistant/controller.py", line 38, in set_language
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nenad/Documents/Voice-assistant/controller.py", line 137, in execute_controller_method
+    command_result = eval('executor(' + command["arg_name"] + "=" + "'" + str(command["arg"]) + "')")
+  File "<string>", line 1, in <module>
+  File "/home/nenad/Documents/Voice-assistant/controller.py", line 47, in set_language
+    raise ValueError("Language is not supported. Use English or Serbian.")
+ValueError: Language is not supported. Use English or Serbian.
+
+09/28/2019 06:27:25 PM: DEBUG - pre-processing: <function tone_marks at 0x7f6d636877b8>
+09/28/2019 06:27:25 PM: DEBUG - pre-processing: <function end_of_line at 0x7f6d63687f28>
+09/28/2019 06:27:25 PM: DEBUG - pre-processing: <function abbreviations at 0x7f6d63698048>
+09/28/2019 06:27:25 PM: DEBUG - pre-processing: <function word_sub at 0x7f6d636980d0>
+09/28/2019 06:27:25 PM: DEBUG - text_parts: 1
+09/28/2019 06:27:25 PM: DEBUG - payload-0: {'ie': 'UTF-8', 'q': 'I have some problems with language setting. Be kind to try again, speak clear and loud.', 'tl': 'en-us', 'ttsspeed': 1, 'total': 1, 'idx': 0, 'client': 'tw-ob', 'textlen': 87, 'tk': '351210.261330'}
+09/28/2019 06:27:25 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:27:26 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=I+have+some+problems+with+language+setting.+Be+kind+to+try+again%2C+speak+clear+and+loud.&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=87&tk=351210.261330 HTTP/1.1" 200 23328
+09/28/2019 06:27:26 PM: DEBUG - headers-0: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/28/2019 06:27:26 PM: DEBUG - url-0: https://translate.google.com/translate_tts?ie=UTF-8&q=I+have+some+problems+with+language+setting.+Be+kind+to+try+again%2C+speak+clear+and+loud.&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=87&tk=351210.261330
+09/28/2019 06:27:26 PM: DEBUG - status-0: 200
+09/28/2019 06:27:26 PM: DEBUG - part-0 written to <_io.BufferedWriter name='data/audio/1569688045.5828295.mp3'>
+09/28/2019 06:27:26 PM: DEBUG - Saved to data/audio/1569688045.5828295.mp3
+09/28/2019 06:27:32 PM: DEBUG - pre-processing: <function tone_marks at 0x7f6d636877b8>
+09/28/2019 06:27:32 PM: DEBUG - pre-processing: <function end_of_line at 0x7f6d63687f28>
+09/28/2019 06:27:32 PM: DEBUG - pre-processing: <function abbreviations at 0x7f6d63698048>
+09/28/2019 06:27:32 PM: DEBUG - pre-processing: <function word_sub at 0x7f6d636980d0>
+09/28/2019 06:27:32 PM: DEBUG - text_parts: 1
+09/28/2019 06:27:32 PM: DEBUG - payload-0: {'ie': 'UTF-8', 'q': 'Some internal error occurred. Check log for more details!', 'tl': 'en-us', 'ttsspeed': 1, 'total': 1, 'idx': 0, 'client': 'tw-ob', 'textlen': 57, 'tk': '450936.17984'}
+09/28/2019 06:27:32 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:27:32 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=Some+internal+error+occurred.+Check+log+for+more+details%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=57&tk=450936.17984 HTTP/1.1" 200 17664
+09/28/2019 06:27:32 PM: DEBUG - headers-0: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/28/2019 06:27:32 PM: DEBUG - url-0: https://translate.google.com/translate_tts?ie=UTF-8&q=Some+internal+error+occurred.+Check+log+for+more+details%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=57&tk=450936.17984
+09/28/2019 06:27:32 PM: DEBUG - status-0: 200
+09/28/2019 06:27:32 PM: DEBUG - part-0 written to <_io.BufferedWriter name='data/audio/1569688052.0112696.mp3'>
+09/28/2019 06:27:32 PM: DEBUG - Saved to data/audio/1569688052.0112696.mp3
+09/28/2019 06:27:36 PM: INFO - Ready for command...
+09/28/2019 06:41:05 PM: DEBUG - tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=\\!).|(?<=\\？).|(?<=\\！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z])\\, |(?<!\\d)\\:|\\：|\\。|\\)|\\，|\\(|\\—|\\¿|\\¡|\\،|\\\n|\\[|\\…|\\‥|\\]|\\;|\\、', re.IGNORECASE) from: [<function tone_marks at 0x7f5a952321e0>, <function period_comma at 0x7f5a95232268>, <function colon at 0x7f5a952322f0>, <function other_punctuation at 0x7f5a95232378>]>
+09/28/2019 06:41:05 PM: DEBUG - pre_processor_funcs: [<function tone_marks at 0x7f5a95b797b8>, <function end_of_line at 0x7f5a95b79f28>, <function abbreviations at 0x7f5a95232048>, <function word_sub at 0x7f5a952320d0>]
+09/28/2019 06:41:05 PM: DEBUG - lang_check: True
+09/28/2019 06:41:05 PM: DEBUG - slow: False
+09/28/2019 06:41:05 PM: DEBUG - lang: en-us
+09/28/2019 06:41:05 PM: DEBUG - text: dummy
+09/28/2019 06:41:05 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:41:05 PM: DEBUG - https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+09/28/2019 06:41:05 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/28/2019 06:41:05 PM: DEBUG - https://translate.google.com:443 "GET //translate/releases/twsfe_w_20190923_RC05/r/js/translate_m.js HTTP/1.1" 200 555734
+09/28/2019 06:41:05 PM: DEBUG - langs: {'af': 'Afrikaans', 'sq': 'Albanian', 'ar': 'Arabic', 'hy': 'Armenian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'hr': 'Croatian', 'cs': 'Czech', 'da': 'Danish', 'nl': 'Dutch', 'en': 'English', 'eo': 'Esperanto', 'et': 'Estonian', 'tl': 'Filipino', 'fi': 'Finnish', 'fr': 'French', 'de': 'German', 'el': 'Greek', 'gu': 'Gujarati', 'hi': 'Hindi', 'hu': 'Hungarian', 'is': 'Icelandic', 'id': 'Indonesian', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'kn': 'Kannada', 'km': 'Khmer', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'sr': 'Serbian', 'si': 'Sinhala', 'sk': 'Slovak', 'es': 'Spanish', 'su': 'Sundanese', 'sw': 'Swahili', 'sv': 'Swedish', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'cy': 'Welsh', 'zh-cn': 'Chinese (Mandarin/China)', 'zh-tw': 'Chinese (Mandarin/Taiwan)', 'en-us': 'English (US)', 'en-ca': 'English (Canada)', 'en-uk': 'English (UK)', 'en-gb': 'English (UK)', 'en-au': 'English (Australia)', 'en-gh': 'English (Ghana)', 'en-in': 'English (India)', 'en-ie': 'English (Ireland)', 'en-nz': 'English (New Zealand)', 'en-ng': 'English (Nigeria)', 'en-ph': 'English (Philippines)', 'en-za': 'English (South Africa)', 'en-tz': 'English (Tanzania)', 'fr-ca': 'French (Canada)', 'fr-fr': 'French (France)', 'pt-br': 'Portuguese (Brazil)', 'pt-pt': 'Portuguese (Portugal)', 'es-es': 'Spanish (Spain)', 'es-us': 'Spanish (United States)'}
+09/28/2019 06:41:05 PM: DEBUG - Text processor language = en.
+09/28/2019 06:41:05 PM: DEBUG - Setting wikipedia language: en
+09/28/2019 06:41:06 PM: INFO - using lxml
+09/28/2019 06:41:06 PM: DEBUG - Command resolver language = en.
+09/28/2019 06:41:06 PM: DEBUG - Populating service command methods....

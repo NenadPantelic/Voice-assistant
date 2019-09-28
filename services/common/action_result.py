@@ -2,7 +2,7 @@ class ActionResult:
     def __init__(self, result, status, language=None):
         """
         :param str result: result of service command execution
-        :param int status: SUCCESS = 1 or FAIL = 0
+        :param int status: SUCCESS = 1 or FAIL = 0, FATAL = -1
         :param str language: lang_code (in which language, command result should be spoken)
         """
         self._result = result

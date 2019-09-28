@@ -41,6 +41,13 @@ def convert_list_to_str(list_to_convert):
     return ' '.join(list_to_convert)
 
 
+def convert_commands_json_array_to_dict(json_array):
+    resulting_map = {}
+    for element in json_array:
+        resulting_map[element["command_id"]] = element
+    return resulting_map
+
+
 # letters conversion
 def convert_or_return_text(text, language):
     return convert_latin_to_cyrillic(text) if language == "sr" else text
@@ -48,10 +55,10 @@ def convert_or_return_text(text, language):
 
 def convert_latin_to_cyrillic(text):
     latin_symbols = ['a', 'b', 'v', 'g', 'd', 'đ', 'e', 'ž', 'z', 'i', 'j', 'k', 'l', 'ǉ', 'm', 'n', 'ǌ', 'o', \
-                       'p', 'r', 's', 't', 'ć', 'u', 'f', 'h', 'c', 'č', 'dž', 'š']
+                     'p', 'r', 's', 't', 'ć', 'u', 'f', 'h', 'c', 'č', 'dž', 'š']
     cyrillic_symbols = ['а', 'б', 'в', 'г', 'д', 'ђ', 'е', 'ж', 'з', 'и', 'ј', 'к', 'л', 'љ', 'м', 'н', 'њ', 'о', 'п',
-                       'р', 'с', 'т', 'ћ', 'у', \
-                       'ф', 'х', 'ц', 'ч', 'џ', 'ш']
+                        'р', 'с', 'т', 'ћ', 'у', \
+                        'ф', 'х', 'ц', 'ч', 'џ', 'ш']
     converted_text = ""
     conversion_map = {latin_symbols[i]: cyrillic_symbols[i] for i in range(len(latin_symbols))}
     for char in text:

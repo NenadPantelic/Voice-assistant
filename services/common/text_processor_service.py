@@ -8,6 +8,11 @@ word_dictionary_mapping = load_words_dictionaries(language_word_files)
 
 class TextProcessor:
     def __init__(self, language="en"):
+        """
+        Fields:
+        language is language code.
+        target_words is list of usual words of language defined with [language] language code
+        """
         self._language = language
         self._target_words = None
         self.set_language(language)
@@ -20,12 +25,13 @@ class TextProcessor:
         :rtype: None
         :return: void method (raise ValueError if language is not supported)
         """
+        assert (isinstance(language, str))
         try:
             logger.debug("Text processor language = {}.".format(language))
             self._target_words = flatten_lists(word_dictionary_mapping[language].values())
             self._language = language
         except KeyError:
-            raise ValueError("TextProcessor: Language is not supported. Use English or Serbian.")
+            raise ValueError("Language is not supported. Use English or Serbian.")
 
     def preprocess_text(self, text):
         """
@@ -34,6 +40,7 @@ class TextProcessor:
         ":rtype: str
         :return: filter text with no punctuation marks and target words - usual words
         """
+        assert (isinstance(text, str))
         text = text.lower()
         logger.debug("Text to be processed = {}".format(text))
         text_with_no_special_chars = self._filter_out_special_chars(text)
@@ -50,6 +57,7 @@ class TextProcessor:
         :rtype: str
         :return: string composed from words from [word_list] that do not belong to [keyword_list]
         """
+        assert (isinstance(word_list, list) and isinstance(keyword_list, list))
         text_without_keywords = ' '.join([word for word in word_list if word not in keyword_list])
         logger.debug("Text without keywords = {}".format(text_without_keywords))
         return text_without_keywords
@@ -62,6 +70,7 @@ class TextProcessor:
         :rtype: str
         :return: string phrase with no punctuation symbols.
         """
+        assert (isinstance(phrase, str))
         return phrase.translate(str.maketrans("", "", string.punctuation))
 
     def _filter_out_words(self, phrase):
@@ -71,5 +80,6 @@ class TextProcessor:
         :rtype:  list of str
         :return: non-filtered list of words from phrase
         """
+        assert (isinstance(phrase, str))
         word_list = phrase.split(' ')
         return [word for word in word_list if word.isalnum() and word not in self._target_words]

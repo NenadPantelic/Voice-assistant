@@ -4,6 +4,7 @@ from utils.utils import logging_exception
 from config.constants import logger, SUCCESS, DEFAULT_EXCEPTION
 from functools import lru_cache
 
+
 class WikipediaService:
     def __init__(self, language="en"):
         if language is not None:
@@ -32,7 +33,7 @@ class WikipediaService:
         logger.debug("Wikipedia summary = {}".format(summary))
         return ActionResult(summary, SUCCESS)
 
-    #not tested nor used
+    # not tested nor used
     @lru_cache(maxsize=8)
     def get_complete_page(self, query):
         """

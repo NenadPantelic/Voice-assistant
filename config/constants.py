@@ -74,6 +74,7 @@ ENGLISH_COMMANDS = "data/commands/commands-en.json"
 # INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!"
 SUCCESS = 1
 FAIL = 0
+FATAL = -1
 
 # exception constants
 DEFAULT_EXCEPTION = 100
@@ -182,9 +183,13 @@ EXCEPTION_MESSAGES = {
         "sr": "Nisam uspeo da nađem ništa na Vikipediji što odgovara tvom zahtevu. Probaj sa nekim drugim zahtevom ili probaj"
               "ponovo, ali probaj da budeš precizniji u govoru."
     },
-    "services.websearch.browser_search_service.GoogleSearchException": {
+    "exceptions.exceptions.GoogleSearchException": {
         "en": "Google search cannot find anything that suits your query.",
         "sr": "Gugl pretraga nije našla ništa što odgovara tvom upitu."
+    },
+    "exceptions.exceptions.VoiceAssistantException": {
+        "en": "Fatal error. Application could not proceed.",
+        "sr": "Došlo je do fatalne interne greške. Aplikacija ne može nastaviti sa radom."
     },
     "exception": {
         "en": GENERIC_MESSAGE_EN,

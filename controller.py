@@ -1,6 +1,6 @@
 from exceptions.exception_handler import ExceptionHandler
 
-from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL
+from config.constants import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL, logger
 from services.common.action_result import ActionResult
 from utils.utils import load_json_data, convert_latin_to_cyrillic
 
@@ -30,15 +30,21 @@ class Controller:
         self.speaking_language = "en"
 
     def set_language(self, language_list):
-        # assert isinstance(language_list, list)
-        lang_code = get_language_code(language_list)
-        self.language = lang_code
-        self.speaking_language = lang_code
-        self.recognizer.set_language(lang_code)
-        self.speaker.set_language(lang_code)
-        self.executor.set_services_language(lang_code)
-        self.command_resolver.set_language(lang_code)
-        self.command_resolver.set_processor_language(lang_code)
+        #assert (isinstance(language_list, str))
+        try:
+            lang_code = get_language_code(language_list)
+            logger.debug("Operating language = {}.".format(lang_code))
+            if lang_code is None:
+                raise KeyError
+            self.language = lang_code
+            self.speaking_language = lang_code
+            self.recognizer.set_language(lang_code)
+            self.speaker.set_language(lang_code)
+            self.executor.set_services_language(lang_code)
+            self.command_resolver.set_language(lang_code)
+            self.command_resolver.set_processor_language(lang_code)
+        except KeyError:
+            raise ValueError("Language is not supported. Use English or Serbian.")
 
     def set_translation_language(self, language):
         assert (isinstance(language, str))
@@ -68,10 +74,14 @@ class Controller:
         self.speaker.save_speech_and_play(message_prefix + command_output_message)
 
     def finalize(self):
-        final_command = self.command_resolver.get_final_command()
+        final_command = self.command_resolver.find_command_by_tag("final")
         command_output_message = final_command["messages"]["success"][self.language]
         self.speaker.save_speech_and_play(command_output_message)
         exit(1)
+
+    def raise_invalid_command(self):
+        #invalid_command = self.command_resolver.
+        pass
 
 
 
@@ -120,12 +130,17 @@ class Controller:
             next_command_id = command["next_command_id"]
         self.command_resolver.set_next_command_id(next_command_id)
 
-    def execute_appropriate_method(self, service, method, command):
-        executor = getattr(service, method)
-        if command["has_args"]:
-            command_result = eval('executor(' + command["arg_name"] + "=" + "'" + str(command["arg"]) + "')")
-        else:
-            command_result = executor()
+    def execute_controller_method(self, service, method, command):
+        executor = getattr(self, method)
+        try:
+            if command["has_args"]:
+                command_result = eval('executor(' + command["arg_name"] + "=" + "'" + str(command["arg"]) + "')")
+            else:
+                command_result = executor()
+        except Exception as e:
+            language = self.language if self.language is not None else "en"
+            message = ExceptionHandler.get_exception_message(e, language)
+            command_result = ActionResult(message, FAIL, language)
         return command_result
 
     # this method should be called only once per voice control request
@@ -141,7 +156,7 @@ class Controller:
             # TODO: map language name to language code - check
         if method is not None:
             if service is self:
-                command_result = self.execute_appropriate_method(service, method, command)
+                command_result = self.execute_controller_method(service, method, command)
             else:
                 command_result = self.executor.set_param_and_commit(command["service"], method, command["arg_name"],
                                                                     command["arg"], input_type=command["arg_type"],
