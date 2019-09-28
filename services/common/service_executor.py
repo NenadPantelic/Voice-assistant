@@ -8,31 +8,66 @@ commands = load_json_data(ENGLISH_COMMANDS)
 
 class ServiceExecutor:
     def __init__(self, service_pool={}):
-        # dictionary that contains all exec methods for service - key:service_alias, value:dictionary with the following
-        # structure - key: service method, value:dictionary of service method arguments e.g.
-        # mailing:{send_email:{recipient : None, subject :None, content:None}}
-        self.__service_command_methods = {}
+        """
+        service_command_methods - dictionary that contains all exec methods for service - key:service_alias,
+        value:dictionary with the following structure - key: service method, value:dictionary of service method
+        arguments e.g.mailing:{send_email:{recipient : None, subject :None, content:None}}
+        :param service_pool: cache of services objects
+        """
+
+        self._service_command_methods = {}
         self._populate_service_command_methods()
-        self.service_pool = service_pool
-        # TODO;check if this should be set in constructor
-        self.__language = None
+        self._service_pool = service_pool
+        self._language = None
 
     def set_services_language(self, language):
-        self.__language = language
-        for service in self.service_pool.values():
+        """
+        Sets the language to all services.
+        :param (str or None) language: language code
+        :rtype: None
+        :return: void method
+        """
+        assert (language is None or isinstance(language, str))
+        self._language = language
+        for service in self._service_pool.values():
             if hasattr(service, "set_language"):
                 service.set_language(language)
 
     def set_param_and_commit(self, service, method_name, arg_name, arg_value, need_input=False, input_type="str",
                              input_processing_method=None,
                              is_ready=False):
+        """
+        Sets parameter value in service_methods_commands and commit if method is executable.
+        :param str service: alias name of the service
+        :param str method_name: name of the target method
+        :param str arg_name: argument name
+        :param str arg_value: argument value
+        :param bool need_input: needs input from keyboard or not
+        :param str input_type: str value of any type (`float`, `str`, `int`, `bool` ...)
+        :param str input_processing_method: name of the function that should preprocess [arg_value]
+        :param bool is_ready: only ready methods are committed
+        :rtype: output type of [_commit] method or None
+        :return:
+        """
         self._set_param(service, method_name, arg_name, arg_value, input_type, input_processing_method, need_input)
         if is_ready:
             return self._commit(service, method_name)
 
     # private methods
+    # TODO: optimize arg list with kwargs or locals() (NOTE: this way is cleaner)
     def _set_param(self, service, method_name, arg_name, arg_value, input_type, input_processing_method,
                    need_input=False):
+        """
+        Sets parameter value in service_methods_commands
+        :param str service: alias name of the service
+        :param str method_name: name of the target method
+        :param str arg_name: argument name
+        :param str arg_value: argument value
+        :param bool need_input: needs input from keyboard or not
+        :param str input_type: str value of any type (`float`, `str`, `int`, `bool` ...)
+        :param str input_processing_method: name of the function that should preprocess [arg_value]
+        :return:
+        """
         if need_input:
             logger.debug("Expecting input...")
             print("Enter your input:")
@@ -43,47 +78,59 @@ class ServiceExecutor:
         if input_processing_method is not None:
             arg_value = eval("data_conversion." + input_processing_method + "('" + arg_value + "')")
         logger.debug("Argument after processing: [type = {}, value = {}]".format(type(arg_value), arg_value))
-        self.__service_command_methods[service][method_name][arg_name] = arg_value
+        self._service_command_methods[service][method_name][arg_name] = arg_value
 
     def _commit(self, service, method):
+        """
+        Executes service method with arguments from [service_command_methods] dict. If some error occurs, calls exception
+        handler. If service is None, returns ActionResult with fatal status.
+        :param str service: service name
+        :param str method: method name
+        :rtype: ActionResult
+        :return: ActionResult with SUCCESS - result of execution as payload, FAIL - customized exception message as
+        payload or FATAL - blank message result.
+        """
         logger.info("-------- begin commit --------")
-        service_inst = self.service_pool.get(service, None)
+        service_inst = self._service_pool.get(service, None)
         command_result = None
         if service_inst is not None:
             if hasattr(service_inst, method):
                 executor = getattr(service_inst, method)
                 try:
-                    result = executor(**self.__service_command_methods[service][method])
+                    result = executor(**self._service_command_methods[service][method])
                     logger.debug("Output = {}".format(result))
                     command_result = result
-                    #TODO:handle fatal exception
+                    # TODO:handle fatal exception
                 except Exception as e:
-                    message = ExceptionHandler.get_exception_message(e, self.__language)
-                    command_result = ActionResult(message, FAIL, self.__language)
+                    message = ExceptionHandler.get_exception_message(e, self._language)
+                    command_result = ActionResult(message, FAIL, self._language)
                 finally:
                     logger.info("-------- end commit --------")
                     return command_result
         else:
             logger.error("Fatal, service cannot be found.")
             return ActionResult("", FATAL)
-            #raise Exception("Fatal, action cannot be performed.")
-
 
     def _populate_service_command_methods(self):
+        """
+        Populating service commands methods dictionary.
+        :rtype: None
+        :return: void method
+        """
         logger.debug("Populating service command methods....")
-        if self.__service_command_methods != {}:
+        if self._service_command_methods != {}:
             return
         for command in commands:
             service = command["service"]
             method = command["method"]
             arg_name = command["arg_name"]
             if service is not None:
-                if service not in self.__service_command_methods:
+                if service not in self._service_command_methods:
                     method_dict = {method: {} if arg_name is None else {arg_name: None}}
-                    self.__service_command_methods[service] = method_dict
+                    self._service_command_methods[service] = method_dict
                 else:
                     if arg_name is not None:
-                        if method in self.__service_command_methods[service]:
-                            self.__service_command_methods[service][method][arg_name] = None
+                        if method in self._service_command_methods[service]:
+                            self._service_command_methods[service][method][arg_name] = None
                         else:
-                            self.__service_command_methods[service][method] = {arg_name: None}
+                            self._service_command_methods[service][method] = {arg_name: None}
