@@ -8,6 +8,7 @@ wfs = WeatherForecastService()
 # assertion check
 # print(ws._get_weather_at_location("London", out_format="pdf"))
 london_weather = wfs.get_forecast_result("London")
+
 print(london_weather.get_result())
 ws_data = wfs._get_weather_at_location('London')
 print(ws_data.get_temperature(unit='celsius'))

@@ -756,3 +756,42 @@ imdb_rating: 8.8,
 09/28/2019 12:54:05 PM: DEBUG - https://translate.google.com:443 "GET /translate_a/single?client=t&sl=sr&tl=it&hl=it&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&ie=UTF-8&oe=UTF-8&otf=1&ssel=0&tsel=0&tk=763730.852064&q=Mo%D1%80%D0%B5+%D0%9C%D0%B0%D1%80%D0%BA%D0%BE+%D0%BD%D0%B5+%D0%BE%D1%80%D0%B8+%D0%B4%D1%80%D1%83%D0%BC%D0%BE%D0%B2%D0%B5. HTTP/1.1" 200 None
 09/28/2019 12:54:05 PM: DEBUG - Raw translation object = Translated(src=sr, dest=it, text=Più Marko strade non Ori., pronunciation=None, extra_data="{'translat...")
 09/28/2019 12:54:05 PM: DEBUG - Translated text = Più Marko strade non Ori.
+09/29/2019 12:58:04 PM: DEBUG - Calling get_forecast_result with params: [location = London, param = all, unit = celsius]
+09/29/2019 12:58:04 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+09/29/2019 12:58:04 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=London&lang=en HTTP/1.1" 200 459
+09/29/2019 12:58:04 PM: DEBUG - Weather data results were fetched....
+09/29/2019 12:58:04 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-09-29 10:54:01+00, status=rain, detailed status=shower rain>
+09/29/2019 12:58:04 PM: DEBUG - Complete forecast info: {'temperature': {'temp': 17.39, 'temp_max': 18.89, 'temp_min': 16.0, 'temp_kf': None}, 'dewpoint': None, 'pressure': {'press': 995, 'sea_level': None}, 'detailed_status': 'shower rain', 'visibility_distance': 10000, 'weather_code': 521, 'humidity': 93, 'weather_icon_url': 'http://openweathermap.org/img/w/09d.png', 'sunrise_time': 1569736629, 'wind': {'speed': 6.2, 'deg': 230}, 'humidex': None, 'rain': {}, 'status': 'Rain', 'sunset_time': 1569779082, 'clouds': 75, 'heat_index': None, 'snow': {}, 'weather_icon_name': '09d', 'reference_time': 1569754441}
+09/29/2019 12:58:04 PM: DEBUG - Forecast in readable form:
+clouds: 75,
+pressure: 995,
+wind speed: 6.2,
+humidity: 93,
+minimum temperature: 16.0,
+maximum temperature: 18.89,
+temperature: 17.39,
+detailed status: shower rain,
+reference time: 29-09-2019 10:54:01,
+
+09/29/2019 12:58:04 PM: DEBUG - Calling get_forecast_result with params: [location = kako je cdLondon, param = all, unit = celsius]
+09/29/2019 12:58:04 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+09/29/2019 12:58:04 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=kako+je+cdLondon&lang=en HTTP/1.1" 404 40
+09/29/2019 01:00:09 PM: DEBUG - Calling get_forecast_result with params: [location = London, param = all, unit = celsius]
+09/29/2019 01:00:09 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+09/29/2019 01:00:09 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=London&lang=en HTTP/1.1" 200 459
+09/29/2019 01:00:09 PM: DEBUG - Weather data results were fetched....
+09/29/2019 01:00:09 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-09-29 10:54:01+00, status=rain, detailed status=shower rain>
+09/29/2019 01:00:09 PM: DEBUG - Complete forecast info: {'pressure': {'press': 995, 'sea_level': None}, 'visibility_distance': 10000, 'heat_index': None, 'sunrise_time': 1569736629, 'sunset_time': 1569779082, 'weather_code': 521, 'weather_icon_url': 'http://openweathermap.org/img/w/09d.png', 'reference_time': 1569754441, 'temperature': {'temp': 17.39, 'temp_max': 18.89, 'temp_min': 16.0, 'temp_kf': None}, 'weather_icon_name': '09d', 'dewpoint': None, 'rain': {}, 'detailed_status': 'shower rain', 'status': 'Rain', 'wind': {'speed': 6.2, 'deg': 230}, 'humidity': 93, 'clouds': 75, 'snow': {}, 'humidex': None}
+09/29/2019 01:00:09 PM: DEBUG - Forecast in readable form:
+clouds: 75,
+pressure: 995,
+wind speed: 6.2,
+humidity: 93,
+minimum temperature: 16.0,
+maximum temperature: 18.89,
+temperature: 17.39,
+detailed status: shower rain,
+reference time: 29-09-2019 10:54:01,
+
+09/29/2019 01:00:09 PM: DEBUG - Calling get_forecast_result with params: [location = kako je cdLondon, param = all, unit = celsius]
+09/29/2019 01:00:09 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80

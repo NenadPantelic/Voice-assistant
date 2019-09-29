@@ -148,6 +148,10 @@ EXCEPTION_MESSAGES = {
         "en": "I have a problem with speaking. Probably you reached out the API limit!",
         "sr": "Imam problem sa govorom. Verovatno si probio API limit!"
     },
+    "pyowm.exceptions.api_response_error.NotFoundError":{
+        "en": "Weather forecast cannot be estimated. I cannot find that location!",
+        "sr": "Ne mogu da procenim vremensku prognozu. Ne mogu da pronađem tu lokaciju!"
+    },
     "smtplib.SMTPAuthenticationError":
         {
             "en": "There is some problem with email authentication. Check your email credentials.",
