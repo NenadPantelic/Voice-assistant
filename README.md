@@ -10,15 +10,15 @@ Voice assistant project based on speech recognition and text-to-speech synthesis
 - Houndify
 - Pocket Sphinx
 
-The best results were achieved with Google's services - Google and Google Cloud. The problem with Google Cloud is that it is not free - up to 60 minutes of converted audio data is free on monthly basis (at the moment of creation of this assistant - July/August 2019th).
-For basic usage of speech conversion to text, you need to install SpeechRecognition library
+The best results were achieved with Google's services - Google and Google Cloud. The problem with Google Cloud is that it is not free - up to 60 minutes of converted audio data is free on monthly basis (at the moment of creation of this assistant - July/August/September 2019th).
+For the basic usage of speech conversion to text, you need to install SpeechRecognition library
 ```sh
 pip3 install speech_recognition
 ```
 Currently, Lindo/a  supports English and Serbian language (my native language). If you want to add some operating language, feel free to do that.
 
 # Installation
-The voice assistant offers services that require the assistance of other modules, libraries, and APIs.All of them are listed in the requirements.txt file. Each of them could be installed with pip. This project was developed under the Linux operating system, but also tested on Windows 10 OS. So, some comments are provided in requirements.txt. If you want clear, all-at-once installation, remove comments from requirements.txt and use: 
+The voice assistant offers services that require the assistance of other modules, libraries, and APIs. All of them are listed in the requirements.txt file. Each of them could be installed with pip. This project was developed under the Linux operating system, but also tested on Windows 10 OS. So, some comments are provided in requirements.txt. If you want clear, all-at-once installation, remove comments from requirements.txt and use: 
 ```
 pip3 install -r requirements.txt
 ```
@@ -46,7 +46,7 @@ If you got dependencies errors (swig and pulse), use this:
 $ sudo apt install libpulse-dev swig
 ```
 
-After dependencies installation, try to install pocketsphinx. Most of the other API services are available to use without any additional installation. Also, most of them (the "web" ones), requires credentials in the form of the API key. For further instructions refer to this page: <https://github.com/Uberi/speech_recognition/edit/master/README.rst>
+After dependencies installation, try to install pocketsphinx. Most of the other API services are available to use without any additional installation. Also, most of them (the "web" ones), requires credentials in the form of the API key. For further instructions refer to this page: <https://github.com/Uberi/speech_recognition>
 
 # Functionalities
 
@@ -120,9 +120,7 @@ Explanation:
 
 Phrase ***What's the weather like at location Denver*** is processed (obligatory) so we get ***what's weather location denver***. After that,  keywords are removed, so we get only ***denver*** and that is sent to the appropriate method as an argument.  
 
-Phrase ***What's the weather like around Denver*** will follow the same procedure, but the result that will be given to the method as an argument is ***around denver*** and that will cause unsuccessful operation. If we add word around in the keywords list for this command, it will also be removed, and only location name will be used as an argument.  
-
-More of the examples will be added.
+Phrase ***What's the weather like around Denver*** will follow the same procedure, but the result that will be given to the method as an argument is ***around denver*** and that will cause unsuccessful operation. If we add word around in the keywords list for this command, it will also be removed, and only location name will be used as an argument.
 
 ## Special commands
 
@@ -136,5 +134,5 @@ There are cases when special commands are called:
 
 ## Aditional notes
 
-- To use arduino service, you must connect arduino with your computer (serial ports parameters are set in config/config.py); uncomment arduino service line service pool in main.py
-- operating system control is under construction. Linux commands execution are tested as proof-of-concept, but the goal is to also add Windows commands, so until then OS service is not used.
+- To use arduino service, you must connect arduino with your computer (serial port's parameters are set in config/config.py); uncomment arduino service line in service pool in main.py
+- operating system control is under construction. Linux commands execution are tested as the proof-of-concept, but the goal is to also add Windows commands, so until then OS service is not used.
