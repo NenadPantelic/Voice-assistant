@@ -48,5 +48,16 @@ $ sudo apt install libpulse-dev swig
 
 After dependencies installation, try to install pocketsphinx. Most of the other API services are available to use without any additional installation. Also, most of them (the "web" ones), requires credentials in the form of the API key. For further instructions refer to this page: <https://github.com/Uberi/speech_recognition/edit/master/README.rst>
 
-# Usage
+# Functionalities
 
+Functionalities that Lindo/a provides:
+- get weather forecast at some location
+- get top movies by IMDB (Internet Movie Database) - up to 250
+- get details about some movie from IMDB
+- get summary about some term on Wikipedia
+- send an email to some address
+- translate some text (from any supported language to any other)
+- search and open some page on Google
+- open social network account page
+- control OS (in development)
+- control any actuator with Arduino (tested on light bulb)
