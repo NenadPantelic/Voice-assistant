@@ -52,6 +52,7 @@
          "be":0.1,
          "weather":0.4,
          "forecast":0.4,
+         "like": 0.15,
          "temperature":0.3,
          "humidity":0.3,
          "pressure":0.3,
