@@ -134,5 +134,5 @@ There are cases when special commands are called:
 
 ## Aditional notes
 
-- To use arduino service, you must connect arduino with your computer (serial ports parameters are set in config/config.py); uncomment arduino service line in service pool in main.py
-- operating system control is under construction. Linux commands execution are tested as proof-of-concept, but the goal is to also add Windows commands, so until then OS service is not used.
+- To use arduino service, you must connect arduino with your computer (serial port's parameters are set in config/config.py); uncomment arduino service line in service pool in main.py
+- operating system control is under construction. Linux commands execution are tested as the proof-of-concept, but the goal is to also add Windows commands, so until then OS service is not used.
