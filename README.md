@@ -11,14 +11,14 @@ Voice assistant project based on speech recognition and text-to-speech synthesis
 - Pocket Sphinx
 
 The best results were achieved with Google's services - Google and Google Cloud. The problem with Google Cloud is that it is not free - up to 60 minutes of converted audio data is free on monthly basis (at the moment of creation of this assistant - July/August/September 2019th).
-For basic usage of speech conversion to text, you need to install SpeechRecognition library
+For the basic usage of speech conversion to text, you need to install SpeechRecognition library
 ```sh
 pip3 install speech_recognition
 ```
 Currently, Lindo/a  supports English and Serbian language (my native language). If you want to add some operating language, feel free to do that.
 
 # Installation
-The voice assistant offers services that require the assistance of other modules, libraries, and APIs.All of them are listed in the requirements.txt file. Each of them could be installed with pip. This project was developed under the Linux operating system, but also tested on Windows 10 OS. So, some comments are provided in requirements.txt. If you want clear, all-at-once installation, remove comments from requirements.txt and use: 
+The voice assistant offers services that require the assistance of other modules, libraries, and APIs. All of them are listed in the requirements.txt file. Each of them could be installed with pip. This project was developed under the Linux operating system, but also tested on Windows 10 OS. So, some comments are provided in requirements.txt. If you want clear, all-at-once installation, remove comments from requirements.txt and use: 
 ```
 pip3 install -r requirements.txt
 ```
