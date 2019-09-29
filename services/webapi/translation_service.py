@@ -2,10 +2,10 @@ from googletrans import Translator
 import googletrans
 
 from functools import lru_cache
-from config.constants import SUCCESS, logger
+from config.config import SUCCESS, logger
 from services.common.action_result import ActionResult
 from utils.utils import load_json_data, convert_latin_to_cyrillic
-from config.constants import LANGUAGES_IN_SERBIAN
+from config.config import LANGUAGES_IN_SERBIAN
 
 
 class TranslationService:

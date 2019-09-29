@@ -1,6 +1,6 @@
 import string
 
-from config.constants import ENGLISH_DICTIONARY_PATH, SERBIAN_DICTIONARY_PATH, logger
+from config.config import ENGLISH_DICTIONARY_PATH, SERBIAN_DICTIONARY_PATH, logger
 from utils.utils import load_words_dictionaries, flatten_lists
 
 language_word_files = dict(en=ENGLISH_DICTIONARY_PATH, sr=SERBIAN_DICTIONARY_PATH)

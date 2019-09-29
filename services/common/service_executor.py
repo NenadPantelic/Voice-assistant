@@ -1,4 +1,4 @@
-from config.constants import COMMANDS, logger, FAIL, FATAL
+from config.config import COMMANDS, logger, FAIL, FATAL
 from exceptions.exception_handler import ExceptionHandler
 from exceptions.exceptions import VoiceAssistantException
 from services.common.action_result import ActionResult

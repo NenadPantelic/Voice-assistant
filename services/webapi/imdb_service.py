@@ -1,7 +1,7 @@
 import imdb
 import omdb
 
-from config.constants import OMDB_API_KEY, SUCCESS, logger
+from config.config import OMDB_API_KEY, SUCCESS, logger
 from functools import lru_cache
 from services.common.action_result import ActionResult
 

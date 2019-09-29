@@ -1,4 +1,4 @@
-from config.constants import *
+from config.config import *
 # possible replacement pyttsx3
 from gtts import gTTS
 from utils.utils import get_current_timestamp, play_audio

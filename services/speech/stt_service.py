@@ -1,5 +1,5 @@
 import speech_recognition as sr
-from config.constants import *
+from config.config import *
 from services.common.action_result import ActionResult
 
 

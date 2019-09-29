@@ -1,4 +1,4 @@
-from config.constants import EXCEPTION_MESSAGES, logger
+from config.config import EXCEPTION_MESSAGES, logger
 from utils.utils import convert_instance_type_to_str
 import traceback
 

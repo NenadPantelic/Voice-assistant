@@ -1,7 +1,7 @@
 import sys
 sys.path.append("..")
 from services.websearch.browser_search_service import BrowserService
-from config.constants import FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL
+from config.config import FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL
 bs = BrowserService()
 #exception case
 #print(bs._get_first_search_result(query="lionfsdfdjnefedmfurniojgigf").get_result())

@@ -1,4 +1,4 @@
-from config.constants import LANG_KEYWORDS, logger
+from config.config import LANG_KEYWORDS, logger
 from exceptions.exceptions import VoiceAssistantException
 from utils.utils import load_json_data, convert_commands_json_array_to_dict
 

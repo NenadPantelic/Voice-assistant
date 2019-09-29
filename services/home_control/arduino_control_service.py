@@ -1,5 +1,5 @@
 import serial
-from config.constants import SERIAL_PORT, DEFAULT_BAUD_RATE, logger
+from config.config import SERIAL_PORT, DEFAULT_BAUD_RATE, logger
 
 
 class ArduinoControlService:

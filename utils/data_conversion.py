@@ -1,4 +1,4 @@
-from config.constants import FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL, logger
+from config.config import FACEBOOK_BASE_URL, TWITTER_BASE_URL, INSTAGRAM_BASE_URL, LINKEDIN_BASE_URL, logger
 
 social_networks_url_map = {"facebook": FACEBOOK_BASE_URL, "twitter": TWITTER_BASE_URL, \
                            "instagram": INSTAGRAM_BASE_URL, "linkedin": LINKEDIN_BASE_URL}

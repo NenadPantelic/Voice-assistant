@@ -1,6 +1,6 @@
 import wikipedia
 from services.common.action_result import ActionResult
-from config.constants import logger, SUCCESS
+from config.config import logger, SUCCESS
 from functools import lru_cache
 
 

@@ -2,7 +2,7 @@ from datetime import datetime
 
 from pyowm import OWM
 from functools import lru_cache
-from config.constants import OWM_API_KEY, WEATHER_PARAMS, WEATHER_PARAMETERS, SUCCESS, logger
+from config.config import OWM_API_KEY, WEATHER_PARAMS, WEATHER_PARAMETERS, SUCCESS, logger
 from services.common.action_result import ActionResult
 
 

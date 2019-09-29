@@ -4,7 +4,7 @@ import uuid
 from playsound import playsound
 import glob, os, os.path
 
-from config.constants import logger
+from config.config import logger
 
 
 def play_audio(file_name):

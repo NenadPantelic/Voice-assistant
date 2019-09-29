@@ -2,7 +2,7 @@ import threading
 from functools import lru_cache
 import googlesearch, webbrowser
 
-from config.constants import SUCCESS, FACEBOOK_BASE_URL, logger
+from config.config import SUCCESS, FACEBOOK_BASE_URL, logger
 from exceptions.exceptions import GoogleSearchException
 from services.common.action_result import ActionResult
 
