@@ -23,7 +23,7 @@ class IMDBService:
         Returns brief movie info details about best movies by imdb. Number of movies is determined by [num] arg. This
         argument cannot be greater than 250.
         :param num: Number of top movies we seek. (int); in range [1,250]
-        :return: movies info string wrapped in ActionResult; default speaking language is english
+        :return: movies info string wrapped in ActionResult; default speaking _language is english
         """
         assert (isinstance(num, int)), "Value must be integer by type_."
         assert (num in range(1, 251)), "Value must be in range 1 to 250"
@@ -39,7 +39,7 @@ class IMDBService:
             movie_info = self._get_brief_movie_info(movie_details)
             complete_info += self._movie_info_to_str(movie_info) + "\n"
         logger.debug("Complete movies info:\n{}".format(complete_info))
-        #NOTE:action result language is set to english because imdb API results are in english
+        #NOTE:action result _language is set to english because imdb API results are in english
         return ActionResult(complete_info, SUCCESS, language="en")
 
     @lru_cache(maxsize=8)
@@ -142,7 +142,7 @@ class IMDBService:
        """
         assert (isinstance(movie, dict))
         info_props = (
-            "title", "year", "released", "runtime", "genre", "director", "actors", "plot", "language", "imdb_rating")
+            "title", "year", "released", "runtime", "genre", "director", "actors", "plot", "_language", "imdb_rating")
         return self._get_movie_info(movie, info_props)
 
     def _movie_info_to_str(self, movie_info):

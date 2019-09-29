@@ -9,7 +9,7 @@ from services.webapi.imdb_service import IMDBService
 from utils.utils import load_json_data
 
 langs = None
-# INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!"
+# INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating _language. Default option is English(USA)!"
 
 speaker = Speaker()
 srec = SpeechRecognizer(language="en-US")

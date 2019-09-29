@@ -11,11 +11,11 @@ class WikipediaService:
 
     def set_language(self, language):
         """
-        Sets language of wikipedia client API
-        :param language: language code (str)
+        Sets _language of wikipedia client API
+        :param language: _language code (str)
         :return:
         """
-        logger.debug("Setting wikipedia language: {}".format(language))
+        logger.debug("Setting wikipedia _language: {}".format(language))
         wikipedia.set_lang(language)
 
     @lru_cache(maxsize=8)

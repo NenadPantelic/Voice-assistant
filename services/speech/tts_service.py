@@ -12,8 +12,8 @@ class Speaker:
     # public methods
     def set_language(self, language):
         """
-        Sets operating speaking language.
-        :param str language: language code
+        Sets operating speaking _language.
+        :param str language: _language code
         :rtype: None
         :return: void method
         """
@@ -23,9 +23,9 @@ class Speaker:
 
     def get_language(self):
         """
-        Returns speaking language.
+        Returns speaking _language.
         :rtype:str
-        :return: speaking language
+        :return: speaking _language
         """
         return self._language
 

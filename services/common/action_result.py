@@ -3,14 +3,14 @@ class ActionResult:
         """
         :param str result: result of service command execution
         :param int status: SUCCESS = 1 or FAIL = 0, FATAL = -1
-        :param str language: lang_code (in which language, command result should be spoken)
+        :param str language: lang_code (in which _language, command result should be spoken)
         """
         self._result = result
         self._status = status
         self._language = language
 
     def __str__(self):
-        return "ActionResult = [result = {}, status = {}, language = {}].".format(self.get_result(), self.get_status(),
+        return "ActionResult = [result = {}, status = {}, _language = {}].".format(self.get_result(), self.get_status(),
                                                                                   self.get_language())
 
     # getters

@@ -12,27 +12,27 @@ class TranslationService:
     def __init__(self, language="en"):
         self._api = Translator()
         self._language = language
-        #TODO:this field is tight coupled with serbian language usage logic, solve that
+        #TODO:this field is tight coupled with serbian _language usage logic, solve that
         self._langs_in_serbian = load_json_data(LANGUAGES_IN_SERBIAN)
 
     # public methods
     def set_language(self, language):
         """
-        Sets operating language of translation service.
-        :param str language: language code
+        Sets operating _language of translation service.
+        :param str language: _language code
         :rtype:None
         :return: void method (no return value)
         """
         assert(isinstance(language, str))
         self._language = language
 
-    # in this use-case, this method has no much sense, because speech recognizer needs to know language for recongition
+    # in this use-case, this method has no much sense, because speech _recognizer needs to know _language for recongition
     def detect_language_from_text(self, text):
         """
-        Detects language from text.
+        Detects _language from text.
         :param str text: text to be analyzed
         :rtype ActionResult
-        :return: ActionResult with language name as payload
+        :return: ActionResult with _language name as payload
         """
         assert(isinstance(text, str))
         lang_code = self._detect_language(text).lang
@@ -44,8 +44,8 @@ class TranslationService:
         Translates text from src_language to dest_language.If text is `Mary had a little lamb`, src_language `en`, and
         dest_language is `sr`, resulting text has value: `Мери је имала мало јагње`
         :param str text: text for translation
-        :param str src_language: language code of text's language
-        :param str dest_language: target translation language
+        :param str src_language: _language code of text's _language
+        :param str dest_language: target translation _language
         :rtype ActionResult
         :return: ActionResult with translated text as payload
         """
@@ -65,8 +65,8 @@ class TranslationService:
         """
         Translates text by using Google Translate API.
         :param str text: text for translation
-        :param str src_language: language code of text's language
-        :param str dest_language: target translation language
+        :param str src_language: _language code of text's _language
+        :param str dest_language: target translation _language
         :rtype googletrans.models.Translated object
         :return: translated object
         """
@@ -76,9 +76,9 @@ class TranslationService:
     @lru_cache(maxsize=8)
     def _detect_language(self, text):
         """
-         Detect language of the input text
+         Detect _language of the input text
 
-        :param text: The source text(s) whose language you want to identify.
+        :param text: The source text(s) whose _language you want to identify.
                      Batch detection is supported via sequence input.
         :type_ text: UTF-8 :class:`str`; :class:`unicode`; string sequence (list, tuple, iterator, generator)
 
@@ -92,10 +92,10 @@ class TranslationService:
     #TODO:move these methods to utils
     def _convert_language_to_lang_code(self, language):
         """
-        Converts and returns language code for the given language. If language is not valid, default value is `en`.
-        :param str language: full language name, e.g. english,serbian, italian...
+        Converts and returns _language code for the given _language. If _language is not valid, default value is `en`.
+        :param str language: full _language name, e.g. english,serbian, italian...
         :rtype str
-        :return: language code, e.g. `en` for english, `it` for italian, `sr` for serbian
+        :return: _language code, e.g. `en` for english, `it` for italian, `sr` for serbian
         """
         assert(isinstance(language, str))
         return googletrans.LANGCODES.get(language, "en")
@@ -103,10 +103,10 @@ class TranslationService:
     # not used at the moment
     def _convert_lang_code_to_language(self, lang_code):
         '''
-        Convert the given language code to language name. `sr` to serbian, `en` to english etc.
+        Convert the given _language code to _language name. `sr` to serbian, `en` to english etc.
         :param str lang_code:
         :rtype str
-        :return: correspongin language name or `english` if lang_code is not valid.
+        :return: correspongin _language name or `english` if lang_code is not valid.
         '''
         assert(isinstance(lang_code, str))
         return self._translate(googletrans.LANGUAGES.get(lang_code, "english"), dest_lang=self._language).text
@@ -114,12 +114,12 @@ class TranslationService:
     def _get_appropriate_lang_code(self, language):
         """
         Determines and returns the corresponding lang_code.
-        :param str language: language or language code
+        :param str language: _language or _language code
         :rtype str
-        :return:lang_code of the given language
+        :return:lang_code of the given _language
         """
         assert(isinstance(language, str))
-        logger.debug("Getting appropriate language code...")
+        logger.debug("Getting appropriate _language code...")
         if self._language == 'sr':
             language = convert_latin_to_cyrillic(language)
             language = self._langs_in_serbian.get(language, "en")

@@ -9,7 +9,7 @@ class ExceptionHandler:
         """
         Logs traceback message and get appropriate exception message from config file.
         :param exception e: exception to be handled
-        :param str language: language code
+        :param str language: _language code
         :rtype: str
         :return: an exception message that will be delivered to the user
         """

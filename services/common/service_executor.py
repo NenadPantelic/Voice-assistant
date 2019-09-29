@@ -1,5 +1,6 @@
 from config.constants import ENGLISH_COMMANDS, logger, FAIL, FATAL
 from exceptions.exception_handler import ExceptionHandler
+from exceptions.exceptions import VoiceAssistantException
 from services.common.action_result import ActionResult
 from utils.utils import load_json_data
 
@@ -22,8 +23,8 @@ class ServiceExecutor:
 
     def set_services_language(self, language):
         """
-        Sets the language to all services.
-        :param (str or None) language: language code
+        Sets the _language to all services.
+        :param (str or None) language: _language code
         :rtype: None
         :return: void method
         """
@@ -109,7 +110,8 @@ class ServiceExecutor:
                     return command_result
         else:
             logger.error("Fatal, service cannot be found.")
-            return ActionResult("", FATAL)
+            message = ExceptionHandler.get_exception_message(VoiceAssistantException, self._language)
+            return ActionResult(message, FATAL)
 
     def _populate_service_command_methods(self):
         """

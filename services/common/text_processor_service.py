@@ -11,8 +11,8 @@ class TextProcessor:
     def __init__(self, language="en"):
         """
         Fields:
-        language is language code.
-        target_words is list of usual words of language defined with [language] language code
+        _language is _language code.
+        target_words is list of usual words of _language defined with [_language] _language code
         """
         self._language = language
         self._target_words = None
@@ -21,14 +21,14 @@ class TextProcessor:
     # public methods
     def set_language(self, language):
         """
-        Sets the language and target words based on language.
-        :param str language: language code
+        Sets the _language and target words based on _language.
+        :param str language: _language code
         :rtype: None
-        :return: void method (raise ValueError if language is not supported)
+        :return: void method (raise ValueError if _language is not supported)
         """
         assert (isinstance(language, str))
         try:
-            logger.debug("Text processor language = {}.".format(language))
+            logger.debug("Text processor _language = {}.".format(language))
             self._target_words = flatten_lists(word_dictionary_mapping[language].values())
             self._language = language
         except KeyError:

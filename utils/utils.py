@@ -2,6 +2,9 @@ import json
 import time
 import uuid
 from playsound import playsound
+import glob, os, os.path
+
+from config.constants import logger
 
 
 def play_audio(file_name):
@@ -17,10 +20,10 @@ def play_audio(file_name):
 
 def get_language_code(language_str):
     """
-    Determines language code based on words in str_list. Strongly coupled with the english-serbian languages use-case
+    Determines _language code based on words in str_list. Strongly coupled with the english-serbian languages use-case
     :param language_str:
     :rtype: None or str
-    :return: language code (`en`, `sr`) or None
+    :return: _language code (`en`, `sr`) or None
     """
     assert (isinstance(language_str, str))
     if any(option in language_str for option in ("english", "default", "engleski", "podrazumevan")):
@@ -53,10 +56,10 @@ def generate_uuid():
 # data load
 def load_words_dictionaries(language_word_files):
     """
-    Loads json files in dictionary. Dictionary keys are language codes and values are list of dictionaries (json).
-    :param tuple, list, set or dictionary language_word_files: contains language codes
+    Loads json files in dictionary. Dictionary keys are _language codes and values are list of dictionaries (json).
+    :param tuple, list, set or dictionary language_word_files: contains _language codes
     :rtype: dictionary
-    :return: Returns dictionary where keys are language codes and values are list of dictionaries (json)
+    :return: Returns dictionary where keys are _language codes and values are list of dictionaries (json)
     """
     assert (any(isinstance(language_word_files, type_) for type_ in (tuple, list, set, dict)))
     language_words = {}
@@ -133,5 +136,12 @@ def convert_instance_type_to_str(type_):
     :rtype: str
     :return: type name
     """
-    assert (isinstance(type_, str))
+    assert (isinstance(type_, type))
     return str(type_).split("'")[1]
+
+
+def delete_all_mp3_files(directory):
+    file_list = glob.glob(os.path.join(directory, "*.mp3"))
+    logger.debug("Cleaning up.....")
+    for f in file_list:
+        os.remove(f)

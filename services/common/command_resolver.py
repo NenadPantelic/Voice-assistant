@@ -16,21 +16,21 @@ class CommandResolver:
 
     def set_language(self, language):
         """
-        Sets language of resolver and load keywords based on language.
-        :param str language: language code
+        Sets _language of resolver and load keywords based on _language.
+        :param str language: _language code
         :rtype: None
         :return: void method
         """
         assert (isinstance(language, str))
-        logger.debug("Command resolver language = {}.".format(language))
+        logger.debug("Command resolver _language = {}.".format(language))
         self._language = language
         keywords = load_json_data(LANG_KEYWORDS[language])
         self._set_keywords(keywords)
 
     def set_processor_language(self, language):
         """
-        Sets language of text processor.
-        :param str language: language code
+        Sets _language of text processor.
+        :param str language: _language code
         :rtype: None
         :return: void method
         """

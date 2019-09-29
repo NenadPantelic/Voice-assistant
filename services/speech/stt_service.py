@@ -18,8 +18,8 @@ class SpeechRecognizer:
     # public methods
     def set_language(self, language):
         """
-        Sets recognition language.
-        :param str language: language code
+        Sets recognition _language.
+        :param str language: _language code
         :rtype: None
         :return: void method
         """
@@ -28,9 +28,9 @@ class SpeechRecognizer:
 
     def get_language(self):
         """
-        Returns recognition language.
+        Returns recognition _language.
         :rtype:str
-        :return: recognition language
+        :return: recognition _language
         """
         return self._language
 

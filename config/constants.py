@@ -71,7 +71,7 @@ ENGLISH_COMMANDS = "data/commands/commands-en.json"
 # ENGLISH_COMMANDS = "data/commands/commands-sr.json"
 # TODO: refactor path variables to be in dictionary form for simpler usage
 
-# INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!"
+# INIT_MESSAGE = "Hi, I'm Lindo voice assistant. Choose operating _language. Default option is English(USA)!"
 SUCCESS = 1
 FAIL = 0
 FATAL = -1
@@ -228,8 +228,8 @@ WEATHER_PARAMS = {'clouds', 'detailed_status', 'dewpoint', 'heat_index', 'humide
                   'weather_code', 'weather_icon_name', 'weather_icon_url', 'wind'}
 
 # format <name in json response>: (json_subvalue or alias, child/alias, display name)
-# hr stands for croatian language beacuse OWM API doesn't support serbian, so instead of serbian (sr),
-# croatian language is used (hr)
+# hr stands for croatian _language beacuse OWM API doesn't support serbian, so instead of serbian (sr),
+# croatian _language is used (hr)
 
 WEATHER_PARAMETERS = {
     "clouds": ("clouds", "alias", {"en": "clouds", "hr": "oblačnost"}),

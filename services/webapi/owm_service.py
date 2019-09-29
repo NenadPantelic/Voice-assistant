@@ -13,11 +13,11 @@ class WeatherForecastService:
 
     def set_language(self, language):
         """
-        Sets language for OWM API.
-        :param language : language code (str) e.g. en, fr, sr...
+        Sets _language for OWM API.
+        :param language : _language code (str) e.g. en, fr, sr...
         :return:
         """
-        logger.debug("Setting owm language: {}".format(language))
+        logger.debug("Setting owm _language: {}".format(language))
         language = 'hr' if language == 'sr' else language
         self._api.set_language(language)
 

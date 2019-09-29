@@ -3,7 +3,7 @@
 
 query : query string that we want to search for.
 tld : tld stands for top level domain which means we want to search our result on google.com or google.in or some other domain.
-lang : lang stands for language.
+lang : lang stands for _language.
 num : Number of results we want.
 start : First result to retrieve.
 stop : Last result to retrieve. Use None to keep searching forever.

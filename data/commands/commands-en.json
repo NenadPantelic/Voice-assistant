@@ -34,7 +34,7 @@
       "service":null,
       "method":"set_language",
       "has_args":true,
-      "arg_name":"language_list",
+      "arg_name":"language_str",
       "arg_type":"str",
       "need_input":false,
       "process_input_text":false,
