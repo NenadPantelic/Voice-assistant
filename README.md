@@ -1,3 +1,4 @@
+# Voice assistan Lindo/a
 Voice assistant project based on speech recognition and text-to-speech synthesis. Done as part of the graduation thesis. The project is developed in Python3.
 Voice-assistant (named Linda/Lindo) is Linux voice assistant based on the Speech recognition Python library. Speech recognition library supports multiple cloud API speech-to-text services. I tested some of them:
 
@@ -16,6 +17,9 @@ For basic usage of speech conversion to text, you need to install SpeechRecognit
 ```sh
 pip3 install speech_recognition
 ```
+
+Currently, Lindo/a supports english and serbian language (my native language). If you want to add some operating language, feel free to do that.
+
 # Installation
 
 The voice assistant offers services that requires assistance of other modules, libraries and APIs.All of them are listed in requirements.txt file. Every of them could be installed with pip. This project was developed under Linux operating system, but also tested on Windows 10 OS. So, some comments are provided in requirements.txt. If you want clear, all-at-once installation, remove comments from requirements.txt and use:  
@@ -51,3 +55,6 @@ $ sudo apt install libpulse-dev swig
 
 After dependcies installation, try to install pocketsphinx.
 Most of the other API services are available to use without any additional installation. Also, most of them (the "web" ones), requires credentials in form of the API key. For further instructions refer to this page: <https://github.com/Uberi/speech_recognition/edit/master/README.rst>
+
+# Usage
+
