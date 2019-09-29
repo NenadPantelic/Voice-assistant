@@ -10,7 +10,7 @@ Voice assistant project based on speech recognition and text-to-speech synthesis
 - Houndify
 - Pocket Sphinx
 
-The best results were achieved with Google's services - Google and Google Cloud. The problem with Google Cloud is that it is not free - up to 60 minutes of converted audio data is free on monthly basis (at the moment of creation of this assistant - July/August 2019th).
+The best results were achieved with Google's services - Google and Google Cloud. The problem with Google Cloud is that it is not free - up to 60 minutes of converted audio data is free on monthly basis (at the moment of creation of this assistant - July/August/September 2019th).
 For basic usage of speech conversion to text, you need to install SpeechRecognition library
 ```sh
 pip3 install speech_recognition
