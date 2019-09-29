@@ -60,7 +60,7 @@ FAIL = 0
 FATAL = -1
 
 # exception messages
-GENERIC_MESSAGE_EN = "Some internal error occurred. Check log for more details!"
+GENERIC_MESSAGE_EN = "Some internal error occurred. Check the log for more details!"
 GENERIC_MESSAGE_SR = "Došlo je do interne greške. Proverite log fajl za više detalja!"
 EXCEPTION_MESSAGES = {
     "KeyError": {
@@ -84,7 +84,7 @@ EXCEPTION_MESSAGES = {
         "sr": GENERIC_MESSAGE_SR
     },
     "speech_recognition.UnknownValueError": {
-        "en": "Speech cannot be analyzed and/or recognized!",
+        "en": "Speech cannot be analyzed or recognized!",
         "sr": "Ваш говор не може бити обрађен или препознат!"
     },
     "speech_recognition.RequestError": {
@@ -97,12 +97,12 @@ EXCEPTION_MESSAGES = {
         "sr": "Imam problem sa govorom. Verovatno si probio API limit!"
     },
     "pyowm.exceptions.api_response_error.NotFoundError": {
-        "en": "Weather forecast cannot be estimated. I cannot find that location!",
+        "en": "The weather forecast cannot be estimated. I cannot find that location!",
         "sr": "Ne mogu da procenim vremensku prognozu. Ne mogu da pronađem tu lokaciju!"
     },
     "smtplib.SMTPAuthenticationError":
         {
-            "en": "There is some problem with email authentication. Check your email credentials.",
+            "en": "There is some problem with email authentication. Check your email address credentials.",
             "sr": "Došlo je do problema sa autentifikacijom email naloga. Proveri kredencijale."
         },
     "smtplib.SMTPNotSupportedError": {
@@ -118,11 +118,11 @@ EXCEPTION_MESSAGES = {
         "sr": "Postoje određeni problemi sa podešavanjima emaila."
     },
     "smtplib.SMTPConnectError": {
-        "en": "There is some problem with email connection.",
+        "en": "There is some problem with an email connection.",
         "sr": "Postoje određeni problemi sa konekcijom ka emaila serveru."
     },
     "smtplib.SMTPServerDisconnected": {
-        "en": "There is some problem with email connection.",
+        "en": "There is some problem with an email connection.",
         "sr": "Postoje određeni problemi sa konekcijom ka emaila serveru."
     },
 
@@ -131,12 +131,12 @@ EXCEPTION_MESSAGES = {
         "sr": "Postoje određeni problemi sa podešavanjima emaila pošiljaoca."
     },
     "smtplib.SMTPRecipientsRefused": {
-        "en": "Recipient's email settings are not valid. Check recipient email address.",
+        "en": "Recipient's email settings are not valid. Check the recipient's email address.",
         "sr": "Postoje određeni problemi sa podešavanjima emaila primaoca. Proveri da li si uneo validnu adresu."
     },
     "wikipedia.exceptions.PageError": {
         "en": "I cannot find anything on Wikipedia that suits your query. Try another one or try again with more precise"
-              "speech.",
+              " speech.",
         "sr": "Nisam uspeo da nađem ništa na Vikipediji što odgovara tvom zahtevu. Probaj sa nekim drugim zahtevom ili probaj"
               "ponovo, ali probaj da budeš precizniji u govoru."
     },
@@ -145,7 +145,7 @@ EXCEPTION_MESSAGES = {
         "sr": "Gugl pretraga nije našla ništa što odgovara tvom upitu."
     },
     "exceptions.exceptions.VoiceAssistantException": {
-        "en": "Fatal error. Application could not proceed.",
+        "en": "Fatal error. The application could not proceed.",
         "sr": "Došlo je do fatalne interne greške. Aplikacija ne može nastaviti sa radom."
     },
     "exception": {

@@ -14,11 +14,11 @@
       "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "messages":{
          "success":{
-            "en":"Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!",
+            "en":"Hi, I'm Linda voice assistant. Choose the operating language. The default option is English(USA)!",
             "sr":"Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
          },
          "fail":{
-            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if error happens again!",
+            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if the error happens again!",
             "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probaj ponovo ili kasnije ukoliko to ne prođe!"
          }
       },
@@ -46,12 +46,12 @@
             "sr":"Jезик је успешно постављен."
          },
          "fail":{
-            "en":"I have some problems with language setting. Be kind to try again, speak clear and loud.",
+            "en":"I have some problems with the language setting. Be kind to try again, speak clear and loud.",
             "sr":"Imam problema sa postavkom jezika. Budi ljubazan da probaš opet, govori jasno i glasno."
          }
       },
       "descriptions":{
-         "en":"Set operating language of voice assistant.",
+         "en":"Sets the operating language of the voice assistant.",
          "sr":"Поставља оперативни језик гласовног асистента."
       }
    },
@@ -80,7 +80,7 @@
       },
       "descriptions":{
          "en":"Invalid command.",
-         "sr":"Nevalidna komanda."
+         "sr":"Netačna komanda."
       }
    },
    {
@@ -98,17 +98,17 @@
       "next_command_id":null,
       "messages":{
          "success":{
-            "en":"I'm sorry, but I'm not sure what you want. Your command is ambiguous. There are few options. Try again please!",
+            "en":"I'm sorry, but I'm not sure what you want. Your command is ambiguous. There are a few options. Try again, please!",
             "sr":"Žao mi je, ali nisam siguran šta želiš. Tvoje komanda nije jednoznačna. Postoji više mogućih opcija. Probaj ponovo!"
          },
          "fail":{
-            "en":"I'm sorry, but I'm not sure what you want. Your command is ambiguous. There are few options. Try again please!",
+            "en":"I'm sorry, but I'm not sure what you want. Your command is ambiguous. There are a few options. Try again, please!",
             "sr":"Žao mi je, ali nisam siguran šta želiš. Tvoje komanda nije jednoznačna. Postoji više mogućih opcija. Probaj ponovo!"
          }
       },
       "descriptions":{
-         "en":"Invalid command.",
-         "sr":"Nevalidna komanda."
+         "en":"Ambiguous command.",
+         "sr":"Neprecizna komanda."
       }
    },
    {
@@ -126,16 +126,16 @@
       "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "messages":{
          "success":{
-            "en":"Yes, that's possible. Choose new operating language. Default option is English(USA)!",
+            "en":"Yes, that's possible. Choose a new operating language. The default option is English(USA)!\n",
             "sr":"Da, to je moguće. Izaberite novi operativni jezik. Podrazumevani jezik je engleski!"
          },
          "fail":{
-            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if error happens again!",
-            "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probaj ponovo ili kasnije ukoliko to ne prođe!"
+            "en":"I'm sorry, I cannot change the language аt the moment. Try again!",
+            "sr":"Nаžalost, ne mogu trenutno da promenim jezik. Probaj ponovo.!"
          }
       },
       "descriptions":{
-         "en":"Switch the operating language.",
+         "en":"Switches the operating language.",
          "sr":"Promena operativnog jezika."
       }
    },
@@ -158,13 +158,13 @@
             "sr":"Prema Vikipediji: "
          },
          "fail":{
-            "en":"Unfortunately, I met some problems during request handling. I think issue lies in voice comprehention. I'm suggesting to try again.",
+            "en":"Unfortunately, I met some problems during request handling. I think the issue lies in voice comprehension. I'm suggesting to try again.",
             "sr":"Nažalost, došlo je do nekih problema. Verovatno zbog razumevanja govora. Moj savet je da probaš ponovo."
          }
       },
       "descriptions":{
-         "en":"Brief Wikipedia search. Returns summary of wikipedia page.",
-         "sr":"Kratak rezime dobijen sa strane dobijene sa Vikipedije."
+         "en":"Brief Wikipedia search. Returns summary of the Wikipedia page.",
+         "sr":"Kratak rezime dobijen sa Vikipedije."
       }
    },
    {
@@ -186,7 +186,7 @@
             "sr":"Stanje vremenske prognoze:\n"
          },
          "fail":{
-            "en":"Oops. There is some problem. Usually problems with this service lies in speech recognition. So, my advice is to repeat your command.",
+            "en":"Oops. There is some problem. Usually, problems with this service lie in speech recognition. So, my advice is to repeat your command.",
             "sr":"Ups. Došlo je do nekog problema. Uglavnom, problemi kod ove usluge potiču iz probleema sa razumevanjem govora.Moj savet je da probaš ponovo."
          }
       },
@@ -214,12 +214,12 @@
             "sr":"Mislim da mogu da ti pomognem. Koji je izvorni jezik sa kog želiš da prevedem?"
          },
          "fail":{
-            "en":"Actually I'm not sure what you meant. Possible solution, say again!",
+            "en":"I'm not sure what you meant. Possible solution, say again!",
             "sr":"Zapravo, nisa siguran šta želiš. Možda će stvar rešiti ako probaš ponovo!"
          }
       },
       "descriptions":{
-         "en":"Initialize speech translation.",
+         "en":"Initializes speech translation.",
          "sr":"Inicijalizuje prevod govora."
       }
    },
@@ -247,8 +247,8 @@
          }
       },
       "descriptions":{
-         "en":"Initialize speech translation.",
-         "sr":"Inicijalizuje prevod govora."
+         "en":"Sets the source language.",
+         "sr":"Postavlja izvorni jezik za prevod."
       }
    },
    {
@@ -275,7 +275,7 @@
          }
       },
       "descriptions":{
-         "en":"Sets text for translation.",
+         "en":"Sets the text for translation.",
          "sr":"Postavlja tekst za prevod."
       }
    },
@@ -298,12 +298,12 @@
             "sr":"Mislim da prevod glasi ovako: "
          },
          "fail":{
-            "en":"I could translate the given speech. Please, try again!",
+            "en":"I could not translate the given speech. Please, try again!",
             "sr":"Nisam uspeo da prevedem govor. Molim, probaj ponovo!"
          }
       },
       "descriptions":{
-         "en":"Translates original speech text.",
+         "en":"Translates the speech text.",
          "sr":"Prevodi tekst iz govora na željeni jezik."
       }
    },
@@ -322,7 +322,7 @@
       "next_command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "messages":{
          "success":{
-            "en":"I'm ready for a new email. who is the recipient? It will be better if you enter an address from keyboard.",
+            "en":"I'm ready for a new email. Who is the recipient? It will be better if you enter an address from the keyboard.",
             "sr":"Spreman sam za novi email. Ko je primalac? Sigurnije je da uneseš adresu sa tastature."
          },
          "fail":{
@@ -359,7 +359,7 @@
          }
       },
       "descriptions":{
-         "en":"Sets the receiver.",
+         "en":"Sets the recipient.",
          "sr":"Postavlja primaoca."
       }
    },
@@ -387,7 +387,7 @@
          }
       },
       "descriptions":{
-         "en":"Accept the message of an email.",
+         "en":"Accepts the message of an email.",
          "sr":"Unos poruke emaila."
       }
    },
@@ -406,11 +406,11 @@
       "next_command_id":null,
       "messages":{
          "success":{
-            "en":"Email was sent successfully!.",
+            "en":"Email was sent successfully!",
             "sr":"Email je uspešno poslat!"
          },
          "fail":{
-            "en":"I could not sent an email!",
+            "en":"I could not send an email!",
             "sr":"Nisam uspeo da pošaljem email!"
          }
       },
@@ -434,16 +434,16 @@
       "next_command_id":"0d473e1c-45a8-4869-bc01-17a01543ba1f",
       "messages":{
          "success":{
-            "en":"Sure, tell me what is the number of top movies you want?",
-            "sr":"Naravno, koliko filmova želiš?"
+            "en":"SSure, tell me what is the number of top movies you want? The maximum number is 250.",
+            "sr":"Naravno, koliko filmova želiš? Maksimalno je moguće 250."
          },
          "fail":{
-            "en":"Ah. Some error occurred. I'm suggesting to try again.",
-            "sr":"Ah, došlo je do neke greške. Predlažem da probaš ponovo."
+            "en":"Ah. Some error occurred. Possibly, you asked for less than 1 or more than 250. I'm suggesting to try again.",
+            "sr":"Ah, došlo je do neke greške. Moguće je da si tražio manje od 1 ili više od 250. Predlažem da probaš ponovo."
          }
       },
       "descriptions":{
-         "en":"Initialize imdb method that returns top movies.",
+         "en":"Initializes the IMDB method that returns top movies.",
          "sr":"Inicijalizuje pretragu najboljih filmova."
       }
    },
@@ -463,15 +463,15 @@
       "messages":{
          "success":{
             "en":"By IMDB these are the top movies you asked for:\n",
-            "sr":"Po IMDB, ovo su najbolji filmovi koje si tražio:\n"
+            "sr":"Po IMDB, ovo su najbolji filmovi koji su traženi:\n"
          },
          "fail":{
-            "en":"Yikes. Some obstacle disabled this action. Try again!",
+            "en":"Yikes. Some obstacles disabled this action. Try again!",
             "sr":"Jao. Nešto je iskrslo pri ovoj akciji. Probaj ponovo!"
          }
       },
       "descriptions":{
-         "en":"Get best movies by IMDB.",
+         "en":"Gets the best movies by IMDB.",
          "sr":"Vraća najbolje filmove po IMDB."
       }
    },
@@ -490,7 +490,7 @@
       "next_command_id":"969eac4b-fb8e-4778-9872-553af12a4819",
       "messages":{
          "success":{
-            "en":"That sounds fine. Tell me the title of movie you want, as precise as you can.",
+            "en":"That sounds fine. Tell me the title of the movie you want, as precise as you can.",
             "sr":"To zvuči izvodljivo. Reci mi što tačniji naziv filma."
          },
          "fail":{
@@ -499,7 +499,7 @@
          }
       },
       "descriptions":{
-         "en":"Initialize movie details searching.",
+         "en":"Initializes movie details searching.",
          "sr":"Inicijalizuje komandu pretrage filma."
       }
    },
@@ -522,12 +522,12 @@
             "sr":"Prema IMDB:\n"
          },
          "fail":{
-            "en":"Action cannot be performed. Some issue got in the way.",
-            "sr":"Akcija ne može biti izvedena. Nešto je napravilo problem."
+            "en":"Action cannot be performed. I could not get any data for the given movie. Some issue got in the way.",
+            "sr":"Akcija ne može biti izvedena. Nisam uspeo da pribavim podatke za dati film. Nešto je napravilo problem."
          }
       },
       "descriptions":{
-         "en":"Get movie details from IMDB.",
+         "en":"Gets movie details from IMDB.",
          "sr":"Vraća podatke o filmu sa IMDB."
       }
    },
@@ -583,7 +583,7 @@
          }
       },
       "descriptions":{
-         "en":"Opens social network page.",
+         "en":"Opens the social network page.",
          "sr":"Otvara stranu društvenu mreže."
       }
    },
@@ -611,7 +611,7 @@
          }
       },
       "descriptions":{
-         "en":"Initialize Google search.",
+         "en":"Initializes Google search.",
          "sr":"Inciijalizuje Google pretragu."
       }
    },
@@ -630,7 +630,7 @@
       "next_command_id":"c8849c8d-b52d-4519-8f4a-40c97f0f4f4a",
       "messages":{
          "success":{
-            "en":"Ok, and what about type? Possible options are videos, news, images, books, shopping, applications or all?.",
+            "en":"Ok, and what about type? Possible options are videos, news, images, books, shopping, applications or all?",
             "sr":"To je u redu. A šta ćemo sa tipom, ponuđene opcije su: video, vesti, slike, knjige, šoping, aplikacije ili sve?"
          },
          "fail":{
@@ -658,8 +658,8 @@
       "next_command_id":null,
       "messages":{
          "success":{
-            "en":"I'm opening first result that I found.",
-            "sr":"Otvaram prvi rezultat koji sam pronašla?"
+            "en":"I'm opening the first result that I found.\n",
+            "sr":"Otvaram prvi rezultat koji je pronađen?"
          },
          "fail":{
             "en":"That's not possible. I got some problems while trying to open the wanted result's page. Try again.",
@@ -667,7 +667,7 @@
          }
       },
       "descriptions":{
-         "en":"Performs google search and opens first found result.",
+         "en":"Performs google search and opens the first found result.",
          "sr":"Izvršava google pretragu i otvara prvi rezultat."
       }
    },
@@ -685,11 +685,11 @@
       "is_ready":false,
       "next_command_id":"13d9c09c-b5cb-4c0a-b6a2-ec1e1ead53c0",
       "messages":{
-         "en":"Hm, I can run some programs. What program you're seeking for?.",
-         "sr":"Hm, mogu da pokrenem neke program. Koji program konkretno želiš?"
+         "en":"Hm, I can run some programs. What program you're seeking for?",
+         "sr":"Hm, mogu da pokrenem neke programe. Koji program konkretno želiš?"
       },
       "descriptions":{
-         "en":"Initialize running of desired program.",
+         "en":"Initializes running of the desired program.",
          "sr":"Inicijalizuje komandu za pokretanje programa."
       }
    },
@@ -711,7 +711,7 @@
          "sr":"Po tvom zahtevu, mislim da si ovo hteo?"
       },
       "descriptions":{
-         "en":"Runs desired program.",
+         "en":"Runs the desired program.",
          "sr":"Pokreće traženi program."
       }
    },
@@ -762,7 +762,7 @@
             "sr":"U redu, ja se povlačim sada. Nadam se da si uživao. Do narednog viđenja!"
          },
          "fail":{
-            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if error happens again!",
+            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if the error happens again!\n",
             "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probaj ponovo ili kasnije ukoliko to ne prođe!"
          }
       },
