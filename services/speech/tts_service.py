@@ -1,4 +1,4 @@
-from config.config import *
+from config.config import DEFAULT_AUDIO_FILE, PATH_TO_AUDIO_DIR
 # possible replacement pyttsx3
 from gtts import gTTS
 from utils.utils import get_current_timestamp, play_audio

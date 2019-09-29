@@ -3,3 +3,4 @@ __pycache__
 *.mp3
 *.MP3
 *.log
+*.pyc

@@ -812,7 +812,7 @@
       "next_command_id":null,
       "messages":{
          "success":{
-            "en":"Ok, I'm going off now. I hope so you enjoyed. See ya next time.!",
+            "en":"Ok, I'm going off now. I hope so you enjoyed. See you next time!",
             "sr":"U redu, ja se povlačim sada. Nadam se da si uživao. Do narednog viđenja!"
          },
          "fail":{
