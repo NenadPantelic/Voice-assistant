@@ -121,3 +121,13 @@ Explanation:
 Phrase ***What's the weather like at location Denver*** is processed (obligatory) so we get ***what's weather location denver***. After that,  keywords are removed, so we get only ***denver*** and that is sent to the appropriate method as an argument.  
 
 Phrase ***What's the weather like around Denver*** will follow the same procedure, but the result that will be given to the method as an argument is ***around denver*** and that will cause unsuccessful operation. If we add word around in the keywords list for this command, it will also be removed, and only location name will be used as an argument.
+
+## Special commands
+
+There are cases when special commands are called:
+initial command (says greeting text and asks for the input text)
+setting language (sets the operating language)
+switch language (switches the operating language)
+ambiguous command (scenario when multiple commands have the same score)
+invalid command (command cannot be determined precisely)
+final command (last calling command)
