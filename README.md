@@ -125,9 +125,14 @@ Phrase ***What's the weather like around Denver*** will follow the same procedur
 ## Special commands
 
 There are cases when special commands are called:
-initial command (says greeting text and asks for the input text)
-setting language (sets the operating language)
-switch language (switches the operating language)
-ambiguous command (scenario when multiple commands have the same score)
-invalid command (command cannot be determined precisely)
-final command (last calling command)
+- initial command (says greeting text and asks for the input text)
+- setting language (sets the operating language)
+- switch language (switches the operating language)
+- ambiguous command (scenario when multiple commands have the same score)
+- invalid command (command cannot be determined precisely)
+- final command (last calling command)
+
+## Aditional notes
+
+- To use arduino service, you must connect arduino with your computer (serial ports parameters are set in config/config.py); uncomment arduino service line service pool in main.py
+- operating system control is under construction. Linux commands execution are tested as proof-of-concept, but the goal is to also add Windows commands, so until then OS service is not used.
