@@ -186,7 +186,7 @@
             "sr":"Stanje vremenske prognoze:\n"
          },
          "fail":{
-            "en":"Oops. There is some problem. Usually, problems with this service lie in speech recognition. So, my advice is to repeat your command.",
+            "en":"Oops. There is some problem. Usually, problem with this service lies in location misunderstanding. So, my advice is to repeat your command.",
             "sr":"Ups. Došlo je do nekog problema. Uglavnom, problemi kod ove usluge potiču iz probleema sa razumevanjem govora.Moj savet je da probaš ponovo."
          }
       },
