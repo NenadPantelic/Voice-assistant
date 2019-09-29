@@ -1,5 +1,6 @@
 from exceptions.exception_handler import ExceptionHandler
-from config.config import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL, logger, FATAL, PATH_TO_AUDIO_DIR
+from config.config import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL, logger, FATAL, PATH_TO_AUDIO_DIR, \
+    CALL_MESSAGE
 from services.common.action_result import ActionResult
 from utils.utils import load_json_data, convert_latin_to_cyrillic, get_language_code, delete_all_mp3_files
 
@@ -57,6 +58,15 @@ class Controller:
                                             language, input_type="str",
                                             need_input=False, input_processing_method=None,
                                             is_ready=False)
+
+    def inform(self):
+        """
+        Prompts the user to tell the following command
+        :rtype: None
+        :return: void method.
+        """
+        message = CALL_MESSAGE.get(self._language, "en")
+        self._speaker.save_speech_and_play(message)
 
     def initialize(self):
         """

@@ -47,7 +47,8 @@ LANG_KEYWORDS = {
     "sr": SERBIAN_KEYWORDS
 }
 
-# answers
+# messages
+CALL_MESSAGE = {"en": "I'm ready for a new command", "sr":"Spreman sam za novu komandu."}
 
 # commands
 COMMANDS = "data/commands/commands.json"
