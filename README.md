@@ -20,7 +20,10 @@ For basic usage of speech conversion to text, you need to install SpeechRecognit
 
 Installing
 -----------------
+The voice assistant offers services that requires assistance of other modules, libraries and APIs.All of them are listed in requirements.txt file. Every of them could be installed with pip. This project was developed under Linux operating system, but also tested on Windows 10 OS. So, some comments are provided in requirements.txt. If you want clear all-at-once installation, remove comments from requirements.txt and use:  
+``pip3 install -r requirements.txt``
 
+API keys are provided in config/config.py file and can be used (for some time surely). Concretely Open Weather Map and OMDB requires API key for authentication. Also, test email address credentials (for mail sending service) are provided.
 
 Use another Web API speech-to-text service
 ------------------------------------------
@@ -37,7 +40,7 @@ Possibly, you will need to install oauth2 library for authentication (``pip3 ins
 If you got dependencies errors (swig and pulse), use this:  
 ``sudo apt-get install libpulse-dev swig``
 
-After this, try to install pocketsphinx.
-Most of the other API services are available to use without any additional installation. Also, most of them (the "web" ones), requires credentials in form of the API key). For further instructions reffer to this page: <https://github.com/Uberi/speech_recognition/edit/master/README.rst>
+After dependcies installation, try to install pocketsphinx.
+Most of the other API services are available to use without any additional installation. Also, most of them (the "web" ones), requires credentials in form of the API key. For further instructions refer to this page: <https://github.com/Uberi/speech_recognition/edit/master/README.rst>
 
 
