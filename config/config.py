@@ -50,7 +50,7 @@ LANG_KEYWORDS = {
 # answers
 
 # commands
-COMMANDS = "data/commands/commands-en.json"
+COMMANDS = "data/commands/commands.json"
 # TODO: refactor path variables to be in dictionary form for simpler usage
 
 # action result statuses

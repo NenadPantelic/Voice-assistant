@@ -10,9 +10,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":"initial",
-      "setup_command":true,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "messages":{
          "success":{
@@ -40,9 +38,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":true,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -70,9 +66,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":"invalid",
-      "setup_command":true,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -100,9 +94,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":"ambiguous",
-      "setup_command":true,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -130,9 +122,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":true,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "messages":{
          "success":{
@@ -160,9 +150,7 @@
       "process_input_text":true,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -190,9 +178,7 @@
       "process_input_text":true,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -220,17 +206,16 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"90f0bfbc-e3f9-4291-bb4e-28b5ddcb2f4d",
       "messages":{
-         "success": {
-             "en":"Ok, I can do it. What's the source language?",
-             "sr":"Mislim da mogu da ti pomognem. Koji je izvorni jezik sa kog želiš da prevedem?"
-         }, "fail": {
-            "en": "Actually I'm not sure what you meant. Possible solution, say again!",
-            "sr": "Zapravo, nisa siguran šta želiš. Možda će stvar rešiti ako probaš ponovo!"
+         "success":{
+            "en":"Ok, I can do it. What's the source language?",
+            "sr":"Mislim da mogu da ti pomognem. Koji je izvorni jezik sa kog želiš da prevedem?"
+         },
+         "fail":{
+            "en":"Actually I'm not sure what you meant. Possible solution, say again!",
+            "sr":"Zapravo, nisa siguran šta želiš. Možda će stvar rešiti ako probaš ponovo!"
          }
       },
       "descriptions":{
@@ -249,15 +234,14 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"5708d0b1-f1d6-4852-930d-8d950f980de1",
       "messages":{
-         "success": {
+         "success":{
             "en":"Yes, I can handle that. Say text for translation.",
             "sr":"Da, snaći ću se sa tim. Koji tekst želiš da prevedem?"
-      }, "fail": {
+         },
+         "fail":{
             "en":"Nope, I have a problem. Say again.",
             "sr":"Ne, imam problem. Ponovi."
          }
@@ -278,15 +262,14 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"e57f3a23-2950-4d1a-88d7-05c6ec072d60",
       "messages":{
-         "success": {
+         "success":{
             "en":"What's the target language?",
             "sr":"Na koji jezik želiš da prevedem ovo?"
-      },"fail": {
+         },
+         "fail":{
             "en":"Unfortunately, I cannot handle your command. Repeat command!",
             "sr":"Nažalost, nisam uspeo da odradim šta želiš. Ponovi komandu!"
          }
@@ -307,20 +290,17 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
-         "success": {
+         "success":{
             "en":"I think that translated speech sounds like this: ",
-         "sr":"Mislim da prevod glasi ovako: "
+            "sr":"Mislim da prevod glasi ovako: "
          },
-         "fail": {
+         "fail":{
             "en":"I could translate the given speech. Please, try again!",
-         "sr":"Nisam uspeo da prevedem govor. Molim, probaj ponovo!"
+            "sr":"Nisam uspeo da prevedem govor. Molim, probaj ponovo!"
          }
-
       },
       "descriptions":{
          "en":"Translates original speech text.",
@@ -338,9 +318,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"fbd5ec45-953c-4c2b-849e-6b5aa0fc8a86",
       "messages":{
          "success":{
@@ -368,9 +346,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"f8a2265d-ab46-41a4-8260-434f9f8decdc",
       "messages":{
          "success":{
@@ -398,9 +374,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"8b33b6a0-7bfb-489c-b6df-12eceefa8ebe",
       "messages":{
          "success":{
@@ -428,9 +402,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -458,9 +430,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"0d473e1c-45a8-4869-bc01-17a01543ba1f",
       "messages":{
          "success":{
@@ -488,9 +458,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -518,9 +486,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"969eac4b-fb8e-4778-9872-553af12a4819",
       "messages":{
          "success":{
@@ -548,9 +514,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -578,9 +542,7 @@
       "process_input_text":false,
       "input_processing_method":"get_social_network_base_url",
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"4478af5d-5536-4f92-a1c1-03a5abc20222",
       "messages":{
          "success":{
@@ -608,9 +570,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -638,9 +598,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"6a90cef4-a6c2-472b-939f-480f138b443d",
       "messages":{
          "success":{
@@ -668,9 +626,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"c8849c8d-b52d-4519-8f4a-40c97f0f4f4a",
       "messages":{
          "success":{
@@ -698,9 +654,7 @@
       "process_input_text":false,
       "input_processing_method":"get_search_type",
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -728,9 +682,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":false,
-      "previous_command_id":null,
       "next_command_id":"13d9c09c-b5cb-4c0a-b6a2-ec1e1ead53c0",
       "messages":{
          "en":"Hm, I can run some programs. What program you're seeking for?.",
@@ -752,9 +704,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "en":"By your input, I think you wanted this action.",
@@ -776,9 +726,7 @@
       "process_input_text":false,
       "input_processing_method":"get_relay_state",
       "tag":null,
-      "setup_command":false,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{
@@ -806,9 +754,7 @@
       "process_input_text":false,
       "input_processing_method":null,
       "tag":"final",
-      "setup_command":true,
       "is_ready":true,
-      "previous_command_id":null,
       "next_command_id":null,
       "messages":{
          "success":{

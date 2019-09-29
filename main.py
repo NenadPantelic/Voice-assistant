@@ -42,7 +42,6 @@ if __name__ == "__main__":
     while True:
         try:
             logger.debug("New command session....")
-            sleep(1)
             controller.listen_and_execute()
         except KeyboardInterrupt:
             controller.finalize()
