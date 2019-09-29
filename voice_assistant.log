@@ -1077,3 +1077,265 @@ trenutak merenja: 29-09-2019 10:51:25,
 09/29/2019 01:02:00 PM: DEBUG - part-17 written to <_io.BufferedWriter name='data/audio/1569754916.7046971.mp3'>
 09/29/2019 01:02:00 PM: DEBUG - Saved to data/audio/1569754916.7046971.mp3
 09/29/2019 01:02:37 PM: INFO - Ready for command...
+09/29/2019 01:09:54 PM: DEBUG - tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=\\!).|(?<=\\？).|(?<=\\！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z])\\, |(?<!\\d)\\:|\\(|\\…|\\、|\\¿|\\：|\\‥|\\،|\\]|\\;|\\[|\\，|\\)|\\。|\\—|\\¡|\\\n', re.IGNORECASE) from: [<function tone_marks at 0x7fd51925e730>, <function period_comma at 0x7fd51925e7b8>, <function colon at 0x7fd51925e840>, <function other_punctuation at 0x7fd51925e8c8>]>
+09/29/2019 01:09:54 PM: DEBUG - pre_processor_funcs: [<function tone_marks at 0x7fd519245d08>, <function end_of_line at 0x7fd51925e510>, <function abbreviations at 0x7fd51925e598>, <function word_sub at 0x7fd51925e620>]
+09/29/2019 01:09:54 PM: DEBUG - lang_check: True
+09/29/2019 01:09:54 PM: DEBUG - slow: False
+09/29/2019 01:09:54 PM: DEBUG - lang: en-us
+09/29/2019 01:09:54 PM: DEBUG - text: dummy
+09/29/2019 01:09:54 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:09:55 PM: DEBUG - https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+09/29/2019 01:09:55 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:09:55 PM: DEBUG - https://translate.google.com:443 "GET //translate/releases/twsfe_w_20190923_RC05/r/js/translate_m.js HTTP/1.1" 200 555734
+09/29/2019 01:09:55 PM: DEBUG - langs: {'af': 'Afrikaans', 'sq': 'Albanian', 'ar': 'Arabic', 'hy': 'Armenian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'hr': 'Croatian', 'cs': 'Czech', 'da': 'Danish', 'nl': 'Dutch', 'en': 'English', 'eo': 'Esperanto', 'et': 'Estonian', 'tl': 'Filipino', 'fi': 'Finnish', 'fr': 'French', 'de': 'German', 'el': 'Greek', 'gu': 'Gujarati', 'hi': 'Hindi', 'hu': 'Hungarian', 'is': 'Icelandic', 'id': 'Indonesian', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'kn': 'Kannada', 'km': 'Khmer', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'sr': 'Serbian', 'si': 'Sinhala', 'sk': 'Slovak', 'es': 'Spanish', 'su': 'Sundanese', 'sw': 'Swahili', 'sv': 'Swedish', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'cy': 'Welsh', 'zh-cn': 'Chinese (Mandarin/China)', 'zh-tw': 'Chinese (Mandarin/Taiwan)', 'en-us': 'English (US)', 'en-ca': 'English (Canada)', 'en-uk': 'English (UK)', 'en-gb': 'English (UK)', 'en-au': 'English (Australia)', 'en-gh': 'English (Ghana)', 'en-in': 'English (India)', 'en-ie': 'English (Ireland)', 'en-nz': 'English (New Zealand)', 'en-ng': 'English (Nigeria)', 'en-ph': 'English (Philippines)', 'en-za': 'English (South Africa)', 'en-tz': 'English (Tanzania)', 'fr-ca': 'French (Canada)', 'fr-fr': 'French (France)', 'pt-br': 'Portuguese (Brazil)', 'pt-pt': 'Portuguese (Portugal)', 'es-es': 'Spanish (Spain)', 'es-us': 'Spanish (United States)'}
+09/29/2019 01:09:55 PM: DEBUG - Text processor _language = en.
+09/29/2019 01:10:34 PM: DEBUG - tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=\\!).|(?<=\\？).|(?<=\\！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z])\\, |(?<!\\d)\\:|\\،|\\[|\\;|\\，|\\、|\\…|\\‥|\\¿|\\。|\\)|\\：|\\\n|\\¡|\\—|\\]|\\(', re.IGNORECASE) from: [<function tone_marks at 0x7f763aa8a730>, <function period_comma at 0x7f763aa8a7b8>, <function colon at 0x7f763aa8a840>, <function other_punctuation at 0x7f763aa8a8c8>]>
+09/29/2019 01:10:34 PM: DEBUG - pre_processor_funcs: [<function tone_marks at 0x7f763b3cad08>, <function end_of_line at 0x7f763aa8a510>, <function abbreviations at 0x7f763aa8a598>, <function word_sub at 0x7f763aa8a620>]
+09/29/2019 01:10:34 PM: DEBUG - lang_check: True
+09/29/2019 01:10:34 PM: DEBUG - slow: False
+09/29/2019 01:10:34 PM: DEBUG - lang: en-us
+09/29/2019 01:10:34 PM: DEBUG - text: dummy
+09/29/2019 01:10:34 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:10:34 PM: DEBUG - https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+09/29/2019 01:10:34 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:10:34 PM: DEBUG - https://translate.google.com:443 "GET //translate/releases/twsfe_w_20190923_RC05/r/js/translate_m.js HTTP/1.1" 200 555734
+09/29/2019 01:10:34 PM: DEBUG - langs: {'af': 'Afrikaans', 'sq': 'Albanian', 'ar': 'Arabic', 'hy': 'Armenian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'hr': 'Croatian', 'cs': 'Czech', 'da': 'Danish', 'nl': 'Dutch', 'en': 'English', 'eo': 'Esperanto', 'et': 'Estonian', 'tl': 'Filipino', 'fi': 'Finnish', 'fr': 'French', 'de': 'German', 'el': 'Greek', 'gu': 'Gujarati', 'hi': 'Hindi', 'hu': 'Hungarian', 'is': 'Icelandic', 'id': 'Indonesian', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'kn': 'Kannada', 'km': 'Khmer', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'sr': 'Serbian', 'si': 'Sinhala', 'sk': 'Slovak', 'es': 'Spanish', 'su': 'Sundanese', 'sw': 'Swahili', 'sv': 'Swedish', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'cy': 'Welsh', 'zh-cn': 'Chinese (Mandarin/China)', 'zh-tw': 'Chinese (Mandarin/Taiwan)', 'en-us': 'English (US)', 'en-ca': 'English (Canada)', 'en-uk': 'English (UK)', 'en-gb': 'English (UK)', 'en-au': 'English (Australia)', 'en-gh': 'English (Ghana)', 'en-in': 'English (India)', 'en-ie': 'English (Ireland)', 'en-nz': 'English (New Zealand)', 'en-ng': 'English (Nigeria)', 'en-ph': 'English (Philippines)', 'en-za': 'English (South Africa)', 'en-tz': 'English (Tanzania)', 'fr-ca': 'French (Canada)', 'fr-fr': 'French (France)', 'pt-br': 'Portuguese (Brazil)', 'pt-pt': 'Portuguese (Portugal)', 'es-es': 'Spanish (Spain)', 'es-us': 'Spanish (United States)'}
+09/29/2019 01:10:34 PM: DEBUG - Text processor _language = en.
+09/29/2019 01:10:34 PM: DEBUG - Setting wikipedia _language: en
+09/29/2019 01:10:35 PM: INFO - using lxml
+09/29/2019 01:10:35 PM: DEBUG - Command resolver _language = en.
+09/29/2019 01:10:35 PM: DEBUG - Populating service command methods....
+09/29/2019 01:10:35 PM: DEBUG - Next command's id = 6dae42df-6029-4e47-8e5a-c435341e1108
+09/29/2019 01:10:35 PM: DEBUG - Command for execution = {'command_id': '536007cb-67ff-492c-8c65-01995ef195c9', 'service': None, 'method': None, 'has_args': False, 'arg_name': None, 'arg_type': None, 'need_input': False, 'process_input_text': False, 'input_processing_method': None, 'tag': 'initial', 'setup_command': True, 'is_ready': True, 'previous_command_id': None, 'next_command_id': '6dae42df-6029-4e47-8e5a-c435341e1108', 'messages': {'success': {'en': "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!", 'sr': 'Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!'}, 'fail': {'en': "I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if error happens again!", 'sr': 'Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probaj ponovo ili kasnije ukoliko to ne prođe!'}}, 'descriptions': {'en': 'Initial command.', 'sr': 'Incijalna komanda.'}}
+09/29/2019 01:10:35 PM: DEBUG - pre-processing: <function tone_marks at 0x7f763b3cad08>
+09/29/2019 01:10:35 PM: DEBUG - pre-processing: <function end_of_line at 0x7f763aa8a510>
+09/29/2019 01:10:35 PM: DEBUG - pre-processing: <function abbreviations at 0x7f763aa8a598>
+09/29/2019 01:10:35 PM: DEBUG - pre-processing: <function word_sub at 0x7f763aa8a620>
+09/29/2019 01:10:35 PM: DEBUG - text_parts: 1
+09/29/2019 01:10:35 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:10:35 PM: DEBUG - https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+09/29/2019 01:10:35 PM: DEBUG - payload-0: {'ie': 'UTF-8', 'q': "Hi, I'm Lindo voice assistant. Choose operating language. Default option is English(USA)!", 'tl': 'en-us', 'ttsspeed': 1, 'total': 1, 'idx': 0, 'client': 'tw-ob', 'textlen': 89, 'tk': '99403.467712'}
+09/29/2019 01:10:35 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:10:35 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=Hi%2C+I%27m+Lindo+voice+assistant.+Choose+operating+language.+Default+option+is+English%28USA%29%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=89&tk=99403.467712 HTTP/1.1" 200 29760
+09/29/2019 01:10:35 PM: DEBUG - headers-0: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:10:35 PM: DEBUG - url-0: https://translate.google.com/translate_tts?ie=UTF-8&q=Hi%2C+I%27m+Lindo+voice+assistant.+Choose+operating+language.+Default+option+is+English%28USA%29%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=89&tk=99403.467712
+09/29/2019 01:10:35 PM: DEBUG - status-0: 200
+09/29/2019 01:10:35 PM: DEBUG - part-0 written to <_io.BufferedWriter name='data/audio/1569755435.0437489.mp3'>
+09/29/2019 01:10:35 PM: DEBUG - Saved to data/audio/1569755435.0437489.mp3
+09/29/2019 01:10:43 PM: INFO - Ready for command...
+09/29/2019 01:10:45 PM: DEBUG - Audio data = <speech_recognition.AudioData object at 0x7f7630e41f98>
+09/29/2019 01:10:46 PM: DEBUG - Speech recognition result = ActionResult = [result = lynx Urban, status = 1, _language = None].
+09/29/2019 01:10:46 PM: DEBUG - Text to be processed = lynx urban
+09/29/2019 01:10:46 PM: DEBUG - Text without special chars = lynx urban
+09/29/2019 01:10:46 PM: DEBUG - Text without target words = ['lynx', 'urban']
+09/29/2019 01:10:46 PM: DEBUG - Next command's id = None
+09/29/2019 01:10:46 PM: DEBUG - Command for execution = {'command_id': '6dae42df-6029-4e47-8e5a-c435341e1108', 'service': None, 'method': 'set_language', 'has_args': True, 'arg_name': 'language_str', 'arg_type': 'str', 'need_input': False, 'process_input_text': False, 'input_processing_method': None, 'tag': None, 'setup_command': True, 'is_ready': True, 'previous_command_id': None, 'next_command_id': None, 'messages': {'success': {'en': 'Language is set successfully.', 'sr': 'Jезик је успешно постављен.'}, 'fail': {'en': 'I have some problems with language setting. Be kind to try again, speak clear and loud.', 'sr': 'Imam problema sa postavkom jezika. Budi ljubazan da probaš opet, govori jasno i glasno.'}}, 'descriptions': {'en': 'Set operating language of voice assistant.', 'sr': 'Поставља оперативни језик гласовног асистента.'}, 'arg': 'lynx urban'}
+09/29/2019 01:10:46 PM: DEBUG - Operating _language = None.
+09/29/2019 01:10:46 PM: WARNING - An exception occurred.
+09/29/2019 01:10:46 PM: ERROR - Traceback (most recent call last):
+  File "/home/nenad/Documents/Voice-assistant/controller.py", line 33, in set_language
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nenad/Documents/Voice-assistant/controller.py", line 197, in _execute_controller_method
+    command_result = eval('executor(' + command["arg_name"] + "=" + "'" + str(command["arg"]) + "')")
+  File "<string>", line 1, in <module>
+  File "/home/nenad/Documents/Voice-assistant/controller.py", line 42, in set_language
+    raise ValueError("Language is not supported. Use English or Serbian.")
+ValueError: Language is not supported. Use English or Serbian.
+
+09/29/2019 01:10:46 PM: DEBUG - Message prefix = I have some problems with language setting. Be kind to try again, speak clear and loud.
+09/29/2019 01:10:46 PM: DEBUG - pre-processing: <function tone_marks at 0x7f763b3cad08>
+09/29/2019 01:10:46 PM: DEBUG - pre-processing: <function end_of_line at 0x7f763aa8a510>
+09/29/2019 01:10:46 PM: DEBUG - pre-processing: <function abbreviations at 0x7f763aa8a598>
+09/29/2019 01:10:46 PM: DEBUG - pre-processing: <function word_sub at 0x7f763aa8a620>
+09/29/2019 01:10:46 PM: DEBUG - text_parts: 1
+09/29/2019 01:10:46 PM: DEBUG - payload-0: {'ie': 'UTF-8', 'q': 'I have some problems with language setting. Be kind to try again, speak clear and loud.', 'tl': 'en-us', 'ttsspeed': 1, 'total': 1, 'idx': 0, 'client': 'tw-ob', 'textlen': 87, 'tk': '832088.660755'}
+09/29/2019 01:10:46 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:10:47 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=I+have+some+problems+with+language+setting.+Be+kind+to+try+again%2C+speak+clear+and+loud.&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=87&tk=832088.660755 HTTP/1.1" 200 23328
+09/29/2019 01:10:47 PM: DEBUG - headers-0: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:10:47 PM: DEBUG - url-0: https://translate.google.com/translate_tts?ie=UTF-8&q=I+have+some+problems+with+language+setting.+Be+kind+to+try+again%2C+speak+clear+and+loud.&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=87&tk=832088.660755
+09/29/2019 01:10:47 PM: DEBUG - status-0: 200
+09/29/2019 01:10:47 PM: DEBUG - part-0 written to <_io.BufferedWriter name='data/audio/1569755446.5369644.mp3'>
+09/29/2019 01:10:47 PM: DEBUG - Saved to data/audio/1569755446.5369644.mp3
+09/29/2019 01:10:52 PM: DEBUG - Output message = Some internal error occurred. Check log for more details!
+09/29/2019 01:10:52 PM: DEBUG - pre-processing: <function tone_marks at 0x7f763b3cad08>
+09/29/2019 01:10:52 PM: DEBUG - pre-processing: <function end_of_line at 0x7f763aa8a510>
+09/29/2019 01:10:52 PM: DEBUG - pre-processing: <function abbreviations at 0x7f763aa8a598>
+09/29/2019 01:10:52 PM: DEBUG - pre-processing: <function word_sub at 0x7f763aa8a620>
+09/29/2019 01:10:52 PM: DEBUG - text_parts: 1
+09/29/2019 01:10:52 PM: DEBUG - payload-0: {'ie': 'UTF-8', 'q': 'Some internal error occurred. Check log for more details!', 'tl': 'en-us', 'ttsspeed': 1, 'total': 1, 'idx': 0, 'client': 'tw-ob', 'textlen': 57, 'tk': '492533.74942'}
+09/29/2019 01:10:52 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:10:53 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=Some+internal+error+occurred.+Check+log+for+more+details%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=57&tk=492533.74942 HTTP/1.1" 200 17664
+09/29/2019 01:10:53 PM: DEBUG - headers-0: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:10:53 PM: DEBUG - url-0: https://translate.google.com/translate_tts?ie=UTF-8&q=Some+internal+error+occurred.+Check+log+for+more+details%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=57&tk=492533.74942
+09/29/2019 01:10:53 PM: DEBUG - status-0: 200
+09/29/2019 01:10:53 PM: DEBUG - part-0 written to <_io.BufferedWriter name='data/audio/1569755452.9883792.mp3'>
+09/29/2019 01:10:53 PM: DEBUG - Saved to data/audio/1569755452.9883792.mp3
+09/29/2019 01:10:57 PM: INFO - Ready for command...
+09/29/2019 01:11:00 PM: DEBUG - Audio data = <speech_recognition.AudioData object at 0x7f7630e41f98>
+09/29/2019 01:11:01 PM: DEBUG - Speech recognition result = ActionResult = [result = Serbian, status = 1, _language = None].
+09/29/2019 01:11:01 PM: DEBUG - Text to be processed = serbian
+09/29/2019 01:11:01 PM: DEBUG - Text without special chars = serbian
+09/29/2019 01:11:01 PM: DEBUG - Text without target words = ['serbian']
+09/29/2019 01:11:01 PM: DEBUG - Next command's id = None
+09/29/2019 01:11:01 PM: DEBUG - Command for execution = {'command_id': '6dae42df-6029-4e47-8e5a-c435341e1108', 'service': None, 'method': 'set_language', 'has_args': True, 'arg_name': 'language_str', 'arg_type': 'str', 'need_input': False, 'process_input_text': False, 'input_processing_method': None, 'tag': None, 'setup_command': True, 'is_ready': True, 'previous_command_id': None, 'next_command_id': None, 'messages': {'success': {'en': 'Language is set successfully.', 'sr': 'Jезик је успешно постављен.'}, 'fail': {'en': 'I have some problems with language setting. Be kind to try again, speak clear and loud.', 'sr': 'Imam problema sa postavkom jezika. Budi ljubazan da probaš opet, govori jasno i glasno.'}}, 'descriptions': {'en': 'Set operating language of voice assistant.', 'sr': 'Поставља оперативни језик гласовног асистента.'}, 'arg': 'serbian'}
+09/29/2019 01:11:01 PM: DEBUG - Operating _language = sr.
+09/29/2019 01:11:01 PM: DEBUG - Setting wikipedia _language: sr
+09/29/2019 01:11:01 PM: DEBUG - Setting owm _language: sr
+09/29/2019 01:11:01 PM: DEBUG - Command resolver _language = sr.
+09/29/2019 01:11:01 PM: DEBUG - Text processor _language = sr.
+09/29/2019 01:11:01 PM: DEBUG - Message prefix = Jезик је успешно постављен.
+09/29/2019 01:11:01 PM: DEBUG - pre-processing: <function tone_marks at 0x7f763b3cad08>
+09/29/2019 01:11:01 PM: DEBUG - pre-processing: <function end_of_line at 0x7f763aa8a510>
+09/29/2019 01:11:01 PM: DEBUG - pre-processing: <function abbreviations at 0x7f763aa8a598>
+09/29/2019 01:11:01 PM: DEBUG - pre-processing: <function word_sub at 0x7f763aa8a620>
+09/29/2019 01:11:01 PM: DEBUG - text_parts: 1
+09/29/2019 01:11:01 PM: DEBUG - payload-0: {'ie': 'UTF-8', 'q': 'Jезик је успешно постављен.', 'tl': 'sr', 'ttsspeed': 1, 'total': 1, 'idx': 0, 'client': 'tw-ob', 'textlen': 27, 'tk': '544839.980748'}
+09/29/2019 01:11:01 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:01 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=J%D0%B5%D0%B7%D0%B8%D0%BA+%D1%98%D0%B5+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D1%99%D0%B5%D0%BD.&tl=sr&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=27&tk=544839.980748 HTTP/1.1" 200 11180
+09/29/2019 01:11:01 PM: DEBUG - headers-0: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:01 PM: DEBUG - url-0: https://translate.google.com/translate_tts?ie=UTF-8&q=J%D0%B5%D0%B7%D0%B8%D0%BA+%D1%98%D0%B5+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D1%99%D0%B5%D0%BD.&tl=sr&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=27&tk=544839.980748
+09/29/2019 01:11:01 PM: DEBUG - status-0: 200
+09/29/2019 01:11:01 PM: DEBUG - part-0 written to <_io.BufferedWriter name='data/audio/1569755461.488478.mp3'>
+09/29/2019 01:11:01 PM: DEBUG - Saved to data/audio/1569755461.488478.mp3
+09/29/2019 01:11:04 PM: DEBUG - Output message = 
+09/29/2019 01:11:04 PM: INFO - Ready for command...
+09/29/2019 01:11:08 PM: DEBUG - Audio data = <speech_recognition.AudioData object at 0x7f7630e41f98>
+09/29/2019 01:11:09 PM: DEBUG - Speech recognition result = ActionResult = [result = on je bio Dositej Obradović, status = 1, _language = None].
+09/29/2019 01:11:09 PM: DEBUG - Text to be processed = on je bio dositej obradović
+09/29/2019 01:11:09 PM: DEBUG - Text without special chars = on je bio dositej obradović
+09/29/2019 01:11:09 PM: DEBUG - Text without target words = ['je', 'bio', 'dositej', 'obradović']
+09/29/2019 01:11:09 PM: DEBUG - Calculating commands scores...
+09/29/2019 01:11:09 PM: DEBUG - Next command's id = None
+09/29/2019 01:11:09 PM: DEBUG - Text without keywords = dositej obradović
+09/29/2019 01:11:09 PM: DEBUG - Command for execution = {'command_id': '0498476b-f599-488c-8c98-a314c64d77f2', 'service': 'wikipedia', 'method': 'brief_search', 'has_args': True, 'arg_name': 'query', 'arg_type': 'str', 'need_input': False, 'process_input_text': True, 'input_processing_method': None, 'tag': None, 'setup_command': False, 'is_ready': True, 'previous_command_id': None, 'next_command_id': None, 'messages': {'success': {'en': 'By Wikipedia: ', 'sr': 'Prema Vikipediji: '}, 'fail': {'en': "Unfortunately, I met some problems during request handling. I think issue lies in voice comprehention. I'm suggesting to try again.", 'sr': 'Nažalost, došlo je do nekih problema. Verovatno zbog razumevanja govora. Moj savet je da probaš ponovo.'}}, 'descriptions': {'en': 'Brief Wikipedia search. Returns summary of wikipedia page.', 'sr': 'Kratak rezime dobijen sa strane dobijene sa Vikipedije.'}, 'arg': 'dositej obradović'}
+09/29/2019 01:11:09 PM: DEBUG - Argument before processing: [type_ = <class 'str'>, value = dositej obradović]
+09/29/2019 01:11:09 PM: DEBUG - Argument after processing: [type_ = <class 'str'>, value = dositej obradović]
+09/29/2019 01:11:09 PM: INFO - -------- begin commit --------
+09/29/2019 01:11:09 PM: DEBUG - Calling wikipedia brief_search with [query = dositej obradović]
+09/29/2019 01:11:09 PM: DEBUG - Starting new HTTP connection (1): sr.wikipedia.org:80
+09/29/2019 01:11:09 PM: DEBUG - http://sr.wikipedia.org:80 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=dositej+obradovi%C4%87&srinfo=suggestion&format=json&action=query HTTP/1.1" 301 0
+09/29/2019 01:11:09 PM: DEBUG - Starting new HTTPS connection (1): sr.wikipedia.org:443
+09/29/2019 01:11:10 PM: DEBUG - https://sr.wikipedia.org:443 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=dositej+obradovi%C4%87&srinfo=suggestion&format=json&action=query HTTP/1.1" 200 212
+09/29/2019 01:11:10 PM: DEBUG - Starting new HTTP connection (1): sr.wikipedia.org:80
+09/29/2019 01:11:10 PM: DEBUG - http://sr.wikipedia.org:80 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=%D0%A1%D0%BF%D0%BE%D0%BC%D0%B5%D0%BD%D0%B8%D0%BA+%D0%94%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D1%98%D1%83+%D0%9E%D0%B1%D1%80%D0%B0%D0%B4%D0%BE%D0%B2%D0%B8%D1%9B%D1%83&format=json&action=query HTTP/1.1" 301 0
+09/29/2019 01:11:10 PM: DEBUG - Starting new HTTPS connection (1): sr.wikipedia.org:443
+09/29/2019 01:11:10 PM: DEBUG - https://sr.wikipedia.org:443 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=%D0%A1%D0%BF%D0%BE%D0%BC%D0%B5%D0%BD%D0%B8%D0%BA+%D0%94%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D1%98%D1%83+%D0%9E%D0%B1%D1%80%D0%B0%D0%B4%D0%BE%D0%B2%D0%B8%D1%9B%D1%83&format=json&action=query HTTP/1.1" 200 377
+09/29/2019 01:11:10 PM: DEBUG - Starting new HTTP connection (1): sr.wikipedia.org:80
+09/29/2019 01:11:10 PM: DEBUG - http://sr.wikipedia.org:80 "GET /w/api.php?prop=extracts&explaintext=&titles=%D0%A1%D0%BF%D0%BE%D0%BC%D0%B5%D0%BD%D0%B8%D0%BA+%D0%94%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D1%98%D1%83+%D0%9E%D0%B1%D1%80%D0%B0%D0%B4%D0%BE%D0%B2%D0%B8%D1%9B%D1%83&exsentences=3&format=json&action=query HTTP/1.1" 301 0
+09/29/2019 01:11:10 PM: DEBUG - Starting new HTTPS connection (1): sr.wikipedia.org:443
+09/29/2019 01:11:11 PM: DEBUG - https://sr.wikipedia.org:443 "GET /w/api.php?prop=extracts&explaintext=&titles=%D0%A1%D0%BF%D0%BE%D0%BC%D0%B5%D0%BD%D0%B8%D0%BA+%D0%94%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D1%98%D1%83+%D0%9E%D0%B1%D1%80%D0%B0%D0%B4%D0%BE%D0%B2%D0%B8%D1%9B%D1%83&exsentences=3&format=json&action=query HTTP/1.1" 200 412
+09/29/2019 01:11:11 PM: DEBUG - Wikipedia summary = Доситеј (Димитрије) Обрадовић (Чаково, 1739, 1742. или 1744 — Београд, 28. март 1811) је био српски књижевник, просветитељ и реформатор револуционарног периода националног буђења и препорода.
+09/29/2019 01:11:11 PM: DEBUG - Output = ActionResult = [result = Доситеј (Димитрије) Обрадовић (Чаково, 1739, 1742. или 1744 — Београд, 28. март 1811) је био српски књижевник, просветитељ и реформатор револуционарног периода националног буђења и препорода., status = 1, _language = None].
+09/29/2019 01:11:11 PM: INFO - -------- end commit --------
+09/29/2019 01:11:11 PM: DEBUG - Message prefix = Prema Vikipediji: 
+09/29/2019 01:11:11 PM: DEBUG - pre-processing: <function tone_marks at 0x7f763b3cad08>
+09/29/2019 01:11:11 PM: DEBUG - pre-processing: <function end_of_line at 0x7f763aa8a510>
+09/29/2019 01:11:11 PM: DEBUG - pre-processing: <function abbreviations at 0x7f763aa8a598>
+09/29/2019 01:11:11 PM: DEBUG - pre-processing: <function word_sub at 0x7f763aa8a620>
+09/29/2019 01:11:11 PM: DEBUG - text_parts: 1
+09/29/2019 01:11:11 PM: DEBUG - payload-0: {'ie': 'UTF-8', 'q': 'Prema Vikipediji:', 'tl': 'sr', 'ttsspeed': 1, 'total': 1, 'idx': 0, 'client': 'tw-ob', 'textlen': 17, 'tk': '832225.660906'}
+09/29/2019 01:11:11 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:11 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=Prema+Vikipediji%3A&tl=sr&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=17&tk=832225.660906 HTTP/1.1" 200 7732
+09/29/2019 01:11:11 PM: DEBUG - headers-0: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:11 PM: DEBUG - url-0: https://translate.google.com/translate_tts?ie=UTF-8&q=Prema+Vikipediji%3A&tl=sr&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=17&tk=832225.660906
+09/29/2019 01:11:11 PM: DEBUG - status-0: 200
+09/29/2019 01:11:11 PM: DEBUG - part-0 written to <_io.BufferedWriter name='data/audio/1569755471.5251417.mp3'>
+09/29/2019 01:11:11 PM: DEBUG - Saved to data/audio/1569755471.5251417.mp3
+09/29/2019 01:11:13 PM: DEBUG - Output message = Доситеј (Димитрије) Обрадовић (Чаково, 1739, 1742. или 1744 — Београд, 28. март 1811) је био српски књижевник, просветитељ и реформатор револуционарног периода националног буђења и препорода.
+09/29/2019 01:11:13 PM: DEBUG - pre-processing: <function tone_marks at 0x7f763b3cad08>
+09/29/2019 01:11:13 PM: DEBUG - pre-processing: <function end_of_line at 0x7f763aa8a510>
+09/29/2019 01:11:13 PM: DEBUG - pre-processing: <function abbreviations at 0x7f763aa8a598>
+09/29/2019 01:11:13 PM: DEBUG - pre-processing: <function word_sub at 0x7f763aa8a620>
+09/29/2019 01:11:13 PM: DEBUG - tokenizing: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=\\!).|(?<=\\？).|(?<=\\！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z])\\, |(?<!\\d)\\:|\\،|\\[|\\;|\\，|\\、|\\…|\\‥|\\¿|\\。|\\)|\\：|\\\n|\\¡|\\—|\\]|\\(', re.IGNORECASE) from: [<function tone_marks at 0x7f763aa8a730>, <function period_comma at 0x7f763aa8a7b8>, <function colon at 0x7f763aa8a840>, <function other_punctuation at 0x7f763aa8a8c8>]>
+09/29/2019 01:11:13 PM: DEBUG - text_parts: 12
+09/29/2019 01:11:13 PM: DEBUG - payload-0: {'ie': 'UTF-8', 'q': 'Доситеј', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 0, 'client': 'tw-ob', 'textlen': 7, 'tk': '174739.265688'}
+09/29/2019 01:11:13 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:13 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=%D0%94%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D1%98&tl=sr&ttsspeed=1&total=12&idx=0&client=tw-ob&textlen=7&tk=174739.265688 HTTP/1.1" 200 3030
+09/29/2019 01:11:13 PM: DEBUG - headers-0: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:13 PM: DEBUG - url-0: https://translate.google.com/translate_tts?ie=UTF-8&q=%D0%94%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D1%98&tl=sr&ttsspeed=1&total=12&idx=0&client=tw-ob&textlen=7&tk=174739.265688
+09/29/2019 01:11:13 PM: DEBUG - status-0: 200
+09/29/2019 01:11:13 PM: DEBUG - part-0 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:13 PM: DEBUG - payload-1: {'ie': 'UTF-8', 'q': 'Димитрије', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 1, 'client': 'tw-ob', 'textlen': 9, 'tk': '664223.820692'}
+09/29/2019 01:11:13 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:14 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D1%98%D0%B5&tl=sr&ttsspeed=1&total=12&idx=1&client=tw-ob&textlen=9&tk=664223.820692 HTTP/1.1" 200 3239
+09/29/2019 01:11:14 PM: DEBUG - headers-1: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:14 PM: DEBUG - url-1: https://translate.google.com/translate_tts?ie=UTF-8&q=%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D1%98%D0%B5&tl=sr&ttsspeed=1&total=12&idx=1&client=tw-ob&textlen=9&tk=664223.820692
+09/29/2019 01:11:14 PM: DEBUG - status-1: 200
+09/29/2019 01:11:14 PM: DEBUG - part-1 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:14 PM: DEBUG - payload-2: {'ie': 'UTF-8', 'q': 'Обрадовић', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 2, 'client': 'tw-ob', 'textlen': 9, 'tk': '496262.79309'}
+09/29/2019 01:11:14 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:14 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=%D0%9E%D0%B1%D1%80%D0%B0%D0%B4%D0%BE%D0%B2%D0%B8%D1%9B&tl=sr&ttsspeed=1&total=12&idx=2&client=tw-ob&textlen=9&tk=496262.79309 HTTP/1.1" 200 3762
+09/29/2019 01:11:14 PM: DEBUG - headers-2: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:14 PM: DEBUG - url-2: https://translate.google.com/translate_tts?ie=UTF-8&q=%D0%9E%D0%B1%D1%80%D0%B0%D0%B4%D0%BE%D0%B2%D0%B8%D1%9B&tl=sr&ttsspeed=1&total=12&idx=2&client=tw-ob&textlen=9&tk=496262.79309
+09/29/2019 01:11:14 PM: DEBUG - status-2: 200
+09/29/2019 01:11:14 PM: DEBUG - part-2 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:14 PM: DEBUG - payload-3: {'ie': 'UTF-8', 'q': 'Чаково', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 3, 'client': 'tw-ob', 'textlen': 6, 'tk': '81204.498303'}
+09/29/2019 01:11:14 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:14 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=%D0%A7%D0%B0%D0%BA%D0%BE%D0%B2%D0%BE&tl=sr&ttsspeed=1&total=12&idx=3&client=tw-ob&textlen=6&tk=81204.498303 HTTP/1.1" 200 3448
+09/29/2019 01:11:14 PM: DEBUG - headers-3: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:14 PM: DEBUG - url-3: https://translate.google.com/translate_tts?ie=UTF-8&q=%D0%A7%D0%B0%D0%BA%D0%BE%D0%B2%D0%BE&tl=sr&ttsspeed=1&total=12&idx=3&client=tw-ob&textlen=6&tk=81204.498303
+09/29/2019 01:11:14 PM: DEBUG - status-3: 200
+09/29/2019 01:11:14 PM: DEBUG - part-3 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:14 PM: DEBUG - payload-4: {'ie': 'UTF-8', 'q': '1739', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 4, 'client': 'tw-ob', 'textlen': 4, 'tk': '661368.831539'}
+09/29/2019 01:11:14 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:14 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=1739&tl=sr&ttsspeed=1&total=12&idx=4&client=tw-ob&textlen=4&tk=661368.831539 HTTP/1.1" 200 10553
+09/29/2019 01:11:14 PM: DEBUG - headers-4: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:14 PM: DEBUG - url-4: https://translate.google.com/translate_tts?ie=UTF-8&q=1739&tl=sr&ttsspeed=1&total=12&idx=4&client=tw-ob&textlen=4&tk=661368.831539
+09/29/2019 01:11:14 PM: DEBUG - status-4: 200
+09/29/2019 01:11:14 PM: DEBUG - part-4 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:14 PM: DEBUG - payload-5: {'ie': 'UTF-8', 'q': '1742', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 5, 'client': 'tw-ob', 'textlen': 4, 'tk': '150441.322786'}
+09/29/2019 01:11:14 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:14 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=1742&tl=sr&ttsspeed=1&total=12&idx=5&client=tw-ob&textlen=4&tk=150441.322786 HTTP/1.1" 200 11180
+09/29/2019 01:11:14 PM: DEBUG - headers-5: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:14 PM: DEBUG - url-5: https://translate.google.com/translate_tts?ie=UTF-8&q=1742&tl=sr&ttsspeed=1&total=12&idx=5&client=tw-ob&textlen=4&tk=150441.322786
+09/29/2019 01:11:14 PM: DEBUG - status-5: 200
+09/29/2019 01:11:14 PM: DEBUG - part-5 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:14 PM: DEBUG - payload-6: {'ie': 'UTF-8', 'q': 'или 1744', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 6, 'client': 'tw-ob', 'textlen': 8, 'tk': '465736.113667'}
+09/29/2019 01:11:14 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:15 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=%D0%B8%D0%BB%D0%B8+1744&tl=sr&ttsspeed=1&total=12&idx=6&client=tw-ob&textlen=8&tk=465736.113667 HTTP/1.1" 200 13166
+09/29/2019 01:11:15 PM: DEBUG - headers-6: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:15 PM: DEBUG - url-6: https://translate.google.com/translate_tts?ie=UTF-8&q=%D0%B8%D0%BB%D0%B8+1744&tl=sr&ttsspeed=1&total=12&idx=6&client=tw-ob&textlen=8&tk=465736.113667
+09/29/2019 01:11:15 PM: DEBUG - status-6: 200
+09/29/2019 01:11:15 PM: DEBUG - part-6 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:15 PM: DEBUG - payload-7: {'ie': 'UTF-8', 'q': 'Београд', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 7, 'client': 'tw-ob', 'textlen': 7, 'tk': '977337.544498'}
+09/29/2019 01:11:15 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:15 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4&tl=sr&ttsspeed=1&total=12&idx=7&client=tw-ob&textlen=7&tk=977337.544498 HTTP/1.1" 200 2926
+09/29/2019 01:11:15 PM: DEBUG - headers-7: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:15 PM: DEBUG - url-7: https://translate.google.com/translate_tts?ie=UTF-8&q=%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4&tl=sr&ttsspeed=1&total=12&idx=7&client=tw-ob&textlen=7&tk=977337.544498
+09/29/2019 01:11:15 PM: DEBUG - status-7: 200
+09/29/2019 01:11:15 PM: DEBUG - part-7 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:15 PM: DEBUG - payload-8: {'ie': 'UTF-8', 'q': '28', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 8, 'client': 'tw-ob', 'textlen': 2, 'tk': '963946.528929'}
+09/29/2019 01:11:15 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:15 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=28&tl=sr&ttsspeed=1&total=12&idx=8&client=tw-ob&textlen=2&tk=963946.528929 HTTP/1.1" 200 4911
+09/29/2019 01:11:15 PM: DEBUG - headers-8: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:15 PM: DEBUG - url-8: https://translate.google.com/translate_tts?ie=UTF-8&q=28&tl=sr&ttsspeed=1&total=12&idx=8&client=tw-ob&textlen=2&tk=963946.528929
+09/29/2019 01:11:15 PM: DEBUG - status-8: 200
+09/29/2019 01:11:15 PM: DEBUG - part-8 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:15 PM: DEBUG - payload-9: {'ie': 'UTF-8', 'q': 'март 1811', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 9, 'client': 'tw-ob', 'textlen': 9, 'tk': '807713.717930'}
+09/29/2019 01:11:15 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:15 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=%D0%BC%D0%B0%D1%80%D1%82+1811&tl=sr&ttsspeed=1&total=12&idx=9&client=tw-ob&textlen=9&tk=807713.717930 HTTP/1.1" 200 10553
+09/29/2019 01:11:15 PM: DEBUG - headers-9: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:15 PM: DEBUG - url-9: https://translate.google.com/translate_tts?ie=UTF-8&q=%D0%BC%D0%B0%D1%80%D1%82+1811&tl=sr&ttsspeed=1&total=12&idx=9&client=tw-ob&textlen=9&tk=807713.717930
+09/29/2019 01:11:15 PM: DEBUG - status-9: 200
+09/29/2019 01:11:15 PM: DEBUG - part-9 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:15 PM: DEBUG - payload-10: {'ie': 'UTF-8', 'q': 'је био српски књижевник', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 10, 'client': 'tw-ob', 'textlen': 23, 'tk': '578974.946901'}
+09/29/2019 01:11:15 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:15 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=%D1%98%D0%B5+%D0%B1%D0%B8%D0%BE+%D1%81%D1%80%D0%BF%D1%81%D0%BA%D0%B8+%D0%BA%D1%9A%D0%B8%D0%B6%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA&tl=sr&ttsspeed=1&total=12&idx=10&client=tw-ob&textlen=23&tk=578974.946901 HTTP/1.1" 200 7732
+09/29/2019 01:11:15 PM: DEBUG - headers-10: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:15 PM: DEBUG - url-10: https://translate.google.com/translate_tts?ie=UTF-8&q=%D1%98%D0%B5+%D0%B1%D0%B8%D0%BE+%D1%81%D1%80%D0%BF%D1%81%D0%BA%D0%B8+%D0%BA%D1%9A%D0%B8%D0%B6%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA&tl=sr&ttsspeed=1&total=12&idx=10&client=tw-ob&textlen=23&tk=578974.946901
+09/29/2019 01:11:15 PM: DEBUG - status-10: 200
+09/29/2019 01:11:15 PM: DEBUG - part-10 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:15 PM: DEBUG - payload-11: {'ie': 'UTF-8', 'q': 'просветитељ и реформатор револуционарног периода националног буђења и препорода.', 'tl': 'sr', 'ttsspeed': 1, 'total': 12, 'idx': 11, 'client': 'tw-ob', 'textlen': 80, 'tk': '703718.793517'}
+09/29/2019 01:11:15 PM: DEBUG - Starting new HTTPS connection (1): translate.google.com:443
+09/29/2019 01:11:16 PM: DEBUG - https://translate.google.com:443 "GET /translate_tts?ie=UTF-8&q=%D0%BF%D1%80%D0%BE%D1%81%D0%B2%D0%B5%D1%82%D0%B8%D1%82%D0%B5%D1%99+%D0%B8+%D1%80%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%BE%D1%80+%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%83%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D1%80%D0%BD%D0%BE%D0%B3+%D0%BF%D0%B5%D1%80%D0%B8%D0%BE%D0%B4%D0%B0+%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D0%BD%D0%BE%D0%B3+%D0%B1%D1%83%D1%92%D0%B5%D1%9A%D0%B0+%D0%B8+%D0%BF%D1%80%D0%B5%D0%BF%D0%BE%D1%80%D0%BE%D0%B4%D0%B0.&tl=sr&ttsspeed=1&total=12&idx=11&client=tw-ob&textlen=80&tk=703718.793517 HTTP/1.1" 200 29884
+09/29/2019 01:11:16 PM: DEBUG - headers-11: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'http://translate.google.com/'}
+09/29/2019 01:11:16 PM: DEBUG - url-11: https://translate.google.com/translate_tts?ie=UTF-8&q=%D0%BF%D1%80%D0%BE%D1%81%D0%B2%D0%B5%D1%82%D0%B8%D1%82%D0%B5%D1%99+%D0%B8+%D1%80%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%BE%D1%80+%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%83%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D1%80%D0%BD%D0%BE%D0%B3+%D0%BF%D0%B5%D1%80%D0%B8%D0%BE%D0%B4%D0%B0+%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D0%BD%D0%BE%D0%B3+%D0%B1%D1%83%D1%92%D0%B5%D1%9A%D0%B0+%D0%B8+%D0%BF%D1%80%D0%B5%D0%BF%D0%BE%D1%80%D0%BE%D0%B4%D0%B0.&tl=sr&ttsspeed=1&total=12&idx=11&client=tw-ob&textlen=80&tk=703718.793517
+09/29/2019 01:11:16 PM: DEBUG - status-11: 200
+09/29/2019 01:11:16 PM: DEBUG - part-11 written to <_io.BufferedWriter name='data/audio/1569755473.6468167.mp3'>
+09/29/2019 01:11:16 PM: DEBUG - Saved to data/audio/1569755473.6468167.mp3
+09/29/2019 01:11:42 PM: INFO - Ready for command...

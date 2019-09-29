@@ -1,6 +1,6 @@
 import wikipedia
 from services.common.action_result import ActionResult
-from config.constants import logger, SUCCESS, DEFAULT_EXCEPTION
+from config.constants import logger, SUCCESS
 from functools import lru_cache
 
 
@@ -44,4 +44,5 @@ class WikipediaService:
             page = wikipedia.page(query)
             return ActionResult(page.content, SUCCESS)
         except Exception as e:
-            return ActionResult(e, DEFAULT_EXCEPTION)
+            #return ActionResult(e, DEFAULT_EXCEPTION)
+            pass

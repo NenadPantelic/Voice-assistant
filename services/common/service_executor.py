@@ -1,10 +1,10 @@
-from config.constants import ENGLISH_COMMANDS, logger, FAIL, FATAL
+from config.constants import COMMANDS, logger, FAIL, FATAL
 from exceptions.exception_handler import ExceptionHandler
 from exceptions.exceptions import VoiceAssistantException
 from services.common.action_result import ActionResult
 from utils.utils import load_json_data
 
-commands = load_json_data(ENGLISH_COMMANDS)
+commands = load_json_data(COMMANDS)
 
 
 class ServiceExecutor:

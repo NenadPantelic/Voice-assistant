@@ -42,7 +42,7 @@ service_pool = {
     #"arduino":ArduinoControlService()
 
 }
-commands = load_json_data(ENGLISH_COMMANDS)
+commands = load_json_data(COMMANDS)
 
 sr = CommandResolver(sp, commands, 'en')
 executor = ServiceExecutor(service_pool)
