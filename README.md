@@ -121,6 +121,11 @@ Phrase ***What's the weather like at location Denver*** is processed (obligatory
 
 Phrase ***What's the weather like around Denver*** will follow the same procedure, but the result that will be given to the method as an argument is ***around denver*** and that will cause unsuccessful operation. If we add word ***"around"*** in the keywords list for this command, it will also be removed, and only location name (***denver***)  will be used as an argument.
 
+
+To start Lindo/a voice assitant, type:
+```
+python3 main.py
+```
 ## Special commands
 
 There are cases when special commands are called:
