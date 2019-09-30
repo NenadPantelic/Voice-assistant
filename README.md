@@ -84,7 +84,7 @@ Based on the rest of the words, the command is being determined. Command's struc
 
 # Usage
 In this section, it will be described how to say commands, so that assistant recognizes them without doubt. 
-As it was described in the previous section when you say some command, the text is processed and the command is determined, it is very important whether   process_input_text is true or not.  For command where process_input_text is true, recognized text (after obligatory processing), rest of the text (after removal of usual words and punctuation) is being processed so keywords are removed.  Everything that "survives" this processing is being regarded as an argument to the execution method. 
+As it was described in the previous section when you say some command, the text is processed and the command is determined. It is very important whether process_input_text is true or not.  For command where process_input_text is true, recognized text (after obligatory processing - removal of usual words and punctuation), is being processed so keywords are removed.  Everything that "survives" this processing is being regarded as an argument to the execution method. 
 One example could look like this:
 Let's say you want to know what is the weather forecast in Denver (USA).  We will use english-case scenario. Command that does that has true value for process_input_text. Keywords for this command are:  
 
@@ -106,7 +106,6 @@ Let's say you want to know what is the weather forecast in Denver (USA).  We wil
    "clouds":0.3,
    "snow":0.3,
    "rain":0.3,
-   "in":0.1,
    "location":0.2,
    "place":0.2,
    "city":0.2
@@ -120,7 +119,7 @@ Explanation:
 
 Phrase ***What's the weather like at location Denver*** is processed (obligatory) so we get ***what's weather location denver***. After that,  keywords are removed, so we get only ***denver*** and that is sent to the appropriate method as an argument.  
 
-Phrase ***What's the weather like around Denver*** will follow the same procedure, but the result that will be given to the method as an argument is ***around denver*** and that will cause unsuccessful operation. If we add word around in the keywords list for this command, it will also be removed, and only location name will be used as an argument.
+Phrase ***What's the weather like around Denver*** will follow the same procedure, but the result that will be given to the method as an argument is ***around denver*** and that will cause unsuccessful operation. If we add word ***"around"*** in the keywords list for this command, it will also be removed, and only location name (***denver***)  will be used as an argument.
 
 ## Special commands
 
