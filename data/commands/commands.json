@@ -14,8 +14,8 @@
       "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "messages":{
          "success":{
-            "en":"Hi, I'm Lindo voice assistant. Choose the operating language. The default option is English(USA)!",
-            "sr":"Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
+            "en":"Hi, I'm Lindo voice assistant. Choose the operating language. The default option is English!",
+            "sr":"Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески!"
          },
          "fail":{
             "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if the error happens again!",
@@ -126,7 +126,7 @@
       "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "messages":{
          "success":{
-            "en":"Yes, that's possible. Choose a new operating language. The default option is English(USA)!\n",
+            "en":"Yes, that's possible. Choose a new operating language. The default option is English!",
             "sr":"Da, to je moguće. Izaberite novi operativni jezik. Podrazumevani jezik je engleski!"
          },
          "fail":{
