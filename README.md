@@ -126,6 +126,7 @@ To start Lindo/a voice assistant, type:
 ```
 python3 main.py
 ```
+Usage examples will be added soon.
 ## Special commands
 
 There are cases when special commands are called:
