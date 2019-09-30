@@ -1,20 +1,18 @@
-from services.common.service_executor import ServiceExecutor
+from controller.service_executor import ServiceExecutor
 from services.common.text_processor_service import TextProcessor
 from services.speech.tts_service import Speaker
 from services.speech.stt_service import SpeechRecognizer
-from controller import Controller
+from controller.controller import Controller
 from services.webapi.imdb_service import IMDBService
 from config.config import COMMANDS, logger
 from utils.utils import load_json_data
 
-from services.common.command_resolver import CommandResolver
+from controller.command_resolver import CommandResolver
 from services.webapi.owm_service import WeatherForecastService
 from services.webapi.translation_service import TranslationService
 from services.webapi.mail_service import MailService
 from services.websearch.browser_search_service import BrowserService
 from services.webapi.wikipedia_service import  WikipediaService
-from services.system.os_service import OSService
-from time import sleep
 
 speaker = Speaker()
 recognizer = SpeechRecognizer(language="en-US")

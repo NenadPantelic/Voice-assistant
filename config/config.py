@@ -16,8 +16,8 @@ PROVIDED_LANGUAGES = {
     "default": "en-US"
 }
 
-LANGUAGES_IN_SERBIAN = os.path.abspath("data/langs_in_serbian.json")
-LANG_CODES = "data/langs_codes.json"
+LANGUAGES_IN_SERBIAN = os.path.abspath("data/languages/langs_in_serbian.json")
+LANG_CODES = "data/languages/langs_codes.json"
 RECOGNITION_METHODS = {
     "bing": "recognize_bing",
     "google": "recognize_google",
@@ -48,7 +48,7 @@ LANG_KEYWORDS = {
 }
 
 # messages
-CALL_MESSAGE = {"en": "I'm ready for a new command", "sr":"Spreman sam za novu komandu."}
+CALL_MESSAGE = {"en": "I'm ready for a new command", "sr": "Spreman sam za novu komandu."}
 
 # commands
 COMMANDS = "data/commands/commands.json"
@@ -97,6 +97,10 @@ EXCEPTION_MESSAGES = {
         "sr": "Imam problem sa govorom. Verovatno si probio API limit!"
     },
     "pyowm.exceptions.api_response_error.NotFoundError": {
+        "en": "The weather forecast cannot be estimated. I cannot find that location!",
+        "sr": "Ne mogu da procenim vremensku prognozu. Ne mogu da pronađem tu lokaciju!"
+    },
+    "pyowm.exceptions.api_call_error.APICallError": {
         "en": "The weather forecast cannot be estimated. I cannot find that location!",
         "sr": "Ne mogu da procenim vremensku prognozu. Ne mogu da pronađem tu lokaciju!"
     },
