@@ -15,3 +15,4 @@ pip3 install git+https://github.com/alberanid/imdbpy or latest realease with pip
 google
 pyserial
 gTTS
+playsound

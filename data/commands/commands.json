@@ -14,7 +14,7 @@
       "next_command_id":"6dae42df-6029-4e47-8e5a-c435341e1108",
       "messages":{
          "success":{
-            "en":"Hi, I'm Linda voice assistant. Choose the operating language. The default option is English(USA)!",
+            "en":"Hi, I'm Lindo voice assistant. Choose the operating language. The default option is English(USA)!",
             "sr":"Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески (САД)!"
          },
          "fail":{

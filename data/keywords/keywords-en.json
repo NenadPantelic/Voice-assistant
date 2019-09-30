@@ -60,7 +60,6 @@
          "clouds":0.3,
          "snow":0.3,
          "rain":0.3,
-         "in":0.1,
          "location":0.2,
          "place":0.2,
          "city":0.2
