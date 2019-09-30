@@ -15,7 +15,7 @@
       "messages":{
          "success":{
             "en":"Hi, I'm Lindo voice assistant. Choose the operating language. The default option is English!",
-            "sr":"Здраво, ја сам Линдо гласовни асистент. Изаберите оперативни језик. Подразумевани језик је енглески!"
+            "sr":"Zdravo, ja sam Lindo glasovni asistent. Izaberite operativni jezik. Podrazumevani jezik je engleski!"
          },
          "fail":{
             "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if the error happens again!",
@@ -43,11 +43,11 @@
       "messages":{
          "success":{
             "en":"Language is set successfully.",
-            "sr":"Jезик је успешно постављен."
+            "sr":"Jezik je uspešno postavljen."
          },
          "fail":{
-            "en":"I have some problems with the language setting. Be kind to try again, speak clear and loud.",
-            "sr":"Imam problema sa postavkom jezika. Budi ljubazan da probaš opet, govori jasno i glasno."
+            "en":"I have some problems with the language setting. Be kind to try again. Speak clear and loud!",
+            "sr":"Imam problema sa postavkom jezika. Budi ljubazan da probaš opet. Govori jasno i glasno!"
          }
       },
       "descriptions":{
