@@ -1,7 +1,7 @@
 SpeechRecognition
 NOTE: for Windows, if you're using python 3.7, you need to install precompiled binaries for compatibility sake, so install
 pipwin first)
-pyaudio
+pyaudio (sudo apt-get install portaudio19-dev python-pyaudio python3-pyaudio)
 pydub
 ffmpeg (for Windows)
 pocketsphinx
@@ -11,8 +11,7 @@ wikipedia
 omdb
 googletrans
 gmail
-pip3 install git+https://github.com/alberanid/imdbpy
-googlesearch
+pip3 install git+https://github.com/alberanid/imdbpy or latest realease with pip3 install imdbpy
+google
 pyserial
-pyttsx3 (requires sudo apt-get update && sudo apt-get install espeak)
 gTTS
