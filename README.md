@@ -13,7 +13,7 @@ Voice assistant project based on speech recognition and text-to-speech synthesis
 The best results were achieved with Google's services - Google and Google Cloud. The problem with Google Cloud is that it is not free - up to 60 minutes of converted audio data is free on monthly basis (at the moment of creation of this assistant - July/August/September 2019th).
 For the basic usage of speech conversion to text, you need to install SpeechRecognition library
 ```sh
-pip3 install speech_recognition
+pip3 install SpeechRecognition
 ```
 Currently, Lindo/a  supports English and Serbian language (my native language). If you want to add some operating language, feel free to do that.
 
