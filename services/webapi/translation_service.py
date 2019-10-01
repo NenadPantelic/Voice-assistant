@@ -102,12 +102,12 @@ class TranslationService:
 
     # not used at the moment
     def _convert_lang_code_to_language(self, lang_code):
-        '''
+        """
         Convert the given _language code to _language name. `sr` to serbian, `en` to english etc.
         :param str lang_code:
         :rtype str
-        :return: correspongin _language name or `english` if lang_code is not valid.
-        '''
+        :return: corresponding _language name or `english` if lang_code is not valid.
+        """
         assert(isinstance(lang_code, str))
         return self._translate(googletrans.LANGUAGES.get(lang_code, "english"), dest_lang=self._language).text
 

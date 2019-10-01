@@ -3,7 +3,7 @@ from exceptions.exception_handler import ExceptionHandler
 from exceptions.exceptions import VoiceAssistantException
 from services.common.action_result import ActionResult
 from utils.utils import load_json_data
-from utils import data_conversion
+from utils import argument_data_extraction
 
 commands = load_json_data(COMMANDS)
 
@@ -78,7 +78,7 @@ class ServiceExecutor:
         if input_type is not None:
             arg_value = eval(input_type + "('" + arg_value + "')")
         if input_processing_method is not None:
-            arg_value = eval("data_conversion." + input_processing_method + "('" + arg_value + "')")
+            arg_value = eval("argument_data_extraction." + input_processing_method + "('" + arg_value + "')")
         logger.debug("Argument after processing: [type_ = {}, value = {}]".format(type(arg_value), arg_value))
         self._service_command_methods[service][method_name][arg_name] = arg_value
 

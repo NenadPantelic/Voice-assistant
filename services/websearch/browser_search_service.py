@@ -9,7 +9,7 @@ from services.common.action_result import ActionResult
 
 class BrowserService:
     def __init__(self):
-        self.__search = googlesearch.search
+        self._search = googlesearch.search
 
     # public methods
     def open_found_url_in_browser(self, query, tpe=''):
@@ -22,8 +22,8 @@ class BrowserService:
         """
         assert (isinstance(query, str) and isinstance(tpe, str))
         logger.debug("Calling open_found_url_in_browser with params: [query = {}, tpe = {}].".format(query, tpe))
-        google_result = self._get_first_search_result(query, tpe=tpe)
-        url = google_result.get_result()
+        url = self._get_first_search_result(query, tpe=tpe)
+        #url = google_result.get_result()
         if url is not None:
             logger.debug("Found url = {}.".format(url))
             self._browser_open(url=url)
@@ -65,15 +65,15 @@ class BrowserService:
         """
         assert (all(isinstance(arg, str) for arg in (query, tld, tpe)) and isinstance(pause, float) and
                 isinstance(stop, int))
-        return self.__search(query=query, tld=tld, tpe=tpe, pause=pause, stop=stop)
+        return self._search(query=query, tld=tld, tpe=tpe, pause=pause, stop=stop)
 
     def _get_first_search_result(self, query, tpe=''):
         """
         Returns the first result found by Google search.
         :param str query: google search query string. Must not be URL-encoded
         :param str tpe: type_ of search, default=`all`
-        :rtype ActionResult
-        :return: Action result with url as payload
+        :rtype str
+        :return: url
         """
         assert (isinstance(query, str) and isinstance(tpe, str))
         results = self._google_search(query=query, tpe=tpe)
@@ -83,7 +83,7 @@ class BrowserService:
         try:
             url = next(results)
             logger.debug("First Google search result = {}.".format(url))
-            return ActionResult(url, SUCCESS)
+            return url
         except StopIteration as e:
             raise GoogleSearchException
 
@@ -102,10 +102,7 @@ class BrowserService:
         logger.debug("Opening url = {}.".format(url))
         webbrowser.open(url, new=new, autoraise=autoraise)
 
-    # NOTE:not used at the moment
-    def _browser_open_with_indep_thread(self, url):
-        thread = threading.Thread(target=self._browser_open, args=(url,), daemon=True)
-        thread.start()
+
 
 
 
