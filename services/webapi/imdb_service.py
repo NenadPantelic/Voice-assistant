@@ -9,7 +9,7 @@ from services.common.action_result import ActionResult
 class IMDBService:
     def __init__(self, api_key=OMDB_API_KEY):
         omdb.set_default('apikey', api_key)
-        self.__imdb = imdb.IMDb()
+        self._imdb = imdb.IMDb()
         self._language = "en"
 
     @property
@@ -30,7 +30,7 @@ class IMDBService:
         # TODO:handle num when spoken in Serbian, it uses words, in english it uses numbers
         num = int(num)
         logger.debug("Seeking for best movies by imdb. Params: [num = {}].".format(num))
-        top_movies = self.__imdb.get_top250_movies()[:num]
+        top_movies = self._imdb.get_top250_movies()[:num]
         complete_info = ""
         for movie in top_movies:
             movie_id = self._get_movie_id(movie)
@@ -77,7 +77,7 @@ class IMDBService:
         """
         assert (isinstance(title, str))
         logger.debug("Searching for movies with title = {}.".format(title))
-        return self.__imdb.search_movie(title)
+        return self._imdb.search_movie(title)
 
     def _get_first_movie(self, title):
         """
@@ -142,7 +142,7 @@ class IMDBService:
        """
         assert (isinstance(movie, dict))
         info_props = (
-            "title", "year", "released", "runtime", "genre", "director", "actors", "plot", "_language", "imdb_rating")
+            "title", "year", "released", "runtime", "genre", "director", "actors", "plot", "language", "imdb_rating")
         return self._get_movie_info(movie, info_props)
 
     def _movie_info_to_str(self, movie_info):

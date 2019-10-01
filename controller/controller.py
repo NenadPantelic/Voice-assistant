@@ -185,7 +185,9 @@ class Controller:
             if command_result.get_status() == SUCCESS:
                 next_command_id = command_ids["next_command_id"]
             elif command_result.get_status() in (FAIL, FATAL):
-                next_command_id = command_ids["command_id"]
+                #TODO: think about this: repeat command or determine nеw one
+                #next_command_id = command_ids["command_id"]
+                next_command_id = None
             else:
                 raise ValueError("Status can only be SUCCESS or FAIL")
         else:
