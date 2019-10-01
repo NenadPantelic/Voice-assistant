@@ -15,7 +15,6 @@ class ExceptionHandler:
         """
         logger.warning("An exception occurred.")
         exception_type = convert_instance_type_to_str(type(e))
-        print(exception_type)
         message = EXCEPTION_MESSAGES.get(exception_type, "exception")[language]
         traceback_message = traceback.format_exc()
         logger.error(traceback_message)

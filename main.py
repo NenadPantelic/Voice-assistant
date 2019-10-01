@@ -1,5 +1,5 @@
 from controller.service_executor import ServiceExecutor
-from services.common.text_processor_service import TextProcessor
+from services.text_processing.text_processor_service import TextProcessor
 from services.speech.tts_service import Speaker
 from services.speech.stt_service import SpeechRecognizer
 from controller.controller import Controller
