@@ -63,7 +63,7 @@ Functionalities that Lindo/a provides:
 - control any actuator with Arduino (tested on light bulb)
 
 
-# How it works 
+# How it works?
 
 There are many use-cases for both languages. Generally, it is important to know how commands recognition works.  When you say some command, the recognizer returns the text (recognized from the speech) and that text is being processed. At first, any punctuation marks are removed. After that usual words that can be found in communication to Lindo/a are removed (these words are stored in __data/words/words-<en/sr>.json__ based on language choice).  
 The most important thing when determining which command user wants is the existence of keywords in the command. Keywords for every non-setup command can be found in __data/keywords/keywords-<en/sr>.json__. So, when the user says something and text is processed as was described, based on keywords in that command, the command with the highest score is chosen (score is calculated for every command based on words that determines that command, and the one with the highest score is chosen). As we will see, there are commands where keywords are removed from the text and that text is used as an argument in the appropriate method call.
@@ -82,9 +82,9 @@ Based on the rest of the words, the command is being determined. Command's struc
 - messages: a dictionary that holds messages when command is successfully executed, and when execution failed (with language choice)
 - descriptions: descriptions of the command on every possible operating language
 
-# Usage
-In this section, it will be described how to say commands, so that assistant recognizes them without doubt. 
-As it was described in the previous section when you say some command, the text is processed and the command is determined. It is very important whether process_input_text is true or not.  For command where process_input_text is true, recognized text (after obligatory processing - removal of usual words and punctuation), is being processed so keywords are removed.  Everything that "survives" this processing is being regarded as an argument to the execution method. 
+## How command is determined?
+In this subsection, it will be described how to say commands, so that assistant recognizes them without doubt. 
+As it was described in the previous subsection when you say some command, the text is processed and the command is determined. It is very important whether process_input_text is true or not.  For command where process_input_text is true, recognized text (after obligatory processing - removal of usual words and punctuation), is being processed so keywords are removed.  Everything that "survives" this processing is being regarded as an argument to the execution method. 
 One example could look like this:
 Let's say you want to know what is the weather forecast in Denver (USA).  We will use english-case scenario. Command that does that has true value for process_input_text. Keywords for this command are:  
 
@@ -121,6 +121,7 @@ Phrase ***What's the weather like at location Denver*** is processed (obligatory
 
 Phrase ***What's the weather like around Denver*** will follow the same procedure, but the result that will be given to the method as an argument is ***around denver*** and that will cause unsuccessful operation. If we add word ***"around"*** in the keywords list for this command, it will also be removed, and only location name (***denver***)  will be used as an argument.
 
+# Usage
 
 To start Lindo/a voice assistant, type:
 ```
