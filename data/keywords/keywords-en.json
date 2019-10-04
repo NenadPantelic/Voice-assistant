@@ -120,17 +120,21 @@
          "movies":0.4,
          "what":0.15,
          "imdb":0.3,
-         "rating":0.3
+         "rating":0.3,
+         "rated":0.3
+
       }
    },
    {
       "command_id":"6978d277-0802-4697-93f5-70ecc004ddd1",
-      "words":{
+      "words": {
          "details":0.4,
          "movie":0.4,
          "info":0.25,
          "information":0.25,
-         "film":0.3
+         "informations":0.25,
+         "film":0.3,
+         "imdb": 0.3
       }
    },
    {

@@ -46,8 +46,8 @@
             "sr":"Jezik je uspešno postavljen."
          },
          "fail":{
-            "en":"I have some problems with the language setting. Be kind to try again. Speak clear and loud!",
-            "sr":"Imam problema sa postavkom jezika. Budi ljubazan da probaš opet. Govori jasno i glasno!"
+            "en":"I have some problems with the language setting. The only options are English and Serbian. Be kind to try again. Speak clear and loud!",
+            "sr":"Imam problema sa postavkom jezika. Jedine opcije su engleski i srpski. Budi ljubazan da probaš opet. Govori jasno i glasno!"
          }
       },
       "descriptions":{
@@ -434,7 +434,7 @@
       "next_command_id":"0d473e1c-45a8-4869-bc01-17a01543ba1f",
       "messages":{
          "success":{
-            "en":"SSure, tell me what is the number of top movies you want? The maximum number is 250.",
+            "en":"Sure, tell me what is the number of top movies you want? The maximum number is 250.",
             "sr":"Naravno, koliko filmova želiš? Maksimalno je moguće 250."
          },
          "fail":{
@@ -466,8 +466,8 @@
             "sr":"Po IMDB, ovo su najbolji filmovi koji su traženi:\n"
          },
          "fail":{
-            "en":"Yikes. Some obstacles disabled this action. Try again!",
-            "sr":"Jao. Nešto je iskrslo pri ovoj akciji. Probaj ponovo!"
+            "en":"Yikes. Some obstacles disabled this action. Maybe you asked for less than 1 or more than 250 movies. Try again!",
+            "sr":"Jao. Nešto je iskrslo pri ovoj akciji. Možda si tražio ili tražila manje od 1 ili više od 250 filmova. Probaj ponovo!"
          }
       },
       "descriptions":{

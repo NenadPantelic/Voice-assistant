@@ -127,7 +127,9 @@
          "filmove":0.4,
          "koji":0.15,
          "imdb":0.3,
-         "rejting":0.3
+         "rejting":0.3,
+         "rejtingom":0.3
+
       }
    },
    {
@@ -138,7 +140,9 @@
          "filmu":0.4,
          "film":0.4,
          "info":0.25,
-         "informacije":0.25
+         "informacije":0.25,
+         "podatke":0.3,
+         "podaci":0.3
       }
    },
    {

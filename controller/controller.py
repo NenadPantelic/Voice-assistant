@@ -90,7 +90,7 @@ class Controller:
         # comment this if you want to keep audio files after session ends
         delete_all_mp3_files(PATH_TO_AUDIO_DIR)
         # comment this if you want to keep log file after session ends
-        delete_log_file()
+        #delete_log_file()
         exit(0)
 
     def listen_and_execute(self):
@@ -105,6 +105,7 @@ class Controller:
         except Exception as e:
             message = ExceptionHandler.get_exception_message(e, self._language)
             text_result = ActionResult(message, FAIL)
+            self._reset_speaking_language_()
         self._reset_recognizer_language()
 
         if text_result is None or text_result.get_result() is None or text_result.get_status() == FAIL:

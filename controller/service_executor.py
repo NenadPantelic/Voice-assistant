@@ -21,7 +21,6 @@ class ServiceExecutor:
         self._populate_service_command_methods()
         self._service_pool = service_pool
         self._language = None
-        print(self._service_command_methods)
 
     def set_services_language(self, language):
         """
