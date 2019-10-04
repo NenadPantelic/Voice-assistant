@@ -37,11 +37,13 @@ controller = Controller(recognizer, speaker, command_resolver, executor)
 
 if __name__ == "__main__":
     controller.initialize()
+    logger.debug("NEW SESSION BEGINS")
     while True:
         try:
             logger.debug("New command session....")
             controller.inform()
             controller.listen_and_execute()
         except KeyboardInterrupt:
+            logger.debug("SESSION ENDS NOW")
             controller.finalize()
 

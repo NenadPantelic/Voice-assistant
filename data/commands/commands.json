@@ -70,7 +70,7 @@
       "next_command_id":null,
       "messages":{
          "success":{
-            "en":"I'm sorry, but I'm not sure what you want. I cannot determine precisely your command. Try again!",
+            "en":"I'm sorry, but I'm not sure what you want. I cannot precisely determine  your command. Try again!",
             "sr":"Žao mi je, ali nisam siguran šta želiš. Ne mogu da odredim precizno tvoju komandu. Probaj ponovo!"
          },
          "fail":{

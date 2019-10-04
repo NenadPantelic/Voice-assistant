@@ -795,3 +795,4 @@ reference time: 29-09-2019 10:54:01,
 
 09/29/2019 01:00:09 PM: DEBUG - Calling get_forecast_result with params: [location = kako je cdLondon, param = all, unit = celsius]
 09/29/2019 01:00:09 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/03/2019 07:58:16 PM: DEBUG - Calling send_email with params [subject = test subject, recipient = 564.2015@fink.rs, content = test message]

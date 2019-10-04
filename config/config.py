@@ -3,6 +3,8 @@
 import logging
 import os
 
+
+LOG_FILE = "voice_assistant.log"
 logging.basicConfig(level=logging.DEBUG, filename="voice_assistant.log",
                     format='%(asctime)s: %(levelname)s - %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p')
@@ -85,11 +87,11 @@ EXCEPTION_MESSAGES = {
     },
     "speech_recognition.UnknownValueError": {
         "en": "Speech cannot be analyzed or recognized!",
-        "sr": "Ваш говор не може бити обрађен или препознат!"
+        "sr": "Vaš govor ne može biti obrađen ili prepoznat!"
     },
     "speech_recognition.RequestError": {
         "en": "Request error problem. Check API limits and connectivity status!",
-        "sr": "Проблеми са слањем захтева. Проверите АПИ лимите и статус мреже!"
+        "sr": "Problemi sa slanjem zahteva. Proverite API limit i status mreže!"
     },
     # TODO: handle when error occurs in speaking module - how to inform user
     "gtts.tts.gTTSError": {

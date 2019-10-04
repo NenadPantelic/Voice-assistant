@@ -5,8 +5,8 @@ from utils.utils import get_current_timestamp, play_audio
 
 
 class Speaker:
-    def __init__(self, lang="en-us"):
-        self._language = lang
+    def __init__(self, language="en-us"):
+        self._language = language
         self._tts = gTTS(lang=self._language, text="dummy")
 
     # public methods
@@ -29,7 +29,7 @@ class Speaker:
         """
         return self._language
 
-    def save_speech_and_play(self, text=''):
+    def save_speech_and_play(self, text=""):
         """
         Speak out the given text. Text must not be empty string.
         :param str text: text to be spoken

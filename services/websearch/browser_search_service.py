@@ -12,7 +12,7 @@ class BrowserService:
         self._search = googlesearch.search
 
     # public methods
-    def open_found_url_in_browser(self, query, tpe=''):
+    def open_found_url_in_browser(self, query, tpe=""):
         """
         Opens the found url in browser.
         :param str query: google search query string. Must not be URL-encoded
@@ -48,7 +48,7 @@ class BrowserService:
 
     #private methods
     @lru_cache(maxsize=16)
-    def _google_search(self, query, tld="com", tpe='', pause=2.0, stop=3):
+    def _google_search(self, query, tld="com", tpe="", pause=2.0, stop=3):
         """
         Search the given query string using Google.
 
@@ -67,7 +67,7 @@ class BrowserService:
                 isinstance(stop, int))
         return self._search(query=query, tld=tld, tpe=tpe, pause=pause, stop=stop)
 
-    def _get_first_search_result(self, query, tpe=''):
+    def _get_first_search_result(self, query, tpe=""):
         """
         Returns the first result found by Google search.
         :param str query: google search query string. Must not be URL-encoded

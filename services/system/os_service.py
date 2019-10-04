@@ -4,7 +4,7 @@ from subprocess import run as run
 # this service is incomplete - strong binding with Linux OS. It should be completed (make it platform agnostic)
 # do not use it in commands
 from exceptions.exceptions import CommandException
-
+from functools import lru_cache
 
 class OSService:
 
@@ -12,6 +12,11 @@ class OSService:
         pass
 
     def execute_command(self, command):
+        """
+        Executes custom command.
+        :param str command: Linux command in str form
+        :return: output of the command
+        """
         command_result = run(args=command, stdout=subprocess.PIPE, shell=True, encoding='utf-8')
         # only for debug, not final logic (currently, accompanying mistakes are ignored)
         if command_result.stdout is not None or command_result.returncode == 0 and command_result.stderr is None:
@@ -20,6 +25,7 @@ class OSService:
             raise CommandException("Command cannot be executed.")
             # command cannot be executed
 
+    @lru_cache(maxsize=4)
     def search_file(self, filename, starting_point="/home/"):
         sudo_mode = False
         if starting_point == "/":
@@ -45,42 +51,15 @@ class OSService:
             "tabular": "libreoffice",
             "code": "kwrite"
         }
-        extension = self.check_file_type(file)
+        extension = self._check_file_type(file)
         open_with = open_with_map.get(extension, None)
         # amarok must be killed after play outs
         if open_with is not None:
             self.execute_command(command=open_with + " " + file)
 
-    def check_file_type(self, filename):
-        extension_map = {"image": ('.png', '.jpg', '.jpeg', 'tiff', 'gif', 'bmp'),
-                         "audio": (".mp3", "flacc", "wav"),
-                         "text": ("txt",),
-                         "pdf": ("pdf",),
-                         "tabular": ("xls", "xlsx", "csv", "odt"),
-                         "code": ("py", "java", "c", "cpp", "js", "cs", "html", "css", "php", "sql")}
-        extension = [type_value for type_value, type_extension in extension_map.items() if filename.lower()
-            .endswith(type_extension)]
-        if len(extension) > 0:
-            return extension[0]
-        else:
-            raise ValueError("File format is not supported at the moment.")
-
     def run_program(self, program):
-        command = self.get_program_command(program.split(' '))
+        command = self._get_program_command(program.split(' '))
         return self.execute_command(command)
-
-    def get_program_command(self, program):
-        programs = {
-            "google-chrome": ("google", "chrome", "browser"),
-            "libreoffice": ("office", "ppt", "power point", "presentation", "sheets", "writer"),
-            "gnome-terminal": ("terminal", "konsole", "console"),
-            "xdg-open /home/": ("file manager", "files")
-        }
-        for program_command, commands in programs.items():
-            if any(program_word in commands for program_word in program):
-                return program_command
-            else:
-                raise CommandException("The given command is not supported or it is invalid.")
 
     def get_computer_status(self):
         command = "echo \"CPU `LC_ALL=C top -bn1 | grep \"Cpu(s)\" | sed \"s/.*, *\([0-9.]*\)%* us.*/\1/\" | awk '{print 100 - $1}'" \
@@ -105,5 +84,35 @@ class OSService:
     def poweroff(self):
         command = "sudo shutdown now"
         return self.execute_command(command)
+
+
+    # private methods
+
+    def _get_program_command(self, program):
+        programs = {
+            "google-chrome": ("google", "chrome", "browser"),
+            "libreoffice": ("office", "ppt", "power point", "presentation", "sheets", "writer"),
+            "gnome-terminal": ("terminal", "konsole", "console"),
+            "xdg-open /home/": ("file manager", "files")
+        }
+        for program_command, commands in programs.items():
+            if any(program_word in commands for program_word in program):
+                return program_command
+            else:
+                raise CommandException("The given command is not supported or it is invalid.")
+    def _check_file_type(self, filename):
+        extension_map = {"image": ('.png', '.jpg', '.jpeg', 'tiff', 'gif', 'bmp'),
+                         "audio": (".mp3", "flacc", "wav"),
+                         "text": ("txt",),
+                         "pdf": ("pdf",),
+                         "tabular": ("xls", "xlsx", "csv", "odt"),
+                         "code": ("py", "java", "c", "cpp", "js", "cs", "html", "css", "php", "sql")}
+        extension = [type_value for type_value, type_extension in extension_map.items() if filename.lower()
+            .endswith(type_extension)]
+        if len(extension) > 0:
+            return extension[0]
+        else:
+            raise ValueError("File format is not supported at the moment.")
+
 
 

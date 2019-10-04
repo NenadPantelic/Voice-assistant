@@ -2,7 +2,8 @@ from exceptions.exception_handler import ExceptionHandler
 from config.config import LANG_CODES, LANGUAGES_IN_SERBIAN, SUCCESS, FAIL, logger, FATAL, PATH_TO_AUDIO_DIR, \
     CALL_MESSAGE
 from services.common.action_result import ActionResult
-from utils.utils import load_json_data, convert_latin_to_cyrillic, get_language_code, delete_all_mp3_files
+from utils.utils import load_json_data, convert_latin_to_cyrillic, get_language_code, delete_all_mp3_files, \
+    delete_log_file
 
 LANGUAGES = load_json_data(LANG_CODES)
 SR_LANGUAGES = load_json_data(LANGUAGES_IN_SERBIAN)
@@ -86,7 +87,10 @@ class Controller:
         final_command = self._command_resolver.find_command_by_tag("final")
         command_output_message = final_command["messages"]["success"][self._language]
         self._speaker.save_speech_and_play(command_output_message)
+        # comment this if you want to keep audio files after session ends
         delete_all_mp3_files(PATH_TO_AUDIO_DIR)
+        # comment this if you want to keep log file after session ends
+        delete_log_file()
         exit(0)
 
     def listen_and_execute(self):
@@ -185,7 +189,7 @@ class Controller:
             if command_result.get_status() == SUCCESS:
                 next_command_id = command_ids["next_command_id"]
             elif command_result.get_status() in (FAIL, FATAL):
-                #TODO: think about this: repeat command or determine nеw one
+                #TODO: think about this: repeat command or forget it and determine new one
                 #next_command_id = command_ids["command_id"]
                 next_command_id = None
             else:

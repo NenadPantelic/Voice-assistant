@@ -3,7 +3,7 @@ from exceptions.exception_handler import ExceptionHandler
 from exceptions.exceptions import VoiceAssistantException
 from services.common.action_result import ActionResult
 from utils.utils import load_json_data
-from utils import argument_data_extraction
+from utils import data_extraction
 
 commands = load_json_data(COMMANDS)
 
@@ -21,6 +21,7 @@ class ServiceExecutor:
         self._populate_service_command_methods()
         self._service_pool = service_pool
         self._language = None
+        print(self._service_command_methods)
 
     def set_services_language(self, language):
         """
@@ -78,7 +79,7 @@ class ServiceExecutor:
         if input_type is not None:
             arg_value = eval(input_type + "('" + arg_value + "')")
         if input_processing_method is not None:
-            arg_value = eval("argument_data_extraction." + input_processing_method + "('" + arg_value + "')")
+            arg_value = eval("data_extraction." + input_processing_method + "('" + arg_value + "')")
         logger.debug("Argument after processing: [type_ = {}, value = {}]".format(type(arg_value), arg_value))
         self._service_command_methods[service][method_name][arg_name] = arg_value
 
@@ -102,16 +103,19 @@ class ServiceExecutor:
                     result = executor(**self._service_command_methods[service][method])
                     logger.debug("Output = {}".format(result))
                     command_result = result
+
                     # TODO:handle fatal exception
                 except Exception as e:
                     message = ExceptionHandler.get_exception_message(e, self._language)
                     command_result = ActionResult(message, FAIL, self._language)
                 finally:
                     logger.info("-------- end commit --------")
+                    #self._clear_all_params(service, method)
                     return command_result
         else:
             logger.error("Fatal, service cannot be found.")
             message = ExceptionHandler.get_exception_message(VoiceAssistantException, self._language)
+            #self._clear_all_params(service, method)
             return ActionResult(message, FATAL)
 
     def _populate_service_command_methods(self):
@@ -137,3 +141,14 @@ class ServiceExecutor:
                             self._service_command_methods[service][method][arg_name] = None
                         else:
                             self._service_command_methods[service][method] = {arg_name: None}
+
+    def _clear_all_params(self, service, method):
+        """
+        Clears all the data for service-method.
+        :param str service: service name
+        :param str method: method name
+        :rtype: None
+        :return: void method
+        """
+        for arg_name in self._service_command_methods[service][method]:
+            self._service_command_methods[service][method][arg_name] = None

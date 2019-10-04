@@ -102,7 +102,7 @@ class IMDBService:
     # omdb
     def _get_movie_by_id(self, _id):
         """
-        Returns dicionary with movie details.
+        Returns dictionary with movie details.
         :param _id: movie id by imdb (str) - id is numerical string, IMDB id should be in form tt<numerical_id>
         :return:
         """
@@ -148,8 +148,9 @@ class IMDBService:
     def _movie_info_to_str(self, movie_info):
         """
         Returns movie info details in string form - param: value\n
-        :param movie_info:
-        :return:
+        :param movie_info: dictionary with info values
+        :rtype: str
+        :return: movie details in string format
         """
         assert (isinstance(movie_info, dict))
         info_str = ""

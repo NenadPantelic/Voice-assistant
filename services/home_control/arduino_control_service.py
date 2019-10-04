@@ -8,6 +8,32 @@ class ArduinoControlService:
         self._controller = serial.Serial(port, baud_rate)
         self._state = 0
 
+    # public methods
+    def get_state(self):
+        """
+        Returns output state.
+        :return: output state 0/1
+        """
+        return self._state
+
+    def control(self, state):
+        """
+        Control arduino writing through serial port. Output state is written as str.
+        :param state: value that determines output state - one of the following values (`switch`, `power off`,
+        `power on`) (str)
+        :return: void method
+        """
+        logger.debug("Calling arduino control method with params: [state = {}]".format(state))
+        self._set_state(state)
+        self._controller.write(str(self._state).encode())
+
+    def dispose(self):
+        """
+        Closes the serial port.
+        :return: void method
+        """
+        self._controller.close()
+
     # private methods
     def _state_switch(self):
         """
@@ -47,28 +73,4 @@ class ArduinoControlService:
             raise ValueError("Invalid state.")
         logger.debug("Current relay state = {}".format(self.get_state()))
 
-    # public methods
-    def get_state(self):
-        """
-        Returns output state.
-        :return: output state 0/1
-        """
-        return self._state
 
-    def control(self, state):
-        """
-        Control arduino writing through serial port. Output state is written as str.
-        :param state: value that determines output state - one of the following values (`switch`, `power off`,
-        `power on`) (str)
-        :return: void method
-        """
-        logger.debug("Calling arduino control method with params: [state = {}]".format(state))
-        self._set_state(state)
-        self._controller.write(str(self._state).encode())
-
-    def dispose(self):
-        """
-        Closes the serial port.
-        :return: void method
-        """
-        self._controller.close()

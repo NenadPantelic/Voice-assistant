@@ -4,7 +4,7 @@ import uuid
 from playsound import playsound
 import glob, os, os.path
 
-from config.config import logger
+from config.config import logger, LOG_FILE
 
 
 def play_audio(file_name):
@@ -145,3 +145,8 @@ def delete_all_mp3_files(directory):
     logger.debug("Cleaning up.....")
     for f in file_list:
         os.remove(f)
+
+
+def delete_log_file():
+    os.remove(LOG_FILE)
+

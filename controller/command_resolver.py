@@ -47,16 +47,6 @@ class CommandResolver:
         assert (command_id is None or isinstance(command_id, str))
         self._next_command_id = command_id
 
-    def _set_keywords(self, keywords):
-        """
-        Sets keywords - convert keywords from json array to dictionary where command_id is key
-        :param keywords: list of dicts
-        :rtype: None
-        :return: void method
-        """
-        assert (isinstance(keywords, list))
-        self._keywords = convert_commands_json_array_to_dict(keywords)
-
     def get_command(self, text):
         """
         Get command based on the given command text. Append arguments to the original command structure if command need
@@ -98,6 +88,17 @@ class CommandResolver:
         except IndexError:
             raise VoiceAssistantException("Command with the given tag = {} cannot be found. Check commands tag.".
                                           format(tag))
+
+    def _set_keywords(self, keywords):
+        """
+        Sets keywords - convert keywords from json array to dictionary where command_id is key
+        :param keywords: list of dicts
+        :rtype: None
+        :return: void method
+        """
+        assert (isinstance(keywords, list))
+        self._keywords = convert_commands_json_array_to_dict(keywords)
+
 
     def _calculate_command_scores(self, word_list):
         """
@@ -145,11 +146,11 @@ class CommandResolver:
         self._next_command_id = self._command["next_command_id"]
         logger.debug("Next command's id = {}".format(self._next_command_id))
 
-    def _find_command_by_id(self, commandId):
+    def _find_command_by_id(self, _id):
         """
         Finds command by command id (if command with the given id exists). Otherwise returns None
-        :param str commandId: command's id
+        :param str _id: command's id
         :rtype: dictionary or None
         :return: proper command or None if command cannot be found.
         """
-        return self._commands.get(commandId, None)
+        return self._commands.get(_id, None)
