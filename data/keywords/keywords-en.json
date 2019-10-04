@@ -106,6 +106,7 @@
       "command_id":"a9e87967-3e58-4297-b2fe-f5bf1c1ce5da",
       "words":{
          "send":0.4,
+         "compose": 0.35,
          "mail":0.4,
          "email":0.4,
          "message":0.25,

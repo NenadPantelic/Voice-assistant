@@ -86,8 +86,12 @@
          "prevođenje":0.35,
          "prevedeš":0.3,
          "tekst":0.2,
+         "teksta":0.2,
          "govor":0.2,
-         "neki":0.1
+         "govora":0.2,
+         "neki":0.1,
+         "nekog":0.1
+
       }
    },
    {
@@ -111,10 +115,16 @@
       "command_id":"a9e87967-3e58-4297-b2fe-f5bf1c1ce5da",
       "words":{
          "pošalji":0.4,
+         "pošaljem":0.4,
+         "sastavi": 0.35,
+         "sastavim": 0.35,
          "mail":0.4,
+         "mejl":0.4,
          "email":0.4,
+         "elektronsku": 0.25,
          "poruku":0.25,
-         "želim":0.1
+         "želim":0.1,
+         "hoću":0.1
       }
    },
    {
@@ -159,6 +169,7 @@
          "mreže":0.35,
          "stranu":0.15,
          "strana":0.15,
+         "stranica":0.15,
          "facebook":0.35,
          "fejsbuk":0.35,
          "fejs":0.35,
@@ -167,6 +178,7 @@
          "instagram":0.35,
          "linkedin":0.35,
          "profil":0.25,
+         "profila":0.25,
          "nalog":0.25
       }
    },
@@ -180,8 +192,11 @@
          "guglaj":0.35,
          "googleu":0.35,
          "izguglaj":0.35,
+         "izgoogleaj":0.35,
          "pretraži":0.35,
          "pretraga":0.35,
+         "pretragu":0.35,
+         "izvrši": 0.1,
          "strana":0.35,
          "traži":0.15,
          "pronađi":0.15,
@@ -190,6 +205,8 @@
          "internet":0.35,
          "internetu":0.35,
          "web":0.35,
+         "veb": 0.35,
+         "vebu" : 0.35,
          "webu":0.35
       }
    },

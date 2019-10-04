@@ -21,3 +21,6 @@ print(w_data)
 print(wfs._get_weather_param(w_data, 'temperature', **{"unit": "celsius"}))
 print(wfs._get_weather_param(ws_data_5, 'temperature', **{"unit": "celsius"}))
 # https://pyowm.readthedocs.io/en/latest/usage-examples-v2/weather-api-usage-examples.html
+
+wfs2 = WeatherForecastService("sr")
+print(wfs2.get_forecast_result("denver"))

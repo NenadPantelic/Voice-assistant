@@ -796,3 +796,105 @@ reference time: 29-09-2019 10:54:01,
 09/29/2019 01:00:09 PM: DEBUG - Calling get_forecast_result with params: [location = kako je cdLondon, param = all, unit = celsius]
 09/29/2019 01:00:09 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
 10/03/2019 07:58:16 PM: DEBUG - Calling send_email with params [subject = test subject, recipient = 564.2015@fink.rs, content = test message]
+10/04/2019 03:46:46 PM: DEBUG - Calling get_forecast_result with params: [location = London, param = all, unit = celsius]
+10/04/2019 03:46:46 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/04/2019 03:46:47 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=London&lang=en HTTP/1.1" 200 461
+10/04/2019 03:46:47 PM: DEBUG - Weather data results were fetched....
+10/04/2019 03:46:47 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-10-04 13:46:29+00, status=rain, detailed status=shower rain>
+10/04/2019 03:46:47 PM: DEBUG - Complete forecast info: {'heat_index': None, 'humidex': None, 'rain': {}, 'visibility_distance': 10000, 'reference_time': 1570196789, 'weather_code': 521, 'snow': {}, 'weather_icon_url': 'http://openweathermap.org/img/w/09d.png', 'pressure': {'press': 1004, 'sea_level': None}, 'wind': {'speed': 6.2, 'deg': 260}, 'weather_icon_name': '09d', 'status': 'Rain', 'temperature': {'temp': 14.38, 'temp_max': 16.67, 'temp_min': 12.0, 'temp_kf': None}, 'sunset_time': 1570210395, 'sunrise_time': 1570169116, 'humidity': 72, 'dewpoint': None, 'clouds': 75, 'detailed_status': 'shower rain'}
+10/04/2019 03:46:47 PM: DEBUG - Forecast in readable form:
+clouds: 75,
+pressure: 1004,
+wind speed: 6.2,
+humidity: 72,
+minimum temperature: 12.0,
+maximum temperature: 16.67,
+temperature: 14.38,
+detailed status: shower rain,
+reference time: 04-10-2019 13:46:29,
+
+10/04/2019 03:46:47 PM: DEBUG - Complete forecast info: {'humidity': 72}
+10/04/2019 03:46:47 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/04/2019 03:46:47 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast/daily?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=Novi+Sad&lang=en&cnt=5 HTTP/1.1" 200 1671
+10/04/2019 03:46:47 PM: DEBUG - Calling get_forecast_result with params: [location = denver, param = all, unit = celsius]
+10/04/2019 03:46:47 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/04/2019 03:46:47 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=denver&lang=en HTTP/1.1" 200 466
+10/04/2019 03:46:47 PM: DEBUG - Weather data results were fetched....
+10/04/2019 03:46:47 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-10-04 13:46:47+00, status=clouds, detailed status=few clouds>
+10/04/2019 03:46:47 PM: DEBUG - Complete forecast info: {'heat_index': None, 'humidex': None, 'rain': {}, 'visibility_distance': 16093, 'reference_time': 1570196807, 'weather_code': 801, 'snow': {}, 'weather_icon_url': 'http://openweathermap.org/img/w/02d.png', 'pressure': {'press': 1019, 'sea_level': None}, 'wind': {'speed': 1.5, 'deg': 220}, 'weather_icon_name': '02d', 'status': 'Clouds', 'temperature': {'temp': 5.3, 'temp_max': 6.11, 'temp_min': 5.0, 'temp_kf': None}, 'sunset_time': 1570235904, 'sunrise_time': 1570193923, 'humidity': 80, 'dewpoint': None, 'clouds': 20, 'detailed_status': 'few clouds'}
+10/04/2019 03:46:47 PM: DEBUG - Forecast in readable form:
+clouds: 20,
+pressure: 1019,
+wind speed: 1.5,
+humidity: 80,
+minimum temperature: 5.0,
+maximum temperature: 6.11,
+temperature: 5.3,
+detailed status: few clouds,
+reference time: 04-10-2019 13:46:47,
+
+10/04/2019 03:47:20 PM: DEBUG - Calling get_forecast_result with params: [location = London, param = all, unit = celsius]
+10/04/2019 03:47:20 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/04/2019 03:47:20 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=London&lang=en HTTP/1.1" 200 460
+10/04/2019 03:47:20 PM: DEBUG - Weather data results were fetched....
+10/04/2019 03:47:20 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-10-04 13:44:09+00, status=rain, detailed status=light rain>
+10/04/2019 03:47:20 PM: DEBUG - Complete forecast info: {'rain': {}, 'humidity': 72, 'humidex': None, 'sunset_time': 1570210395, 'visibility_distance': 10000, 'weather_code': 500, 'weather_icon_url': 'http://openweathermap.org/img/w/10d.png', 'clouds': 75, 'status': 'Rain', 'heat_index': None, 'reference_time': 1570196649, 'weather_icon_name': '10d', 'temperature': {'temp': 14.37, 'temp_max': 16.67, 'temp_min': 12.22, 'temp_kf': None}, 'snow': {}, 'pressure': {'press': 1004, 'sea_level': None}, 'detailed_status': 'light rain', 'wind': {'speed': 6.2, 'deg': 260}, 'sunrise_time': 1570169116, 'dewpoint': None}
+10/04/2019 03:47:20 PM: DEBUG - Forecast in readable form:
+clouds: 75,
+pressure: 1004,
+wind speed: 6.2,
+humidity: 72,
+minimum temperature: 12.22,
+maximum temperature: 16.67,
+temperature: 14.37,
+detailed status: light rain,
+reference time: 04-10-2019 13:44:09,
+
+10/04/2019 03:47:20 PM: DEBUG - Complete forecast info: {'humidity': 72}
+10/04/2019 03:47:20 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/04/2019 03:47:20 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast/daily?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=Novi+Sad&lang=en&cnt=5 HTTP/1.1" 200 1671
+10/04/2019 03:47:20 PM: DEBUG - Calling get_forecast_result with params: [location = denver, param = all, unit = celsius]
+10/04/2019 03:47:20 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/04/2019 03:47:20 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=denver&lang=sr HTTP/1.1" 200 489
+10/04/2019 03:47:20 PM: DEBUG - Weather data results were fetched....
+10/04/2019 03:47:20 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-10-04 13:47:20+00, status=clouds, detailed status=местимични облаци>
+10/04/2019 03:47:20 PM: DEBUG - Complete forecast info: {'rain': {}, 'humidity': 80, 'humidex': None, 'sunset_time': 1570235904, 'visibility_distance': 16093, 'weather_code': 801, 'weather_icon_url': 'http://openweathermap.org/img/w/02d.png', 'clouds': 20, 'status': 'Clouds', 'heat_index': None, 'reference_time': 1570196840, 'weather_icon_name': '02d', 'temperature': {'temp': 5.3, 'temp_max': 6.11, 'temp_min': 5.0, 'temp_kf': None}, 'snow': {}, 'pressure': {'press': 1019, 'sea_level': None}, 'detailed_status': 'местимични облаци', 'wind': {'speed': 1.5, 'deg': 220}, 'sunrise_time': 1570193923, 'dewpoint': None}
+10/04/2019 03:47:57 PM: DEBUG - Setting owm _language: en
+10/04/2019 03:47:57 PM: DEBUG - Calling get_forecast_result with params: [location = London, param = all, unit = celsius]
+10/04/2019 03:47:57 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/04/2019 03:47:57 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=London&lang=en HTTP/1.1" 200 460
+10/04/2019 03:47:57 PM: DEBUG - Weather data results were fetched....
+10/04/2019 03:47:57 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-10-04 13:44:09+00, status=rain, detailed status=light rain>
+10/04/2019 03:47:57 PM: DEBUG - Complete forecast info: {'weather_icon_name': '10d', 'dewpoint': None, 'reference_time': 1570196649, 'temperature': {'temp': 14.37, 'temp_max': 16.67, 'temp_min': 12.22, 'temp_kf': None}, 'visibility_distance': 10000, 'humidex': None, 'wind': {'speed': 6.2, 'deg': 260}, 'detailed_status': 'light rain', 'snow': {}, 'sunset_time': 1570210395, 'heat_index': None, 'sunrise_time': 1570169116, 'weather_icon_url': 'http://openweathermap.org/img/w/10d.png', 'weather_code': 500, 'pressure': {'press': 1004, 'sea_level': None}, 'status': 'Rain', 'clouds': 75, 'rain': {}, 'humidity': 72}
+10/04/2019 03:47:57 PM: DEBUG - Forecast in readable form:
+clouds: 75,
+pressure: 1004,
+wind speed: 6.2,
+humidity: 72,
+minimum temperature: 12.22,
+maximum temperature: 16.67,
+temperature: 14.37,
+detailed status: light rain,
+reference time: 04-10-2019 13:44:09,
+
+10/04/2019 03:47:57 PM: DEBUG - Complete forecast info: {'humidity': 72}
+10/04/2019 03:47:57 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/04/2019 03:47:57 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast/daily?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=Novi+Sad&lang=en&cnt=5 HTTP/1.1" 200 1671
+10/04/2019 03:47:57 PM: DEBUG - Setting owm _language: sr
+10/04/2019 03:47:57 PM: DEBUG - Calling get_forecast_result with params: [location = denver, param = all, unit = celsius]
+10/04/2019 03:47:57 PM: DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+10/04/2019 03:47:57 PM: DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/weather?APPID=5ab8013f8b3c54d28b8f8035ffd40f0a&q=denver&lang=hr HTTP/1.1" 200 470
+10/04/2019 03:47:57 PM: DEBUG - Weather data results were fetched....
+10/04/2019 03:47:57 PM: DEBUG - Raw forecast results = <pyowm.weatherapi25.weather.Weather - reference time=2019-10-04 13:47:20+00, status=clouds, detailed status=blaga naoblaka>
+10/04/2019 03:47:57 PM: DEBUG - Complete forecast info: {'weather_icon_name': '02d', 'dewpoint': None, 'reference_time': 1570196840, 'temperature': {'temp': 5.3, 'temp_max': 6.11, 'temp_min': 5.0, 'temp_kf': None}, 'visibility_distance': 16093, 'humidex': None, 'wind': {'speed': 1.5, 'deg': 220}, 'detailed_status': 'blaga naoblaka', 'snow': {}, 'sunset_time': 1570235904, 'heat_index': None, 'sunrise_time': 1570193923, 'weather_icon_url': 'http://openweathermap.org/img/w/02d.png', 'weather_code': 801, 'pressure': {'press': 1019, 'sea_level': None}, 'status': 'Clouds', 'clouds': 20, 'rain': {}, 'humidity': 80}
+10/04/2019 03:47:57 PM: DEBUG - Forecast in readable form:
+oblačnost: 20,
+pritisak: 1019,
+brzina vetra: 1.5,
+vlažnost vazduha: 80,
+minimalna dnevna temperatura: 5.0,
+maksimalna dnevna temperatura: 6.11,
+prosečna dnevna temperatura: 5.3,
+detaljniji opis: blaga naoblaka,
+trenutak merenja: 04-10-2019 13:47:20,
+

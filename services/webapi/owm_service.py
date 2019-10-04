@@ -10,6 +10,7 @@ class WeatherForecastService:
 
     def __init__(self, language="en"):
         self._api = OWM(OWM_API_KEY, language=language)
+        self.set_language(language)
 
     def set_language(self, language):
         """

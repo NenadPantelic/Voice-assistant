@@ -378,7 +378,7 @@
       "next_command_id":"8b33b6a0-7bfb-489c-b6df-12eceefa8ebe",
       "messages":{
          "success":{
-            "en":"Finally, what is your message.",
+            "en":"Finally, what is your message?",
             "sr":"Na kraju, izdiktiraj mi poruku."
          },
          "fail":{
@@ -531,6 +531,7 @@
          "sr":"Vraća podatke o filmu sa IMDB."
       }
    },
+
    {
       "command_id":"3cc20832-b257-4bab-a6b5-90bae5ec2198",
       "service":"browser",
@@ -546,8 +547,8 @@
       "next_command_id":"4478af5d-5536-4f92-a1c1-03a5abc20222",
       "messages":{
          "success":{
-            "en":"Sure, I'm here to help. Tell me the nickname.",
-            "sr":"Naravno, tu sam da pomognem. Reci mi korisničko ime."
+            "en":"Sure, I'm here to help. Tell me the nickname. I'm suggesting to type it from the keyboard.",
+            "sr":"Naravno, tu sam da pomognem. Predlažem da uneseš korisničko ime sa tastature."
          },
          "fail":{
             "en":"Oops. I met an unmanaged problem. Suggestion, try again.",
@@ -602,7 +603,7 @@
       "next_command_id":"6a90cef4-a6c2-472b-939f-480f138b443d",
       "messages":{
          "success":{
-            "en":"I'll do it with pleasure. What are you looking for?.",
+            "en":"I'll do it with pleasure. What are you looking for?",
             "sr":"Vrlo rado. Šta želiš da potražim?"
          },
          "fail":{
@@ -658,8 +659,8 @@
       "next_command_id":null,
       "messages":{
          "success":{
-            "en":"I'm opening the first result that I found.\n",
-            "sr":"Otvaram prvi rezultat koji je pronađen?"
+            "en":"I'm opening the first result that I found.",
+            "sr":"Otvaram prvi rezultat koji je pronađen."
          },
          "fail":{
             "en":"That's not possible. I got some problems while trying to open the wanted result's page. Try again.",
