@@ -127,7 +127,73 @@ To start Lindo/a voice assistant, type:
 ```
 python3 main.py
 ```
-Usage examples will be added soon.
+
+The first command the application starts with is the initial command. The initial command is to greet the user and ask him or her to select the operating language. The initial message looks like this:  
+
+***en: Hi, I’m Lindo voice assistant. Choose the operating language. The default option is English!***
+***sr: Zdravo, ja sam Lindo glasovni asistent. Izaberite operativni jezik. Podrazumevani jezik je engleski!***
+
+The user selects one of the offered languages (English or Serbian), and if he tries to select one of the non-existent languages, he will receive an error:  
+
+
+***en: I have some problems with the language setting. Be kind to try again. The only options are English and Serbian. Speak clear and loud!***  
+***sr: Imam problema sa postavkom jezika. Jedine opcije su engleski i srpski. Budi ljubazan da probaš opet. Govori jasno i glasno!***  
+
+The user is then expected to repeat the command, ie. chooses the operating language.
+
+After the message, the user should select one of the operating languages (English or Serbian). When selecting a language, any form of command that contains a language name is valid. Therefore, for the choice of English it is important that the command contains any of these words: ***english, default, engleski, podrazumevan (podrazumevani, podrazumevana)***. To select Serbian, the command should contain one of the words: ***serbian, srpski***.
+
+For example, these commands could be:  
+
+***en: Hi Lindo, I'm choosing English!***  
+***sr: Zdravo Lindo, moj izbor je srpski!***  
+
+## Usage examples
+
+After clarifying how Lindo works, a demonstration of functionality follows. In each of the examples of functionality, a list of keywords for that functionality command, will be provided, as well as an indication of whether that command must exclusively contain common words and keywords, or it may also contain some arbitrary words. The following is a list of common words by Lindo, for English and Serbian.  
+
+***English:***
+
+```json
+{
+   "usual_words":[
+      "lindo", "linda", "please", "should", "could","tell", "say", "listen", "speak", "help", "hello", "hi", "bye", "good bye",
+      "yo", "the", "a", "an"
+   ],
+   "conjunctions":[
+      "and", "or", "nor", "for", "but", "yet", "so"
+   ],
+   "pronouns":[
+      "i", "you", "he", "she", "it", "we", "they", "me", "them",    "her", "his"
+   ],
+   "prepositions":[
+      "at", "in", "to", "of", "by"
+   ]
+}
+```
+
+***Serbian:***
+
+```json
+{
+   "usual_words":[
+      "lindo", "linda", "molim", "treba", "možeš", 
+      "hoćeš", "reći", "reci", "kaži", "slušaj", 
+      "govori", "pomozi", "pomogneš", "kažeš",
+      "zdravo", "ćao", "pozdrav", "ej", "hej"
+   ],
+   "conjunctions":[
+      "i", "ili", "ni", "za", "ali", "već", "pa", "niti" 
+    ],
+   "pronouns":[
+      "ja", "ti", "on", "ona", "ono", "mi", "oni", "mene", "tebe",
+      "tobom", "njega", "njih", "nju",
+   ],
+   "prepositions":[
+      "kod", "u", "na", "ka", "od", "sa"
+   ]
+}
+```
 ## Special commands
 
 There are cases when special commands are called:
