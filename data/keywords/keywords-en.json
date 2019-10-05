@@ -22,7 +22,7 @@
          "replace":0.15,
          "language":0.25,
          "operating":0.2,
-         "new":0.05
+         "new":0.1
       }
    },
    {
@@ -195,8 +195,7 @@
          "bulb":0.35,
          "arduino":0.35,
          "relay":0.35,
-         "power on":0.25,
-         "power off":0.25,
+         "power":0.25,
          "light":0.35
       }
    },
@@ -208,7 +207,8 @@
          "off":0.25,
          "down":0.25,
          "sleep":0.25,
-         "abort":0.25
+         "abort":0.25,
+         "exit": 0.25
       }
    }
 ]

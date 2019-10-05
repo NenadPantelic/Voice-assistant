@@ -237,8 +237,11 @@
          "stanje":0.15,
          "sijalica":0.35,
          "sijalice":0.35,
+         "sijalicu":0.35,
          "relej":0.25,
-         "svetlo":0.35
+         "svetlo":0.35,
+         "treba": 0.1,
+         "osvetljenje": 0.3
       }
    },
    {
@@ -249,7 +252,8 @@
          "idi":0.2,
          "ugasi":0.25,
          "prekini":0.25,
-         "povuci":0.25
+         "povuci":0.25,
+         "završi": 0.25
       }
    }
 ]
