@@ -1,5 +1,5 @@
-# Voice assistant Lindo/a
-Voice assistant project based on speech recognition and text-to-speech synthesis. Done as part of the graduation thesis. The project is developed in Python3. Voice-assistant (named Linda/Lindo) is a Linux voice assistant based on the Speech recognition Python library. Speech recognition library supports multiple cloud API speech-to-text services. I tested some of them:
+# Voice assistant Lindo
+Voice assistant project based on speech recognition and text-to-speech synthesis. Done as part of the graduation thesis. The project is developed in Python3. Voice-assistant (named Lindo) is a Linux voice assistant based on the Speech recognition Python library. Speech recognition library supports multiple cloud API speech-to-text services. I tested some of them:
 
 - Google speech-to-text
 - Google Cloud
@@ -123,7 +123,7 @@ Phrase ***What's the weather like around Denver*** will follow the same procedur
 
 # Usage
 
-To start Lindo/a voice assistant, type:
+To start Lindo voice assistant, type:
 ```
 python3 main.py
 ```
