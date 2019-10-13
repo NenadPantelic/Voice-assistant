@@ -19,7 +19,7 @@
          },
          "fail":{
             "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if the error happens again!",
-            "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probaj ponovo ili kasnije ukoliko to ne prođe!"
+            "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probajte ponovo ili kasnije ukoliko to ne prođe!"
          }
       },
       "descriptions":{
@@ -47,12 +47,12 @@
          },
          "fail":{
             "en":"I have some problems with the language setting. The only options are English and Serbian. Be kind to try again. Speak clear and loud!",
-            "sr":"Imam problema sa postavkom jezika. Jedine opcije su engleski i srpski. Budi ljubazan da probaš opet. Govori jasno i glasno!"
+            "sr":"Imam problema sa postavkom jezika. Jedine opcije su engleski i srpski. Budite ljubazni da probate opet. Govorite jasno i glasno!"
          }
       },
       "descriptions":{
          "en":"Sets the operating language of the voice assistant.",
-         "sr":"Поставља оперативни језик гласовног асистента."
+         "sr":"Postavlja operativni jezik glasovnog asistenta."
       }
    },
    {
@@ -71,11 +71,11 @@
       "messages":{
          "success":{
             "en":"I'm sorry, but I'm not sure what you want. I cannot precisely determine  your command. Try again!",
-            "sr":"Žao mi je, ali nisam siguran šta želiš. Ne mogu da odredim precizno tvoju komandu. Probaj ponovo!"
+            "sr":"Žao mi je, ali nisam siguran šta želite. Ne mogu da odredim precizno Vašu komandu. Probajte ponovo!"
          },
          "fail":{
             "en":"I'm sorry, but I'm not sure what you want. I cannot determine precisely your command. Try again!",
-            "sr":"Žao mi je, ali nisam siguran šta želiš. Ne mogu da odredim precizno tvoju komandu. Probaj ponovo!"
+            "sr":"Žao mi je, ali nisam siguran šta želite. Ne mogu da odredim precizno Vašu komandu. Probajte ponovo!"
          }
       },
       "descriptions":{
@@ -99,11 +99,11 @@
       "messages":{
          "success":{
             "en":"I'm sorry, but I'm not sure what you want. Your command is ambiguous. There are a few options. Try again, please!",
-            "sr":"Žao mi je, ali nisam siguran šta želiš. Tvoje komanda nije jednoznačna. Postoji više mogućih opcija. Probaj ponovo!"
+            "sr":"Žao mi je, ali nisam siguran šta želite. Vaša komanda nije jednoznačna. Postoji više mogućih opcija. Probajte ponovo!"
          },
          "fail":{
             "en":"I'm sorry, but I'm not sure what you want. Your command is ambiguous. There are a few options. Try again, please!",
-            "sr":"Žao mi je, ali nisam siguran šta želiš. Tvoje komanda nije jednoznačna. Postoji više mogućih opcija. Probaj ponovo!"
+            "sr":"Žao mi je, ali nisam siguran šta želite. Vaša komanda nije jednoznačna. Postoji više mogućih opcija. Probajte ponovo!"
          }
       },
       "descriptions":{
@@ -131,7 +131,7 @@
          },
          "fail":{
             "en":"I'm sorry, I cannot change the language аt the moment. Try again!",
-            "sr":"Nаžalost, ne mogu trenutno da promenim jezik. Probaj ponovo.!"
+            "sr":"Nаžalost, ne mogu trenutno da promenim jezik. Probajte ponovo!"
          }
       },
       "descriptions":{
@@ -159,7 +159,7 @@
          },
          "fail":{
             "en":"Unfortunately, I met some problems during request handling. I think the issue lies in voice comprehension. I'm suggesting to try again.",
-            "sr":"Nažalost, došlo je do nekih problema. Verovatno zbog razumevanja govora. Moj savet je da probaš ponovo."
+            "sr":"Nažalost, došlo je do nekih problema. Verovatno zbog razumevanja govora. Moj savet je da probate ponovo."
          }
       },
       "descriptions":{
@@ -187,12 +187,12 @@
          },
          "fail":{
             "en":"Oops. There is some problem. Usually, problem with this service lies in location misunderstanding. So, my advice is to repeat your command.",
-            "sr":"Ups. Došlo je do nekog problema. Uglavnom, problemi kod ove usluge potiču iz probleema sa razumevanjem govora.Moj savet je da probaš ponovo."
+            "sr":"Ups. Došlo je do nekog problema. Uglavnom, problemi kod ove usluge potiču iz problema sa razumevanjem govora. Moj savet je da probate ponovo."
          }
       },
       "descriptions":{
          "en":"Brief Wikipedia search. Returns summary of wikipedia page.",
-         "sr":"Кратак резиме са стране добијене са Википедије"
+         "sr":"Kratak rezime sa strane dobijene sa Vikipedije"
       }
    },
    {
@@ -211,11 +211,11 @@
       "messages":{
          "success":{
             "en":"Ok, I can do it. What's the source language?",
-            "sr":"Mislim da mogu da ti pomognem. Koji je izvorni jezik sa kog želiš da prevedem?"
+            "sr":"Mislim da mogu da Vam pomognem. Koji je izvorni jezik sa kog želite da prevedem?"
          },
          "fail":{
-            "en":"I'm not sure what you meant. Possible solution, say again!",
-            "sr":"Zapravo, nisa siguran šta želiš. Možda će stvar rešiti ako probaš ponovo!"
+            "en":"I'm not sure what you meant. Possible solution, say again.",
+            "sr":"Zapravo, nisa siguran šta želite. Najbolje je da probate ponovo."
          }
       },
       "descriptions":{
@@ -239,11 +239,11 @@
       "messages":{
          "success":{
             "en":"Yes, I can handle that. Say text for translation.",
-            "sr":"Da, snaći ću se sa tim. Koji tekst želiš da prevedem?"
+            "sr":"Da, snaći ću se sa tim. Koji tekst želite da prevedem?"
          },
          "fail":{
-            "en":"Nope, I have a problem. Say again.",
-            "sr":"Ne, imam problem. Ponovi."
+            "en":"Nope, I have a problem. Say again!",
+            "sr":"Ne, imam problem. Ponovite!"
          }
       },
       "descriptions":{
@@ -267,11 +267,11 @@
       "messages":{
          "success":{
             "en":"What's the target language?",
-            "sr":"Na koji jezik želiš da prevedem ovo?"
+            "sr":"Na koji jezik želite da prevedem ovo?"
          },
          "fail":{
             "en":"Unfortunately, I cannot handle your command. Repeat command!",
-            "sr":"Nažalost, nisam uspeo da odradim šta želiš. Ponovi komandu!"
+            "sr":"Nažalost, nisam uspeo da odradim šta želite. Ponovite komandu!"
          }
       },
       "descriptions":{
@@ -299,7 +299,7 @@
          },
          "fail":{
             "en":"I could not translate the given speech. Please, try again!",
-            "sr":"Nisam uspeo da prevedem govor. Molim, probaj ponovo!"
+            "sr":"Nisam uspeo da prevedem govor. Molim, probajte ponovo!"
          }
       },
       "descriptions":{
@@ -323,11 +323,11 @@
       "messages":{
          "success":{
             "en":"I'm ready for a new email. Who is the recipient? It will be better if you enter an address from the keyboard.",
-            "sr":"Spreman sam za novi email. Ko je primalac? Sigurnije je da uneseš adresu sa tastature."
+            "sr":"Spreman sam za novi email. Ko je primalac? Sigurnije je da unesete adresu sa tastature."
          },
          "fail":{
-            "en":"I'm sorry, I could not handle this. Problems happen mainly because of speech recognition. Try again.",
-            "sr":"Žao mi je, nisam uspeo da rešim ovo. Problemi uglavnom nastaju zbog prepoznavanja glasa. Probaj ponovo."
+            "en":"I'm sorry, I could not handle this. Problems happen mainly because of speech recognition. Try again!",
+            "sr":"Žao mi je, nisam uspeo da rešim ovo. Problemi uglavnom nastaju zbog prepoznavanja govora. Probajte ponovo!"
          }
       },
       "descriptions":{
@@ -354,8 +354,8 @@
             "sr":"Koja je tema poruke?"
          },
          "fail":{
-            "en":"Your last command cannot be executed. I met some unhandled issues. Try again.",
-            "sr":"Nisam u mogućnosti da izvršim poslednju komandu. Dogodile su se neke greškee. Pokušaj ponovo."
+            "en":"Your last command cannot be executed. I met some unhandled issues. Try again!",
+            "sr":"Nisam u mogućnosti da izvršim poslednju komandu. Dogodile su se neke greške. Pokušajte ponovo!"
          }
       },
       "descriptions":{
@@ -379,11 +379,11 @@
       "messages":{
          "success":{
             "en":"Finally, what is your message?",
-            "sr":"Na kraju, izdiktiraj mi poruku."
+            "sr":"Na kraju, izdiktirajte mi poruku."
          },
          "fail":{
             "en":"Huh, I encountered some problems. Please, say again your last command.",
-            "sr":"Huh, naišao sam na neki problem. Ponovi poslednju komandu."
+            "sr":"Huh, naišao sam na neki problem. Ponovite poslednju komandu molim."
          }
       },
       "descriptions":{
@@ -435,11 +435,11 @@
       "messages":{
          "success":{
             "en":"Sure, tell me what is the number of top movies you want? The maximum number is 250.",
-            "sr":"Naravno, koliko filmova želiš? Maksimalno je moguće 250."
+            "sr":"Naravno, koliko filmova želite? Maksimalno je moguće 250."
          },
          "fail":{
             "en":"Ah. Some error occurred. Possibly, you asked for less than 1 or more than 250. I'm suggesting to try again.",
-            "sr":"Ah, došlo je do neke greške. Moguće je da si tražio manje od 1 ili više od 250. Predlažem da probaš ponovo."
+            "sr":"Ah, došlo je do neke greške. Moguće je da ste tražili manje od 1 ili više od 250. Predlažem da probate ponovo."
          }
       },
       "descriptions":{
@@ -467,7 +467,7 @@
          },
          "fail":{
             "en":"Yikes. Some obstacles disabled this action. Maybe you asked for less than 1 or more than 250 movies. Try again!",
-            "sr":"Jao. Nešto je iskrslo pri ovoj akciji. Možda si tražio ili tražila manje od 1 ili više od 250 filmova. Probaj ponovo!"
+            "sr":"Jao. Nešto je iskrslo pri ovoj akciji. Možda ste tražili manje od 1 ili više od 250 filmova. Probajte ponovo!"
          }
       },
       "descriptions":{
@@ -491,11 +491,11 @@
       "messages":{
          "success":{
             "en":"That sounds fine. Tell me the title of the movie you want, as precise as you can.",
-            "sr":"To zvuči izvodljivo. Reci mi što tačniji naziv filma."
+            "sr":"To zvuči izvodljivo. Recite mi što tačniji naziv filma."
          },
          "fail":{
             "en":"I'm sorry to say, but something went wrong. Try again!",
-            "sr":"Žao mi je što ovo kažem, ali nešto je pošlo naopako. Probaj ponovo."
+            "sr":"Žao mi je što ovo kažem, ali nešto je pošlo naopako. Probajte ponovo!"
          }
       },
       "descriptions":{
@@ -531,7 +531,6 @@
          "sr":"Vraća podatke o filmu sa IMDB."
       }
    },
-
    {
       "command_id":"3cc20832-b257-4bab-a6b5-90bae5ec2198",
       "service":"browser",
@@ -548,11 +547,11 @@
       "messages":{
          "success":{
             "en":"Sure, I'm here to help. Tell me the nickname. I'm suggesting to type it from the keyboard.",
-            "sr":"Naravno, tu sam da pomognem. Predlažem da uneseš korisničko ime sa tastature."
+            "sr":"Naravno, tu sam da pomognem. Predlažem da unesete korisničko ime sa tastature."
          },
          "fail":{
             "en":"Oops. I met an unmanaged problem. Suggestion, try again.",
-            "sr":"Ups. Naišao sam na problem. Predlažem da probaš ponovo."
+            "sr":"Ups. Naišao sam na problem. Predlažem da probate ponovo."
          }
       },
       "descriptions":{
@@ -580,7 +579,7 @@
          },
          "fail":{
             "en":"I cannot open the given social network account. Trying again is one of the possibilities.",
-            "sr":"Ne mogu da otvorim nalog sa društvene mreže. Jedna od opcija je da probaš ponovo."
+            "sr":"Ne mogu da otvorim nalog sa društvene mreže. Jedna od opcija je da probate ponovo."
          }
       },
       "descriptions":{
@@ -604,11 +603,11 @@
       "messages":{
          "success":{
             "en":"I'll do it with pleasure. What are you looking for?",
-            "sr":"Vrlo rado. Šta želiš da potražim?"
+            "sr":"Vrlo rado. Šta želite da potražim?"
          },
          "fail":{
             "en":"I'm sorry, but we have a problem. Maybe you should try again.",
-            "sr":"Žao mi je, ali imamo problem. Možda bi trebalo da probaš ponovo."
+            "sr":"Žao mi je, ali imamo problem. Možda bi trebalo da probate ponovo."
          }
       },
       "descriptions":{
@@ -636,7 +635,7 @@
          },
          "fail":{
             "en":"Sorry, but I have a problem with that. Try again.",
-            "sr":"Izvini, ali imam problem sa tim. Probaj ponovo"
+            "sr":"Izvinite, ali imam problem sa tim. Probajte ponovo"
          }
       },
       "descriptions":{
@@ -663,8 +662,8 @@
             "sr":"Otvaram prvi rezultat koji je pronađen."
          },
          "fail":{
-            "en":"That's not possible. I got some problems while trying to open the wanted result's page. Try again.",
-            "sr":"To nije moguće. Naišao sam na problem dok sam pokušavao da otvorim željenu stranu. Pokušaj ponovo."
+            "en":"That's not possible. I got some problems while trying to open the wanted result's page. Try again!",
+            "sr":"To nije moguće. Naišao sam na problem dok sam pokušavao da otvorim željenu stranu. Pokušajte ponovo!"
          }
       },
       "descriptions":{
@@ -686,8 +685,13 @@
       "is_ready":false,
       "next_command_id":"13d9c09c-b5cb-4c0a-b6a2-ec1e1ead53c0",
       "messages":{
-         "en":"Hm, I can run some programs. What program you're seeking for?",
-         "sr":"Hm, mogu da pokrenem neke programe. Koji program konkretno želiš?"
+         "success":{
+            "en":"Hm, I can run some programs. What program you're seeking for?",
+            "sr":"Hm, mogu da pokrenem neke programe. Koji program konkretno želite?"
+         },
+         "fail":{
+
+         }
       },
       "descriptions":{
          "en":"Initializes running of the desired program.",
@@ -708,8 +712,13 @@
       "is_ready":true,
       "next_command_id":null,
       "messages":{
-         "en":"By your input, I think you wanted this action.",
-         "sr":"Po tvom zahtevu, mislim da si ovo hteo?"
+         "success":{
+            "en":"By your input, I think you wanted this action.",
+            "sr":"Po Vašem zahtevu, mislim da ste ovo želeli."
+         },
+         "fail":{
+
+         }
       },
       "descriptions":{
          "en":"Runs the desired program.",
@@ -736,7 +745,7 @@
          },
          "fail":{
             "en":"I'm sorry. Something went wrong. Check connectivity and serial port parameters.",
-            "sr":"Žao mi je, nešto je pošlo po zlu. Proveri konekciju i parametre serijskog porta."
+            "sr":"Žao mi je, nešto je pošlo po zlu. Proverite konekciju i parametre serijskog porta."
          }
       },
       "descriptions":{
@@ -760,11 +769,11 @@
       "messages":{
          "success":{
             "en":"Ok, I'm going off now. I hope so you enjoyed. See you next time!",
-            "sr":"U redu, ja se povlačim sada. Nadam se da si uživao. Do narednog viđenja!"
+            "sr":"U redu, ja se povlačim sada. Nadam se da ste uživali. Do narednog viđenja!"
          },
          "fail":{
-            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if the error happens again!\n",
-            "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probaj ponovo ili kasnije ukoliko to ne prođe!"
+            "en":"I'm sorry, but some internal error occurred that cannot be handled at the moment. Try again or later if the error happens again!",
+            "sr":"Nаžalost, došlo je do neke greške koju ne mogu trenutno da rešim. Probajte ponovo ili kasnije ukoliko to ne prođe!"
          }
       },
       "descriptions":{
