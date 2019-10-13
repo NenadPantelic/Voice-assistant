@@ -148,9 +148,18 @@ For example, these commands could be:
 ***en: Hi Lindo, I'm choosing English!***  
 ***sr: Zdravo Lindo, moj izbor je srpski!***  
 
+To change the operating language, keywords are:
+***promeni, izbor, zameni, jezik, operativni, novi и switch, change, replace, language, operating, new***
+
+According to the keywords, these could be commands:
+- ***Promeni operativni jezik.***
+- ***Zameni operativni jezik.***
+- ***Switch the operating language.***
+- ***Change the operating language.***
+
 ## Usage examples
 
-After clarifying how Lindo works, a demonstration of functionality follows. In each of the examples of functionality, a list of keywords for that functionality command, will be provided, as well as an indication of whether that command must exclusively contain common words and keywords, or it may also contain some arbitrary words. The following is a list of common words by Lindo, for English and Serbian.  
+After clarifying how Lindo works, a demonstration of functionality follows. In each of the examples of functionality, a list of keywords for that functionality command, will be provided. The following is a list of common words by Lindo, for English and Serbian.  
 
 ***English:***
 
@@ -194,16 +203,31 @@ After clarifying how Lindo works, a demonstration of functionality follows. In e
    ]
 }
 ```
-## Special commands
+
+## Examples:
+
+
+
+## Special cases
 
 There are cases when special commands are called:
 - initial command (says greeting text and asks for the input text)
 - setting language (sets the operating language)
 - switch language (switches the operating language)
-- ambiguous command (scenario when multiple commands have the same score)
+- ambiguous command (scenario when multiple commands have the same score):
+   - ***en: I’m sorry, but I’m not sure what you want. Your command is ambiguous. There are a few options. Try again,            please!***,
+   - ***sr: Žao mi je, ali nisam siguran šta želite. Vaša komanda nije jednoznačna. Postoji više mogućih opcija. Probajte        ponovo!***
+    
 - invalid command (command cannot be determined precisely)
 - final command (last calling command)
 
+Also, there may be situations where speech recognition returns an error:
+- speech cannot be processed:
+   - ***en: Speech cannot be analyzed or recognized!***,
+   - ***sr: Vaš govor ne može biti obraden ili prepoznat!***
+- API problems:
+   - ***en: Request error problem. Check API limits and connectivity status!***,
+   - ***sr: Problemi sa slanjem zahteva. Proverite API limit i status mreže!***
 ## Aditional notes
 
 - To use arduino service, you must connect arduino with your computer (serial port's parameters are set in config/config.py); uncomment arduino service line in service pool in main.py
