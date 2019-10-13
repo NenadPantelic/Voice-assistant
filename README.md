@@ -242,7 +242,7 @@ After this, Lindo will ask for the name of the movie. Say the name of the movie 
  - Keywords:en - ***send, mail, email, message, want*** and sr - ***pošalji, pošaljem, mail, mejl, email, elektronsku, poruku, želim, hoću***
  
 
-The example of successful communication in english looks like this:
+The example of successful communication in English looks like this:
 ```
    User: Lindo, send an email!
    (Lindo, compose an email!)
@@ -257,7 +257,7 @@ The example of successful communication in english looks like this:
    Lindo: Email was sent successfully!
 
 ```
-In serbian:
+In Serbian:
 ```
    User: Lindo, želim da pošaljem mail.
    (Lindo, sastavi email!)
@@ -278,7 +278,7 @@ In serbian:
  - Keywords:en - ***translate, translation, language, translator, text, some*** and sr - ***prevedi, prevodilac, prevod, prevodenje, prevedeš, tekst, teksta, govor, govora, neki, nekog***
  
 
-The example of successful communication in english looks like this:
+The example of successful communication in English looks like this:
 ```
    User: Lindo, translate some text.
    (Lindo, I need a language translator.)
@@ -294,7 +294,7 @@ The example of successful communication in english looks like this:
    У Мари был маленький ягненок
 
 ```
-And in serbian:
+And in Serbian:
 ```
    User: Lindo, prevedi mi tekst.
    (Lindo, treba mi prevod govora!)
@@ -308,6 +308,89 @@ And in serbian:
    Lindo: Mislim da prevod glasi ovako: Estoy defendiendo mi tesis hoy
 
 ```
+### Wikipedia service
+#### getting info from Wikipedia
+
+ - Keywords: any phrase that starts with: en - ***Who is..., What is..., What was ...., What are... What were..., Tell me something about....***, sr - ***Ko je..., Ko je bio..., Ko su bili, Šta je....***
+ 
+ - Commands (en):
+   - ***Who was Thomas Edison?***
+   - ***What is Ohm’s Law?***
+   - ***Tell me something about car.***
+
+- Commands (sr):
+   - ***Ko je bio Dositej Obradović?***
+   - ***Šta je integrisano kolo?***
+ 
+### Browser services
+
+### searching on Google and opening the results in the browser 
+
+- Keywords: en - ***open, google, search, page, find, look, browser, term, query, internet, web*** 
+   sr - ***otvori, google, gugl, guglu, guglaj, googlu, izguglaj, izgooglaj, pretraži, pretraga, pretragu, izvrši, strana,      traži, pronadi, browser, upit, internet, internetu, web, webu, veb, vebu***
+
+Use-case in English:
+```
+   User: Lindo, search something on Google.
+   (Lindo, activate the Internet search.)
+   (Lindo, look for something on Google for me.)
+   Lindo: I'll do it with pleasure. What are you looking for?
+   User: Novak Doković (*or any other term*) 
+   Lindo: Ok, and what about type? Possible options are videos, news, images,books, shopping, applications or all?
+   User: *user should say any phrase that contains one of these words videos, news, images, books, shopping, applications,       all*
+   Lindo: I'm opening the first result that I found.
+   (*browser opens the page*)
+```
+Use-case in Serbian:
+```
+   User: Lindo, pretraži nešto na Google-u.
+   (Lindo, izvrši pretragu na Google-u.)
+   (Lindo, treba mi internet pretraga.)
+   Lindo: Vrlo rado. Šta želite da potražim?
+   User: Fakultet inženjerskih nauka u Kragujevcu (*ili bilo koji drugi upit*)
+   Lindo: To je u redu. A šta ćemo sa tipom, ponudene opcije su: video, vesti,slike, knjige, šoping, aplikacije ili sve?
+   User: *korisnik izgovara bilo koju instrukciju koja u sebi sadrži neku od reči: video, vesti, slike, knjige, šoping,        aplikacije ili sve*
+   Lindo: Otvaram prvi rezultat koji je pronaden.
+   (*otvara se strana u pretraživaču*)
+```
+
+#### opening a page from a social network
+
+- Keywords: en - ***open, social, network, page, facebook, twitter, instagram, linkedin, nickname, profile, account*** 
+   sr - ***otvori, prikaži, pokaži,socijalna, socijalnu, društvenu, društvene, mrežu, mreže, stranu, strana, stranica, facebook, fejsbuk, fejs, twitter, tviter, instagram, linkedin, profil, profila, nalog***
+
+Use-case in English:
+```
+   User: Lindo, оpen Linkedin page.
+   (Lindo, open Facebook/Instagram/Twitter account page.)
+   Lindo: Sure, I'm here to help. Tell me the nickname. I'm suggesting to type it from the keyboard.
+   User: Ok, I'm ready. (*enters nickname from the keyboard- e.g. nenad-pantelić*)
+   Lindo: Here is the page. (*browser opens the page*)
+```
+Use-case in Serbian:
+```
+   User: Lindo, otvori Linkedin stranu.
+   (Lindo, otvori stranu Facebook/Instagram/Twitter naloga.)
+   Lindo: Naravno, tu sam da pomognem. Predlažem da unesete korisničko ime sa tastature.
+   User: U redu, spreman sam za unos. (*korisnik unosi korisničko ime profila - npr. nenad-pantelić*)
+   Lindo: Evo strane koju sam našao. (*otvara se strana u pretraživaču*)
+```
+
+### Arduino control service
+
+- Keywords: en - turn, on, off, switch, bulb, arduino, relay, power, light and sr - uključi, upali, isključi, ugasi, promeni,  stanje, sijalica, sijalice, sijalicu, relej, svetlo, treba, osvetljenje.
+
+- Commands in English:
+   - Turn on/off the light
+   - Switch the state of the bulb
+
+- Commands in Serbian:
+   - Uključi sijalicu/Isključi sijalicu!
+   - Treba mi osvetljenje.
+   - Upali/Ugasi svetlo!
+   - Promeni stanje sijalice.
+
+   
 ## Special cases
 
 There are cases when special commands are called:
