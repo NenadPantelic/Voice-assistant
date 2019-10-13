@@ -206,8 +206,108 @@ After clarifying how Lindo works, a demonstration of functionality follows. In e
 
 ## Examples:
 
+### IMDB services
 
+#### getting movie info:
+- keywords:  en - ***details, movie, info, information, informations, film, imdb*** and sr - ***detalji, detalje, filmu, film, info, informacije, imbd, podatke, podaci***  
 
+- Commands (en):
+   - ***I need some movie details.***
+   - ***Tell me some film information.***
+   - ***Can you provide some IMDB info?***  
+
+- Commands (sr):
+   - ***Potrebni su mi detalji o filmu.***
+   - ***Želim informacije o filmu.***
+   - ***Daj mi podatke o filmu sa IMDB.*** 
+   
+After this, Lindo will ask for the name of the movie. Say the name of the movie as accurately as you can, e.g. Green Book.
+
+#### getting top movies:
+- keywords:  en - ***top, best,movies, what, imdb, rating*** and sr - ***top, najbolji, najbolje, filmovi, filmove, koji, imdb, rejting***  
+
+   
+ - Commands (en):
+   - ***What are the best movies by IMDB?***
+   - ***Tell me top rated movies.***
+
+- Commands (sr):
+   - ***Koji su najbolji filmovi po IMDB?***
+   - ***Navedi mi filmove sa top rejtingom.***
+   
+ After this, Lindo will ask about the number of movies you are looking for. Value must be in range [1,250]
+ 
+ ### Email sending service
+ #### send an email
+ - Keywords:en - ***send, mail, email, message, want*** and sr - ***pošalji, pošaljem, mail, mejl, email, elektronsku, poruku, želim, hoću***
+ 
+
+The example of successful communication in english looks like this:
+```
+   User: Lindo, send an email!
+   (Lindo, compose an email!)
+   (Lindo, I want to send an email!)
+   Lindo: I'm ready for a new email. Who is the recipient?
+   It will be better if you enter an address from the keyboard.
+   User: Ok, I'll do it (*enter an address from the keyboard*)
+   Lindo: What about the subject?
+   User: Graduation thesis
+   Lindo: Finally, what is your message?
+   User: This is my graduation thesis.
+   Lindo: Email was sent successfully!
+
+```
+In serbian:
+```
+   User: Lindo, želim da pošaljem mail.
+   (Lindo, sastavi email!)
+   (Lindo, pošalji poruku!)
+   Lindo: Spreman sam za novi email. Ko je primalac?
+   Sigurnije je da unesete adresu sa tastature.
+   User: U redu. (*затим уноси адресу са тастатуре*)
+   Lindo: Koja je tema poruke?
+   User: Diplomski rad
+   Lindo: Na kraju, izdiktirajte mi poruku.
+   User: Ovo je diplomski rad.
+   Lindo: Email je uspešno poslat!
+
+```
+### Translation service
+
+#### translate text
+ - Keywords:en - ***translate, translation, language, translator, text, some*** and sr - ***prevedi, prevodilac, prevod, prevodenje, prevedeš, tekst, teksta, govor, govora, neki, nekog***
+ 
+
+The example of successful communication in english looks like this:
+```
+   User: Lindo, translate some text.
+   (Lindo, I need a language translator.)
+   (Lindo, I need a text translation.)
+   Lindo: Ok, I can do it. What's the source language?.
+   User: english (*or some other text*)
+   Lindo: Yes, I can handle that. Say text for translation.
+   User: *use says text for translation, e.g. Mary had
+   a little lamb.*
+   Lindo: What's the target language??
+   User: *choose target language, e.g. russian.*
+   Lindo: I think that translated speech sounds like this:
+   У Мари был маленький ягненок
+
+```
+And in serbian:
+```
+   User: Lindo, prevedi mi tekst.
+   (Lindo, treba mi prevod govora!)
+   (Lindo, treba mi prevodenje teksta!)
+   Lindo: Mislim da mogu da Vam pomognem. Koji je izvorni jezik sa kog želite da prevedem?.
+   User: srpski (*ili bilo koji drugi jezik*)
+   Lindo: Da, snaći ću se sa tim. Koji tekst želite da prevedem?
+   User: *korisnik izgovara tekst za prevod, npr.  Ja danas branim diplomski rad.*
+   Lindo: Na koji jezik želite da prevedem ovo?
+   User: *korisnik bira ciljni jezik, npr. španski.*
+   Lindo: Mislim da prevod glasi ovako: Estoy defendiendo mi tesis hoy
+
+```
 ## Special cases
 
 There are cases when special commands are called:
