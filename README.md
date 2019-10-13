@@ -204,8 +204,6 @@ After clarifying how Lindo works, a demonstration of functionality follows. In e
 }
 ```
 
-## Examples:
-
 ### IMDB services
 
 #### getting movie info:
