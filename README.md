@@ -149,7 +149,7 @@ For example, these commands could be:
 ***sr: Zdravo Lindo, moj izbor je srpski!***  
 
 To change the operating language, keywords are:
-***promeni, izbor, zameni, jezik, operativni, novi и switch, change, replace, language, operating, new***
+***promeni, izbor, zameni, jezik, operativni, novi*** (sr) and ***switch, change, replace, language, operating, new*** (en).
 
 According to the keywords, these could be commands:
 - ***Promeni operativni jezik.***
@@ -211,15 +211,16 @@ After clarifying how Lindo works, a demonstration of functionality follows. In e
 ## Special cases
 
 There are cases when special commands are called:
-- initial command (says greeting text and asks for the input text)
-- setting language (sets the operating language)
-- switch language (switches the operating language)
 - ambiguous command (scenario when multiple commands have the same score):
    - ***en: I’m sorry, but I’m not sure what you want. Your command is ambiguous. There are a few options. Try again,            please!***,
    - ***sr: Žao mi je, ali nisam siguran šta želite. Vaša komanda nije jednoznačna. Postoji više mogućih opcija. Probajte        ponovo!***
     
-- invalid command (command cannot be determined precisely)
-- final command (last calling command)
+- invalid command (command cannot be determined precisely):
+   - ***en: I’m sorry, but I’m not sure what you want. I cannot precisely determine your command. Try again!***,
+   - ***sr: Žao mi je, ali nisam siguran šta želite. Ne mogu da odredim precizno Vašu komandu. Probajte ponovo!***
+- final command (last calling command) - you invoke this command when you want to exit the application. Command keywords: ***slobodan, slobodna, idi, ugasi, prekini, povuci,završi*** - serbian and ***free, go, off, down, sleep, abort. exit*** - english. Example:
+   - ***en: Lindo, you're free to go!***,
+   - ***sr: Lindo, povuci se!***
 
 Also, there may be situations where speech recognition returns an error:
 - speech cannot be processed:
