@@ -379,14 +379,14 @@ Use-case in Serbian:
 - Keywords: en - turn, on, off, switch, bulb, arduino, relay, power, light and sr - uključi, upali, isključi, ugasi, promeni,  stanje, sijalica, sijalice, sijalicu, relej, svetlo, treba, osvetljenje.
 
 - Commands in English:
-   - Turn on/off the light
-   - Switch the state of the bulb
+   - ***Turn on/off the light***
+   - ***Switch the state of the bulb***
 
 - Commands in Serbian:
-   - Uključi sijalicu/Isključi sijalicu!
-   - Treba mi osvetljenje.
-   - Upali/Ugasi svetlo!
-   - Promeni stanje sijalice.
+   - ***Uključi sijalicu/Isključi sijalicu!***
+   - ***Treba mi osvetljenje.***
+   - ***Upali/Ugasi svetlo!***
+   - ***Promeni stanje sijalice.***
 
    
 ## Special cases
