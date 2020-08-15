@@ -1,5 +1,5 @@
 # Voice assistant Lindo
-Voice assistant project based on speech recognition and text-to-speech synthesis. Done as part of the graduation thesis. The project is developed in Python3. Voice-assistant (named Lindo) is a Linux voice assistant based on the Speech recognition Python library. Speech recognition library supports multiple cloud API speech-to-text services. I tested some of them:
+Voice assistant project based on speech recognition and text-to-speech synthesis. Done as part of the graduation thesis. The project was developed in Python3. Voice-assistant (named Lindo) is a Linux voice assistant based on the Speech recognition Python library. Speech recognition library supports multiple cloud API speech-to-text services. I tested some of them:
 
 - Google speech-to-text
 - Google Cloud
@@ -15,10 +15,10 @@ For the basic usage of speech conversion to text, you need to install SpeechReco
 ```sh
 pip3 install SpeechRecognition
 ```
-Currently, Lindo/a  supports English and Serbian language (my native language). If you want to add some operating language, feel free to do that.
+Currently, Lindo  supports English and Serbian language (my native language). If you want to add some operating language, feel free to do that.
 
 # Installation
-The voice assistant offers services that require the assistance of other modules, libraries, and APIs. All of them are listed in the requirements.txt file. Most of them could be installed with pip. This project was developed under the Linux operating system, but also tested on Windows 10 OS. So, some comments are provided in requirements.txt. If you want clear, all-at-once installation, remove comments from requirements.txt and use: 
+The voice assistant offers services that require the assistance of other modules, libraries, and APIs. All of them are listed in the requirements.txt file. Most of them could be installed with pip. This project was developed under the Linux operating system, but also tested on Windows 10 OS. So, some comments are provided in requirements.txt. If you want clear, all-at-once installation, remove comments from requirements.txt, and use: 
 ```
 pip3 install -r requirements.txt
 ```
@@ -28,7 +28,7 @@ API keys are provided in config/config.py file and can be used (for some time su
 ## Use another Web API speech-to-text service
 
 
-As previously mentioned, voice recognition is performed with the SpeechRecognition library that supports multiple API services for speech-to-text conversion. ***Lindo/a*** voice assistant is built with Google's speech-to-text service (abbr. stt). In most of its behavior, this application is modular and easy to change and maintain. So, practically, you can change the stt service, If you want so. To use Google Cloud API, you also need to install google-api-python-client library with the following command:
+As previously mentioned, voice recognition is performed with the SpeechRecognition library that supports multiple API services for speech-to-text conversion. ***Lindo*** voice assistant is built with Google's speech-to-text service (abbr. stt). In most of its behavior, this application is modular and easy to change and maintain. So, practically, you can change the stt service, If you want so. To use Google Cloud API, you also need to install google-api-python-client library with the following command:
 ```
 pip3 install --upgrade google-api-python-client
 ```  
@@ -79,14 +79,14 @@ Based on the rest of the words, the command is being determined. Command's struc
 - tag: mark of command; from the set {initial, final, invalid, ambiguous}
 - is_ready: boolean, only commands with is_ready true are executed
 - next_command_id: command that goes after current command
-- messages: a dictionary that holds messages when command is successfully executed, and when execution failed (with language choice)
+- messages: a dictionary that holds messages when the command is successfully executed, and when execution failed (with language choice)
 - descriptions: descriptions of the command on every possible operating language
 
 ## How command is determined?
-In this subsection, it will be described how to say commands, so that assistant recognizes them without doubt. 
+In this subsection, it will be described how to say commands, so that assistant recognizes them without a doubt. 
 As it was described in the previous subsection when you say some command, the text is processed and the command is determined. It is very important whether process_input_text is true or not.  For command where process_input_text is true, recognized text (after obligatory processing - removal of usual words and punctuation), is being processed so keywords are removed.  Everything that "survives" this processing is being regarded as an argument to the execution method. 
 One example could look like this:
-Let's say you want to know what is the weather forecast in Denver (USA).  We will use english-case scenario. Command that does that has true value for process_input_text. Keywords for this command are:  
+Let's say you want to know what is the weather forecast in Denver (USA).  We will use the english-case scenario. A command that does that has true value for process_input_text. Keywords for this command are:  
 
 "words":{
    "how":0.2,
@@ -111,7 +111,7 @@ Let's say you want to know what is the weather forecast in Denver (USA).  We wil
    "city":0.2
 }  
 
-Every word in this group has some value, and it represents it's score coefficient. For every command in __data/keywords/keywords-<en/sr>.json__, score is calculated on principle, for every known word in word list for that command calculate how many times word repeats and multiply with it's score, then sum it all up and get total score for that command. Command with the highest score wins. Now, let's get back to our example - weather forecast in Denver. 
+Every word in this group has some value, and it represents its score coefficient. For every command in __data/keywords/keywords-<en/sr>.json__, the score is calculated on principle, for every known word in word list for that command calculate how many times word repeats and multiply with its score, then sum it all up and get the total score for that command. Command with the highest score wins. Now, let's get back to our example - weather forecast in Denver. 
 If we say: ***What's the weather like at location Denver*** - will successfully return forecast details.
 On the other side: ***What's the weather like around Denver*** will return notification that weather forecast details cannot be fetched.  
 
@@ -141,7 +141,7 @@ The user selects one of the offered languages (English or Serbian), and if he tr
 
 The user is then expected to repeat the command, ie. chooses the operating language.
 
-After the message, the user should select one of the operating languages (English or Serbian). When selecting a language, any form of command that contains a language name is valid. Therefore, for the choice of English it is important that the command contains any of these words: ***english, default, engleski, podrazumevan (podrazumevani, podrazumevana)***. To select Serbian, the command should contain one of the words: ***serbian, srpski***.
+After the message, the user should select one of the operating languages (English or Serbian). When selecting a language, any form of command that contains a language name is valid. Therefore, for the choice of English, the command must contain any of these words: ***english, default, engleski, podrazumevan (podrazumevani, podrazumevana)***. To select Serbian, the command should contain one of the words: ***serbian, srpski***.
 
 For example, these commands could be:  
 
@@ -282,7 +282,7 @@ The example of successful communication in English looks like this:
    (Lindo, I need a language translator.)
    (Lindo, I need a text translation.)
    Lindo: Ok, I can do it. What's the source language?.
-   User: english (*or some other text*)
+   User: english (*or some other language*)
    Lindo: Yes, I can handle that. Say text for translation.
    User: *use says text for translation, e.g. Mary had
    a little lamb.*
@@ -412,5 +412,5 @@ Also, there may be situations where speech recognition returns an error:
    - ***sr: Problemi sa slanjem zahteva. Proverite API limit i status mreže!***
 ## Aditional notes
 
-- To use arduino service, you must connect arduino with your computer (serial port's parameters are set in config/config.py); uncomment arduino service line in service pool in main.py
-- operating system control is under construction. Linux commands execution are tested as the proof-of-concept, but the goal is to also add Windows commands, so until then OS service is not used.
+- To use arduino service, you must connect Arduino with your computer (serial port's parameters are set in config/config.py); uncomment Arduino service line in service pool in main.py
+- operating system control is under construction. Linux commands execution is tested as the proof-of-concept, but the goal is to also add Windows commands, so until then OS service is not used.
